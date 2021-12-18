@@ -30,7 +30,7 @@ void bi_new(IN OUT bigint **arr, IN int wordlen)
 void bi_refine(bigint *arr)
 {
     if (arr == NULL)
-        bi_delete(arr);
+        bi_delete(&arr);
 
     int new_wordlen = arr->wordlen;
 
@@ -51,8 +51,43 @@ void bi_refine(bigint *arr)
         arr->sign = NON_NEGATIVE;
 }
 
+// x배열을 y에 assign
+void bi_assign(IN OUT bigint **y, IN bigint *x)
+{
+    if (*y != NULL)
+        bi_delete(y);
+
+    bi_new(y, x->wordlen);
+    (*y)->sign = x->sign;
+
+    memmove((*y)->a, x->a, sizeof(word) * x->wordlen);
+}
+
 void test()
 {
     printf("hello World!\n");
     printf("출력 확인용");
+}
+
+void bi_print(bigint *arr)
+{
+    if (arr->sign == NEGATIVE)
+        printf("-");
+
+#if (w == 64)
+    printf("%llx ", arr->a[arr->wordlen - 1]);
+    for (int j = arr->wordlen - 2; j >= 0; j--)
+        printf("%016llx ", arr->a[j]);
+
+#elif (w == 32)
+    printf("%llx ", arr->a[arr->wordlen - 1]);
+    for (int j = arr->wordlen - 2; j >= 0; j--)
+        printf("%08llx ", arr->a[j]);
+
+#elif (w == 8)
+    printf("%llx ", arr->a[arr->wordlen - 1]);
+    for (int j = arr->wordlen - 2; j >= 0; j--)
+        printf("%016llx ", arr->a[j]);
+#endif
+    printf("\n");
 }

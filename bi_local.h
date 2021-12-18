@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#define check printf("?????\n")
 
 #define IN  // function input
 #define OUT // function output
@@ -30,6 +33,12 @@ typedef struct
 } bigint;
 
 void test();
+/* == == == == == BASIC FUNCTION == == == == == */
 void bi_delete(IN OUT bigint **arr);
 void bi_new(IN OUT bigint **arr, IN int wordlen);
 void bi_refine(bigint *arr);
+void bi_assign(IN OUT bigint **y, IN bigint *x);
+
+void bi_print(bigint *arr);
+
+// bi_assign(IN OUT bigint **y, IN bigint *x);

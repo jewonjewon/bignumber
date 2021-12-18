@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
+#include <stdbool.h>
 
 #define check printf("?????\n")
 
@@ -34,11 +36,20 @@ typedef struct
 
 void test();
 /* == == == == == BASIC FUNCTION == == == == == */
-void bi_delete(IN OUT bigint **arr);
-void bi_new(IN OUT bigint **arr, IN int wordlen);
-void bi_refine(bigint *arr);
+void bi_delete(IN OUT bigint **A);
+void bi_new(IN OUT bigint **A, IN int wordlen);
+void bi_refine(bigint *A);
 void bi_assign(IN OUT bigint **y, IN bigint *x);
 
-void bi_print(bigint *arr);
+void bi_print(bigint *A);
 
-// bi_assign(IN OUT bigint **y, IN bigint *x);
+void Aay_rand(word *dst, IN int wordlen);
+void bi_gen_rand(OUT bigint **A, IN int sign, IN int wordlen);
+
+void bi_set_one(OUT bigint **A);
+void bi_set_zero(OUT bigint **A);
+
+int bi_is_zero(IN bigint *A);
+int bi_is_one(IN bigint *A);
+
+int bi_compare_abs(IN bigint *A, OUT bigint *B);

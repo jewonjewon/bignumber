@@ -1,10 +1,13 @@
+#ifndef __BI_LOCAL_H__
+#define __BI_LOCAL_H__
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <stdbool.h>
 
-#define check printf("?????\n")
+#define check printf("#?????\n")
 
 #define IN  // function input
 #define OUT // function output
@@ -34,12 +37,13 @@ typedef struct
     word *a;
 } bigint;
 
-void test();
 /* == == == == == BASIC FUNCTION == == == == == */
 void bi_delete(IN OUT bigint **A);
 void bi_new(IN OUT bigint **A, IN int wordlen);
 void bi_refine(bigint *A);
 void bi_assign(IN OUT bigint **y, IN bigint *x);
+void bi_resize(IN OUT bigint **A, IN int wordlen);
+void bi_init(IN OUT bigint **A);
 
 void bi_print(bigint *A);
 
@@ -52,4 +56,10 @@ void bi_set_zero(OUT bigint **A);
 int bi_is_zero(IN bigint *A);
 int bi_is_one(IN bigint *A);
 
-int bi_compare_abs(IN bigint *A, OUT bigint *B);
+int bi_compare_abs(IN bigint *A, IN bigint *B);
+int bi_cmp(IN bigint *A, IN bigint *B);
+
+void bi_abs(IN bigint *A);
+void bi_flip_sign(IN bigint *A);
+
+#endif

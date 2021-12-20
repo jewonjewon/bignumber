@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "bi_local.h": "c"
+    "bi_local.h": "c",
+    "bi_operation.h": "c"
   }
 }

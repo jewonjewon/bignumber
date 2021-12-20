@@ -63,10 +63,20 @@ void bi_assign(IN OUT bigint **y, IN bigint *x)
     memmove((*y)->a, x->a, sizeof(word) * x->wordlen);
 }
 
-void test()
+void bi_resize(IN OUT bigint **A, IN int wordlen)
 {
-    printf("hello World!\n");
-    printf("출력 확인용");
+    (*A)->a = (word *)realloc((*A)->a, sizeof(word) * wordlen);
+
+    for (int j = (*A)->wordlen; j < wordlen; j++)
+        (*A)->a[j] = 0;
+
+    (*A)->wordlen = wordlen;
+}
+
+void bi_init(IN OUT bigint **A)
+{
+    for (int j = 0; j < (*A)->wordlen; j++)
+        (*A)->a[j] = 0;
 }
 
 void bi_print(bigint *A)
@@ -75,9 +85,9 @@ void bi_print(bigint *A)
         printf("-");
 
 #if (w == 64)
-    printf("%llx ", A->a[A->wordlen - 1]);
+    printf("%#llx", A->a[A->wordlen - 1]);
     for (int j = A->wordlen - 2; j >= 0; j--)
-        printf("%016llx ", A->a[j]);
+        printf("%016llx", A->a[j]);
 
 #elif (w == 32)
     printf("%llx ", A->a[A->wordlen - 1]);
@@ -129,9 +139,9 @@ void bi_set_zero(OUT bigint **A)
     (*A)->a[0] = 0;
 }
 
-int bi_is_zero(bigint *A)
+int bi_is_zero(IN bigint *A)
 {
-    // Case: A <0 or A[0] != 0
+    // Case: A < 0 or A[0] != 0
     if (A->sign == NEGATIVE or A->a[0] != 0)
         return false;
 
@@ -141,8 +151,9 @@ int bi_is_zero(bigint *A)
     return true;
 }
 
-int bi_is_one(bigint *A)
+int bi_is_one(IN bigint *A)
 {
+    // Case: A < 0 or A[0] != 1
     if (A->sign == NEGATIVE or A->a[0] != 1)
         return false;
 
@@ -176,4 +187,35 @@ int bi_compare_abs(IN bigint *A, IN bigint *B)
             return -1;
     // A=B
     return 0;
+}
+
+// A > B = 1, A < B = -1, A = B = 0
+int bi_cmp(IN bigint *A, IN bigint *B)
+{
+    // Case: A > B
+    if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
+        return true;
+    // Case: A < B
+    if (A->sign == NEGATIVE and B->sign == NON_NEGATIVE)
+        return -1;
+
+    int ret = bi_compare_abs(A, B);
+
+    if (A->sign == NON_NEGATIVE)
+        return ret;
+    else
+        return ret * (-1);
+}
+
+void bi_abs(IN bigint *A)
+{
+    A->sign = NON_NEGATIVE;
+}
+
+void bi_flip_sign(IN bigint *A)
+{
+    if (A->sign == NON_NEGATIVE)
+        A->sign = NEGATIVE;
+    else
+        A->sign = NON_NEGATIVE;
 }

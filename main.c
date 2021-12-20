@@ -7,8 +7,8 @@
 int main()
 {
     srand((unsigned)time(NULL));
-    py_test_ADD(1000);
-    // py_test_SUB(1000);
+    // py_test_ADD(1000);
+    py_test_SUB(1000);
 
     return 0;
 }

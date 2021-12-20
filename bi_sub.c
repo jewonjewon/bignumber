@@ -27,8 +27,6 @@ void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
     for (int j = 0; j < A->wordlen; j++)
         bi_SUB_AbB(&T->a[j], A->a[j], B->a[j], &b);
 
-    T->a[A->wordlen] = b;
-
     bi_assign(C, T);
     bi_refine(*C);
     bi_delete(&T);
@@ -36,42 +34,41 @@ void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
 
 void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    // Case: A = 0, C = -B
-    if (bi_is_zero(A) == true)
-    {
-        bi_assign(C, B);
-        return;
-    }
-    // Case: B = 0, C = -A
-    if (bi_is_zero(B) == true)
-    {
-        bi_assign(C, A);
-        return;
-    }
-    // Case: A = B ,C = 0
+    // Case 1: A = B ,C = 0
     if (bi_cmp(A, B) == 0)
     {
         bi_set_zero(C);
         return;
     }
+    // Case 2: A = 0, C = -B
+    if (bi_is_zero(A) == true)
+    {
+        bi_assign(C, B);
+        bi_flip_sign(*C);
+        return;
+    }
+    // Case 3: B = 0, C = -A
+    if (bi_is_zero(B) == true)
+    {
+        bi_assign(C, A);
+        return;
+    }
 
-    // Case: 0 < B ≤ A,  C = A - B
+    // Case 4: 0 < B ≤ A,  C = A - B
     if (A->sign == NON_NEGATIVE and B->sign == NON_NEGATIVE and bi_cmp(A, B) == 1)
     {
         bi_SUBC(C, A, B);
         return;
     }
 
-    // Case: 0 < A < B,  -C = B - A
+    // Case 5: 0 < A < B,  -C = B - A
     else if (A->sign == NON_NEGATIVE and B->sign == NON_NEGATIVE and bi_cmp(A, B) == -1)
     {
-        check;
-
         bi_SUBC(C, B, A);
         (*C)->sign = NEGATIVE;
         return;
     }
-    // Case: 0 > A ≥ B,  C = |B| - |A|
+    // Case 6: 0 > A ≥ B,  C = |B| - |A|
     if (A->sign == NEGATIVE and B->sign == NEGATIVE and bi_cmp(A, B) == 1)
     {
         bi_abs(A);
@@ -82,7 +79,7 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
 
-    // Case: 0 > B > A,  C = |B| - |A|
+    // Case 7: 0 > B > A,  C = |B| - |A|
     else if (A->sign == NEGATIVE and B->sign == NEGATIVE and bi_cmp(A, B) == -1)
     {
         bi_abs(A);
@@ -94,7 +91,7 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
 
-    // Case: A > 0 and B < 0
+    // Case 8: A > 0 and B < 0
     if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
     {
         bi_abs(B);

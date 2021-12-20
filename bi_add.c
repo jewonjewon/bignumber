@@ -68,14 +68,14 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
 
-    // Case: wordlen(B) ≥ wordlen(B)
+    // Case: wordlen(A) ≥ wordlen(B)
     if (A->wordlen >= B->wordlen)
     {
         bi_ADDC(C, A, B);
         (*C)->sign = A->sign;
         return;
     }
-
+    // Case: wordlen(A) < wordlen(B)
     else
     {
         bi_ADDC(C, B, A);

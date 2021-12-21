@@ -1,5 +1,5 @@
 #include "bi_local.h"
-#include "bi_operation.h"
+#include "bi_op.h"
 void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 void bi_ADD_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c)

@@ -62,7 +62,7 @@ void bi_assign(IN OUT bigint **y, IN bigint *x)
 
     memmove((*y)->a, x->a, sizeof(word) * x->wordlen);
 }
-
+// 입력 배열 A의 길이를 입력 wordlen만큼 길이를 늘려주는 함수
 void bi_resize(IN OUT bigint **A, IN int wordlen)
 {
     (*A)->a = (word *)realloc((*A)->a, sizeof(word) * wordlen);
@@ -155,6 +155,18 @@ int bi_is_one(IN bigint *A)
 {
     // Case: A < 0 or A[0] != 1
     if (A->sign == NEGATIVE or A->a[0] != 1)
+        return false;
+
+    for (int j = A->wordlen - 1; j > 0; j--)
+        if (A->a[j] != 0)
+            return false;
+    return true;
+}
+
+int bi_is_minus_one(IN bigint *A)
+{
+    // Case: A < 0 or A[0] != 1
+    if (A->sign == NON_NEGATIVE or A->a[0] != 1)
         return false;
 
     for (int j = A->wordlen - 1; j > 0; j--)

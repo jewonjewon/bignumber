@@ -55,6 +55,7 @@ void bi_set_zero(OUT bigint **A);
 
 int bi_is_zero(IN bigint *A);
 int bi_is_one(IN bigint *A);
+int bi_is_minus_one(IN bigint *A);
 
 int bi_compare_abs(IN bigint *A, IN bigint *B);
 int bi_cmp(IN bigint *A, IN bigint *B);

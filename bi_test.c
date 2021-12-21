@@ -1,5 +1,5 @@
 #include "bi_local.h"
-#include "bi_operation.h"
+#include "bi_op.h"
 #include "bi_test.h"
 
 // Case: A = 0, C = B
@@ -570,4 +570,367 @@ void py_test_SUB(IN int TEST)
     py_test_SUB7(TEST / Case);
     py_test_SUB8(TEST / Case);
     py_test_SUB9(TEST / Case);
+}
+
+/////////// SUB /////////////
+
+void py_test_MUL6(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int sign1 = rand() % 2;
+        int sign2 = rand() % 2;
+
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, sign1, num1);
+        bi_gen_rand(&B, sign2, num2);
+
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+
+        bi_MUL(&C, A, B);
+        printf("C = ");
+        bi_print(C);
+        printf("print(A * B == C) #%d\n", j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// void test_MULC(int TEST)
+// {
+//     bigint *A = NULL;
+//     bigint *B = NULL;
+//     bigint *C = NULL;
+
+//     // bi_MULC TEST
+//     for (int j = 0; j < TEST; j++)
+//     {
+//         int num1 = rand() % 0x0f + 1;
+//         int num2 = rand() % 0x0f + 1;
+
+//         bi_gen_rand(&A, NON_NEGATIVE, num1);
+//         bi_gen_rand(&B, NON_NEGATIVE, num2);
+
+//         bi_MULC(&C, A, B);
+
+//         printf("A = ");
+//         bi_print(A);
+
+//         printf("B = ");
+//         bi_print(B);
+
+//         printf("C = ");
+//         bi_print(C);
+
+//         printf("print(A * B == C) #%d\n", j);
+//     }
+//     bi_delete(&A);
+//     bi_delete(&B);
+//     bi_delete(&C);
+// }
+
+// Case 1_1: A = 0 then C = 0 * B
+void py_test_MUL1_1(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        bi_new(&A, 1);
+
+        int sign2 = rand() % 2;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&B, sign2, num2);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 1_2: B = 0 then C = A * 0
+void py_test_MUL1_2(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int sign1 = rand() % 2;
+        int num1 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, sign1, num1);
+
+        bi_new(&B, 1);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 1_3: A = 0 and B = 0 then C = 0 * 0
+void py_test_MUL1_3(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        bi_new(&A, 1);
+        bi_new(&B, 1);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 2: A = 1 then C = 1 * B
+void py_test_MUL2(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        bi_new(&A, 1);
+        A->a[0] = 1;
+
+        int sign2 = rand() % 2;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&B, sign2, num2);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 3: A = -1 then C = -(1) * B
+void py_test_MUL3(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        bi_new(&A, 1);
+        A->a[0] = 1;
+        A->sign = NEGATIVE;
+
+        int sign2 = rand() % 2;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&B, sign2, num2);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 4: B = 1 then C = 1 * A
+void py_test_MUL4(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int sign1 = rand() % 2;
+        int num1 = rand() % 0x0f + 1;
+
+        bi_new(&B, 1);
+        B->a[0] = 1;
+
+        bi_gen_rand(&A, sign1, num1);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 5: B = -1 then C = -(1) * A
+void py_test_MUL5(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int sign1 = rand() % 2;
+        int num1 = rand() % 0x0f + 1;
+
+        bi_new(&B, 1);
+        B->a[0] = 1;
+        B->sign = NEGATIVE;
+
+        bi_gen_rand(&A, sign1, num1);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 6: Otherwise
+void test_MUL6(int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&B, NON_NEGATIVE, num2);
+
+        bi_MUL(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+void py_test_MUL(IN int TEST)
+{
+    int Case = 6;
+
+    printf("\n\n\n\n\n### MUL TEST ###\n");
+
+    py_test_MUL1_1(TEST / Case);
+    py_test_MUL1_2(TEST / Case);
+    py_test_MUL1_3(TEST / Case);
+    py_test_MUL2(TEST / Case);
+    py_test_MUL3(TEST / Case);
+    py_test_MUL4(TEST / Case);
+    py_test_MUL5(TEST / Case);
+    py_test_MUL6(TEST / Case);
 }

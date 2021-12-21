@@ -2,9 +2,10 @@
 #define __BI_TEST_H__
 
 #include "bi_local.h"
-#include "bi_operation.h"
+#include "bi_op.h"
 #include "bi_test.h"
 
+/* ADD Accuracy Verification */
 void py_test_ADD1(IN int TEST);
 void py_test_ADD2(IN int TEST);
 void py_test_ADD3(IN int TEST);
@@ -14,6 +15,7 @@ void py_test_ADD6(IN int TEST);
 
 void py_test_ADD(IN int TEST);
 
+/* SUB Accuracy Verification */
 void py_test_SUB1(IN int TEST);
 void py_test_SUB2(IN int TEST);
 void py_test_SUB3(IN int TEST);
@@ -25,5 +27,16 @@ void py_test_SUB8(IN int TEST);
 void py_test_SUB9(IN int TEST);
 
 void py_test_SUB(IN int TEST);
+
+void py_test_MUL1_1(IN int TEST);
+void py_test_MUL1_2(IN int TEST);
+void py_test_MUL1_3(IN int TEST);
+void py_test_MUL2(IN int TEST);
+void py_test_MUL3(IN int TEST);
+void py_test_MUL4(IN int TEST);
+void py_test_MUL5(IN int TEST);
+void py_test_MUL6(IN int TEST);
+
+void py_test_MUL(IN int TEST);
 
 #endif

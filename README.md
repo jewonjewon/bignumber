@@ -5,18 +5,20 @@
 큰 정수 연산 라이브러리
 
 - [ ] 덧셈
-- 뺄셈 []
-- Schoolbook 곱셈 []
-- Schoolbook 제곱
-- Karastuba 곱셈
-- Karastuba 제곱
-- 워드 단위 긴 나눗셈
-- 이진 긴 나눗셈
+- [ ] 뺄셈
+- [ ] Schoolbook 곱셈
+- [ ] Schoolbook 제곱
+- [ ] Karastuba 곱셈
+- [ ] Karastuba 제곱
+- [ ] 워드 단위 긴 나눗셈
+- [ ] 이진 긴 나눗셈
 
-Textbook-RSA 1024, 2048
-RSA-CRT 1024, 2048
-RSA-OAEP
-DH Key Exchange Protocol
+암호
+
+- [ ] Textbook-RSA 1024, 2048
+- [ ] RSA-CRT 1024, 2048
+- [ ] RSA-OAEP
+- [ ] DH Key Exchange Protocol
 
 ## 개발 일정
 
@@ -25,4 +27,5 @@ DH Key Exchange Protocol
 
 ## 개발 현황
 
-21.12.21: 곱셈 구현, 검증 완료(ADD, SUB 검증 재확인할 것)
+|:날짜:|:개발 내용:|:비고:|
+|21.12.21|Schoolbook 곱셈 구현, 케이스 별 검증 완료 |(ADD, SUB 검증 재확인할 것)|

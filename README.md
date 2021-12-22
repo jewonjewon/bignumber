@@ -4,9 +4,9 @@
 
 큰 정수 연산 라이브러리
 
-- 덧셈
-- 뺄셈
-- Schoolbook 곱셈
+- 덧셈 []
+- 뺄셈 []
+- Schoolbook 곱셈 []
 - Schoolbook 제곱
 - Karastuba 곱셈
 - Karastuba 제곱

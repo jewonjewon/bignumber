@@ -119,17 +119,17 @@ void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_flip_sign(B);
 }
 
-void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, IN int flag)
-{
-    if (flag >= 1)
-    {
-        MUL(C, A, B);
-        return 0;
-    }
-    int l = 0;
+// void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, IN int flag)
+// {
+//     if (flag >= 1)
+//     {
+//         MUL(C, A, B);
+//         return 0;
+//     }
+//     int l = 0;
 
-    bigint *A1 = NULL;
-    bigint *A0 = NULL;
-    bigint *B1 = NULL;
-    bigint *B0 = NULL;
-}
+//     bigint *A1 = NULL;
+//     bigint *A0 = NULL;
+//     bigint *B1 = NULL;
+//     bigint *B0 = NULL;
+// }

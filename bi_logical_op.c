@@ -42,12 +42,14 @@ void bi_lshift(bigint **A, int x)
     bi_delete(&T);
 }
 
-void bi_word_lshift(OUT bigint **A, IN int x)
+void bi_word_rshift(OUT bigint **A, IN int x)
 {
+    return;
 }
 
-void bi_lshift(bigint **A, int x)
+void bi_rshift(bigint **A, int x)
 {
+    return;
 }
 
 void bi_word_reduction(OUT bigint **A, IN int x)

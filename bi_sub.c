@@ -27,6 +27,7 @@ void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
     for (int j = 0; j < A->wordlen; j++)
         bi_SUB_AbB(&T->a[j], A->a[j], B->a[j], &b);
 
+    bi_refine(B);
     bi_assign(C, T);
     bi_refine(*C);
     bi_delete(&T);

@@ -1,11 +1,17 @@
 #include "bi_local.h"
 #include "bi_op.h"
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_MUL_AB(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
+ * 단일 워드 2개를 입력받아 곱셈 연산 수행 후 최대 2워드 크기의 출력값을 반환하는 함수.
+ * 단일 워드 곱셈이므로 결과값 C의 최대 워드 길이는 2워드.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+//  bi_MUL_AB(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
 void bi_MUL_AB(OUT bigint **C, IN word A, IN word B)
 {
-    // 단일 워드 곱셈이므로 결과값의 길이는 최대 2워드
     // 이 부분 new 해줘도 안해줘도 둘다 컴파일 되는데 어떤거 쓰는지 궁금
-    // bi_new(C, 2);
+    bi_new(C, 2);
 
     // A1, B1 = A, B의 상위 w/2비트
     // A0, B0 = A, B의 하위 w/2비트
@@ -30,10 +36,18 @@ void bi_MUL_AB(OUT bigint **C, IN word A, IN word B)
     C0 = C0 + (T0 << (w / 2));
     C1 = C1 + (T1 << (w / 2)) + (T0 >> (w / 2)) + (C0 < T);
 
+    // C = C1 || C0
     (*C)->a[1] = C1;
     (*C)->a[0] = C0;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_MULC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
+ * 다중 워드 2개를 입력받아 곱셈 연산 수행 후 최대 wordlen(A) + wordlen(B) 워드 크기의 출력값을 반환하는 함수.
+ * 다중 워드 곱셈이므로 결과값 C의 최대 워드 길이는 wordlen(A) + wordlen(B) 워드.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_MULC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
 void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     bi_new(C, A->wordlen + B->wordlen);
@@ -54,6 +68,13 @@ void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_delete(&T);
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+ * 임의의 정수 A와 B를 입력받아 MULC를 통한 곱셈 연산 수행 후 결과값 C를 반환하는 함수.
+ * 다중 워드 곱셈이므로 결과값 C의 최대 워드 길이는 wordlen(A) + wordlen(B) 워드.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     // Case 1: A = 0 or B = 0 then C = 0
@@ -90,10 +111,25 @@ void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
     // Case 6: Otherwise
-    // bi_abs(A);
-    // bi_abs(B);
+    bi_abs(A);
+    bi_abs(B);
     bi_MULC(C, A, B);
     (*C)->sign = A->sign ^ B->sign;
-    // bi_flip_sign(A);
-    // bi_flip_sign(B);
+    bi_flip_sign(A);
+    bi_flip_sign(B);
+}
+
+void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, IN int flag)
+{
+    if (flag >= 1)
+    {
+        MUL(C, A, B);
+        return 0;
+    }
+    int l = 0;
+
+    bigint *A1 = NULL;
+    bigint *A0 = NULL;
+    bigint *B1 = NULL;
+    bigint *B0 = NULL;
 }

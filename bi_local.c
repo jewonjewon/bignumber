@@ -7,7 +7,7 @@ void bi_delete(IN OUT bigint **A)
 
 #ifdef ZEROLIZE
     // 입력 배열 초기화
-    Aay_init((*A)->a, (*A)->wordlen);
+    arr_init((*A)->a, (*A)->wordlen);
 #endif
 
     free((*A)->a);
@@ -102,7 +102,7 @@ void bi_print(bigint *A)
     printf("\n");
 }
 
-void Aay_rand(word *dst, IN int wordlen)
+void arr_rand(word *dst, IN int wordlen)
 {
     unsigned char *p = (unsigned char *)dst;
     int cnt = wordlen * sizeof(word);
@@ -118,7 +118,7 @@ void bi_gen_rand(OUT bigint **A, IN int sign, IN int wordlen)
 {
     bi_new(A, wordlen);
     (*A)->sign = sign;
-    Aay_rand((*A)->a, wordlen);
+    arr_rand((*A)->a, wordlen);
 
     bi_refine(*A);
 }

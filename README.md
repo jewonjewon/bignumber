@@ -8,10 +8,13 @@
 - [ ] 뺄셈
 - [ ] Schoolbook 곱셈
 - [ ] Schoolbook 제곱
-- [ ] Karastuba 곱셈
-- [ ] Karastuba 제곱
+- [ ] Karatsuba 곱셈
+- [ ] Karatsuba 제곱
 - [ ] 워드 단위 긴 나눗셈
 - [ ] 이진 긴 나눗셈
+- [ ] Left-To-Right binary Method
+- [ ] Right-To-Left binary Method
+- [ ] Montgomery Ladder Method
 
 2. 검증 함수
 
@@ -19,15 +22,18 @@
 - [ ] 뺄셈
 - [ ] Schoolbook 곱셈
 - [ ] Schoolbook 제곱
-- [ ] Karastuba 곱셈
-- [ ] Karastuba 제곱
+- [ ] Karatsuba 곱셈
+- [ ] Karatsuba 제곱
 - [ ] 워드 단위 긴 나눗셈
 - [ ] 이진 긴 나눗셈
+- [ ] Left-To-Right binary Method
+- [ ] Right-To-Left binary Method
+- [ ] Montgomery Ladder Method
 
 3. 암호
 
 - [ ] Textbook-RSA 1024, 2048
-- [ ] RSA-CRT 1024, 2048
+- [ ] RSA-CRT
 - [ ] RSA-OAEP
 - [ ] DH Key Exchange Protocol
 

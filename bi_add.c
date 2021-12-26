@@ -1,5 +1,6 @@
 #include "bi_local.h"
 #include "bi_op.h"
+
 void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 void bi_ADD_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c)
@@ -31,6 +32,7 @@ void bi_ADDC(OUT bigint **C, IN bigint *A, IN bigint *B)
 
     T->a[A->wordlen] = c;
 
+    bi_refine(B);
     bi_assign(C, T);
     bi_refine(*C);
     bi_delete(&T);
@@ -38,19 +40,19 @@ void bi_ADDC(OUT bigint **C, IN bigint *A, IN bigint *B)
 
 void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    // Case: A = 0, C = B
+    // Case 1: A = 0, C = B
     if (bi_is_zero(A) == true)
     {
         bi_assign(C, B);
         return;
     }
-    // Case: B = 0, C = A
+    // Case 2: B = 0, C = A
     if (bi_is_zero(B) == true)
     {
         bi_assign(C, A);
         return;
     }
-    // Case: A > 0 and B < 0, C = A - |B|
+    // Case 3: A > 0 and B < 0, C = A - |B|
     if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
     {
         bi_abs(B);
@@ -59,7 +61,7 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
 
-    // Case: A < 0 and B > 0, C = B - |A|
+    // Case 4: A < 0 and B > 0, C = B - |A|
     if (A->sign == NEGATIVE and B->sign == NON_NEGATIVE)
     {
         bi_abs(A);
@@ -68,14 +70,14 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
 
-    // Case: wordlen(A) ≥ wordlen(B)
+    // Case 5: wordlen(A) ≥ wordlen(B)
     if (A->wordlen >= B->wordlen)
     {
         bi_ADDC(C, A, B);
         (*C)->sign = A->sign;
         return;
     }
-    // Case: wordlen(A) < wordlen(B)
+    // Case 6: wordlen(A) < wordlen(B)
     else
     {
         bi_ADDC(C, B, A);

@@ -16,7 +16,12 @@ void bi_MUL_AB(OUT bigint **C, IN word A, IN word B);
 void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B);
 void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B);
 
+void bi_SQU_A(OUT bigint **C, word A);
+void bi_SQUC(OUT bigint **C, IN bigint *A);
+void bi_SQU(OUT bigint **C, IN bigint *A);
+
 /* LOGICAL OPERATION */
 void bi_word_lshift(OUT bigint **A, IN int x);
+void bi_lshift(OUT bigint **A, IN int x);
 
 #endif

@@ -14,6 +14,42 @@ void bi_word_lshift(OUT bigint **A, IN int x)
         (*A)->a[j] = 0;
 }
 
+void bi_lshift(bigint **A, int x)
+{
+
+    int n = (*A)->wordlen;
+    int q = x / w;
+    int r = x % w;
+
+    if (x % w == 0)
+    {
+        bi_word_lshift(A, q);
+        return;
+    }
+
+    bigint *T = NULL;
+    bi_new(&T, n + q + 1);
+
+    T->a[q] = (*A)->a[0] << r;
+
+    for (int j = 1; j < n; j++)
+        T->a[j + q] = ((*A)->a[j] << r) | ((*A)->a[j - 1] >> (w - r));
+
+    T->a[n + q] = (*A)->a[n - 1] >> (w - r);
+
+    bi_refine(T);
+    bi_assign(A, T);
+    bi_delete(&T);
+}
+
+void bi_word_lshift(OUT bigint **A, IN int x)
+{
+}
+
+void bi_lshift(bigint **A, int x)
+{
+}
+
 void bi_word_reduction(OUT bigint **A, IN int x)
 {
     return;

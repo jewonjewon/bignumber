@@ -83,7 +83,7 @@ bi_add, bi_sub, bi_mul, bi_squ
   - bi_MULC
   - bi_MUL
 - 나눗셈
-  - bi_SQU_ABc
+  - bi_SQU_A
   - bi_SQUC
   - bi_SQU
 

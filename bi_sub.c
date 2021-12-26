@@ -1,9 +1,17 @@
 #include "bi_local.h"
 #include "bi_op.h"
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_SUB_AbB(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드, 입력: 해당 borrow 값)
+ * 단일 워드 2개를 입력받아 뺄셈 연산 수행 후 최대 1워드 크기의 출력값을 반환하는 함수.
+ * borrow 를 고려한 단일 워드 뺄셈 처리 함수.
+ * 단일 워드 뺄셈이므로 결과값 C의 최대 워드 길이는 1워드.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+//  bi_SUB_AbB(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
 void bi_SUB_AbB(OUT word *C, IN word A, IN word B, IN OUT int *b)
 {
-    int bb = 0;
+    int bb = 0; // 현재 borrow 값
     *C = A - *b;
 
     if (A < *b)
@@ -16,6 +24,14 @@ void bi_SUB_AbB(OUT word *C, IN word A, IN word B, IN OUT int *b)
     *b = bb;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_SUBC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드): 뺄셈 core 함수
+ * 기본 가정: A와 B의 부호는 같음, wordlen(A) ≥ wordlen(B)
+ * 다중 워드 2개를 입력받아 뺄셈 연산 수행 후 최대 입력 배열 A의 워드 크기의 출력값을 반환하는 함수.
+ * (오류 방지)뺄셈 연산 수행을 위해 bi_resize()함수를 사용하여 B의 워드 길이를 A의 워드 길이와 동일하게 설정해줌
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+//  bi_SUBC(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
 void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     bigint *T = NULL;
@@ -33,6 +49,13 @@ void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_delete(&T);
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_SUB(출력: C = A - B, 입력: 임의의 정수, 입력: 임의의 정수)
+ * 임의의 두 정수 A, B를 입력받아 뺄셈 연산 수행 후 출력값 C(= A - B)를 반환하는 함수.
+ * Case 별로 뺄셈 연산 수행
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+//  bi_SUB(출력: C = A - B, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     // Case 1: A = B ,C = 0

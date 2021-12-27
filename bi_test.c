@@ -258,12 +258,13 @@ void sub_test_SUB1(IN int TEST)
         bi_new(&A, 1);
         bi_new(&B, 1);
 
+        bi_SUB(&C, A, B);
+
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -289,12 +290,13 @@ void sub_test_SUB2(IN int TEST)
         bi_new(&A, 1);
         bi_gen_rand(&B, sign2, num2);
 
+        bi_SUB(&C, A, B);
+
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
 
@@ -321,12 +323,13 @@ void sub_test_SUB3(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_new(&B, 1);
 
+        bi_SUB(&C, A, B);
+
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -363,13 +366,13 @@ void sub_test_SUB4(IN int TEST)
             if (bi_cmp(A, B) == 1)
                 break;
         }
+        bi_SUB(&C, A, B);
 
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -406,13 +409,13 @@ void sub_test_SUB5(IN int TEST)
             if (bi_cmp(A, B) == -1)
                 break;
         }
+        bi_SUB(&C, A, B);
 
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -449,13 +452,13 @@ void sub_test_SUB6(IN int TEST)
             if (bi_cmp(A, B) == 1)
                 break;
         }
+        bi_SUB(&C, A, B);
 
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -492,12 +495,13 @@ void sub_test_SUB7(IN int TEST)
                 break;
         }
 
+        bi_SUB(&C, A, B);
+
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -525,12 +529,13 @@ void sub_test_SUB8(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
+        bi_SUB(&C, A, B);
+
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -559,12 +564,13 @@ void sub_test_SUB9(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
+        bi_SUB(&C, A, B);
+
         printf("A = ");
         bi_print(A);
         printf("B = ");
         bi_print(B);
 
-        bi_SUB(&C, A, B);
         printf("C = ");
         bi_print(C);
         printf("print(A - B == C) #%d\n", j);
@@ -1129,6 +1135,32 @@ void test_bi_word_lshift(int TEST)
 
     bi_delete(&A);
 }
+void test_bi_word_lshift2(int TEST)
+{
+    bigint *A = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int x = rand() % 0xf + 1;
+        int num1 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+
+        printf("A = ");
+        bi_print(A);
+
+        bi_word_lshift2(&C, A, x);
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A << (%d * %d) == C) #%d\n", x, w, j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&C);
+}
+
 void test_bi_lshift(int TEST)
 {
     bigint *A = NULL;

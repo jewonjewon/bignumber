@@ -14,6 +14,15 @@ void bi_word_lshift(OUT bigint **A, IN int x)
         (*A)->a[j] = 0;
 }
 
+void bi_word_lshift2(OUT bigint **C, IN bigint *A, IN int r)
+{
+    bi_new(C, A->wordlen + r);
+
+    // 기존 값 왼쪽으로 워드 시프트
+    for (int j = 0; j < A->wordlen; j++)
+        (*C)->a[j + r] = A->a[j];
+}
+
 void bi_lshift(bigint **A, int x)
 {
 
@@ -44,7 +53,22 @@ void bi_lshift(bigint **A, int x)
 
 void bi_word_rshift(OUT bigint **A, IN int x)
 {
-    return;
+    if ((*A)->wordlen < x)
+    {
+        bi_set_zero(A);
+        return;
+    }
+
+    for (int j = 0; j < (*A)->wordlen - x; j++)
+        (*A)->a[j] = (*A)->a[j + x];
+
+    for (int j = (*A)->wordlen - x; j < (*A)->wordlen; j++)
+        (*A)->a[j] = 0;
+
+    if ((*A)->sign == NEGATIVE)
+        (*A)->a[0]++;
+
+    bi_refine(*A);
 }
 
 void bi_rshift(bigint **A, int x)
@@ -52,7 +76,28 @@ void bi_rshift(bigint **A, int x)
     return;
 }
 
-void bi_word_reduction(OUT bigint **A, IN int x)
+void bi_word_reduction(OUT bigint **A, IN int r)
 {
-    return;
+    for (int j = r; j < (*A)->wordlen; j++)
+        (*A)->a[j] = 0;
+
+    bi_refine(*A);
+    printf("너?\n");
+    bi_print(*A);
+    if ((*A)->sign == NEGATIVE)
+    {
+        bigint *T = NULL;
+        bi_new(&T, (*A)->wordlen + 1);
+
+        T->a[(*A)->wordlen] = 1;
+        // Case 4: A < 0 and B > 0, C = B - |A|
+
+        bi_abs(*A);
+        bi_SUB(A, T, *A);
+        bi_flip_sign(*A);
+
+        // bi_ADD(A, *A, T);
+        // printf("너냐?\n");
+        bi_print(*A);
+    }
 }

@@ -19,14 +19,19 @@
 #define and &&
 #define or ||
 
+#define ZEROLIZE
+
 #define w 64 // w: 워드의 크기 지정
 
 #if w == 64 // 64비트
 typedef unsigned long long word;
+#define MASK (0xffffffffffffffff)
 #elif w == 32 // 32비트
 typedef unsigned int word;
-#elif w == 8  // 8비트
+#define MASK (0xffffffff)
+#elif w == 8 // 8비트
 typedef unsigned char word;
+#define MASK (0xff)
 #endif
 
 // bigint 구조체 설정(sign= 부호, wordlen= 워드길이, a=배열)
@@ -62,5 +67,10 @@ int bi_cmp(IN bigint *A, IN bigint *B);
 
 void bi_abs(IN bigint *A);
 void bi_flip_sign(IN bigint *A);
+
+int bi_min(IN int a, IN int b);
+int bi_max(IN int a, IN int b);
+
+void bi_attach(bigint **C, bigint *A, bigint *B);
 
 #endif

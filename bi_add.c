@@ -37,21 +37,18 @@ void bi_ADD_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c)
 //  bi_ADDC(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
 void bi_ADDC(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    bigint *T = NULL;
-    bi_new(&T, A->wordlen + 1);
+    bi_new(C, A->wordlen + 1);
 
     bi_resize(&B, A->wordlen);
     int c = 0;
 
     for (int j = 0; j < A->wordlen; j++)
-        bi_ADD_ABc(&T->a[j], A->a[j], B->a[j], &c);
+        bi_ADD_ABc(&(*C)->a[j], A->a[j], B->a[j], &c);
 
-    T->a[A->wordlen] = c;
+    (*C)->a[A->wordlen] = c;
 
     bi_refine(B);
-    bi_assign(C, T);
     bi_refine(*C);
-    bi_delete(&T);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -96,7 +93,12 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
     // Case 5: wordlen(A) ≥ wordlen(B)
     if (A->wordlen >= B->wordlen)
     {
+        // printf("sign(A1) = %d\n", A->sign);
+
+        // printf("너니?\n");
+        // check;
         bi_ADDC(C, A, B);
+        // printf("sign(A2) = %d\n", A->sign);
         (*C)->sign = A->sign;
         return;
     }

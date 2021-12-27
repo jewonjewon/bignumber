@@ -75,6 +75,50 @@ void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B)
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 // bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+// void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
+// {
+//     // Case 1: A = 0 or B = 0 then C = 0
+//     if (bi_is_zero(A) == true or bi_is_zero(B) == true)
+//     {
+//         bi_set_zero(C);
+//         return;
+//     }
+
+//     // Case 2: A = 1 then C = 1 * B
+//     if (bi_is_one(A) == true)
+//     {
+//         bi_assign(C, B);
+//         return;
+//     }
+//     // Case 3: A = -1 then C = -(1) * B
+//     else if (bi_is_minus_one(A) == true)
+//     {
+//         bi_assign(C, B);
+//         bi_flip_sign(*C);
+//         return;
+//     }
+//     // Case 4: B = 1 then C = 1 * A
+//     if (bi_is_one(B) == true)
+//     {
+//         bi_assign(C, A);
+//         return;
+//     }
+//     // Case 5: B = -1 then C = -(1) * A
+//     else if (bi_is_minus_one(B) == true)
+//     {
+//         bi_assign(C, A);
+//         bi_flip_sign(*C);
+//         return;
+//     }
+//     // Case 6: Otherwise
+//     bi_abs(A);
+//     bi_abs(B);
+//     bi_MULC(C, A, B);
+//     (*C)->sign = A->sign ^ B->sign;
+//     bi_flip_sign(A);
+//     bi_flip_sign(B);
+// }
+
 void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     // Case 1: A = 0 or B = 0 then C = 0
@@ -111,25 +155,135 @@ void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
     // Case 6: Otherwise
-    bi_abs(A);
-    bi_abs(B);
+    // bi_abs(A);
+    // bi_abs(B);
     bi_MULC(C, A, B);
     (*C)->sign = A->sign ^ B->sign;
-    bi_flip_sign(A);
-    bi_flip_sign(B);
+    // bi_flip_sign(A);
+    // bi_flip_sign(B);
 }
 
-// void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, IN int flag)
-// {
-//     if (flag >= 1)
-//     {
-//         MUL(C, A, B);
-//         return 0;
-//     }
-//     int l = 0;
+void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
+{
+    int flag = 5;
+    if (flag >= bi_min(A->wordlen, B->wordlen))
+    {
+        // printf("wordlen(A) = %d, wordlen(B) = %d\n", A->wordlen, B->wordlen);
+        // printf("min(n, m): %d\n", bi_min(A->wordlen, B->wordlen));
+        printf("if문 들어옴\n");
+        bi_MUL(C, A, B);
+        return;
+    }
 
-//     bigint *A1 = NULL;
-//     bigint *A0 = NULL;
-//     bigint *B1 = NULL;
-//     bigint *B0 = NULL;
-// }
+    int l = (bi_max(A->wordlen, B->wordlen) + 1) >> 1;
+    printf("max(n, m): %d\n", bi_max(A->wordlen, B->wordlen));
+    printf("l = %d\n", l);
+
+    bigint *A1 = NULL;
+    bigint *A0 = NULL;
+
+    bi_assign(&A1, A);
+    bi_assign(&A0, A);
+
+    bi_word_rshift(&A1, l);
+    bi_word_reduction(&A0, l);
+
+    bigint *B1 = NULL;
+    bigint *B0 = NULL;
+
+    bi_assign(&B1, B);
+    bi_assign(&B0, B);
+
+    bi_word_rshift(&B1, l);
+    bi_word_reduction(&B0, l);
+
+    // 테스트
+    printf("A1 = ");
+    bi_print(A1);
+    printf("A0 = ");
+    bi_print(A0);
+    printf("\n");
+
+    printf("B1 = ");
+    bi_print(B1);
+    printf("B0 = ");
+    bi_print(B0);
+    printf("\n");
+
+    // printf("A1 sign = %d, A0 sign = %d\n", A1->sign, A0->sign);
+
+    bigint *T1 = NULL;
+    bigint *T0 = NULL;
+
+    // printf("sign(A1) = %d, sign(B0) = %d\n", A1->sign, B1->sign);
+    bi_MULC_karatsuba(&T1, A1, B1);
+    // printf("sign(A1) = %d, sign(B0) = %d\n", A1->sign, B1->sign);
+    bi_MULC_karatsuba(&T0, A0, B0);
+
+    printf("T1 = ");
+    bi_print(T1);
+
+    printf("T0 = ");
+    bi_print(T0);
+    printf("\n");
+
+    bigint *R = NULL;
+
+    // if (R == NULL)
+    //     bi_new(&R, 1);
+
+    bi_attach(&R, T1, T0);
+
+    bigint *S1 = NULL;
+    bigint *S0 = NULL;
+
+    // printf("이상: A1 sign = %d, A0 sign = %d\n", A1->sign, A0->sign);
+    bi_SUB(&S1, A0, A1);
+    printf("S1 = ");
+    bi_print(S1);
+
+    bi_SUB(&S0, B1, B0);
+    printf("S0 = ");
+    bi_print(S0);
+    printf("\n");
+
+    bigint *S = NULL;
+
+    if (S == NULL)
+        bi_new(&S, 1);
+
+    int t_sign1 = S1->sign;
+    int t_sign0 = S0->sign;
+
+    S1->sign = NON_NEGATIVE;
+    S0->sign = NON_NEGATIVE;
+
+    bi_MULC_karatsuba(&S, S1, S0);
+
+    S1->sign = t_sign1;
+    S0->sign = t_sign0;
+
+    S->sign = S1->sign ^ S0->sign;
+    printf("kara_S = ");
+    bi_print(S);
+
+    // printf("T1 = ");
+    // bi_print(T1);
+    printf("sign(S) = %d\n", S->sign);
+
+    bi_ADD(&S, S, T1);
+
+    printf("S = ");
+    bi_print(S);
+
+    bi_ADD(&S, S, T0);
+
+    printf("S = ");
+    bi_print(S);
+    printf("\n");
+
+    bi_word_lshift(&S, l);
+    bi_ADD(&R, R, S);
+
+    bi_assign(C, R);
+}

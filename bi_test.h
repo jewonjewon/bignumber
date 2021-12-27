@@ -43,6 +43,18 @@ void sub_test_MUL6(IN int TEST);
 
 void test_MUL(IN int TEST);
 
+/* karatsuba MUL Accuracy Verification */
+void sub_test_KMUL1_1(IN int TEST);
+void sub_test_KMUL1_2(IN int TEST);
+void sub_test_KMUL1_3(IN int TEST);
+void sub_test_KMUL2(IN int TEST);
+void sub_test_KMUL3(IN int TEST);
+void sub_test_KMUL4(IN int TEST);
+void sub_test_KMUL5(IN int TEST);
+void sub_test_KMUL6(IN int TEST);
+
+void test_KMUL(IN int TEST);
+
 void test_SQU_A(int TEST);
 void test_SQUC(int TEST);
 
@@ -56,6 +68,7 @@ void test_SQU(IN int TEST);
 
 /* LEFT SHIFT TEST */
 void test_bi_word_lshift(int TEST);
+void test_bi_word_lshift2(int TEST);
 void test_bi_lshift(int TEST);
 
 #endif

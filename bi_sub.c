@@ -34,19 +34,26 @@ void bi_SUB_AbB(OUT word *C, IN word A, IN word B, IN OUT int *b)
 //  bi_SUBC(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
 void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    bigint *T = NULL;
-    bi_new(&T, A->wordlen);
+    // printf("A = ");
+    // bi_print(A);
+
+    // printf("B = ");
+    // bi_print(B);
+
+    // bigint *T = NULL;
+    // bi_new(&T, A->wordlen);
+    bi_new(C, A->wordlen);
 
     bi_resize(&B, A->wordlen);
     int b = 0;
 
     for (int j = 0; j < A->wordlen; j++)
-        bi_SUB_AbB(&T->a[j], A->a[j], B->a[j], &b);
+        bi_SUB_AbB(&(*C)->a[j], A->a[j], B->a[j], &b);
 
     bi_refine(B);
-    bi_assign(C, T);
+    // bi_assign(C, T);
     bi_refine(*C);
-    bi_delete(&T);
+    // bi_delete(&T);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -127,8 +134,8 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
     {
         bi_abs(A);
         bi_ADD(C, A, B);
-        (*C)->sign = NEGATIVE;
         bi_flip_sign(A);
+        (*C)->sign = NEGATIVE;
         return;
     }
 }

@@ -7,7 +7,8 @@ void bi_delete(IN OUT bigint **A)
 
 #ifdef ZEROLIZE
     // 입력 배열 초기화
-    arr_init((*A)->a, (*A)->wordlen);
+    bi_init(A);
+    // arr_init((*A)->a, (*A)->wordlen);
 #endif
 
     free((*A)->a);
@@ -219,6 +220,7 @@ int bi_cmp(IN bigint *A, IN bigint *B)
         return ret * (-1);
 }
 
+// |A| ← A
 void bi_abs(IN bigint *A)
 {
     A->sign = NON_NEGATIVE;
@@ -226,8 +228,41 @@ void bi_abs(IN bigint *A)
 
 void bi_flip_sign(IN bigint *A)
 {
+    // Case 1: A → -A
     if (A->sign == NON_NEGATIVE)
         A->sign = NEGATIVE;
+    // Case 2: -A → A
     else
         A->sign = NON_NEGATIVE;
+}
+
+int bi_min(IN int a, IN int b)
+{
+    // Case 1: a < b, then return a.
+    if (a < b)
+        return a;
+
+    // Case 2: a ≥ b, then return b.
+    return b;
+}
+
+int bi_max(IN int a, IN int b)
+{
+    // Case 1: a ≥ b, then return a.
+    if (a >= b)
+        return a;
+
+    // Case 2: a < b, then return b.
+    return b;
+}
+// A와 B를 연접하는 함수 -> C = A || B
+void bi_attach(bigint **C, bigint *A, bigint *B)
+{
+    bi_new(C, A->wordlen + B->wordlen);
+
+    for (int j = 0; j < B->wordlen; j++)
+        (*C)->a[j] = B->a[j];
+
+    for (int j = 0; j < A->wordlen; j++)
+        (*C)->a[B->wordlen + j] = A->a[j];
 }

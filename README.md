@@ -4,11 +4,11 @@
 
 1. 큰 정수 연산 라이브러리
 
-- [ x ] 덧셈
-- [ ] 뺄셈
-- [ ] Schoolbook 곱셈
-- [ ] Schoolbook 제곱
-- [ ] Karatsuba 곱셈
+- [x] 덧셈
+- [x] 뺄셈
+- [x] Schoolbook 곱셈
+- [x] Schoolbook 제곱
+- [x] Karatsuba 곱셈
 - [ ] Karatsuba 제곱
 - [ ] 워드 단위 긴 나눗셈
 - [ ] 이진 긴 나눗셈
@@ -18,11 +18,11 @@
 
 2. 검증 함수
 
-- [ ] 덧셈
-- [ ] 뺄셈
-- [ ] Schoolbook 곱셈
-- [ ] Schoolbook 제곱
-- [ ] Karatsuba 곱셈
+- [x] 덧셈
+- [x] 뺄셈
+- [x] Schoolbook 곱셈
+- [x] Schoolbook 제곱
+- [x] Karatsuba 곱셈
 - [ ] Karatsuba 제곱
 - [ ] 워드 단위 긴 나눗셈
 - [ ] 이진 긴 나눗셈
@@ -50,6 +50,7 @@
 | 21.12.21 | Schoolbook 곱셈 구현, 케이스 별 검증 완료                                   | (ADD, SUB 검증 재확인할 것)                                   |
 | 21.12.26 | Schoolbook 제곱 구현, 케이스 별 검증 완료                                   | ~~SQU 함수에서 memory leak 발생 이 부분 다시 확인하기~~, 해결 |
 | 21.12.27 | 카라츄바 곱셈 하는중 (음수 \* 양수), reduction에서 오류뜸 , 덧셈, 뺄셈 수정 | 없음                                                          |
+| 22.01.02 | 카라츄바 입력정수 양수인 케이스 만 완성                                     | 음수 처리 해야함                                              |
 
 ## 유의 사항
 

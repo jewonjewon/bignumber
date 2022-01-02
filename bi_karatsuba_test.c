@@ -265,6 +265,7 @@ void sub_test_KMUL5(IN int TEST)
 void sub_test_KMUL6(int TEST)
 {
     printf("print(\"### Case 6\\n\")\n");
+    printf("cnt = 0\n");
 
     bigint *A = NULL;
     bigint *B = NULL;
@@ -279,10 +280,105 @@ void sub_test_KMUL6(int TEST)
         int num1 = rand() % 0x0f + 1;
         int num2 = rand() % 0x0f + 1;
 
-        // bi_gen_rand(&A, sign1, num1);
-        // bi_gen_rand(&B, sign2, num2);
+        bi_gen_rand(&A, sign1, num1);
+        bi_gen_rand(&B, sign2, num2);
 
-        bi_gen_rand(&A, NEGATIVE, num1);
+        // bi_gen_rand(&A, NON_NEGATIVE, num1);
+        // bi_gen_rand(&B, NON_NEGATIVE, num2);
+
+        printf("a = ");
+        bi_print(A);
+
+        printf("b = ");
+        bi_print(B);
+
+        bi_MULC_karatsuba(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+        printf("if (C != A * B):\n");
+        printf("    print(\"{} : {}\".format(%d, A * B == C)) #%d\n", j, j);
+        printf("    cnt = cnt + 1\n");
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 6_2: wordlen(A) == wordlen(B)
+void sub_test_KMUL6_2(int TEST)
+{
+    printf("print(\"### Case 6_2: wordlen(A) == wordlen(B)\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        int num1 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&B, NON_NEGATIVE, num1);
+
+        printf("a = ");
+        bi_print(A);
+
+        printf("b = ");
+        bi_print(B);
+
+        bi_MULC_karatsuba(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+        printf("if (C != A * B):\n");
+        printf("    print(\"{} : {}\".format(%d, A * B == C)) #%d\n", j, j);
+        printf("    cnt = cnt + 1\n");
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 6_3: wordlen(A) > wordlen(B)
+void sub_test_KMUL6_3(int TEST)
+{
+    printf("print(\"### Case 6_3: wordlen(A) > wordlen(B)\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+    int num1 = 0;
+    int num2 = 0;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        do
+        {
+            num1 = rand() % 0x0f + 1;
+            num2 = rand() % 0x0f + 1;
+        } while (num1 >= num2);
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
         bi_gen_rand(&B, NON_NEGATIVE, num2);
 
         printf("a = ");
@@ -301,8 +397,64 @@ void sub_test_KMUL6(int TEST)
 
         printf("C = ");
         bi_print(C);
-        printf("print(\"{} : {}\".format(%d, A * B == C)) #%d\n", j, j);
+        printf("if (C != A * B):\n");
+        printf("    print(\"{} : {}\".format(%d, A * B == C)) #%d\n", j, j);
+        printf("    cnt = cnt + 1\n");
     }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+// Case 6_4: wordlen(A) < wordlen(B)
+void sub_test_KMUL6_4(int TEST)
+{
+    printf("print(\"### Case 6_4: wordlen(A) < wordlen(B)\\n\")\n");
+    printf("cnt = 0\n");
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    int num1 = 0;
+    int num2 = 0;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        do
+        {
+            num1 = rand() % 0x0f + 2;
+            num2 = rand() % 0x0f + 1;
+        } while (num1 <= num2);
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&B, NON_NEGATIVE, num2);
+
+        printf("%d, %d\n", num1, num2);
+
+        printf("a = ");
+        bi_print(A);
+
+        printf("b = ");
+        bi_print(B);
+
+        bi_MULC_karatsuba(&C, A, B);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
+
+        printf("C = ");
+        bi_print(C);
+        printf("if (C != A * B):\n");
+        printf("    print(\"{} : {}\".format(%d, A * B == C)) #%d\n", j, j);
+        printf("    cnt = cnt + 1\n");
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
     bi_delete(&A);
     bi_delete(&B);
     bi_delete(&C);
@@ -311,15 +463,18 @@ void sub_test_KMUL6(int TEST)
 void test_KMUL(IN int TEST)
 {
     // int Case = 6;
-    int Case = 1;
+    int Case = 10;
     printf("\n\n\n\n\n### MUL TEST ###\n");
 
-    // sub_test_KMUL1_1(TEST / Case);
-    // sub_test_KMUL1_2(TEST / Case);
-    // sub_test_KMUL1_3(TEST / Case);
-    // sub_test_KMUL2(TEST / Case);
-    // sub_test_KMUL3(TEST / Case);
-    // sub_test_KMUL4(TEST / Case);
-    // sub_test_KMUL5(TEST / Case);
+    sub_test_KMUL1_1((TEST / Case) % 5);
+    sub_test_KMUL1_2((TEST / Case) % 5);
+    sub_test_KMUL1_3((TEST / Case) % 5);
+    sub_test_KMUL2((TEST / Case) % 5);
+    sub_test_KMUL3((TEST / Case) % 5);
+    sub_test_KMUL4((TEST / Case) % 5);
+    sub_test_KMUL5((TEST / Case) % 5);
     sub_test_KMUL6(TEST / Case);
+    sub_test_KMUL6_2(TEST / Case);
+    sub_test_KMUL6_3(TEST / Case);
+    sub_test_KMUL6_4(TEST / Case);
 }

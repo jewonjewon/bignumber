@@ -259,7 +259,7 @@ int bi_max(IN int a, IN int b)
 void bi_attach(bigint **C, bigint *A, bigint *B)
 {
     bi_new(C, A->wordlen + B->wordlen);
-
+    // printf("# sign(T1) = %d, sign(T0) = %d\n", A->sign, B->sign);
     for (int j = 0; j < B->wordlen; j++)
         (*C)->a[j] = B->a[j];
 

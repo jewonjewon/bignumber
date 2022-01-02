@@ -52,6 +52,9 @@ void sub_test_KMUL3(IN int TEST);
 void sub_test_KMUL4(IN int TEST);
 void sub_test_KMUL5(IN int TEST);
 void sub_test_KMUL6(IN int TEST);
+void sub_test_KMUL6_2(int TEST);
+void sub_test_KMUL6_3(int TEST);
+void sub_test_KMUL6_4(int TEST);
 
 void test_KMUL(IN int TEST);
 

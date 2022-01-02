@@ -42,16 +42,13 @@ void test_MULC_karastuba(int TEST)
         int num1 = rand() % 0x0f + 1;
         int num2 = rand() % 0x0f + 1;
 
-        bi_gen_rand(&A, NON_NEGATIVE, 12);
-        bi_gen_rand(&B, NON_NEGATIVE, 12);
-
+        bi_gen_rand(&A, NON_NEGATIVE, 20);
+        bi_gen_rand(&B, NON_NEGATIVE, 20);
+        bi_MULC_karatsuba(&C, A, B);
         printf("A = ");
         bi_print(A);
-
         printf("B = ");
         bi_print(B);
-
-        bi_MULC_karatsuba(&C, A, B);
         printf("C = ");
         bi_print(C);
 
@@ -72,7 +69,7 @@ void test_bi_word_reduction(int TEST)
         int sign1 = rand() % 2;
         int num1 = rand() % 0x0f + 1;
 
-        bi_gen_rand(&A, sign1, num1);
+        bi_gen_rand(&A, NEGATIVE, num1);
 
         printf("A = ");
         bi_print(A);
@@ -88,22 +85,22 @@ void test_bi_word_reduction(int TEST)
 
 int main()
 {
-    // srand((unsigned)time(NULL));
+    srand((unsigned)time(NULL));
 
-    // test_ADD(1000);
-    // test_SUB(9000);
-    // test_MULC(100);
-    // test_MUL(10000);
+    // test_ADD(6);
+    // test_SUB(900);
+    // test_MUL(100);
+    // test_SQU(100);
 
     // test_bi_lshift(10000);
     // test_SQU_A(100);
-    // test_SQUC(1);
 
-    // test_SQU(100);
+    // test_SQUC(1);
+    // test_MULC(1);
 
     // test_bi_word_rshift(10);
     // test_MULC_karastuba(100);
-    test_KMUL(1);
+    test_KMUL(5000);
     // test_bi_word_reduction(1);
 
     // // 시간 측정

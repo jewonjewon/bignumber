@@ -8,6 +8,7 @@
 #include <stdbool.h>
 
 #define check printf("#?????\n")
+#define newline printf("\n")
 
 #define IN  // function input
 #define OUT // function output

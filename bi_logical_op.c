@@ -75,29 +75,56 @@ void bi_rshift(bigint **A, int x)
 {
     return;
 }
-
 void bi_word_reduction(OUT bigint **A, IN int r)
 {
     for (int j = r; j < (*A)->wordlen; j++)
         (*A)->a[j] = 0;
 
     bi_refine(*A);
-    printf("너?\n");
-    bi_print(*A);
-    if ((*A)->sign == NEGATIVE)
-    {
-        bigint *T = NULL;
-        bi_new(&T, (*A)->wordlen + 1);
-
-        T->a[(*A)->wordlen] = 1;
-        // Case 4: A < 0 and B > 0, C = B - |A|
-
-        bi_abs(*A);
-        bi_SUB(A, T, *A);
-        bi_flip_sign(*A);
-
-        // bi_ADD(A, *A, T);
-        // printf("너냐?\n");
-        bi_print(*A);
-    }
 }
+
+// void bi_word_reduction(OUT bigint **A, IN int r)
+// {
+//     if (r > (*A)->wordlen)
+//     {
+//         goto minus;
+//         return;
+//     }
+
+//     for (int j = r; j < (*A)->wordlen; j++)
+//         (*A)->a[j] = 0;
+
+//     bi_refine(*A);
+
+// minus:
+//     if ((*A)->sign == NEGATIVE)
+//     {
+//         bigint *T = NULL;
+//         bi_new(&T, (*A)->wordlen + 1);
+
+//         T->a[(*A)->wordlen] = 1;
+//         // Case 4: A < 0 and B > 0, C = B - |A|
+
+//         // printf("1. A = ");
+//         // bi_print(*A);
+
+//         // printf("1. T = ");
+//         // bi_print(T);
+//         // printf("\n");
+
+//         bi_abs(*A);
+//         bi_SUB(A, *A, T);
+//         bi_flip_sign(*A);
+//         // bi_ADD(A, T, *A);
+
+//         // printf("2. A = ");
+//         // bi_print(*A);
+
+//         // printf("2. T = ");
+//         // bi_print(T);
+
+//         // printf("mod A = ");
+//         // bi_print(*A);
+//         // bi_delete(&T);
+//     }
+// }

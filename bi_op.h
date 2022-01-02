@@ -16,6 +16,7 @@ void bi_MUL_AB(OUT bigint **C, IN word A, IN word B);
 void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B);
 void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B);
 
+void bi_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B);
 void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 void bi_SQU_A(OUT bigint **C, word A);

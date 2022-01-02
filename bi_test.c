@@ -19,6 +19,13 @@ void sub_test_ADD1(IN int TEST)
         bi_new(&A, 1);
         bi_gen_rand(&B, sign2, num2);
 
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
+
         bi_ADD(&C, A, B);
 
         printf("A = ");
@@ -51,6 +58,13 @@ void sub_test_ADD2(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
         bi_new(&B, 1);
+
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
 
         bi_ADD(&C, A, B);
 
@@ -87,6 +101,13 @@ void sub_test_ADD3(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
+
         bi_ADD(&C, A, B);
 
         printf("A = ");
@@ -120,6 +141,13 @@ void sub_test_ADD4(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
+
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
 
         bi_ADD(&C, A, B);
 
@@ -216,6 +244,13 @@ void sub_test_ADD6(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign1, num2);
 
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
+
         bi_ADD(&C, A, B);
 
         printf("A = ");
@@ -257,7 +292,12 @@ void sub_test_SUB1(IN int TEST)
     {
         bi_new(&A, 1);
         bi_new(&B, 1);
-
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -289,7 +329,12 @@ void sub_test_SUB2(IN int TEST)
 
         bi_new(&A, 1);
         bi_gen_rand(&B, sign2, num2);
-
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -322,7 +367,12 @@ void sub_test_SUB3(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
         bi_new(&B, 1);
-
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -366,6 +416,12 @@ void sub_test_SUB4(IN int TEST)
             if (bi_cmp(A, B) == 1)
                 break;
         }
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -409,6 +465,12 @@ void sub_test_SUB5(IN int TEST)
             if (bi_cmp(A, B) == -1)
                 break;
         }
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -452,6 +514,12 @@ void sub_test_SUB6(IN int TEST)
             if (bi_cmp(A, B) == 1)
                 break;
         }
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -494,7 +562,12 @@ void sub_test_SUB7(IN int TEST)
             if (bi_cmp(A, B) == -1)
                 break;
         }
-
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -528,7 +601,12 @@ void sub_test_SUB8(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
-
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -563,7 +641,12 @@ void sub_test_SUB9(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
-
+        //
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        //
         bi_SUB(&C, A, B);
 
         printf("A = ");
@@ -924,6 +1007,12 @@ void sub_test_MUL6(int TEST)
 
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
+
+        printf("A = ");
+        bi_print(A);
+
+        printf("B = ");
+        bi_print(B);
 
         bi_MUL(&C, A, B);
 

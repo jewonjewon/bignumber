@@ -478,3 +478,95 @@ void test_KMUL(IN int TEST)
     sub_test_KMUL6_3(TEST / Case);
     sub_test_KMUL6_4(TEST / Case);
 }
+
+// Case 6_1: sign(A) == NEGATIVE
+void sub_test_KSQU6_1(int TEST)
+{
+    printf("print(\"### Case 6_1: sign(A) == NEGATIVE \\n\")\n");
+    printf("cnt = 0\n");
+    bigint *A = NULL;
+    bigint *C = NULL;
+
+    int num1 = 0;
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        num1 = rand() % 0x0f + 2;
+
+        bi_gen_rand(&A, NEGATIVE, num1);
+
+        printf("a = ");
+        bi_print(A);
+
+        bi_SQUC_karatsuba(&C, A);
+        printf("A = ");
+        bi_print(A);
+
+        printf("C = ");
+        bi_print(C);
+        printf("if (C != A ** 2):\n");
+        printf("    print(\"{} : {}\".format(%d, A ** 2 == C)) #%d\n", j, j);
+        printf("    cnt = cnt + 1\n");
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+
+    bi_delete(&A);
+    bi_delete(&C);
+}
+
+// Case 6_2: wordlen(A) < wordlen(B)
+void sub_test_KSQU6_2(int TEST)
+{
+    printf("print(\"### Case 6_2: sign(A) == NON-NEGATIVE \\n\")\n");
+    printf("cnt = 0\n");
+    bigint *A = NULL;
+    bigint *C = NULL;
+
+    int num1 = 0;
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        num1 = rand() % 0x0f + 2;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+
+        printf("a = ");
+        bi_print(A);
+
+        bi_SQUC_karatsuba(&C, A);
+        printf("A = ");
+        bi_print(A);
+
+        printf("C = ");
+        bi_print(C);
+        printf("if (C != A ** 2):\n");
+        printf("    print(\"{} : {}\".format(%d, A ** 2 == C)) #%d\n", j, j);
+        printf("    cnt = cnt + 1\n");
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+
+    bi_delete(&A);
+    bi_delete(&C);
+}
+
+void test_KSQU(IN int TEST)
+{
+    // int Case = 6;
+    int Case = 10;
+    printf("\n\n\n\n\n### SQU TEST ###\n");
+
+    // sub_test_KSQU1_1((TEST / Case) % 5);
+    // sub_test_KSQU1_2((TEST / Case) % 5);
+    // sub_test_KSQU1_3((TEST / Case) % 5);
+    // sub_test_KSQU2((TEST / Case) % 5);
+    // sub_test_KSQU3((TEST / Case) % 5);
+    // sub_test_KSQU4((TEST / Case) % 5);
+    // sub_test_KSQU5((TEST / Case) % 5);
+    // sub_test_KSQU6(TEST / Case);
+    sub_test_KSQU6_1(TEST / Case);
+    sub_test_KSQU6_2(TEST / Case);
+}

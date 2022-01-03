@@ -96,3 +96,65 @@ void bi_SQU(OUT bigint **C, IN bigint *A)
     // Case 2: Otherwise
     bi_SQUC(C, A);
 }
+
+void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
+{
+    int sign_A = A->sign;
+
+    int flag = 5;
+    if (flag >= A->wordlen)
+    {
+        bi_SQUC(C, A);
+        return;
+    }
+
+    int l = (A->wordlen + 1) >> 1;
+
+    bigint *A1 = NULL;
+    bigint *A0 = NULL;
+
+    bi_abs(A);
+    bi_assign(&A1, A);
+    bi_assign(&A0, A);
+
+    bi_word_rshift(&A1, l);
+    bi_word_reduction(&A0, l);
+
+    bigint *T1 = NULL;
+    bigint *T0 = NULL;
+
+    bi_SQUC_karatsuba(&T1, A1);
+    bi_SQUC_karatsuba(&T0, A0);
+
+    bigint *R = NULL;
+    bi_attach(&R, T1, T0);
+
+    bigint *S = NULL;
+    bi_MULC_karatsuba(&S, A1, A0);
+    bi_lshift(&S, l * w + 1);
+    bi_ADDC(C, R, S);
+
+    A->sign = sign_A;
+
+    bi_delete(&A1);
+    bi_delete(&A0);
+    bi_delete(&T1);
+    bi_delete(&T0);
+    bi_delete(&R);
+    bi_delete(&S);
+}
+
+void bi_KSQU(OUT bigint **C, IN bigint *A)
+{
+    // Case: sign(A) == NEGATIVE
+    if (A->sign == NEGATIVE)
+    {
+        bi_SQUC_karatsuba(C, A);
+        A->sign = NEGATIVE;
+        return;
+    }
+
+    // Case: sign(A) == NON-NEGATIVE
+    bi_SQUC_karatsuba(C, A);
+    return;
+}

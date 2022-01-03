@@ -69,6 +69,12 @@ void sub_test_SQU2(IN int TEST);
 
 void test_SQU(IN int TEST);
 
+void sub_test_KSQU6_2(IN int TEST);
+void sub_test_KSQU6_3(IN int TEST);
+void sub_test_KSQU6_4(IN int TEST);
+
+void test_KSQU(IN int TEST);
+
 /* LEFT SHIFT TEST */
 void test_bi_word_lshift(int TEST);
 void test_bi_word_lshift2(int TEST);

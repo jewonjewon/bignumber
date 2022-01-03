@@ -100,7 +100,8 @@ int main()
 
     // test_bi_word_rshift(10);
     // test_MULC_karastuba(100);
-    test_KMUL(5000);
+    // test_KMUL(5000);
+    test_KSQU(100);
     // test_bi_word_reduction(1);
 
     // // 시간 측정

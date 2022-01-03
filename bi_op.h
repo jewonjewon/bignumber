@@ -23,6 +23,9 @@ void bi_SQU_A(OUT bigint **C, word A);
 void bi_SQUC(OUT bigint **C, IN bigint *A);
 void bi_SQU(OUT bigint **C, IN bigint *A);
 
+void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A);
+void bi_KSQU(OUT bigint **C, IN bigint *A);
+
 /* LOGICAL OPERATION */
 void bi_word_lshift(IN OUT bigint **A, IN int x);
 void bi_word_lshift2(OUT bigint **C, IN bigint *A, IN int r);

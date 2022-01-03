@@ -51,6 +51,7 @@
 | 21.12.26 | Schoolbook 제곱 구현, 케이스 별 검증 완료                                   | ~~SQU 함수에서 memory leak 발생 이 부분 다시 확인하기~~, 해결 |
 | 21.12.27 | 카라츄바 곱셈 하는중 (음수 \* 양수), reduction에서 오류뜸 , 덧셈, 뺄셈 수정 | 없음                                                          |
 | 22.01.02 | 카라츄바 입력정수 양수인 케이스 만 완성                                     | 음수 처리 해야함                                              |
+| 22.01.03 | 카라츄바 제곱 완성, 테스트함수 완성                                         | 부족한 부분 주석 채워넣기, 다음 날 교수님께 현 상황 보고      |
 
 ## 유의 사항
 
@@ -64,8 +65,9 @@
 
 논리연산자 함수
 
-- 워드 left shift 함수
-- 워드 bit shift 함수
+- 큰 정수 SHIFT 함수
+  - bit LEFT shift + word LEFT shift 함수 \rightarrow bi_lshift()
+  - word LEFT shift 함수 \Rightarrow bi_word_lshift(bigint 구조체, 워드 단위 시프트 수)
 
 ## bi_op
 

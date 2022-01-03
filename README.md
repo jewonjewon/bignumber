@@ -66,8 +66,8 @@
 논리연산자 함수
 
 - 큰 정수 SHIFT 함수
-  - bit LEFT shift + word LEFT shift 함수 \rightarrow bi_lshift()
-  - word LEFT shift 함수 \Rightarrow bi_word_lshift(bigint 구조체, 워드 단위 시프트 수)
+  - bit LEFT shift + word LEFT shift 함수 $\rightarrow$ bi_lshift()
+  - word LEFT shift 함수 $\Rightarrow$ bi_word_lshift(bigint 구조체, 워드 단위 시프트 수)
 
 ## bi_op
 

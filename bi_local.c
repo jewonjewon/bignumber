@@ -8,7 +8,6 @@ void bi_delete(IN OUT bigint **A)
 #ifdef ZEROLIZE
     // 입력 배열 초기화
     bi_init(A);
-    // arr_init((*A)->a, (*A)->wordlen);
 #endif
 
     free((*A)->a);
@@ -152,6 +151,15 @@ int bi_is_zero(IN bigint *A)
     return true;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_is_one(*A) → sign(A) = NON-NEGATIVE
+ * bigint형 구조체 A와 B를 입력받아 A와 B의 대소 비교를 진행하는 함수
+ *  - If A < 0 or A[0] ≠ 1, then return false (A is NOT 1)
+ *  - Else If {A[wordlen(A)], ..., A[1]} ≠ 0, then return false (A is NOT 1)
+ *  - Else, return true (A = 1)
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_is_one(*A)
 int bi_is_one(IN bigint *A)
 {
     // Case: A < 0 or A[0] != 1
@@ -164,6 +172,15 @@ int bi_is_one(IN bigint *A)
     return true;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_is_minus_one(*A) → sign(A) = NON-NEGATIVE
+ * bigint형 구조체 A와 B를 입력받아 A와 B의 대소 비교를 진행하는 함수
+ *  - If A > 0 or A[0] ≠ 1, then return false (A is NOT -1)
+ *  - Else If {A[wordlen(A)], ..., A[1]} ≠ 0, then return false (A is NOT -1)
+ *  - Else, return true (A = -1)
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_is_minus_one(*A)
 int bi_is_minus_one(IN bigint *A)
 {
     // Case: A < 0 or A[0] != 1
@@ -176,6 +193,15 @@ int bi_is_minus_one(IN bigint *A)
     return true;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_compare_abs(*A) → sign(A) = NON-NEGATIVE
+ * bigint형 구조체 A와 B를 입력받아 A와 B의 대소 비교를 진행하는 함수
+ *  - If A > B, then return 1(true)
+ *  - If A < B, then return -1
+ *  - If A = B, then return 0
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_cmp(*A, *B)
 // A>B = 1, A<B = -1, A=B = 0
 int bi_compare_abs(IN bigint *A, IN bigint *B)
 {
@@ -202,12 +228,20 @@ int bi_compare_abs(IN bigint *A, IN bigint *B)
     return 0;
 }
 
-// A > B = 1, A < B = -1, A = B = 0
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_cmp(*A) → sign(A) = NON-NEGATIVE
+ * bigint형 구조체 A와 B를 입력받아 A와 B의 대소 비교를 진행하는 함수
+ *  - If A > B, then return 1(true)
+ *  - If A < B, then return -1
+ *  - If A = B, then return 0
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_cmp(*A, *B)
 int bi_cmp(IN bigint *A, IN bigint *B)
 {
     // Case: A > B
     if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
-        return true;
+        return 1;
     // Case: A < B
     if (A->sign == NEGATIVE and B->sign == NON_NEGATIVE)
         return -1;
@@ -220,7 +254,13 @@ int bi_cmp(IN bigint *A, IN bigint *B)
         return ret * (-1);
 }
 
-// |A| ← A
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_abs(*A) → sign(A) = NON-NEGATIVE
+ * bigint형 구조체 A를 입력받아 A의 부호에 절댓값을 취해주는 함수
+ *  - sign(A) = NON-NEGATIVE
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_abs(a, b) → abs(a, b)
 void bi_abs(IN bigint *A)
 {
     A->sign = NON_NEGATIVE;
@@ -236,6 +276,12 @@ void bi_flip_sign(IN bigint *A)
         A->sign = NON_NEGATIVE;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_min(a, b) → min(a, b)
+ * 정수 a와 b를 입력받아 최대값(min(a, b))을 출력하는 함수
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_min(a, b) → min(a, b)
 int bi_min(IN int a, IN int b)
 {
     // Case 1: a < b, then return a.
@@ -246,6 +292,12 @@ int bi_min(IN int a, IN int b)
     return b;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_max(a, b) → max(a, b)
+ * 정수 a와 b를 입력받아 최대값(max(a, b))을 출력하는 함수
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_max(a, b) → max(a, b)
 int bi_max(IN int a, IN int b)
 {
     // Case 1: a ≥ b, then return a.
@@ -255,11 +307,25 @@ int bi_max(IN int a, IN int b)
     // Case 2: a < b, then return b.
     return b;
 }
-// A와 B를 연접하는 함수 -> C = A || B
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_attach(**C, *A, *B) → C = A || B
+ * bigint 배열 A와 B를 입력받아 A와 B를 연접하는 함수
+ *  - wordlen(C) ⬅ wordlen(A) + wordlen(B)
+ *  - sign(C) ⬅ sign(A)
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_attach(**C, *A, *B) → C = A || B
 void bi_attach(bigint **C, bigint *A, bigint *B)
 {
+
+    // wordlen(C) ⬅ wordlen(A) + wordlen(B)
     bi_new(C, A->wordlen + B->wordlen);
-    // printf("# sign(T1) = %d, sign(T0) = %d\n", A->sign, B->sign);
+
+    // sign(C) ⬅ sign(A)
+    if (A->sign == NEGATIVE)
+        (*C)->sign = A->sign;
+
     for (int j = 0; j < B->wordlen; j++)
         (*C)->a[j] = B->a[j];
 

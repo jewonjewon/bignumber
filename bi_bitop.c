@@ -1,4 +1,4 @@
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
 
 void bi_word_lshift(OUT bigint **A, IN int x)

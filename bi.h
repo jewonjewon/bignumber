@@ -1,11 +1,13 @@
-#ifndef __BI_LOCAL_H__
-#define __BI_LOCAL_H__
+#ifndef __BI_H__
+#define __BI_H__
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <stdbool.h>
+
+#define w 32 // w: 워드의 크기 지정
 
 #define check printf("#?????\n")
 #define newline printf("\n")
@@ -22,19 +24,20 @@
 
 #define ZEROLIZE
 
-#define w 32 // w: 워드의 크기 지정
-
 #if w == 64 // 64비트
 typedef unsigned long long word;
 #define MASK (0xffffffffffffffff)
+#define HALF_MASK (0xffffffff) // 32비트 마스크
 #define W (0xffffffffffffffff)
 #elif w == 32 // 32비트
 typedef unsigned int word;
 #define MASK (0xffffffff)
+#define HALF_MASK (0xffff) // 16비트 마스크
 #define W (0xffffffff)
 #elif w == 8 // 8비트
 typedef unsigned char word;
 #define MASK (0xff)
+#define HALF_MASK (0xf) // 4비트 마스크
 #define W (0xff)
 #endif
 
@@ -75,6 +78,6 @@ void bi_flip_sign(IN bigint *A);
 int bi_min(IN int a, IN int b);
 int bi_max(IN int a, IN int b);
 
-void bi_attach(bigint **C, bigint *A, bigint *B);
+void bi_concatenation(bigint **C, bigint *A, bigint *B);
 
 #endif

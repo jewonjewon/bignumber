@@ -1,4 +1,4 @@
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
 
 void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B);
@@ -59,8 +59,21 @@ void bi_ADDC(OUT bigint **C, IN bigint *A, IN bigint *B)
  * Case 별로 덧셈 연산 수행
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_ADD_0B
-// bi_ADD_A0
+//     // Case 1: A = 0, C = B
+//     if (bi_is_zero(A) == true)
+//     {
+//         if (*C == NULL)
+//         {
+//             bi_assign(C, B);
+//             return;
+//         }
+
+//         if (bi_cmp(*C, B) == 0)
+//             return;
+
+//         bi_assign(C, B);
+//         return;
+//     }
 
 //  bi_ADD(출력: C = A + B, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
@@ -111,7 +124,8 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
     {
         bi_abs(A);
         bi_SUB(C, B, A);
-        A->sign = NEGATIVE;
+        // A->sign = NEGATIVE;
+
         return;
     }
 
@@ -252,9 +266,11 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
     {
         bi_abs(A);
         bi_abs(B);
+
         bi_SUBC(C, B, A);
-        bi_flip_sign(A);
-        bi_flip_sign(B);
+
+        A->sign = NEGATIVE;
+        B->sign = NEGATIVE;
         return;
     }
 
@@ -263,10 +279,13 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
     {
         bi_abs(A);
         bi_abs(B);
+
         bi_SUBC(C, A, B);
+
+        A->sign = NEGATIVE;
+        B->sign = NEGATIVE;
         (*C)->sign = NEGATIVE;
-        bi_flip_sign(A);
-        bi_flip_sign(B);
+
         return;
     }
 
@@ -276,12 +295,11 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
         printf("#수상\n");
         bi_abs(B);
         bi_ADD(C, A, B);
-        bi_flip_sign(B);
+        B->sign = NEGATIVE;
         return;
     }
     else
     {
-        printf("\n");
         bi_abs(A);
         bi_ADD(C, A, B);
         bi_flip_sign(A);

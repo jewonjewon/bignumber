@@ -1,4 +1,4 @@
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -14,7 +14,8 @@ void bi_SQU_A(OUT bigint **C, word A)
 
     // A1 = A의 상위 w/2비트, A0 = A의 하위 w/2비트
     word A1 = A >> (w / 2);
-    word A0 = (A << (w / 2)) >> (w / 2);
+    // word A0 = (A << (w / 2)) >> (w / 2);
+    word A0 = A & HALF_MASK;
 
     word C1 = A1 * A1;
     word C0 = A0 * A0;
@@ -127,7 +128,7 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
     bi_SQUC_karatsuba(&T0, A0);
 
     bigint *R = NULL;
-    bi_attach(&R, T1, T0);
+    bi_concatenation(&R, T1, T0);
 
     bigint *S = NULL;
     bi_MULC_karatsuba(&S, A1, A0);

@@ -1,4 +1,4 @@
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -17,10 +17,10 @@ void bi_MUL_AB(OUT bigint **C, IN word A, IN word B)
     // A0, B0 = A, B의 하위 w/2비트
 
     word A1 = A >> (w / 2);
-    word A0 = A << (w / 2) >> (w / 2);
+    word A0 = A & HALF_MASK;
 
     word B1 = B >> (w / 2);
-    word B0 = B << (w / 2) >> (w / 2);
+    word B0 = B & HALF_MASK;
 
     word T1 = A1 * B0;
     word T0 = A0 * B1;
@@ -180,7 +180,11 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_MULC_karatsuba(&T0, A0, B0);
 
     bigint *R = NULL;
-    bi_attach(&R, T1, T0);
+
+    bi_assign(&R, T1);
+    bi_word_lshift(&R, 2 * l);
+    bi_ADD(&R, R, T0);
+    // bi_concatenation(&R, T1, T0);
 
     bigint *S1 = NULL;
     bigint *S0 = NULL;
@@ -256,6 +260,7 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     // newline;
 
     bi_assign(C, R);
+
     bi_delete(&A1);
     bi_delete(&A0);
     bi_delete(&B1);
@@ -268,4 +273,54 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_delete(&S0);
 
     return;
+}
+
+// bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B)
+{
+    // Case 1: A = 0 or B = 0 then C = 0
+    if (bi_is_zero(A) == true or bi_is_zero(B) == true)
+    {
+        bi_set_zero(C);
+        return;
+    }
+
+    // Case 2: A = 1 then C = 1 * B
+    if (bi_is_one(A) == true)
+    {
+        bi_assign(C, B);
+        return;
+    }
+    // Case 3: A = -1 then C = -(1) * B
+    else if (bi_is_minus_one(A) == true)
+    {
+        bi_assign(C, B);
+        (*C)->sign = A->sign ^ B->sign;
+        return;
+    }
+    // Case 4: B = 1 then C = 1 * A
+    if (bi_is_one(B) == true)
+    {
+        bi_assign(C, A);
+        return;
+    }
+    // Case 5: B = -1 then C = -(1) * A
+    else if (bi_is_minus_one(B) == true)
+    {
+        bi_assign(C, A);
+        (*C)->sign = A->sign ^ B->sign;
+        return;
+    }
+    // Case 6: Otherwise
+    int t1 = A->sign;
+    int t0 = B->sign;
+
+    bi_abs(A);
+    bi_abs(B);
+
+    bi_MULC_karatsuba(C, A, B);
+
+    A->sign = t1;
+    B->sign = t0;
+    (*C)->sign = t1 ^ t0;
 }

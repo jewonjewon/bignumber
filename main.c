@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
 #include "bi_test.h"
 
@@ -147,9 +147,13 @@ int main()
     srand((unsigned)time(NULL));
 
     // test_ADD(1000);
-    // test_SUB(900);
+    // test_SUB(1000);
     // test_MUL(1000);
     // test_SQU(1000);
+    test_KMUL(1000);
+    // test_MUL_AB(10);
+
+    // test_KSQU(1000);
 
     // test_bi_lshift(1000);
     // test_bi_rshift(1000);
@@ -160,8 +164,6 @@ int main()
 
     // test_bi_word_rshift(10);
     // test_MULC_karastuba(100);
-    // test_KMUL(5000);
-    // test_KSQU(1000);
     // test_bi_word_reduction(1);
 
     // // 시간 측정
@@ -195,41 +197,41 @@ int main()
 
     // printf("%x\n", Q);
 
-    // TEST
-    bigint *A = NULL;
-    bigint *B = NULL;
+    // TEST div 용
+    // bigint *A = NULL;
+    // bigint *B = NULL;
 
-    bigint *Q = NULL;
-    bigint *R = NULL;
+    // bigint *Q = NULL;
+    // bigint *R = NULL;
 
-    int num1 = rand() % 0x0f + 2;
-    int num2 = rand() % 0x0f + 1;
+    // int num1 = rand() % 0x07 + 1;
+    // int num2 = rand() % 0x05 + 1;
 
-    bi_gen_rand(&A, NON_NEGATIVE, num1);
-    bi_gen_rand(&B, NON_NEGATIVE, num2);
+    // bi_gen_rand(&A, NON_NEGATIVE, num1);
+    // bi_gen_rand(&B, NON_NEGATIVE, num2);
 
-    printf("A = ");
-    bi_print(A);
-    printf("B = ");
-    bi_print(B);
+    // printf("A = ");
+    // bi_print(A);
+    // printf("B = ");
+    // bi_print(B);
 
-    bi_DIV(&Q, &R, A, B);
-    // bi_DIVC(&Q, &R, A, B);
-    // bi_DIVCC(&Q, &R, A, B);
+    // bi_DIV(&Q, &R, A, B);
+    // // bi_DIVC(&Q, &R, A, B);
+    // // bi_DIVCC(&Q, &R, A, B);
 
-    printf("Q = ");
-    bi_print(Q);
-    printf("R = ");
-    bi_print(R);
-    printf("print(A//B ==Q)\n");
-    printf("print(hex(A//B))\n");
-    printf("print(A%%B ==R)\n");
-    printf("print(hex(A%%B))\n");
+    // printf("Q = ");
+    // bi_print(Q);
+    // printf("R = ");
+    // bi_print(R);
+    // printf("print(A//B ==Q)\n");
+    // printf("print(hex(A//B))\n");
+    // printf("print(A%%B ==R)\n");
+    // printf("print(hex(A%%B))\n");
 
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&Q);
-    bi_delete(&R);
+    // bi_delete(&A);
+    // bi_delete(&B);
+    // bi_delete(&Q);
+    // bi_delete(&R);
 
     // End TEST
     return 0;

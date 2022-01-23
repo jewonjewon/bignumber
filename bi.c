@@ -1,4 +1,4 @@
-#include "bi_local.h"
+#include "bi.h"
 
 void bi_delete(IN OUT bigint **A)
 {
@@ -85,19 +85,38 @@ void bi_print(bigint *A)
         printf("-");
 
 #if (w == 64)
-    printf("%#llx", A->a[A->wordlen - 1]);
-    for (int j = A->wordlen - 2; j >= 0; j--)
-        printf("%016llx", A->a[j]);
-
+    // Case: 워드길이가 1인 경우
+    if (A->wordlen == 1)
+        printf("%#llx", A->a[A->wordlen - 1]);
+    // Case: 그 외
+    else
+    {
+        printf("%#llx", A->a[A->wordlen - 1]);
+        for (int j = A->wordlen - 2; j >= 0; j--)
+            printf("%016llx", A->a[j]);
+    }
 #elif (w == 32)
-    printf("%#x", A->a[A->wordlen - 1]);
-    for (int j = A->wordlen - 2; j >= 0; j--)
-        printf("%08x", A->a[j]);
-
+    // Case: 워드길이가 1인 경우
+    if (A->wordlen == 1)
+        printf("%#x", A->a[A->wordlen - 1]);
+    // Case: 그 외
+    else
+    {
+        printf("%#x", A->a[A->wordlen - 1]);
+        for (int j = A->wordlen - 2; j >= 0; j--)
+            printf("%08x", A->a[j]);
+    }
 #elif (w == 8)
-    printf("%#x", A->a[A->wordlen - 1]);
-    for (int j = A->wordlen - 2; j >= 0; j--)
-        printf("%02x", A->a[j]);
+    // Case: 워드길이가 1인 경우
+    if (A->wordlen == 1)
+        printf("%#x", A->a[A->wordlen - 1]);
+    // Case: 그 외
+    else
+    {
+        printf("%#x", A->a[A->wordlen - 1]);
+        for (int j = A->wordlen - 2; j >= 0; j--)
+            printf("%02x", A->a[j]);
+    }
 #endif
     printf("\n");
 }
@@ -309,14 +328,14 @@ int bi_max(IN int a, IN int b)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_attach(**C, *A, *B) → C = A || B
+ * bi_concatenation(**C, *A, *B) → C = A || B
  * bigint 배열 A와 B를 입력받아 A와 B를 연접하는 함수
  *  - wordlen(C) ⬅ wordlen(A) + wordlen(B)
  *  - sign(C) ⬅ sign(A)
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_attach(**C, *A, *B) → C = A || B
-void bi_attach(bigint **C, bigint *A, bigint *B)
+// bi_concatenation(**C, *A, *B) → C = A || B
+void bi_concatenation(bigint **C, bigint *A, bigint *B)
 {
 
     // wordlen(C) ⬅ wordlen(A) + wordlen(B)

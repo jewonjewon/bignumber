@@ -1,15 +1,5 @@
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
-
-// #define bitlen(a)        \
-//     {                    \
-//         int cnt = 0;     \
-//         do               \
-//         {                \
-//             a = a >> 1;  \
-//             cnt++        \
-//         } while (a > 0); \
-//     }
 
 int bitlen(word a)
 {
@@ -24,52 +14,6 @@ int bitlen(word a)
     return cnt;
 }
 
-// // bi_MULC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
-// void bi_MULC(OUT bigint **C, IN bigint *A, IN word B)
-// {
-//     bi_new(C, A->wordlen + 1);
-//     bigint *T = NULL;
-
-//     for (int j = 0; j < A->wordlen; j++)
-//         for (int i = 0; i < B->wordlen; i++)
-//         {
-//             // bi_resize 함수 안쓰고 ADD 함수로 대체하는 방법도 있음 어느것을 쓸지 고민 중
-//             bi_resize(C, A->wordlen + 1);
-//             bi_new(&T, 2);
-
-//             bi_MUL_AB(&T, A->a[j], B);
-//             bi_MUL_AB(&T, A->a[j], B->a[i]);
-//             // printf("1. T = ");
-//             // bi_print(T);
-
-//             bi_word_lshift(&T, j);
-//             bi_word_lshift(&T, i + j);
-//             // printf("2. T = ");
-//             // bi_print(T);
-
-//             bi_ADDC(C, *C, T);
-//             bi_ADDC(C, *C, T);
-//             // printf("3. C = ");
-//             // bi_print(*C);
-//             printf("j = %d i = %d\n", j, i);
-//             printf("wordlen(B) = %d\n", B->wordlen);
-//         }
-
-//     bi_delete(&T);
-// }
-
-// void bi_bigintA_mul_wordB(bigint **C, bigint *A, word B)
-// {
-//     A->a[0] = A->a[0] * B;
-//     bigint *T = NULL;
-//     bi_MUL_AB(&T, A->a[0], B);
-//     (*C)->a[0] = T->a[0];
-//     bi_ADD_ABc()
-//         bi_ADDC(C, A, )(*C)
-//             ->a[1] = T->a[1];
-// }
-// 음수 = 1, 음이 아닌 정수 = 0
-
 int bi_is_negative(bigint *A)
 {
     if (A->sign == NEGATIVE)
@@ -82,14 +26,12 @@ word bi_long_div_2word(IN bigint *A, IN word B)
 {
     printf("\n# bi_long_div_2word\n");
     newline;
+
     if (A->a[1] >= B)
     {
-        printf("error\n");
-        return 0;
+        printf("#조건 성립 x\n");
     }
-    printf("AA = ");
-    bi_print(A);
-    newline;
+
     word Q = 0;
     word R = A->a[1];
     for (int j = w - 1; j >= 0; j--)
@@ -121,19 +63,23 @@ void bi_DIVCC(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 {
     printf("\n# bi_DIVCC\n");
     newline;
-    printf("if B_(m-1) ≥ 2^(w-1)?\n");
-    printf("%x >= %x?\n", B->a[B->wordlen - 1], pow(w - 1));
-    printf("%d\n", B->a[B->wordlen - 1] >= pow(w - 1));
+    // printf("if B_(m-1) ≥ 2^(w-1)?\n");
+    // printf("%x >= %x?\n", B->a[B->wordlen - 1], pow(w - 1));
+    if (B->a[B->wordlen - 1] >= pow(w - 1))
+        printf("true!\n");
+    else
+        printf("false\n");
 
     int n = A->wordlen;
     int m = B->wordlen;
-    printf("# wordlen(A) = %d, wordlen(B) = %d\n", n, m);
 
-    printf("A = ");
-    bi_print(A);
+    // printf("# wordlen(A) = %d, wordlen(B) = %d\n", n, m);
 
-    printf("B = ");
-    bi_print(B);
+    // printf("A = ");
+    // bi_print(A);
+
+    // printf("B = ");
+    // bi_print(B);
 
     word q;
 
@@ -147,7 +93,6 @@ void bi_DIVCC(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
             q = W;
             // printf("1. q = %x\n", q);
         }
-
         else
         {
             bigint *T = NULL;
@@ -170,15 +115,19 @@ void bi_DIVCC(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 
     bi_MULC(&T, B, *Q);
     bi_SUB(R, A, T);
+    int cnt = 0;
 
-    while (bi_is_negative(*R))
+    while ((*R)->sign == NEGATIVE)
     {
         (*Q)->a[0]--;
         bi_ADDC(R, *R, B);
-        printf("# R' = ");
-        bi_print(*R);
+        // printf("# R' = ");
+        // bi_print(*R);
         // check;
+        cnt++;
     }
+
+    printf("DIVCC while문 반복횟수: %d\n", cnt);
 
     bi_delete(&T);
 }
@@ -236,6 +185,9 @@ void bi_DIVC(OUT word *word_Q, OUT bigint **R, IN bigint *A, IN bigint *B)
         printf("# bi_DIVC if 문\n");
         *word_Q = 0;
         bi_assign(R, A);
+
+        printf("R = ");
+        bi_print(*R);
         return;
     }
 
@@ -245,31 +197,42 @@ void bi_DIVC(OUT word *word_Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     bigint *BB = NULL;
 
     int k = 0;
-
+    // printf("!!!! B = ");
+    // bi_print(B);
     int bitlen_b = bitlen(B->a[B->wordlen - 1]);
 
-    // printf("#B_(m-1) = %#x\n", B->a[B->wordlen - 1]);
-    // printf("#bitlen_b = %d\n", bitlen_b);
-
     k = w - bitlen_b;
-    printf("k = %d\n", k);
+    // printf("k = %d\n", k);
 
     // printf("#k = %d\n", k);
 
     bi_assign(&AA, A);
     bi_assign(&BB, B);
-    bi_lshift(&AA, pow(k));
-    bi_lshift(&BB, pow(k));
 
-    printf("AA = ");
-    bi_print(AA);
-    printf("BB = ");
-    bi_print(BB);
+    // printf("AA = ");
+    // bi_print(AA);
+    // printf("BB = ");
+    // bi_print(BB);
+
+    if (k >= 1)
+    {
+        bi_lshift(&AA, pow(k - 1));
+        bi_lshift(&BB, pow(k - 1));
+    }
+
+    // printf("AA = ");
+    // bi_print(AA);
+    // printf("BB = ");
+    // bi_print(BB);
 
     bi_DIVCC(&QQ, &RR, AA, BB);
 
     // bi_assign(Q, QQ);
     *word_Q = QQ->a[0];
+
+    if (k >= 1)
+        bi_rshift(&RR, pow(k));
+
     bi_rshift(&RR, pow(k));
     bi_assign(R, RR);
 
@@ -302,20 +265,25 @@ void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
         printf("bi_DIV for-loop\n");
         bi_word_lshift(&T, 1);
         T->a[0] = A->a[j];
+        bi_refine(T);
 
-        printf("R = ");
+        printf("1. R = ");
         bi_print(T);
+
+        printf("wordlen(R) = %d\n", T->wordlen);
 
         bi_DIVC(&word_Q, R, T, B);
+        if (bi_cmp(*R, B) == -1)
+            printf("R < B\n");
+        else
+            printf("R ≥ B\n");
 
         printf("R = ");
         bi_print(T);
 
-        if (j == n - 3)
-            return;
         (*Q)->a[j] = word_Q;
         word_Q = 0;
     }
-
+    bi_refine(*Q);
     bi_delete(&T);
 }

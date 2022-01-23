@@ -1,7 +1,7 @@
 #ifndef __BI_TEST_H__
 #define __BI_TEST_H__
 
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
 #include "bi_test.h"
 
@@ -52,17 +52,18 @@ void sub_test_MUL6(bigint **C, bigint *A, bigint *B, IN int TEST);
 void test_MUL(IN int TEST);
 
 /* karatsuba MUL Accuracy Verification */
-void sub_test_KMUL1_1(IN int TEST);
-void sub_test_KMUL1_2(IN int TEST);
-void sub_test_KMUL1_3(IN int TEST);
-void sub_test_KMUL2(IN int TEST);
-void sub_test_KMUL3(IN int TEST);
-void sub_test_KMUL4(IN int TEST);
-void sub_test_KMUL5(IN int TEST);
-void sub_test_KMUL6(IN int TEST);
-void sub_test_KMUL6_2(int TEST);
-void sub_test_KMUL6_3(int TEST);
-void sub_test_KMUL6_4(int TEST);
+void sub_test_KMUL1_1(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL1_2(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL1_3(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL2(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL3(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL4(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL5(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL6_1(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL6_2(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL6_3(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL6_4(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_KMUL6_5(bigint **C, bigint *A, bigint *B, IN int TEST);
 
 void test_KMUL(IN int TEST);
 

@@ -1,7 +1,7 @@
 #ifndef __BI_OP_H__
 #define __BI_OP_H__
 
-#include "bi_local.h"
+#include "bi.h"
 
 #define pow(a) ((1) << (a))
 #define get_j_bit(a, j) ((a >> j) & 0x1)

@@ -1,4 +1,4 @@
-#include "bi_local.h"
+#include "bi.h"
 #include "bi_op.h"
 #include "bi_test.h"
 
@@ -223,7 +223,7 @@ void test_ADD(IN int TEST)
 
     int Case = 6;
 
-    printf("\n\n\n\n\n### ADD TEST ###\n");
+    printf("print(\"### ADD TEST ###\")\n");
 
     sub_test_ADD1(&C, A, B, TEST / Case);
     sub_test_ADD2(&C, A, B, TEST / Case);
@@ -463,7 +463,7 @@ void test_SUB(IN int TEST)
 
     int Case = 9;
 
-    printf("\n\n\n\n\n### SUB TEST ###\n");
+    printf("print(\"### SUB TEST ###\")\n");
 
     sub_test_SUB1(&C, A, B, TEST / Case);
     sub_test_SUB2(&C, A, B, TEST / Case);
@@ -504,6 +504,7 @@ void test_MUL_AB(int TEST)
         bi_print(C);
 
         printf("print(A * B == C) #%d\n", j);
+        printf("print(hex(A*B))\n");
     }
     bi_delete(&A);
     bi_delete(&B);
@@ -734,7 +735,7 @@ void test_MUL(IN int TEST)
 
     int Case = 6;
 
-    printf("\n\n\n\n\n### MUL TEST ###\n");
+    printf("print(\"### MUL TEST ###\")\n");
 
     sub_test_MUL1_1(&C, A, B, TEST / Case);
     sub_test_MUL1_2(&C, A, B, TEST / Case);
@@ -871,7 +872,7 @@ void sub_test_SQU2(bigint **C, bigint *A, IN int TEST)
 void test_SQU(IN int TEST)
 {
     int Case = 4;
-    printf("\n\n\n\n\n### SQU TEST ###\n");
+    printf("print(\"### SQU TEST ###\")\n");
 
     bigint *A = NULL;
     bigint *C = NULL;

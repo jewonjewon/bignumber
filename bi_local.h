@@ -22,17 +22,20 @@
 
 #define ZEROLIZE
 
-#define w 64 // w: 워드의 크기 지정
+#define w 32 // w: 워드의 크기 지정
 
 #if w == 64 // 64비트
 typedef unsigned long long word;
 #define MASK (0xffffffffffffffff)
+#define W (0xffffffffffffffff)
 #elif w == 32 // 32비트
 typedef unsigned int word;
 #define MASK (0xffffffff)
+#define W (0xffffffff)
 #elif w == 8 // 8비트
 typedef unsigned char word;
 #define MASK (0xff)
+#define W (0xff)
 #endif
 
 // bigint 구조체 설정(sign= 부호, wordlen= 워드길이, a=배열)

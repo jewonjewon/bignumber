@@ -2,14 +2,67 @@
 #include "bi_op.h"
 #include "bi_test.h"
 
-// Case 1: A = 0, C = B
-void sub_test_ADD1(IN int TEST)
+void sage_show_add(bigint **C, bigint *A, bigint *B, int j)
 {
-    printf("\n### Case 1: A = 0, C = B ###\n");
+    printf("A = ");
+    bi_print(A);
+    printf("B = ");
+    bi_print(B);
+    printf("C = ");
+    bi_print(*C);
+    printf("if (C != A + B):\n");
+    printf("    print(\"{} : {}\".format(%d, A + B == C)) #%d\n", j, j);
+    printf("    cnt = cnt + 1\n");
+}
 
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+void sage_show_sub(bigint **C, bigint *A, bigint *B, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("B = ");
+    bi_print(B);
+    printf("C = ");
+    bi_print(*C);
+    printf("if (C != A - B):\n");
+    printf("    print(\"{} : {}\".format(%d, A - B == C)) #%d\n", j, j);
+    printf("    cnt = cnt + 1\n");
+}
+
+void sage_show_mul(bigint **C, bigint *A, bigint *B, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("B = ");
+    bi_print(B);
+    printf("C = ");
+    bi_print(*C);
+    printf("if (C != A * B):\n");
+    printf("    print(\"{} : {}\".format(%d, A * B == C)) #%d\n", j, j);
+    printf("    cnt = cnt + 1\n");
+}
+
+void sage_show_squ(bigint **C, bigint *A, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("C = ");
+    bi_print(*C);
+    printf("if (C != A ** 2):\n");
+    printf("    print(\"{} : {}\".format(%d, A ** 2 == C)) #%d\n", j, j);
+    printf("    cnt = cnt + 1\n");
+}
+
+/////
+/////
+/////
+/////
+/////
+
+// Case 1: A = 0, C = B
+void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST)
+{
+    printf("print(\"### Case 1: A = 0, C = B ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -19,37 +72,18 @@ void sub_test_ADD1(IN int TEST)
         bi_new(&A, 1);
         bi_gen_rand(&B, sign2, num2);
 
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-
-        bi_ADD(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        printf("C = ");
-        bi_print(C);
-        printf("print(A + B == C) #%d\n", j);
+        bi_ADD(C, A, B);
+        sage_show_add(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 2: B = 0, C = A
-void sub_test_ADD2(IN int TEST)
+void sub_test_ADD2(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("\n### Case 2: B = 0, C = A ###\n");
-
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 2: B = 0, C = A ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -59,37 +93,19 @@ void sub_test_ADD2(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_new(&B, 1);
 
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
+        bi_ADD(C, A, B);
 
-        bi_ADD(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        printf("C = ");
-        bi_print(C);
-        printf("print(A + B == C) #%d\n", j);
+        sage_show_add(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 3: A > 0 and B < 0, C = A - |B|
-void sub_test_ADD3(IN int TEST)
+void sub_test_ADD3(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("\n### Case 3: A > 0 and B < 0, C = A - |B| ###\n");
-
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 3: A > 0 and B < 0, C = A - |B| ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -101,36 +117,19 @@ void sub_test_ADD3(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
+        bi_ADD(C, A, B);
 
-        bi_ADD(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        printf("C = ");
-        bi_print(C);
-        printf("print(A + B == C) #%d\n", j);
+        sage_show_add(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
-// Case 4: A < 0 and B > 0, C = B - |A|
-void sub_test_ADD4(IN int TEST)
-{
-    printf("\n### Case 4: A < 0 and B > 0, C = B - |A| ###\n");
 
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+// Case 4: A < 0 and B > 0, C = B - |A|
+void sub_test_ADD4(bigint **C, bigint *A, bigint *B, IN int TEST)
+{
+    printf("print(\"### Case 4: A < 0 and B > 0, C = B - |A| ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -142,36 +141,18 @@ void sub_test_ADD4(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
+        bi_ADD(C, A, B);
 
-        bi_ADD(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        printf("C = ");
-        bi_print(C);
-        printf("print(A + B == C) #%d\n", j);
+        sage_show_add(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 // Case 5: wordlen(A) ≥ wordlen(B)
-void sub_test_ADD5(IN int TEST)
+void sub_test_ADD5(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("\n### Case 5: wordlen(A) ≥ wordlen(B) ###\n");
-
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 5: wordlen(A) ≥ wordlen(B) ###\\n\")\n");
+    printf("cnt = 0\n");
 
     int num1 = 0;
     int num2 = 0;
@@ -193,37 +174,19 @@ void sub_test_ADD5(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign1, num2);
 
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
+        bi_ADD(C, A, B);
 
-        bi_ADD(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        printf("C = ");
-        bi_print(C);
-        printf("print(A + B == C) #%d\n", j);
+        sage_show_add(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 6: wordlen(A) < wordlen(B)
-void sub_test_ADD6(IN int TEST)
+void sub_test_ADD6(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("\n### Case 6: wordlen(A) < wordlen(B) ###\n");
-
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 6: wordlen(A) < wordlen(B) ###\\n\")\n");
+    printf("cnt = 0\n");
 
     int num1 = 0;
     int num2 = 0;
@@ -244,84 +207,59 @@ void sub_test_ADD6(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign1, num2);
 
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
+        bi_ADD(C, A, B);
 
-        bi_ADD(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        printf("C = ");
-        bi_print(C);
-        printf("print(A + B == C) #%d\n", j);
+        sage_show_add(C, A, B, j);
     }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+}
+
+void test_ADD(IN int TEST)
+{
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    int Case = 6;
+
+    printf("\n\n\n\n\n### ADD TEST ###\n");
+
+    sub_test_ADD1(&C, A, B, TEST / Case);
+    sub_test_ADD2(&C, A, B, TEST / Case);
+    sub_test_ADD3(&C, A, B, TEST / Case);
+    sub_test_ADD4(&C, A, B, TEST / Case);
+    sub_test_ADD5(&C, A, B, TEST / Case);
+    sub_test_ADD6(&C, A, B, TEST / Case);
 
     bi_delete(&A);
     bi_delete(&B);
     bi_delete(&C);
 }
 
-void test_ADD(IN int TEST)
-{
-    int Case = 6;
-
-    printf("\n\n\n\n\n### ADD TEST ###\n");
-
-    sub_test_ADD1(TEST / Case);
-    sub_test_ADD2(TEST / Case);
-    sub_test_ADD3(TEST / Case);
-    sub_test_ADD4(TEST / Case);
-    sub_test_ADD5(TEST / Case);
-    sub_test_ADD6(TEST / Case);
-}
-
 // Case 1: A = B ,C = 0
-void sub_test_SUB1(IN int TEST)
+void sub_test_SUB1(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 1: A = B ,C = 0 ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
         bi_new(&A, 1);
         bi_new(&B, 1);
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 2: A = 0, C = -B
-void sub_test_SUB2(IN int TEST)
+void sub_test_SUB2(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
-
+    printf("print(\"### Case 2: A = 0, C = -B ###\\n\")\n");
+    printf("cnt = 0\n");
     for (int j = 0; j < TEST; j++)
     {
         int sign2 = rand() % 2;
@@ -329,37 +267,19 @@ void sub_test_SUB2(IN int TEST)
 
         bi_new(&A, 1);
         bi_gen_rand(&B, sign2, num2);
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 3: B = 0, C = -A
-void sub_test_SUB3(IN int TEST)
+void sub_test_SUB3(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
-
+    printf("print(\"### Case 3: B = 0, C = -A ###\\n\")\n");
+    printf("cnt = 0\n");
     for (int j = 0; j < TEST; j++)
     {
         int sign1 = rand() % 2;
@@ -367,41 +287,21 @@ void sub_test_SUB3(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
         bi_new(&B, 1);
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 4: 0 < B ≤ A,  C = A - B
-void sub_test_SUB4(IN int TEST)
+void sub_test_SUB4(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
-
+    printf("print(\"### Case 4: 0 < B ≤ A,  C = A - B ###\\n\")\n");
+    printf("cnt = 0\n");
     for (int j = 0; j < TEST; j++)
     {
-        int sign1 = NON_NEGATIVE;
-        int sign2 = NON_NEGATIVE;
-
         int num1 = 0;
         int num2 = 0;
 
@@ -410,46 +310,28 @@ void sub_test_SUB4(IN int TEST)
             int num1 = rand() % 0x0f + 1;
             int num2 = rand() % 0x0f + 1;
 
-            bi_gen_rand(&A, sign1, num1);
-            bi_gen_rand(&B, sign2, num2);
+            bi_gen_rand(&A, NON_NEGATIVE, num1);
+            bi_gen_rand(&B, NON_NEGATIVE, num2);
 
             if (bi_cmp(A, B) == 1)
                 break;
         }
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 5: 0 < A < B,  -C = B - A
-void sub_test_SUB5(IN int TEST)
+void sub_test_SUB5(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 5: 0 < A < B,  -C = B - A ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
-        int sign1 = NON_NEGATIVE;
-        int sign2 = NON_NEGATIVE;
 
         int num1 = 0;
         int num2 = 0;
@@ -459,47 +341,27 @@ void sub_test_SUB5(IN int TEST)
             int num1 = rand() % 0x0f + 1;
             int num2 = rand() % 0x0f + 1;
 
-            bi_gen_rand(&A, sign1, num1);
-            bi_gen_rand(&B, sign2, num2);
+            bi_gen_rand(&A, NON_NEGATIVE, num1);
+            bi_gen_rand(&B, NON_NEGATIVE, num2);
 
             if (bi_cmp(A, B) == -1)
                 break;
         }
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 6: 0 > A ≥ B,  C = |B| - |A|
-void sub_test_SUB6(IN int TEST)
+void sub_test_SUB6(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
-
+    printf("print(\"### Case 6: 0 > A ≥ B,  C = |B| - |A| ###\\n\")\n");
+    printf("cnt = 0\n");
     for (int j = 0; j < TEST; j++)
     {
-        int sign1 = NEGATIVE;
-        int sign2 = NEGATIVE;
-
         int num1 = 0;
         int num2 = 0;
 
@@ -508,46 +370,27 @@ void sub_test_SUB6(IN int TEST)
             int num1 = rand() % 0x0f + 1;
             int num2 = rand() % 0x0f + 1;
 
-            bi_gen_rand(&A, sign1, num1);
-            bi_gen_rand(&B, sign2, num2);
+            bi_gen_rand(&A, NEGATIVE, num1);
+            bi_gen_rand(&B, NEGATIVE, num2);
 
             if (bi_cmp(A, B) == 1)
                 break;
         }
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
-// Case 7: 0 > B > A,  C = |B| - |A|
-void sub_test_SUB7(IN int TEST)
-{
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
 
+// Case 7: 0 > B > A,  C = |B| - |A|
+void sub_test_SUB7(bigint **C, bigint *A, bigint *B, IN int TEST)
+{
+    printf("print(\"### Case 7: 0 > B > A,  C = |B| - |A| ###\\n\")\n");
+    printf("cnt = 0\n");
     for (int j = 0; j < TEST; j++)
     {
-        int sign1 = NEGATIVE;
-        int sign2 = NEGATIVE;
-
         int num1 = 0;
         int num2 = 0;
 
@@ -556,132 +399,88 @@ void sub_test_SUB7(IN int TEST)
             int num1 = rand() % 0x0f + 1;
             int num2 = rand() % 0x0f + 1;
 
-            bi_gen_rand(&A, sign1, num1);
-            bi_gen_rand(&B, sign2, num2);
+            bi_gen_rand(&A, NEGATIVE, num1);
+            bi_gen_rand(&B, NEGATIVE, num2);
 
             if (bi_cmp(A, B) == -1)
                 break;
         }
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 // Case 8: A > 0 and B < 0
-void sub_test_SUB8(IN int TEST)
+void sub_test_SUB8(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
-
+    printf("print(\"### Case 8: A > 0 and B < 0 ###\\n\")\n");
+    printf("cnt = 0\n");
     for (int j = 0; j < TEST; j++)
     {
-        int sign1 = NON_NEGATIVE;
-        int sign2 = NEGATIVE;
 
         int num1 = rand() % 0x0f + 1;
         int num2 = rand() % 0x0f + 1;
 
-        bi_gen_rand(&A, sign1, num1);
-        bi_gen_rand(&B, sign2, num2);
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&B, NEGATIVE, num2);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 9: A < 0 and B > 0
-void sub_test_SUB9(IN int TEST)
+void sub_test_SUB9(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 9: A < 0 and B > 0 ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
-        int sign1 = NEGATIVE;
-        int sign2 = NON_NEGATIVE;
 
         int num1 = rand() % 0x0f + 1;
         int num2 = rand() % 0x0f + 1;
 
-        bi_gen_rand(&A, sign1, num1);
-        bi_gen_rand(&B, sign2, num2);
-        //
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        //
-        bi_SUB(&C, A, B);
+        bi_gen_rand(&A, NEGATIVE, num1);
+        bi_gen_rand(&B, NON_NEGATIVE, num2);
 
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-        printf("print(A - B == C) #%d\n", j);
+        bi_SUB(C, A, B);
+        sage_show_sub(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 void test_SUB(IN int TEST)
 {
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
     int Case = 9;
 
     printf("\n\n\n\n\n### SUB TEST ###\n");
 
-    sub_test_SUB1(TEST / Case);
-    sub_test_SUB2(TEST / Case);
-    sub_test_SUB3(TEST / Case);
-    sub_test_SUB4(TEST / Case);
-    sub_test_SUB5(TEST / Case);
-    sub_test_SUB6(TEST / Case);
-    sub_test_SUB7(TEST / Case);
-    sub_test_SUB8(TEST / Case);
-    sub_test_SUB9(TEST / Case);
+    sub_test_SUB1(&C, A, B, TEST / Case);
+    sub_test_SUB2(&C, A, B, TEST / Case);
+    sub_test_SUB3(&C, A, B, TEST / Case);
+    sub_test_SUB4(&C, A, B, TEST / Case);
+    sub_test_SUB5(&C, A, B, TEST / Case);
+    sub_test_SUB6(&C, A, B, TEST / Case);
+    sub_test_SUB7(&C, A, B, TEST / Case);
+    sub_test_SUB8(&C, A, B, TEST / Case);
+    sub_test_SUB9(&C, A, B, TEST / Case);
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
 }
 
-/////////// SUB /////////////
+/////////// END SUB TEST /////////////
 
 void test_MUL_AB(int TEST)
 {
@@ -744,12 +543,13 @@ void test_MULC(int TEST)
     bi_delete(&C);
 }
 
+// MUL 껍데기함수 검증
+
 // Case 1_1: A = 0 then C = 0 * B
-void sub_test_MUL1_1(IN int TEST)
+void sub_test_MUL1_1(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 1_1: A = 0 then C = 0 * B ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -760,31 +560,18 @@ void sub_test_MUL1_1(IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 1_2: B = 0 then C = A * 0
-void sub_test_MUL1_2(IN int TEST)
+void sub_test_MUL1_2(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 1_2: B = 0 then C = A * 0 ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -795,31 +582,18 @@ void sub_test_MUL1_2(IN int TEST)
 
         bi_new(&B, 1);
 
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 1_3: A = 0 and B = 0 then C = 0 * 0
-void sub_test_MUL1_3(IN int TEST)
+void sub_test_MUL1_3(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 1_3: A = 0 and B = 0 then C = 0 * 0 ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -827,31 +601,18 @@ void sub_test_MUL1_3(IN int TEST)
         bi_new(&A, 1);
         bi_new(&B, 1);
 
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 2: A = 1 then C = 1 * B
-void sub_test_MUL2(IN int TEST)
+void sub_test_MUL2(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 2: A = 1 then C = 1 * B ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -863,31 +624,18 @@ void sub_test_MUL2(IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 3: A = -1 then C = -(1) * B
-void sub_test_MUL3(IN int TEST)
+void sub_test_MUL3(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 3: A = -1 then C = -(1) * B ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -900,30 +648,18 @@ void sub_test_MUL3(IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 4: B = 1 then C = 1 * A
-void sub_test_MUL4(IN int TEST)
+void sub_test_MUL4(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 4: B = 1 then C = 1 * A ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -935,31 +671,18 @@ void sub_test_MUL4(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
 
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 5: B = -1 then C = -(1) * A
-void sub_test_MUL5(IN int TEST)
+void sub_test_MUL5(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 5: B = -1 then C = -(1) * A ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -972,30 +695,18 @@ void sub_test_MUL5(IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
 
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 // Case 6: Otherwise
-void sub_test_MUL6(int TEST)
+void sub_test_MUL6(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *B = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 6: Otherwise ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -1008,44 +719,35 @@ void sub_test_MUL6(int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        bi_MUL(&C, A, B);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("B = ");
-        bi_print(B);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(A * B == C) #%d\n", j);
+        bi_MUL(C, A, B);
+        sage_show_mul(C, A, B, j);
     }
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 void test_MUL(IN int TEST)
 {
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
     int Case = 6;
 
     printf("\n\n\n\n\n### MUL TEST ###\n");
 
-    sub_test_MUL1_1(TEST / Case);
-    sub_test_MUL1_2(TEST / Case);
-    sub_test_MUL1_3(TEST / Case);
-    sub_test_MUL2(TEST / Case);
-    sub_test_MUL3(TEST / Case);
-    sub_test_MUL4(TEST / Case);
-    sub_test_MUL5(TEST / Case);
-    sub_test_MUL6(TEST / Case);
+    sub_test_MUL1_1(&C, A, B, TEST / Case);
+    sub_test_MUL1_2(&C, A, B, TEST / Case);
+    sub_test_MUL1_3(&C, A, B, TEST / Case);
+    sub_test_MUL2(&C, A, B, TEST / Case);
+    sub_test_MUL3(&C, A, B, TEST / Case);
+    sub_test_MUL4(&C, A, B, TEST / Case);
+    sub_test_MUL5(&C, A, B, TEST / Case);
+    sub_test_MUL6(&C, A, B, TEST / Case);
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
 }
 
 void test_SQU_A(int TEST)
@@ -1097,77 +799,61 @@ void test_SQUC(int TEST)
 }
 
 // Case 1_1: A = 0
-void sub_test_SQU1_1(IN int TEST)
+void sub_test_SQU1_1(bigint **C, bigint *A, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *C = NULL;
+    printf("print(\"### // Case 1_1: A = 0 ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
         bi_new(&A, 1);
-        bi_SQU(&C, A);
-
-        printf("A = ");
-        bi_print(A);
-        printf("C = ");
-        bi_print(C);
-        printf("print(\"{} : {}\".format(%d, A ** %d == C)) #%d\n", j, 2, j);
+        bi_SQU(C, A);
+        sage_show_squ(C, A, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
-// Case 1_1: A = 1
-void sub_test_SQU1_2(IN int TEST)
+// Case 1_2: A = 1
+void sub_test_SQU1_2(bigint **C, bigint *A, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *C = NULL;
+    printf("print(\"### // Case 1_2: A = 1 ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
         bi_new(&A, 1);
         A->a[0] = 1;
-        bi_SQU(&C, A);
-
-        printf("A = ");
-        bi_print(A);
-        printf("C = ");
-        bi_print(C);
-        printf("print(\"{} : {}\".format(%d, A ** %d == C)) #%d\n", j, 2, j);
+        bi_SQU(C, A);
+        sage_show_squ(C, A, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
-// Case 1_1: A = -1
-void sub_test_SQU1_3(IN int TEST)
+
+// Case 1_3: A = -1
+void sub_test_SQU1_3(bigint **C, bigint *A, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *C = NULL;
+    printf("print(\"### // Case 1_3: A = -1 ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
         bi_new(&A, 1);
         A->a[0] = 1;
         A->sign = NEGATIVE;
-        bi_SQU(&C, A);
-
-        printf("A = ");
-        bi_print(A);
-        printf("C = ");
-        bi_print(C);
-        printf("print(\"{} : {}\".format(%d, A ** %d == C)) #%d\n", j, 2, j);
+        bi_SQU(C, A);
+        sage_show_squ(C, A, j);
     }
-
-    bi_delete(&A);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
-void sub_test_SQU2(IN int TEST)
+// Case 2: Otherwise
+void sub_test_SQU2(bigint **C, bigint *A, IN int TEST)
 {
-    bigint *A = NULL;
-    bigint *C = NULL;
+    printf("print(\"### Case 2: Otherwise ###\\n\")\n");
+    printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -1175,19 +861,11 @@ void sub_test_SQU2(IN int TEST)
         int num1 = rand() % 0x0f + 1;
 
         bi_gen_rand(&A, sign1, num1);
-
-        bi_SQU(&C, A);
-
-        printf("A = ");
-        bi_print(A);
-
-        printf("C = ");
-        bi_print(C);
-
-        printf("print(\"{} : {}\".format(%d, A ** %d == C)) #%d\n", j, 2, j);
+        bi_SQU(C, A);
+        sage_show_squ(C, A, j);
     }
-    bi_delete(&A);
-    bi_delete(&C);
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
 }
 
 void test_SQU(IN int TEST)
@@ -1195,10 +873,16 @@ void test_SQU(IN int TEST)
     int Case = 4;
     printf("\n\n\n\n\n### SQU TEST ###\n");
 
-    sub_test_SQU1_1(TEST / Case);
-    sub_test_SQU1_2(TEST / Case);
-    sub_test_SQU1_3(TEST / Case);
-    sub_test_SQU2(TEST / Case);
+    bigint *A = NULL;
+    bigint *C = NULL;
+
+    sub_test_SQU1_1(&C, A, TEST / Case);
+    sub_test_SQU1_2(&C, A, TEST / Case);
+    sub_test_SQU1_3(&C, A, TEST / Case);
+    sub_test_SQU2(&C, A, TEST / Case);
+
+    bi_delete(&A);
+    bi_delete(&C);
 }
 
 void test_bi_word_lshift(int TEST)
@@ -1268,6 +952,29 @@ void test_bi_lshift(int TEST)
         printf("C = ");
         bi_print(A);
         printf("print(\"{} : {}\".format(%d, A << %d == C)) #%d\n", j, x, j);
+    }
+
+    bi_delete(&A);
+}
+
+void test_bi_rshift(int TEST)
+{
+    bigint *A = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int x = rand() % 0xff;
+        int num1 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+
+        printf("A = ");
+        bi_print(A);
+
+        bi_rshift(&A, x);
+        printf("C = ");
+        bi_print(A);
+        printf("print(\"{} : {}\".format(%d, A >> %d == C)) #%d\n", j, x, j);
     }
 
     bi_delete(&A);

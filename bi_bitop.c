@@ -25,7 +25,6 @@ void bi_word_lshift2(OUT bigint **C, IN bigint *A, IN int r)
 
 void bi_lshift(bigint **A, int x)
 {
-
     int n = (*A)->wordlen;
     int q = x / w;
     int r = x % w;
@@ -71,10 +70,64 @@ void bi_word_rshift(OUT bigint **A, IN int x)
     bi_refine(*A);
 }
 
+// void bi_rshift(bigint **A, int x)
+// {
+//     int n = (*A)->wordlen;
+//     int q = x / w;
+//     int r = x % w;
+
+//     if (x % w == 0)
+//     {
+//         bi_word_lshift(A, q);
+//         return;
+//     }
+
+//     bigint *T = NULL;
+//     bi_new(&T, n + q + 1);
+
+//     T->a[q] = (*A)->a[0] << r;
+
+//     for (int j = 1; j < n; j++)
+//         T->a[j + q] = ((*A)->a[j] << r) | ((*A)->a[j - 1] >> (w - r));
+
+//     T->a[n + q] = (*A)->a[n - 1] >> (w - r);
+
+//     bi_refine(T);
+//     bi_assign(A, T);
+//     bi_delete(&T);
+// }
+
 void bi_rshift(bigint **A, int x)
 {
-    return;
+    int n = (*A)->wordlen;
+    int q = x / w;
+    int r = x % w;
+
+    if (x >= (w * n))
+    {
+        bi_set_zero(A);
+        return;
+    }
+
+    if (x % w == 0)
+    {
+        bi_word_rshift(A, q);
+        return;
+    }
+
+    bigint *T = NULL;
+    bi_new(&T, n - q);
+
+    for (int j = q; j < n; j++)
+        T->a[j - q] = ((*A)->a[j + 1] << (w - r)) | ((*A)->a[j] >> r);
+
+    T->a[T->wordlen - 1] = (*A)->a[n - 1] >> r;
+
+    bi_refine(T);
+    bi_assign(A, T);
+    bi_delete(&T);
 }
+
 void bi_word_reduction(OUT bigint **A, IN int r)
 {
     for (int j = r; j < (*A)->wordlen; j++)

@@ -247,6 +247,8 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     // newline;
 
     bi_ADD(&R, R, S);
+    // 함수를 두개 만들기
+    // z = x + y, z = z + x
 
     //
     // printf("#  R = ");

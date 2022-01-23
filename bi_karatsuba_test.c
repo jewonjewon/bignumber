@@ -280,11 +280,11 @@ void sub_test_KMUL6(int TEST)
         int num1 = rand() % 0x0f + 1;
         int num2 = rand() % 0x0f + 1;
 
-        bi_gen_rand(&A, sign1, num1);
-        bi_gen_rand(&B, sign2, num2);
+        // bi_gen_rand(&A, sign1, num1);
+        // bi_gen_rand(&B, sign2, num2);
 
-        // bi_gen_rand(&A, NON_NEGATIVE, num1);
-        // bi_gen_rand(&B, NON_NEGATIVE, num2);
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&B, NON_NEGATIVE, num2);
 
         printf("a = ");
         bi_print(A);

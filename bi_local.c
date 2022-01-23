@@ -90,14 +90,14 @@ void bi_print(bigint *A)
         printf("%016llx", A->a[j]);
 
 #elif (w == 32)
-    printf("%llx ", A->a[A->wordlen - 1]);
+    printf("%#x", A->a[A->wordlen - 1]);
     for (int j = A->wordlen - 2; j >= 0; j--)
-        printf("%08llx ", A->a[j]);
+        printf("%08x", A->a[j]);
 
 #elif (w == 8)
-    printf("%llx ", A->a[A->wordlen - 1]);
+    printf("%#x", A->a[A->wordlen - 1]);
     for (int j = A->wordlen - 2; j >= 0; j--)
-        printf("%016llx ", A->a[j]);
+        printf("%02x", A->a[j]);
 #endif
     printf("\n");
 }
@@ -236,7 +236,7 @@ int bi_compare_abs(IN bigint *A, IN bigint *B)
  *  - If A = B, then return 0
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_cmp(*A, *B)
+// bi_cmp(*A, *B),A > B → 1, A < B → -1, A = B → 0
 int bi_cmp(IN bigint *A, IN bigint *B)
 {
     // Case: A > B

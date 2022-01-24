@@ -98,6 +98,23 @@ void bi_SQU(OUT bigint **C, IN bigint *A)
     bi_SQUC(C, A);
 }
 
+void bi_SQU_assign(OUT bigint **C)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C);
+    // Case 1: A = 0 or A = 1 or A = -1
+    if (bi_is_zero(T) == true or bi_is_one(T) == true or bi_is_minus_one(T) == true)
+    {
+        bi_abs(*C);
+        return;
+    }
+
+    // Case 2: Otherwise
+    bi_SQUC(C, T);
+
+    bi_delete(&T);
+}
+
 void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
 {
     int sign_A = A->sign;
@@ -128,7 +145,11 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
     bi_SQUC_karatsuba(&T0, A0);
 
     bigint *R = NULL;
-    bi_concatenation(&R, T1, T0);
+
+    bi_assign(&R, T1);
+    bi_word_lshift(&R, 2 * l);
+    bi_ADD(&R, R, T0);
+    // bi_concatenation(&R, T1, T0);
 
     bigint *S = NULL;
     bi_MULC_karatsuba(&S, A1, A0);
@@ -147,15 +168,14 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
 
 void bi_KSQU(OUT bigint **C, IN bigint *A)
 {
-    // Case: sign(A) == NEGATIVE
-    if (A->sign == NEGATIVE)
+    // Case 1: A = 0 or A = 1 or A = -1
+    if (bi_is_zero(A) == true or bi_is_one(A) == true or bi_is_minus_one(A) == true)
     {
-        bi_SQUC_karatsuba(C, A);
-        A->sign = NEGATIVE;
+        bi_assign(C, A);
+        (*C)->sign = NON_NEGATIVE;
         return;
     }
 
-    // Case: sign(A) == NON-NEGATIVE
+    // Case 2: Otherwise
     bi_SQUC_karatsuba(C, A);
-    return;
 }

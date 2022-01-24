@@ -52,6 +52,46 @@ void sage_show_squ(bigint **C, bigint *A, int j)
     printf("    cnt = cnt + 1\n");
 }
 
+void sage_show_div(bigint **Q, bigint **R, bigint *A, bigint *B, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("B = ");
+    bi_print(B);
+    printf("Q = ");
+    bi_print(*Q);
+    printf("R = ");
+    bi_print(*R);
+    printf("if ((Q != A // B) and (Q != A %% B)):\n");
+    printf("    print(\"{} : {}\".format(%d, A // B == Q)) #%d\n", j, j);
+    printf("    print(\"{} : {}\".format(%d, A %% B == R)) #%d\n", j, j);
+    printf("    cnt = cnt + 1\n");
+}
+
+void sage_show_exp(bigint **C, bigint *A, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("C = ");
+    bi_print(*C);
+    printf("if (C != A ** 2):\n");
+    printf("    print(\"{} : {}\".format(%d, A ** 2 == C)) #%d\n", j, j);
+    printf("    cnt = cnt + 1\n");
+}
+
+void bi_delete_3(bigint **C, bigint **A, bigint **B)
+{
+    bi_delete(C);
+    bi_delete(A);
+    bi_delete(B);
+}
+
+void bi_delete_2(bigint **C, bigint **A)
+{
+    bi_delete(C);
+    bi_delete(A);
+}
+
 /////
 /////
 /////
@@ -77,6 +117,7 @@ void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 2: B = 0, C = A
@@ -99,6 +140,7 @@ void sub_test_ADD2(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 3: A > 0 and B < 0, C = A - |B|
@@ -123,6 +165,7 @@ void sub_test_ADD3(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 4: A < 0 and B > 0, C = B - |A|
@@ -147,6 +190,7 @@ void sub_test_ADD4(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 // Case 5: wordlen(A) ≥ wordlen(B)
 void sub_test_ADD5(bigint **C, bigint *A, bigint *B, IN int TEST)
@@ -180,6 +224,7 @@ void sub_test_ADD5(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 6: wordlen(A) < wordlen(B)
@@ -213,6 +258,7 @@ void sub_test_ADD6(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 void test_ADD(IN int TEST)
@@ -231,10 +277,6 @@ void test_ADD(IN int TEST)
     sub_test_ADD4(&C, A, B, TEST / Case);
     sub_test_ADD5(&C, A, B, TEST / Case);
     sub_test_ADD6(&C, A, B, TEST / Case);
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
 }
 
 // Case 1: A = B ,C = 0
@@ -253,6 +295,7 @@ void sub_test_SUB1(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 2: A = 0, C = -B
@@ -273,6 +316,7 @@ void sub_test_SUB2(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 3: B = 0, C = -A
@@ -293,6 +337,7 @@ void sub_test_SUB3(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 4: 0 < B ≤ A,  C = A - B
@@ -322,6 +367,7 @@ void sub_test_SUB4(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 5: 0 < A < B,  -C = B - A
@@ -353,6 +399,7 @@ void sub_test_SUB5(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 6: 0 > A ≥ B,  C = |B| - |A|
@@ -382,6 +429,7 @@ void sub_test_SUB6(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 7: 0 > B > A,  C = |B| - |A|
@@ -411,6 +459,7 @@ void sub_test_SUB7(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 // Case 8: A > 0 and B < 0
 void sub_test_SUB8(bigint **C, bigint *A, bigint *B, IN int TEST)
@@ -431,6 +480,7 @@ void sub_test_SUB8(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 9: A < 0 and B > 0
@@ -453,6 +503,7 @@ void sub_test_SUB9(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 void test_SUB(IN int TEST)
@@ -474,10 +525,6 @@ void test_SUB(IN int TEST)
     sub_test_SUB7(&C, A, B, TEST / Case);
     sub_test_SUB8(&C, A, B, TEST / Case);
     sub_test_SUB9(&C, A, B, TEST / Case);
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
 }
 
 /////////// END SUB TEST /////////////
@@ -506,9 +553,7 @@ void test_MUL_AB(int TEST)
         printf("print(A * B == C) #%d\n", j);
         printf("print(hex(A*B))\n");
     }
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
+    bi_delete_3(&C, &A, &B);
 }
 
 void test_MULC(int TEST)
@@ -566,6 +611,8 @@ void sub_test_MUL1_1(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 1_2: B = 0 then C = A * 0
@@ -588,6 +635,9 @@ void sub_test_MUL1_2(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
+
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 1_3: A = 0 and B = 0 then C = 0 * 0
@@ -607,6 +657,7 @@ void sub_test_MUL1_3(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 2: A = 1 then C = 1 * B
@@ -630,6 +681,7 @@ void sub_test_MUL2(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 3: A = -1 then C = -(1) * B
@@ -654,6 +706,7 @@ void sub_test_MUL3(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 4: B = 1 then C = 1 * A
@@ -677,6 +730,7 @@ void sub_test_MUL4(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 5: B = -1 then C = -(1) * A
@@ -701,6 +755,7 @@ void sub_test_MUL5(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 // Case 6: Otherwise
@@ -725,6 +780,7 @@ void sub_test_MUL6(bigint **C, bigint *A, bigint *B, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_3(C, &A, &B);
 }
 
 void test_MUL(IN int TEST)
@@ -745,10 +801,6 @@ void test_MUL(IN int TEST)
     sub_test_MUL4(&C, A, B, TEST / Case);
     sub_test_MUL5(&C, A, B, TEST / Case);
     sub_test_MUL6(&C, A, B, TEST / Case);
-
-    bi_delete(&A);
-    bi_delete(&B);
-    bi_delete(&C);
 }
 
 void test_SQU_A(int TEST)
@@ -813,6 +865,7 @@ void sub_test_SQU1_1(bigint **C, bigint *A, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_2(C, &A);
 }
 
 // Case 1_2: A = 1
@@ -830,6 +883,7 @@ void sub_test_SQU1_2(bigint **C, bigint *A, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_2(C, &A);
 }
 
 // Case 1_3: A = -1
@@ -848,6 +902,7 @@ void sub_test_SQU1_3(bigint **C, bigint *A, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_2(C, &A);
 }
 
 // Case 2: Otherwise
@@ -867,6 +922,7 @@ void sub_test_SQU2(bigint **C, bigint *A, IN int TEST)
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+    bi_delete_2(C, &A);
 }
 
 void test_SQU(IN int TEST)
@@ -881,9 +937,6 @@ void test_SQU(IN int TEST)
     sub_test_SQU1_2(&C, A, TEST / Case);
     sub_test_SQU1_3(&C, A, TEST / Case);
     sub_test_SQU2(&C, A, TEST / Case);
-
-    bi_delete(&A);
-    bi_delete(&C);
 }
 
 void test_bi_word_lshift(int TEST)

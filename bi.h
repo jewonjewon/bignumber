@@ -7,7 +7,7 @@
 #include <time.h>
 #include <stdbool.h>
 
-#define w 32 // w: 워드의 크기 지정
+#define w 8 // w: 워드의 크기 지정
 
 #define check printf("#?????\n")
 #define newline printf("\n")

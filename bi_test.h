@@ -10,6 +10,10 @@ void sage_show_add(bigint **C, bigint *A, bigint *B, int j);
 void sage_show_sub(bigint **C, bigint *A, bigint *B, int j);
 void sage_show_mul(bigint **C, bigint *A, bigint *B, int j);
 void sage_show_squ(bigint **C, bigint *A, int j);
+void sage_show_div(bigint **Q, bigint **R, bigint *A, bigint *B, int j);
+
+void bi_delete_3(bigint **C, bigint **A, bigint **B);
+void bi_delete_2(bigint **C, bigint **A);
 
 /* ADD Accuracy Verification */
 void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST);
@@ -62,8 +66,6 @@ void sub_test_KMUL5(bigint **C, bigint *A, bigint *B, IN int TEST);
 void sub_test_KMUL6_1(bigint **C, bigint *A, bigint *B, IN int TEST);
 void sub_test_KMUL6_2(bigint **C, bigint *A, bigint *B, IN int TEST);
 void sub_test_KMUL6_3(bigint **C, bigint *A, bigint *B, IN int TEST);
-void sub_test_KMUL6_4(bigint **C, bigint *A, bigint *B, IN int TEST);
-void sub_test_KMUL6_5(bigint **C, bigint *A, bigint *B, IN int TEST);
 
 void test_KMUL(IN int TEST);
 
@@ -78,9 +80,10 @@ void sub_test_SQU2(bigint **C, bigint *A, IN int TEST);
 
 void test_SQU(IN int TEST);
 
-void sub_test_KSQU6_2(IN int TEST);
-void sub_test_KSQU6_3(IN int TEST);
-void sub_test_KSQU6_4(IN int TEST);
+void sub_test_KSQU1_1(bigint **C, bigint *A, IN int TEST);
+void sub_test_KSQU1_2(bigint **C, bigint *A, IN int TEST);
+void sub_test_KSQU1_3(bigint **C, bigint *A, IN int TEST);
+void sub_test_KSQU2(bigint **C, bigint *A, IN int TEST);
 
 void test_KSQU(IN int TEST);
 

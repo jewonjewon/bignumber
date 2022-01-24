@@ -1,8 +1,29 @@
 #include "bi.h"
 #include "bi_op.h"
 
+word pow2(int a)
+{
+    word x = 1;
+    return (x << a);
+}
+
+int bitlen(word a)
+{
+    word cnt = 0;
+
+    do
+    {
+        a = a >> 1;
+        cnt++;
+    } while (a > 0);
+
+    return cnt;
+}
 void bi_word_lshift(OUT bigint **A, IN int x)
 {
+    if (bi_is_zero(*A) == true)
+        bi_set_zero(A);
+
     bi_resize(A, (*A)->wordlen + x);
 
     // 기존 값 왼쪽으로 워드 시프트

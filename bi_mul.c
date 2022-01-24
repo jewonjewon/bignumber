@@ -130,6 +130,59 @@ void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
     (*C)->sign = t1 ^ t0;
 }
 
+// bi_MUL_assign(출력: bigint형 배열, 입력: 임의의 정수) → C *= A
+void bi_MUL_assign(IN OUT bigint **C, IN bigint *A)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C);
+
+    // Case 1: A = 0 or C = 0 then C = 0
+    if (bi_is_zero(A) == true or bi_is_zero(T) == true)
+    {
+        bi_set_zero(C);
+        return;
+    }
+
+    // Case 2: A = 1 then C = 1 * C
+    if (bi_is_one(A) == true)
+    {
+        bi_assign(C, T);
+        return;
+    }
+    // Case 3: A = -1 then C = -(1) * T
+    else if (bi_is_minus_one(A) == true)
+    {
+        bi_assign(C, T);
+        (*C)->sign = NEGATIVE;
+        return;
+    }
+    // Case 4: T = 1 then C = 1 * A
+    if (bi_is_one(T) == true)
+    {
+        bi_assign(C, A);
+        return;
+    }
+    // Case 5: T = -1 then C = -(1) * A
+    else if (bi_is_minus_one(T) == true)
+    {
+        bi_assign(C, A);
+        (*C)->sign = NEGATIVE;
+        return;
+    }
+    // Case 6: Otherwise
+    int t1 = A->sign;
+    int t0 = T->sign;
+
+    bi_abs(A);
+    bi_abs(T);
+    bi_MULC(C, A, T);
+    A->sign = t1;
+    T->sign = t0;
+    (*C)->sign = t1 ^ t0;
+
+    bi_delete(&T);
+}
+
 void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     int flag = 5;

@@ -34,8 +34,13 @@ void bi_gcd_bin(bigint **C, bigint *A, bigint *B)
 
     // bi_MUL(C, T0, T2);
     bi_assign(C, T2);
-    // bi_print(T0);
-    // bi_print(T2);
+
+    printf("T0 = ");
+    bi_print(T0);
+    printf("T1 = ");
+    bi_print(T1);
+    printf("T2 = ");
+    bi_print(T2);
 
     bi_delete(&T0);
     bi_delete(&T1);

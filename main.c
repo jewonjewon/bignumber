@@ -457,6 +457,7 @@ void test_gcd_bin(int TEST)
         bi_print(C);
         printf("if (C != gcd(A, B)):\n");
         printf("    print(\"{} : {}\".format(%d, gcd(A, B) == C)) #%d\n", j, j);
+        printf("    print(hex(gcd(A, B)))\n");
         printf("    cnt = cnt + 1\n");
     }
     printf("if (cnt == 0):\n");
@@ -467,7 +468,7 @@ void test_gcd_bin(int TEST)
 }
 int main()
 {
-    srand((unsigned)time(NULL));
+    // srand((unsigned)time(NULL));
 
     // test_ADD(1000);
     // test_SUB(1000);
@@ -480,7 +481,7 @@ int main()
     // test_l2r(1);
     // test_r2l(1);
     // test_mns(1);
-    test_gcd_bin(100);
+    test_gcd_bin(10);
 
     // test_bi_long_div_2word(1000);
     // test_DIVCC(1000);

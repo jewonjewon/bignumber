@@ -2,660 +2,240 @@ print("### ADD TEST ###")
 print("### Case 1: A = 0, C = B ###\n")
 cnt = 0
 A = 0
-B = 0x9f359262
-C = 0x9f359262
+B = 0xc9e965377d26
+C = 0xc9e965377d26
 if (C != A + B):
-    print("0-th")
+    print("Error: A + B, 0-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x4885
-C = 0x4885
+B = 0x2c64c0bc88be4d7e0a
+C = 0x2c64c0bc88be4d7e0a
 if (C != A + B):
-    print("1-th")
+    print("Error: A + B, 1-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x30ae31
-C = -0x30ae31
+B = -0x149c85fe0d24cfb51beedb
+C = -0x149c85fe0d24cfb51beedb
 if (C != A + B):
-    print("2-th")
+    print("Error: A + B, 2-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xc4cf3a8c759d
-C = 0xc4cf3a8c759d
+B = 0x791084
+C = 0x791084
 if (C != A + B):
-    print("3-th")
+    print("Error: A + B, 3-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x2d22c19a4973a48679fc
-C = 0x2d22c19a4973a48679fc
+B = -0xbec0e50b9dff4e
+C = -0xbec0e50b9dff4e
 if (C != A + B):
-    print("4-th")
+    print("Error: A + B, 4-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xdc454bbb1010e87b180beb3ec4
-C = -0xdc454bbb1010e87b180beb3ec4
+B = -0x2bf9154a2e2efdf51dd9ab26e262c
+C = -0x2bf9154a2e2efdf51dd9ab26e262c
 if (C != A + B):
-    print("5-th")
+    print("Error: A + B, 5-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x6ace95423570e9
-C = 0x6ace95423570e9
+B = -0xcd552f86802d6fdea
+C = -0xcd552f86802d6fdea
 if (C != A + B):
-    print("6-th")
+    print("Error: A + B, 6-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xf7edc90289acdc3a5e149010
-C = 0xf7edc90289acdc3a5e149010
+B = 0x1b0949799bd36c40
+C = 0x1b0949799bd36c40
 if (C != A + B):
-    print("7-th")
+    print("Error: A + B, 7-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x169908124e5ff77649
-C = 0x169908124e5ff77649
+B = -0xc535326128949e
+C = -0xc535326128949e
 if (C != A + B):
-    print("8-th")
+    print("Error: A + B, 8-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x126b8072dd
-C = -0x126b8072dd
+B = 0x8ee8c16263c30025c0b16f
+C = 0x8ee8c16263c30025c0b16f
 if (C != A + B):
-    print("9-th")
+    print("Error: A + B, 9-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x46a6c5bfc452b8
-C = 0x46a6c5bfc452b8
+B = -0x7481a68f
+C = -0x7481a68f
 if (C != A + B):
-    print("10-th")
+    print("Error: A + B, 10-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xb2f7ab
-C = -0xb2f7ab
+B = -0xe61e
+C = -0xe61e
 if (C != A + B):
-    print("11-th")
+    print("Error: A + B, 11-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xb9
-C = 0xb9
+B = -0x7bb8a54c82dd34
+C = -0x7bb8a54c82dd34
 if (C != A + B):
-    print("12-th")
+    print("Error: A + B, 12-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x476b6f25742dfb5b3e4a
-C = 0x476b6f25742dfb5b3e4a
+B = -0x1b2cc8e27bf7b70846104d8a4c1b
+C = -0x1b2cc8e27bf7b70846104d8a4c1b
 if (C != A + B):
-    print("13-th")
+    print("Error: A + B, 13-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xc6170fe656de08
-C = -0xc6170fe656de08
+B = 0x1d68f1b96b0ecb5112e
+C = 0x1d68f1b96b0ecb5112e
 if (C != A + B):
-    print("14-th")
+    print("Error: A + B, 14-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xedcb8782a3eec2167a2bb0
-C = 0xedcb8782a3eec2167a2bb0
+B = 0x112955ef4618aaaa2298e3c8496d
+C = 0x112955ef4618aaaa2298e3c8496d
 if (C != A + B):
-    print("15-th")
+    print("Error: A + B, 15-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xef8ac
-C = 0xef8ac
+B = -0xad1101b35c301273d97604cc
+C = -0xad1101b35c301273d97604cc
 if (C != A + B):
-    print("16-th")
+    print("Error: A + B, 16-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x68a756
-C = 0x68a756
+B = 0x711c7a74262cfd5d71624e4f
+C = 0x711c7a74262cfd5d71624e4f
 if (C != A + B):
-    print("17-th")
+    print("Error: A + B, 17-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x5ff8e4eec7b24e7516e252
-C = 0x5ff8e4eec7b24e7516e252
+B = -0x149eb36ce00c7c6e7c91
+C = -0x149eb36ce00c7c6e7c91
 if (C != A + B):
-    print("18-th")
+    print("Error: A + B, 18-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x73d25894aaf93a28a6cf6f5c02
-C = -0x73d25894aaf93a28a6cf6f5c02
+B = -0x4a4b10f09d9b9b12b3
+C = -0x4a4b10f09d9b9b12b3
 if (C != A + B):
-    print("19-th")
+    print("Error: A + B, 19-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x5dc739f323f12a
-C = -0x5dc739f323f12a
+B = 0x506247ee87a8c52a0dc5dc
+C = 0x506247ee87a8c52a0dc5dc
 if (C != A + B):
-    print("20-th")
+    print("Error: A + B, 20-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xfef9
-C = -0xfef9
+B = 0xaeef8e05952072c6a44ccc20581a
+C = 0xaeef8e05952072c6a44ccc20581a
 if (C != A + B):
-    print("21-th")
+    print("Error: A + B, 21-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x8baceeadb2b2b418
-C = 0x8baceeadb2b2b418
+B = 0xe769cb16be1c52a112732cd2
+C = 0xe769cb16be1c52a112732cd2
 if (C != A + B):
-    print("22-th")
+    print("Error: A + B, 22-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x84a264
-C = -0x84a264
+B = 0x72ccc69f2ca854cb2555367203c128
+C = 0x72ccc69f2ca854cb2555367203c128
 if (C != A + B):
-    print("23-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x84c229a2fe228e359f087b
-C = -0x84c229a2fe228e359f087b
-if (C != A + B):
-    print("24-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x3f23ab10155f0aae
-C = -0x3f23ab10155f0aae
-if (C != A + B):
-    print("25-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x6298bf4a12a639c8c7d867
-C = -0x6298bf4a12a639c8c7d867
-if (C != A + B):
-    print("26-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x857a10d09b6d0e218068c7f1
-C = 0x857a10d09b6d0e218068c7f1
-if (C != A + B):
-    print("27-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x66d6598415e73ee00b688ac1
-C = -0x66d6598415e73ee00b688ac1
-if (C != A + B):
-    print("28-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x8d063fb17a
-C = 0x8d063fb17a
-if (C != A + B):
-    print("29-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0xd23feabd204168ce85b8
-C = -0xd23feabd204168ce85b8
-if (C != A + B):
-    print("30-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0xb0f2dc64ab
-C = 0xb0f2dc64ab
-if (C != A + B):
-    print("31-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x8c4d4c48bd448ca24743c5a
-C = 0x8c4d4c48bd448ca24743c5a
-if (C != A + B):
-    print("32-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0xf5bb477b47
-C = 0xf5bb477b47
-if (C != A + B):
-    print("33-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x52fb3d4ebea9
-C = 0x52fb3d4ebea9
-if (C != A + B):
-    print("34-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x5049a788988cc63d2e4215f03114
-C = 0x5049a788988cc63d2e4215f03114
-if (C != A + B):
-    print("35-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0xa7329355d415702fde6c
-C = -0xa7329355d415702fde6c
-if (C != A + B):
-    print("36-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x46aedc
-C = 0x46aedc
-if (C != A + B):
-    print("37-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0xf4f259eb1c
-C = -0xf4f259eb1c
-if (C != A + B):
-    print("38-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x62b5174be08ada0541f7c6ea93e579
-C = -0x62b5174be08ada0541f7c6ea93e579
-if (C != A + B):
-    print("39-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x441417b275eedf869df4f44e324b
-C = 0x441417b275eedf869df4f44e324b
-if (C != A + B):
-    print("40-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x56
-C = -0x56
-if (C != A + B):
-    print("41-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0xac78bad3
-C = 0xac78bad3
-if (C != A + B):
-    print("42-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x40cccda717871f
-C = -0x40cccda717871f
-if (C != A + B):
-    print("43-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x940d23d096
-C = -0x940d23d096
-if (C != A + B):
-    print("44-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0xb825f66c9f9b07b950fbad
-C = -0xb825f66c9f9b07b950fbad
-if (C != A + B):
-    print("45-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x5b672cd224fa60f24a39425e6a
-C = 0x5b672cd224fa60f24a39425e6a
-if (C != A + B):
-    print("46-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x67
-C = 0x67
-if (C != A + B):
-    print("47-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x6681d9e552
-C = -0x6681d9e552
-if (C != A + B):
-    print("48-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x5628a97fac57ec10aa9c146bb370d
-C = -0x5628a97fac57ec10aa9c146bb370d
-if (C != A + B):
-    print("49-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0xef1332109413e572fc0049953f6adb
-C = 0xef1332109413e572fc0049953f6adb
-if (C != A + B):
-    print("50-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0xa0cee14033
-C = -0xa0cee14033
-if (C != A + B):
-    print("51-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0xbd
-C = 0xbd
-if (C != A + B):
-    print("52-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x824a5258f6e7f3f0ae
-C = 0x824a5258f6e7f3f0ae
-if (C != A + B):
-    print("53-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x949f1e43df780bcc8d24b737
-C = -0x949f1e43df780bcc8d24b737
-if (C != A + B):
-    print("54-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x15d4708e15
-C = -0x15d4708e15
-if (C != A + B):
-    print("55-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x382da28aa4f74c23e4c7fa97d1
-C = 0x382da28aa4f74c23e4c7fa97d1
-if (C != A + B):
-    print("56-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x93ba6c58b
-C = 0x93ba6c58b
-if (C != A + B):
-    print("57-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0x5f6e571e92b88a7b33b65ae
-C = -0x5f6e571e92b88a7b33b65ae
-if (C != A + B):
-    print("58-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0xb7b018594377e318a4631d86
-C = 0xb7b018594377e318a4631d86
-if (C != A + B):
-    print("59-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x2ef789e72057c34b0ad
-C = 0x2ef789e72057c34b0ad
-if (C != A + B):
-    print("60-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x909d4a
-C = 0x909d4a
-if (C != A + B):
-    print("61-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0xa3c2b3e663b86db7
-C = 0xa3c2b3e663b86db7
-if (C != A + B):
-    print("62-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0xd7bb
-C = -0xd7bb
-if (C != A + B):
-    print("63-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = 0x1af799a2c8
-C = 0x1af799a2c8
-if (C != A + B):
-    print("64-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0
-B = -0xb1b96922e78bc95a303cece2ef0a
-C = -0xb1b96922e78bc95a303cece2ef0a
-if (C != A + B):
-    print("65-th")
+    print("Error: A + B, 23-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
@@ -665,997 +245,1417 @@ A = 0
 B = 0x35
 C = 0x35
 if (C != A + B):
-    print("66-th")
+    print("Error: A + B, 24-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x372683848a427ceca7da9b
-C = 0x372683848a427ceca7da9b
+B = 0x762865f08ce3135b96a3
+C = 0x762865f08ce3135b96a3
 if (C != A + B):
-    print("67-th")
+    print("Error: A + B, 25-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x9307c6954bc5ad58b33d
-C = -0x9307c6954bc5ad58b33d
+B = -0x99672d5fb93c599f5ac56c
+C = -0x99672d5fb93c599f5ac56c
 if (C != A + B):
-    print("68-th")
+    print("Error: A + B, 26-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x29dec6865c
-C = -0x29dec6865c
+B = -0xd879504b46e41ec4a6d3ac54
+C = -0xd879504b46e41ec4a6d3ac54
 if (C != A + B):
-    print("69-th")
+    print("Error: A + B, 27-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xe61b48de
-C = 0xe61b48de
+B = -0x70d486c4d3bfcb0cba2854d2074dbb
+C = -0x70d486c4d3bfcb0cba2854d2074dbb
 if (C != A + B):
-    print("70-th")
+    print("Error: A + B, 28-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x6932e0f7
-C = -0x6932e0f7
+B = 0x5737fa
+C = 0x5737fa
 if (C != A + B):
-    print("71-th")
+    print("Error: A + B, 29-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x949bade1ac
-C = 0x949bade1ac
+B = -0xf3024d
+C = -0xf3024d
 if (C != A + B):
-    print("72-th")
+    print("Error: A + B, 30-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xe59bcc32d3
-C = 0xe59bcc32d3
+B = -0xf7cf7265
+C = -0xf7cf7265
 if (C != A + B):
-    print("73-th")
+    print("Error: A + B, 31-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x74
-C = 0x74
+B = 0xb5
+C = 0xb5
 if (C != A + B):
-    print("74-th")
+    print("Error: A + B, 32-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x7975702c97af2ae3a26c12
-C = -0x7975702c97af2ae3a26c12
+B = 0x139d33fd68e08
+C = 0x139d33fd68e08
 if (C != A + B):
-    print("75-th")
+    print("Error: A + B, 33-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xb0411111aad7c5
-C = -0xb0411111aad7c5
+B = 0xb01f756583c1bb632e565c6199
+C = 0xb01f756583c1bb632e565c6199
 if (C != A + B):
-    print("76-th")
+    print("Error: A + B, 34-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x170c316eae657bb234b3f88a30fe94
-C = 0x170c316eae657bb234b3f88a30fe94
+B = 0xa5418127dc3ebae9
+C = 0xa5418127dc3ebae9
 if (C != A + B):
-    print("77-th")
+    print("Error: A + B, 35-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x956362
-C = -0x956362
+B = -0xefac2f21636e6c99215eed
+C = -0xefac2f21636e6c99215eed
 if (C != A + B):
-    print("78-th")
+    print("Error: A + B, 36-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x901bff
-C = 0x901bff
+B = -0xfbe2c9
+C = -0xfbe2c9
 if (C != A + B):
-    print("79-th")
+    print("Error: A + B, 37-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x8cd5
-C = 0x8cd5
+B = -0xae8795a93b6a
+C = -0xae8795a93b6a
 if (C != A + B):
-    print("80-th")
+    print("Error: A + B, 38-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x8ffb
-C = -0x8ffb
+B = -0x5c5e4cf1d4f2f513
+C = -0x5c5e4cf1d4f2f513
 if (C != A + B):
-    print("81-th")
+    print("Error: A + B, 39-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xb8baae15b81cc1e2231e46e092
-C = 0xb8baae15b81cc1e2231e46e092
+B = 0x6f349fcfb9
+C = 0x6f349fcfb9
 if (C != A + B):
-    print("82-th")
+    print("Error: A + B, 40-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xbd5b2f4cb12405
-C = -0xbd5b2f4cb12405
+B = 0x12fe8e20d3cd44c449
+C = 0x12fe8e20d3cd44c449
 if (C != A + B):
-    print("83-th")
+    print("Error: A + B, 41-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x21e09b932c
-C = 0x21e09b932c
+B = -0x72074a84ff1070a52bfd
+C = -0x72074a84ff1070a52bfd
 if (C != A + B):
-    print("84-th")
+    print("Error: A + B, 42-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x62c3be5dce09d56dfb7d5388
-C = -0x62c3be5dce09d56dfb7d5388
+B = 0x65c1f4e5cddc530b8e
+C = 0x65c1f4e5cddc530b8e
 if (C != A + B):
-    print("85-th")
+    print("Error: A + B, 43-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x18c
-C = -0x18c
+B = 0x627424f0be9d0ae4bcfa0f
+C = 0x627424f0be9d0ae4bcfa0f
 if (C != A + B):
-    print("86-th")
+    print("Error: A + B, 44-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x3d2470a0
-C = 0x3d2470a0
+B = 0x27ede9f0943851b2dd12e0
+C = 0x27ede9f0943851b2dd12e0
 if (C != A + B):
-    print("87-th")
+    print("Error: A + B, 45-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xf9930657e0
-C = 0xf9930657e0
+B = -0x92a737a01421df
+C = -0x92a737a01421df
 if (C != A + B):
-    print("88-th")
+    print("Error: A + B, 46-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x2038
-C = -0x2038
+B = 0xa1a1519b7ff6
+C = 0xa1a1519b7ff6
 if (C != A + B):
-    print("89-th")
+    print("Error: A + B, 47-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x3e4d
-C = 0x3e4d
+B = -0x63b630
+C = -0x63b630
 if (C != A + B):
-    print("90-th")
+    print("Error: A + B, 48-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x5edeb51cac4e
-C = -0x5edeb51cac4e
+B = -0xc18dbc7e8d46d8
+C = -0xc18dbc7e8d46d8
 if (C != A + B):
-    print("91-th")
+    print("Error: A + B, 49-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x629f3555d7a4
-C = 0x629f3555d7a4
+B = -0xe7
+C = -0xe7
 if (C != A + B):
-    print("92-th")
+    print("Error: A + B, 50-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xa87563da1687e7713826d0958f
-C = -0xa87563da1687e7713826d0958f
+B = -0x9d
+C = -0x9d
 if (C != A + B):
-    print("93-th")
+    print("Error: A + B, 51-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x3c4b552ab585fd
-C = -0x3c4b552ab585fd
+B = -0x91c0ab524d
+C = -0x91c0ab524d
 if (C != A + B):
-    print("94-th")
+    print("Error: A + B, 52-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xa0401481fb45bb9549e3
-C = 0xa0401481fb45bb9549e3
+B = 0x8aec3d3829f14e17ec588865b71c
+C = 0x8aec3d3829f14e17ec588865b71c
 if (C != A + B):
-    print("95-th")
+    print("Error: A + B, 53-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x18de11ae577ac7ff47ae5f00c780
-C = -0x18de11ae577ac7ff47ae5f00c780
+B = -0xe6f39815a47cba40ae5d1f64
+C = -0xe6f39815a47cba40ae5d1f64
 if (C != A + B):
-    print("96-th")
+    print("Error: A + B, 54-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xb4a4bcfdacb17191d17f
-C = 0xb4a4bcfdacb17191d17f
+B = -0x2081d681063e
+C = -0x2081d681063e
 if (C != A + B):
-    print("97-th")
+    print("Error: A + B, 55-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x1b1bb1
-C = -0x1b1bb1
+B = -0xb5a6b9095bad45ec78240700
+C = -0xb5a6b9095bad45ec78240700
 if (C != A + B):
-    print("98-th")
+    print("Error: A + B, 56-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xe1fd058bdf71ea4c8
-C = 0xe1fd058bdf71ea4c8
+B = 0x2178220da4a2c
+C = 0x2178220da4a2c
 if (C != A + B):
-    print("99-th")
+    print("Error: A + B, 57-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x97
-C = -0x97
+B = -0x1a40
+C = -0x1a40
 if (C != A + B):
-    print("100-th")
+    print("Error: A + B, 58-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x4c6978e7de3331
-C = -0x4c6978e7de3331
+B = -0x31d43c8a00e8
+C = -0x31d43c8a00e8
 if (C != A + B):
-    print("101-th")
+    print("Error: A + B, 59-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x6547a3e81cd28b
-C = 0x6547a3e81cd28b
+B = 0x4f0e
+C = 0x4f0e
 if (C != A + B):
-    print("102-th")
+    print("Error: A + B, 60-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xe57dfb1e2d
-C = -0xe57dfb1e2d
+B = -0xa0ef36b3f1
+C = -0xa0ef36b3f1
 if (C != A + B):
-    print("103-th")
+    print("Error: A + B, 61-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x93363c74
-C = 0x93363c74
+B = 0xaa1f19961590f7fda3ee3002
+C = 0xaa1f19961590f7fda3ee3002
 if (C != A + B):
-    print("104-th")
+    print("Error: A + B, 62-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x24f61a
-C = -0x24f61a
+B = 0xd4a37d65a4aee952e0cd01
+C = 0xd4a37d65a4aee952e0cd01
 if (C != A + B):
-    print("105-th")
+    print("Error: A + B, 63-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x415006de488597c79c8640
-C = -0x415006de488597c79c8640
+B = -0x260eb30d4ee2e2981decdddc3d07da
+C = -0x260eb30d4ee2e2981decdddc3d07da
 if (C != A + B):
-    print("106-th")
+    print("Error: A + B, 64-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xd12d4a
-C = 0xd12d4a
+B = 0xc37560a860b64372530c
+C = 0xc37560a860b64372530c
 if (C != A + B):
-    print("107-th")
+    print("Error: A + B, 65-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x2a69
-C = 0x2a69
+B = -0x5e9582094cc2d08d
+C = -0x5e9582094cc2d08d
 if (C != A + B):
-    print("108-th")
+    print("Error: A + B, 66-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x22c5ee55f8c0d69bd8885c
-C = 0x22c5ee55f8c0d69bd8885c
+B = 0x9c1d2e
+C = 0x9c1d2e
 if (C != A + B):
-    print("109-th")
+    print("Error: A + B, 67-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xdcb93e7a641a
-C = 0xdcb93e7a641a
+B = -0xca59da60b1cf94c06b
+C = -0xca59da60b1cf94c06b
 if (C != A + B):
-    print("110-th")
+    print("Error: A + B, 68-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xf2956861f75e4e36becb2badfdcf
-C = -0xf2956861f75e4e36becb2badfdcf
+B = 0xd621b0f66d7e9c986858b4bb30b2
+C = 0xd621b0f66d7e9c986858b4bb30b2
 if (C != A + B):
-    print("111-th")
+    print("Error: A + B, 69-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x7d0f1556eb970a192c03ce637ae084
-C = -0x7d0f1556eb970a192c03ce637ae084
+B = -0x1ace79
+C = -0x1ace79
 if (C != A + B):
-    print("112-th")
+    print("Error: A + B, 70-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xda82246065
-C = 0xda82246065
+B = -0xde7263c08df27cb6e54229
+C = -0xde7263c08df27cb6e54229
 if (C != A + B):
-    print("113-th")
+    print("Error: A + B, 71-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xfb312a74315c
-C = -0xfb312a74315c
+B = -0xd488ebe607601c
+C = -0xd488ebe607601c
 if (C != A + B):
-    print("114-th")
+    print("Error: A + B, 72-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xf2132dc49a6494ffa33bfb3a39de
-C = 0xf2132dc49a6494ffa33bfb3a39de
+B = -0x50ea75f3b7c
+C = -0x50ea75f3b7c
 if (C != A + B):
-    print("115-th")
+    print("Error: A + B, 73-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xfb776e78
-C = -0xfb776e78
+B = -0xdd3626d05d
+C = -0xdd3626d05d
 if (C != A + B):
-    print("116-th")
+    print("Error: A + B, 74-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x6ce19dc562
-C = 0x6ce19dc562
+B = 0x5966709aca8f644a7a841d
+C = 0x5966709aca8f644a7a841d
 if (C != A + B):
-    print("117-th")
+    print("Error: A + B, 75-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xbaacc0f96337dff7357fc0ea2d0ae
-C = -0xbaacc0f96337dff7357fc0ea2d0ae
+B = 0xfb61
+C = 0xfb61
 if (C != A + B):
-    print("118-th")
+    print("Error: A + B, 76-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xb25d00
-C = -0xb25d00
+B = 0xc2
+C = 0xc2
 if (C != A + B):
-    print("119-th")
+    print("Error: A + B, 77-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xe1ad0c55c1f5be1ae62
-C = -0xe1ad0c55c1f5be1ae62
+B = 0xe857ef33
+C = 0xe857ef33
 if (C != A + B):
-    print("120-th")
+    print("Error: A + B, 78-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xd133
-C = 0xd133
+B = -0x7f8460
+C = -0x7f8460
 if (C != A + B):
-    print("121-th")
+    print("Error: A + B, 79-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x69c1
-C = 0x69c1
+B = -0xa93f70f750cb50e7
+C = -0xa93f70f750cb50e7
 if (C != A + B):
-    print("122-th")
+    print("Error: A + B, 80-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x5c3c7f99bbebe48eb6
-C = 0x5c3c7f99bbebe48eb6
+B = 0x6721da89
+C = 0x6721da89
 if (C != A + B):
-    print("123-th")
+    print("Error: A + B, 81-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x697f01
-C = 0x697f01
+B = -0x566738ce42cec785daa7
+C = -0x566738ce42cec785daa7
 if (C != A + B):
-    print("124-th")
+    print("Error: A + B, 82-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x2c7b8a47fb27d0e4fd48e0bae62d
-C = 0x2c7b8a47fb27d0e4fd48e0bae62d
+B = 0x4d9823d1bc3e6763c59993b1d47f
+C = 0x4d9823d1bc3e6763c59993b1d47f
 if (C != A + B):
-    print("125-th")
+    print("Error: A + B, 83-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xfc5c1d93
-C = -0xfc5c1d93
+B = -0x1871c055
+C = -0x1871c055
 if (C != A + B):
-    print("126-th")
+    print("Error: A + B, 84-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x6ba141293f8210145289
-C = 0x6ba141293f8210145289
+B = 0xcfcb087c45f939
+C = 0xcfcb087c45f939
 if (C != A + B):
-    print("127-th")
+    print("Error: A + B, 85-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xe0286f004ac123d222ec9711679573
-C = 0xe0286f004ac123d222ec9711679573
+B = 0x5ebc7dd2e358
+C = 0x5ebc7dd2e358
 if (C != A + B):
-    print("128-th")
+    print("Error: A + B, 86-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x5df2a53ab89253268a0537
-C = 0x5df2a53ab89253268a0537
+B = -0x7495a385f325e71669cc92
+C = -0x7495a385f325e71669cc92
 if (C != A + B):
-    print("129-th")
+    print("Error: A + B, 87-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x79aac8f1debecb
-C = 0x79aac8f1debecb
+B = -0x47b01e
+C = -0x47b01e
 if (C != A + B):
-    print("130-th")
+    print("Error: A + B, 88-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x32fa6335d370822582e4a8
-C = -0x32fa6335d370822582e4a8
+B = 0x342987e39650d9d36aaa656732
+C = 0x342987e39650d9d36aaa656732
 if (C != A + B):
-    print("131-th")
+    print("Error: A + B, 89-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x1c1c530bddfed4367ccb
-C = -0x1c1c530bddfed4367ccb
+B = 0xaf8289e3fae1a8
+C = 0xaf8289e3fae1a8
 if (C != A + B):
-    print("132-th")
+    print("Error: A + B, 90-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xd3555292
-C = 0xd3555292
+B = -0x1cea7a53234057
+C = -0x1cea7a53234057
 if (C != A + B):
-    print("133-th")
+    print("Error: A + B, 91-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x54a011
-C = -0x54a011
+B = -0xf450d61731fb34d6b5951f
+C = -0xf450d61731fb34d6b5951f
 if (C != A + B):
-    print("134-th")
+    print("Error: A + B, 92-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x9fc85343
-C = -0x9fc85343
+B = 0x3c453d74d91387b21e784b
+C = 0x3c453d74d91387b21e784b
 if (C != A + B):
-    print("135-th")
+    print("Error: A + B, 93-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x962aed
-C = -0x962aed
+B = 0xe50c88a867
+C = 0xe50c88a867
 if (C != A + B):
-    print("136-th")
+    print("Error: A + B, 94-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x553192aae0af
-C = 0x553192aae0af
+B = 0x31d6d5f5a2bd
+C = 0x31d6d5f5a2bd
 if (C != A + B):
-    print("137-th")
+    print("Error: A + B, 95-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xd57620cbc11d813abf0c
-C = -0xd57620cbc11d813abf0c
+B = -0x34f44852a9841c931248eee4908a
+C = -0x34f44852a9841c931248eee4908a
 if (C != A + B):
-    print("138-th")
+    print("Error: A + B, 96-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xfbff6e9e299c7cb6262a
-C = -0xfbff6e9e299c7cb6262a
+B = -0x664f4c2167ac5ead748ce24
+C = -0x664f4c2167ac5ead748ce24
 if (C != A + B):
-    print("139-th")
+    print("Error: A + B, 97-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x3735f0a81cadc4
-C = -0x3735f0a81cadc4
+B = -0x320e39b5d89b3aba6b4bee3312
+C = -0x320e39b5d89b3aba6b4bee3312
 if (C != A + B):
-    print("140-th")
+    print("Error: A + B, 98-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xb38ba9d5652577dfff
-C = 0xb38ba9d5652577dfff
+B = 0x14ea4747e40f62b9ac
+C = 0x14ea4747e40f62b9ac
 if (C != A + B):
-    print("141-th")
+    print("Error: A + B, 99-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xfb70fbd3c15304
-C = -0xfb70fbd3c15304
+B = -0x790301d14a
+C = -0x790301d14a
 if (C != A + B):
-    print("142-th")
+    print("Error: A + B, 100-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x379fbc69137
-C = 0x379fbc69137
+B = -0xd880c43f18deaaa681b1
+C = -0xd880c43f18deaaa681b1
 if (C != A + B):
-    print("143-th")
+    print("Error: A + B, 101-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x44682fc48999731e
-C = 0x44682fc48999731e
+B = 0x7ca1
+C = 0x7ca1
 if (C != A + B):
-    print("144-th")
+    print("Error: A + B, 102-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x943a9c1d
-C = 0x943a9c1d
+B = -0x63e0cbf09d
+C = -0x63e0cbf09d
 if (C != A + B):
-    print("145-th")
+    print("Error: A + B, 103-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x3c6e8bc2
-C = -0x3c6e8bc2
+B = -0xd6
+C = -0xd6
 if (C != A + B):
-    print("146-th")
+    print("Error: A + B, 104-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xf87ba25
-C = 0xf87ba25
+B = 0x33b3b1b59ef5b06f08b4
+C = 0x33b3b1b59ef5b06f08b4
 if (C != A + B):
-    print("147-th")
+    print("Error: A + B, 105-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x6136c5
-C = 0x6136c5
+B = -0x6b554a5
+C = -0x6b554a5
 if (C != A + B):
-    print("148-th")
+    print("Error: A + B, 106-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x9c008b5fa1af8124
-C = -0x9c008b5fa1af8124
+B = 0x97965a65e242e7f1bfa045b191
+C = 0x97965a65e242e7f1bfa045b191
 if (C != A + B):
-    print("149-th")
+    print("Error: A + B, 107-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xccbe68df159e1084a3
-C = 0xccbe68df159e1084a3
+B = 0x532a05c4
+C = 0x532a05c4
 if (C != A + B):
-    print("150-th")
+    print("Error: A + B, 108-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x560c
-C = 0x560c
+B = 0x52
+C = 0x52
 if (C != A + B):
-    print("151-th")
+    print("Error: A + B, 109-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xa09a50afb5779b447c6e
-C = -0xa09a50afb5779b447c6e
+B = 0x428c6f6b74f28f4783cc98af
+C = 0x428c6f6b74f28f4783cc98af
 if (C != A + B):
-    print("152-th")
+    print("Error: A + B, 110-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x174a10ef57b9e725bbb4
-C = 0x174a10ef57b9e725bbb4
+B = -0xf631d3a4de0a3c6a7b3ab780e25efe
+C = -0xf631d3a4de0a3c6a7b3ab780e25efe
 if (C != A + B):
-    print("153-th")
+    print("Error: A + B, 111-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xcb4e47030
-C = -0xcb4e47030
+B = -0x325951e239de
+C = -0x325951e239de
 if (C != A + B):
-    print("154-th")
+    print("Error: A + B, 112-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x23fdc7c764439539
-C = -0x23fdc7c764439539
+B = -0xdcf6717b6c51656ac61118be40
+C = -0xdcf6717b6c51656ac61118be40
 if (C != A + B):
-    print("155-th")
+    print("Error: A + B, 113-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xfc73f3c6cd00ec654c1189da2e6bfe
-C = -0xfc73f3c6cd00ec654c1189da2e6bfe
+B = -0xa081c3aed8a57e39e3e8a3914223c9
+C = -0xa081c3aed8a57e39e3e8a3914223c9
 if (C != A + B):
-    print("156-th")
+    print("Error: A + B, 114-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x25bec9e077f3fa75399683a9ce
-C = -0x25bec9e077f3fa75399683a9ce
+B = 0x6140178883b25f19a1ab7b51
+C = 0x6140178883b25f19a1ab7b51
 if (C != A + B):
-    print("157-th")
+    print("Error: A + B, 115-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xe97a
-C = -0xe97a
+B = -0xc45600c3bcd7
+C = -0xc45600c3bcd7
 if (C != A + B):
-    print("158-th")
+    print("Error: A + B, 116-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0xe3d39f798d1d7524c6fe7292945c
-C = 0xe3d39f798d1d7524c6fe7292945c
+B = -0xb37423a4
+C = -0xb37423a4
 if (C != A + B):
-    print("159-th")
+    print("Error: A + B, 117-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x8ee380ca97
-C = 0x8ee380ca97
+B = 0xead554cf6f2fad7ca4d2628da3
+C = 0xead554cf6f2fad7ca4d2628da3
 if (C != A + B):
-    print("160-th")
+    print("Error: A + B, 118-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xf37a8e0787e182aa0cdb
-C = -0xf37a8e0787e182aa0cdb
+B = -0xafb35c6c99
+C = -0xafb35c6c99
 if (C != A + B):
-    print("161-th")
+    print("Error: A + B, 119-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0xe2884010
-C = -0xe2884010
+B = -0xe5bf9d
+C = -0xe5bf9d
 if (C != A + B):
-    print("162-th")
+    print("Error: A + B, 120-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x44cfc35b02ea632c6c47389b
-C = 0x44cfc35b02ea632c6c47389b
+B = -0x79
+C = -0x79
 if (C != A + B):
-    print("163-th")
+    print("Error: A + B, 121-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = 0x5b16616721ec4cc5e17a1fc5fa2e
-C = 0x5b16616721ec4cc5e17a1fc5fa2e
+B = -0xb05df94580008d
+C = -0xb05df94580008d
 if (C != A + B):
-    print("164-th")
+    print("Error: A + B, 122-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = 0
-B = -0x57b72f6ca38f0b266dd7e3
-C = -0x57b72f6ca38f0b266dd7e3
+B = 0x2025dd048a26e9375a055a2a
+C = 0x2025dd048a26e9375a055a2a
 if (C != A + B):
-    print("165-th")
+    print("Error: A + B, 123-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xe5da9645a86da9bcaf
+C = 0xe5da9645a86da9bcaf
+if (C != A + B):
+    print("Error: A + B, 124-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x11a65c2cefe29c328304fbdd
+C = -0x11a65c2cefe29c328304fbdd
+if (C != A + B):
+    print("Error: A + B, 125-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x21e9a0bc1bef07a6ceb7640e20a4
+C = -0x21e9a0bc1bef07a6ceb7640e20a4
+if (C != A + B):
+    print("Error: A + B, 126-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xe6dd5a28ae3136b82d98
+C = 0xe6dd5a28ae3136b82d98
+if (C != A + B):
+    print("Error: A + B, 127-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x433e51101f73889bf9e43989
+C = -0x433e51101f73889bf9e43989
+if (C != A + B):
+    print("Error: A + B, 128-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xcac502c1ab56c7e396f16bf8
+C = 0xcac502c1ab56c7e396f16bf8
+if (C != A + B):
+    print("Error: A + B, 129-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xa8a9ee6c5acab9b90ae87a
+C = 0xa8a9ee6c5acab9b90ae87a
+if (C != A + B):
+    print("Error: A + B, 130-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xfea878157bcba760ea51
+C = 0xfea878157bcba760ea51
+if (C != A + B):
+    print("Error: A + B, 131-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x613f264fd16cce0e
+C = 0x613f264fd16cce0e
+if (C != A + B):
+    print("Error: A + B, 132-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x466ada9630
+C = -0x466ada9630
+if (C != A + B):
+    print("Error: A + B, 133-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xcd22bb0024ab248499a3e5d8313ad5
+C = 0xcd22bb0024ab248499a3e5d8313ad5
+if (C != A + B):
+    print("Error: A + B, 134-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0xcaeb
+C = -0xcaeb
+if (C != A + B):
+    print("Error: A + B, 135-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x62aee298218a5aab
+C = 0x62aee298218a5aab
+if (C != A + B):
+    print("Error: A + B, 136-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x4eb581ddfd2de6b9c2b0
+C = -0x4eb581ddfd2de6b9c2b0
+if (C != A + B):
+    print("Error: A + B, 137-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x4fbe5148e139b2f99766974e71
+C = -0x4fbe5148e139b2f99766974e71
+if (C != A + B):
+    print("Error: A + B, 138-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x99da4651a615
+C = -0x99da4651a615
+if (C != A + B):
+    print("Error: A + B, 139-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x3e2a7eb2bd3b7847
+C = 0x3e2a7eb2bd3b7847
+if (C != A + B):
+    print("Error: A + B, 140-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0xbccf48e956bb3d4265ad
+C = -0xbccf48e956bb3d4265ad
+if (C != A + B):
+    print("Error: A + B, 141-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xc88e37bdd27da50647
+C = 0xc88e37bdd27da50647
+if (C != A + B):
+    print("Error: A + B, 142-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x8e27bbc7519c886d85859b2156
+C = -0x8e27bbc7519c886d85859b2156
+if (C != A + B):
+    print("Error: A + B, 143-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x2eddae4a562775f2
+C = 0x2eddae4a562775f2
+if (C != A + B):
+    print("Error: A + B, 144-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x30552e6b4360971d03a0b0aa
+C = 0x30552e6b4360971d03a0b0aa
+if (C != A + B):
+    print("Error: A + B, 145-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0xe969904a8c49c6a53fb8ab
+C = -0xe969904a8c49c6a53fb8ab
+if (C != A + B):
+    print("Error: A + B, 146-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xb4b0a3afc32dcddf3f5ebe1c
+C = 0xb4b0a3afc32dcddf3f5ebe1c
+if (C != A + B):
+    print("Error: A + B, 147-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x2bba4f167f
+C = -0x2bba4f167f
+if (C != A + B):
+    print("Error: A + B, 148-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0xa24096e188b9558b0a820f
+C = -0xa24096e188b9558b0a820f
+if (C != A + B):
+    print("Error: A + B, 149-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x9f3b63191f1314ae224026e7db
+C = 0x9f3b63191f1314ae224026e7db
+if (C != A + B):
+    print("Error: A + B, 150-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xfd6e883a6c6c042
+C = 0xfd6e883a6c6c042
+if (C != A + B):
+    print("Error: A + B, 151-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xa802291d385866a64e01ee30b8
+C = 0xa802291d385866a64e01ee30b8
+if (C != A + B):
+    print("Error: A + B, 152-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x5cec20d019de241c1c7ffcdebd
+C = -0x5cec20d019de241c1c7ffcdebd
+if (C != A + B):
+    print("Error: A + B, 153-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x2228
+C = 0x2228
+if (C != A + B):
+    print("Error: A + B, 154-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xf7ab01a8a4b
+C = 0xf7ab01a8a4b
+if (C != A + B):
+    print("Error: A + B, 155-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xd1eeeb1555ee83842996
+C = 0xd1eeeb1555ee83842996
+if (C != A + B):
+    print("Error: A + B, 156-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xc1
+C = 0xc1
+if (C != A + B):
+    print("Error: A + B, 157-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x7b83c76eb4f39f3ee7f3910123
+C = -0x7b83c76eb4f39f3ee7f3910123
+if (C != A + B):
+    print("Error: A + B, 158-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xbdc0bdd5317ca
+C = 0xbdc0bdd5317ca
+if (C != A + B):
+    print("Error: A + B, 159-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x419e350d8f
+C = 0x419e350d8f
+if (C != A + B):
+    print("Error: A + B, 160-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x8c891b95cad80530763bd2
+C = -0x8c891b95cad80530763bd2
+if (C != A + B):
+    print("Error: A + B, 161-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0xc6f24dae67e17f52e2585da558
+C = 0xc6f24dae67e17f52e2585da558
+if (C != A + B):
+    print("Error: A + B, 162-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x8719
+C = 0x8719
+if (C != A + B):
+    print("Error: A + B, 163-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = -0x267d2d1fbcaffed4ecd5f1
+C = -0x267d2d1fbcaffed4ecd5f1
+if (C != A + B):
+    print("Error: A + B, 164-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0
+B = 0x93d14d3be1
+C = 0x93d14d3be1
+if (C != A + B):
+    print("Error: A + B, 165-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
@@ -1665,1661 +1665,1661 @@ if (cnt == 0):
     print("ALL TRUE!")
 print("### Case 2: B = 0, C = A ###\n")
 cnt = 0
-A = -0x8a6eab9b449ba9f4d698c9
+A = 0xa1ec7709627edbdb89cb86deff
 B = 0
-C = -0x8a6eab9b449ba9f4d698c9
+C = 0xa1ec7709627edbdb89cb86deff
 if (C != A + B):
-    print("0-th")
+    print("Error: A + B, 0-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6d65c38e2f1718c715a8c50663fc
+A = -0xa36203f64b5c9638e803387cff9a46
 B = 0
-C = -0x6d65c38e2f1718c715a8c50663fc
+C = -0xa36203f64b5c9638e803387cff9a46
 if (C != A + B):
-    print("1-th")
+    print("Error: A + B, 1-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6c8953b715f70675
+A = 0x6b0c7a64a8
 B = 0
-C = 0x6c8953b715f70675
+C = 0x6b0c7a64a8
 if (C != A + B):
-    print("2-th")
+    print("Error: A + B, 2-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3b5b5b
+A = 0xb4756d090abf
 B = 0
-C = -0x3b5b5b
+C = 0xb4756d090abf
 if (C != A + B):
-    print("3-th")
+    print("Error: A + B, 3-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5e3656055f160764a9
+A = 0xd724a603c96be8b5
 B = 0
-C = -0x5e3656055f160764a9
+C = 0xd724a603c96be8b5
 if (C != A + B):
-    print("4-th")
+    print("Error: A + B, 4-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7f58a8
+A = -0x28e06eee5e27
 B = 0
-C = -0x7f58a8
+C = -0x28e06eee5e27
 if (C != A + B):
-    print("5-th")
+    print("Error: A + B, 5-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2ee99c
+A = 0xd6
 B = 0
-C = 0x2ee99c
+C = 0xd6
 if (C != A + B):
-    print("6-th")
+    print("Error: A + B, 6-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbfe4a027aeb114fa
+A = -0xee9fd4
 B = 0
-C = 0xbfe4a027aeb114fa
+C = -0xee9fd4
 if (C != A + B):
-    print("7-th")
+    print("Error: A + B, 7-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd1f582be1b
+A = -0x3e9f
 B = 0
-C = -0xd1f582be1b
+C = -0x3e9f
 if (C != A + B):
-    print("8-th")
+    print("Error: A + B, 8-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x65853d
+A = 0x6eab974b1d67ef85
 B = 0
-C = -0x65853d
+C = 0x6eab974b1d67ef85
 if (C != A + B):
-    print("9-th")
+    print("Error: A + B, 9-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xff
+A = -0x4f3885631230
 B = 0
-C = -0xff
+C = -0x4f3885631230
 if (C != A + B):
-    print("10-th")
+    print("Error: A + B, 10-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x76c0203cca7a43
+A = 0x44e818c6a4a3fb29
 B = 0
-C = 0x76c0203cca7a43
+C = 0x44e818c6a4a3fb29
 if (C != A + B):
-    print("11-th")
+    print("Error: A + B, 11-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbc
+A = -0x676d16b1
 B = 0
-C = 0xbc
+C = -0x676d16b1
 if (C != A + B):
-    print("12-th")
+    print("Error: A + B, 12-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1031d57b17
+A = -0xc79dcb12833b54b9a2
 B = 0
-C = 0x1031d57b17
+C = -0xc79dcb12833b54b9a2
 if (C != A + B):
-    print("13-th")
+    print("Error: A + B, 13-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xab20cee5ecf8
+A = 0x459db80a336e3d732d6b5077e2b98c
 B = 0
-C = 0xab20cee5ecf8
+C = 0x459db80a336e3d732d6b5077e2b98c
 if (C != A + B):
-    print("14-th")
+    print("Error: A + B, 14-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x962639f1f1ed4c567e3d
+A = -0xb3
 B = 0
-C = -0x962639f1f1ed4c567e3d
+C = -0xb3
 if (C != A + B):
-    print("15-th")
+    print("Error: A + B, 15-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x75
+A = 0x6a8939c7f938f500
 B = 0
-C = -0x75
+C = 0x6a8939c7f938f500
 if (C != A + B):
-    print("16-th")
+    print("Error: A + B, 16-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x259d2e64
+A = -0xb12a9ca248f7248099872c984e093a
 B = 0
-C = 0x259d2e64
+C = -0xb12a9ca248f7248099872c984e093a
 if (C != A + B):
-    print("17-th")
+    print("Error: A + B, 17-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf8
+A = -0xadf30fe61e55f11df0d86e4e
 B = 0
-C = -0xf8
+C = -0xadf30fe61e55f11df0d86e4e
 if (C != A + B):
-    print("18-th")
+    print("Error: A + B, 18-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8d4128cebb46ffd5638
+A = -0x39184aaa63b18eb51cca6a8757d1
 B = 0
-C = -0x8d4128cebb46ffd5638
+C = -0x39184aaa63b18eb51cca6a8757d1
 if (C != A + B):
-    print("19-th")
+    print("Error: A + B, 19-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x208da0d606d79f9957be3cf3e7ac12
+A = 0xb
 B = 0
-C = 0x208da0d606d79f9957be3cf3e7ac12
+C = 0xb
 if (C != A + B):
-    print("20-th")
+    print("Error: A + B, 20-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd98dba9330ff6e
+A = 0x1f708dec7d14b6816f791293
 B = 0
-C = -0xd98dba9330ff6e
+C = 0x1f708dec7d14b6816f791293
 if (C != A + B):
-    print("21-th")
+    print("Error: A + B, 21-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfd
+A = 0x68cc6672a2
 B = 0
-C = -0xfd
+C = 0x68cc6672a2
 if (C != A + B):
-    print("22-th")
+    print("Error: A + B, 22-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc16868bc5fe8
+A = 0x670410520a09c602cfbcc621
 B = 0
-C = 0xc16868bc5fe8
+C = 0x670410520a09c602cfbcc621
 if (C != A + B):
-    print("23-th")
+    print("Error: A + B, 23-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x19d6b238cb19886835
+A = 0x9b7dc30ee096f009705fe458b2f9
 B = 0
-C = -0x19d6b238cb19886835
+C = 0x9b7dc30ee096f009705fe458b2f9
 if (C != A + B):
-    print("24-th")
+    print("Error: A + B, 24-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9d51
+A = -0x97b6d7e76901f181
 B = 0
-C = -0x9d51
+C = -0x97b6d7e76901f181
 if (C != A + B):
-    print("25-th")
+    print("Error: A + B, 25-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb666f3144cef46305
+A = 0x662a5c711099a65a9ced
 B = 0
-C = 0xb666f3144cef46305
+C = 0x662a5c711099a65a9ced
 if (C != A + B):
-    print("26-th")
+    print("Error: A + B, 26-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x676747471caac0f39486
+A = -0x87a43279
 B = 0
-C = 0x676747471caac0f39486
+C = -0x87a43279
 if (C != A + B):
-    print("27-th")
+    print("Error: A + B, 27-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x22567959
+A = 0xd34d371eb1d338b78511
 B = 0
-C = 0x22567959
+C = 0xd34d371eb1d338b78511
 if (C != A + B):
-    print("28-th")
+    print("Error: A + B, 28-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9d19d04f72a07a171e9a6ed7dc
+A = -0x2ac5eaa3a866483e
 B = 0
-C = 0x9d19d04f72a07a171e9a6ed7dc
+C = -0x2ac5eaa3a866483e
 if (C != A + B):
-    print("29-th")
+    print("Error: A + B, 29-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x201b6753a4d05a90d3ff88d5ca6300
+A = -0xe1243bc02012cb155722183664ea4d
 B = 0
-C = -0x201b6753a4d05a90d3ff88d5ca6300
+C = -0xe1243bc02012cb155722183664ea4d
 if (C != A + B):
-    print("30-th")
+    print("Error: A + B, 30-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xba6a590030bfc25802
+A = -0x7a048f6b0374078df35152072
 B = 0
-C = -0xba6a590030bfc25802
+C = -0x7a048f6b0374078df35152072
 if (C != A + B):
-    print("31-th")
+    print("Error: A + B, 31-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc969de
+A = -0x361f12ef
 B = 0
-C = 0xc969de
+C = -0x361f12ef
 if (C != A + B):
-    print("32-th")
+    print("Error: A + B, 32-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xba836642
+A = 0xbe56
 B = 0
-C = -0xba836642
+C = 0xbe56
 if (C != A + B):
-    print("33-th")
+    print("Error: A + B, 33-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x41c7b66eea053142d0166e49
+A = -0xea51
 B = 0
-C = -0x41c7b66eea053142d0166e49
+C = -0xea51
 if (C != A + B):
-    print("34-th")
+    print("Error: A + B, 34-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4f03040c53554c6f76ed
+A = -0x4ac1bb833bba7e832edd02cd
 B = 0
-C = -0x4f03040c53554c6f76ed
+C = -0x4ac1bb833bba7e832edd02cd
 if (C != A + B):
-    print("35-th")
+    print("Error: A + B, 35-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xab
+A = 0x189cf6805d
 B = 0
-C = 0xab
+C = 0x189cf6805d
 if (C != A + B):
-    print("36-th")
+    print("Error: A + B, 36-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7041ecd2fb06c7
+A = 0xdc08
 B = 0
-C = -0x7041ecd2fb06c7
+C = 0xdc08
 if (C != A + B):
-    print("37-th")
+    print("Error: A + B, 37-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc98431d1ad4f1ed8
+A = 0x7c7a81e091f4e5b710ce435290
 B = 0
-C = 0xc98431d1ad4f1ed8
+C = 0x7c7a81e091f4e5b710ce435290
 if (C != A + B):
-    print("38-th")
+    print("Error: A + B, 38-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x17c5e4db715fdcf7
+A = -0x21418814d1791f
 B = 0
-C = 0x17c5e4db715fdcf7
+C = -0x21418814d1791f
 if (C != A + B):
-    print("39-th")
+    print("Error: A + B, 39-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8fcb6e0193e76692f61da8be08ff
+A = 0xb90f94c2b6453d0e0172
 B = 0
-C = -0x8fcb6e0193e76692f61da8be08ff
+C = 0xb90f94c2b6453d0e0172
 if (C != A + B):
-    print("40-th")
+    print("Error: A + B, 40-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb66f1642f813f6718cec5352a1
+A = 0x6e090422954afa5e826e15e63a
 B = 0
-C = 0xb66f1642f813f6718cec5352a1
+C = 0x6e090422954afa5e826e15e63a
 if (C != A + B):
-    print("41-th")
+    print("Error: A + B, 41-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x127d24336
+A = 0x9032c859594d8d
 B = 0
-C = 0x127d24336
+C = 0x9032c859594d8d
 if (C != A + B):
-    print("42-th")
+    print("Error: A + B, 42-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6b0f7e84
+A = 0x39bd1bf509
 B = 0
-C = -0x6b0f7e84
+C = 0x39bd1bf509
 if (C != A + B):
-    print("43-th")
+    print("Error: A + B, 43-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf57f4f78f6e664bb261874319991
+A = -0xef22b5a2fae5d6b4f884
 B = 0
-C = -0xf57f4f78f6e664bb261874319991
+C = -0xef22b5a2fae5d6b4f884
 if (C != A + B):
-    print("44-th")
+    print("Error: A + B, 44-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc09bcf27cbcd
+A = -0xefe85a
 B = 0
-C = -0xc09bcf27cbcd
+C = -0xefe85a
 if (C != A + B):
-    print("45-th")
+    print("Error: A + B, 45-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc44383
+A = -0x18ff1b7f89e466459d
 B = 0
-C = 0xc44383
+C = -0x18ff1b7f89e466459d
 if (C != A + B):
-    print("46-th")
+    print("Error: A + B, 46-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xffb857691836a1b1
+A = -0x3e79b295
 B = 0
-C = -0xffb857691836a1b1
+C = -0x3e79b295
 if (C != A + B):
-    print("47-th")
+    print("Error: A + B, 47-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x75101b21cbf85331
+A = -0x81d846
 B = 0
-C = -0x75101b21cbf85331
+C = -0x81d846
 if (C != A + B):
-    print("48-th")
+    print("Error: A + B, 48-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xccee9e533d134c0617
+A = -0x672b64f7bd5f4959e6c209412f
 B = 0
-C = 0xccee9e533d134c0617
+C = -0x672b64f7bd5f4959e6c209412f
 if (C != A + B):
-    print("49-th")
+    print("Error: A + B, 49-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xff17ac5def
+A = -0xb545d3cf
 B = 0
-C = -0xff17ac5def
+C = -0xb545d3cf
 if (C != A + B):
-    print("50-th")
+    print("Error: A + B, 50-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcd7d693fcdfc
+A = -0x10c59e37dd9e94
 B = 0
-C = 0xcd7d693fcdfc
+C = -0x10c59e37dd9e94
 if (C != A + B):
-    print("51-th")
+    print("Error: A + B, 51-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5398e9a2e893fdb66485b9ed36
+A = -0x14accf569af03e9ee16be5f2f310
 B = 0
-C = -0x5398e9a2e893fdb66485b9ed36
+C = -0x14accf569af03e9ee16be5f2f310
 if (C != A + B):
-    print("52-th")
+    print("Error: A + B, 52-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8c855b319cca9fae047016
+A = 0xbd9d2259880969515777fa
 B = 0
-C = -0x8c855b319cca9fae047016
+C = 0xbd9d2259880969515777fa
 if (C != A + B):
-    print("53-th")
+    print("Error: A + B, 53-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x33639ac618f743
+A = 0x9ae04eb33b38ace2f36af8c0f0
 B = 0
-C = -0x33639ac618f743
+C = 0x9ae04eb33b38ace2f36af8c0f0
 if (C != A + B):
-    print("54-th")
+    print("Error: A + B, 54-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x25ce635b021e935f1fbf4c3eed7e
+A = 0xf7c363102127cf25d87c5712
 B = 0
-C = -0x25ce635b021e935f1fbf4c3eed7e
+C = 0xf7c363102127cf25d87c5712
 if (C != A + B):
-    print("55-th")
+    print("Error: A + B, 55-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x72510c1e5ca
+A = -0x31a53ff5c09ab89f6d525f919c81
 B = 0
-C = -0x72510c1e5ca
+C = -0x31a53ff5c09ab89f6d525f919c81
 if (C != A + B):
-    print("56-th")
+    print("Error: A + B, 56-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x30346a
+A = -0x8fc455a37574ceddca80
 B = 0
-C = 0x30346a
+C = -0x8fc455a37574ceddca80
 if (C != A + B):
-    print("57-th")
+    print("Error: A + B, 57-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbfe9ef9ab152c67f953783995e
+A = -0x6bcef
 B = 0
-C = -0xbfe9ef9ab152c67f953783995e
+C = -0x6bcef
 if (C != A + B):
-    print("58-th")
+    print("Error: A + B, 58-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x38892a2630031080c7616d
+A = -0x401be182c6e5ada74d0c72
 B = 0
-C = -0x38892a2630031080c7616d
+C = -0x401be182c6e5ada74d0c72
 if (C != A + B):
-    print("59-th")
+    print("Error: A + B, 59-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbe58c65e1da
+A = 0x1eed1
 B = 0
-C = -0xbe58c65e1da
+C = 0x1eed1
 if (C != A + B):
-    print("60-th")
+    print("Error: A + B, 60-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd4d34c44de55ee53
+A = 0xfcd42e4ab654ef74
 B = 0
-C = -0xd4d34c44de55ee53
+C = 0xfcd42e4ab654ef74
 if (C != A + B):
-    print("61-th")
+    print("Error: A + B, 61-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x771579049aba3935
+A = -0xcaef61ab3db
 B = 0
-C = -0x771579049aba3935
+C = -0xcaef61ab3db
 if (C != A + B):
-    print("62-th")
+    print("Error: A + B, 62-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x59924d5472da0a3
+A = -0x34877caae1fcca
 B = 0
-C = -0x59924d5472da0a3
+C = -0x34877caae1fcca
 if (C != A + B):
-    print("63-th")
+    print("Error: A + B, 63-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe99527267dec
+A = 0xfabeceeab08ccec8d412c531
 B = 0
-C = 0xe99527267dec
+C = 0xfabeceeab08ccec8d412c531
 if (C != A + B):
-    print("64-th")
+    print("Error: A + B, 64-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6975a30b0bb29d4bb45b56a410e93f
+A = -0x9036de32c86bb5f55b63437bb74225
 B = 0
-C = -0x6975a30b0bb29d4bb45b56a410e93f
+C = -0x9036de32c86bb5f55b63437bb74225
 if (C != A + B):
-    print("65-th")
+    print("Error: A + B, 65-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7df3a1a522d3b38a
+A = -0x16b98638d4aa0e676eb0d10b8a87
 B = 0
-C = 0x7df3a1a522d3b38a
+C = -0x16b98638d4aa0e676eb0d10b8a87
 if (C != A + B):
-    print("66-th")
+    print("Error: A + B, 66-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd16334a1123b
+A = -0x9e6d09daa9dad9528b58
 B = 0
-C = -0xd16334a1123b
+C = -0x9e6d09daa9dad9528b58
 if (C != A + B):
-    print("67-th")
+    print("Error: A + B, 67-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x98cacee8de44
+A = -0xabe2d6
 B = 0
-C = -0x98cacee8de44
+C = -0xabe2d6
 if (C != A + B):
-    print("68-th")
+    print("Error: A + B, 68-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9465
+A = -0x411babe848fb4ce12967a10a9b
 B = 0
-C = -0x9465
+C = -0x411babe848fb4ce12967a10a9b
 if (C != A + B):
-    print("69-th")
+    print("Error: A + B, 69-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8705c9c978faf11679f3c75215ee
+A = -0x9e0c38a
 B = 0
-C = 0x8705c9c978faf11679f3c75215ee
+C = -0x9e0c38a
 if (C != A + B):
-    print("70-th")
+    print("Error: A + B, 70-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xca846e5e8df018
+A = -0xe23db6eba710
 B = 0
-C = 0xca846e5e8df018
+C = -0xe23db6eba710
 if (C != A + B):
-    print("71-th")
+    print("Error: A + B, 71-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4657e4bf0858c349
+A = 0xcfecd5daf27ff605f9e8ca
 B = 0
-C = 0x4657e4bf0858c349
+C = 0xcfecd5daf27ff605f9e8ca
 if (C != A + B):
-    print("72-th")
+    print("Error: A + B, 72-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x90baa75353430a5f836af4e5
+A = 0xe686a824d2e46c8d4d22
 B = 0
-C = -0x90baa75353430a5f836af4e5
+C = 0xe686a824d2e46c8d4d22
 if (C != A + B):
-    print("73-th")
+    print("Error: A + B, 73-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xaee499e87e
+A = -0xeb4aa5451d22e8ee7748
 B = 0
-C = -0xaee499e87e
+C = -0xeb4aa5451d22e8ee7748
 if (C != A + B):
-    print("74-th")
+    print("Error: A + B, 74-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa117e38be045496c1df68eef1feffd
+A = 0x651663ed0b
 B = 0
-C = -0xa117e38be045496c1df68eef1feffd
+C = 0x651663ed0b
 if (C != A + B):
-    print("75-th")
+    print("Error: A + B, 75-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4e67f65bf25467c8fe3296
+A = 0x5f02dc5a
 B = 0
-C = 0x4e67f65bf25467c8fe3296
+C = 0x5f02dc5a
 if (C != A + B):
-    print("76-th")
+    print("Error: A + B, 76-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2f
+A = 0x93818d82
 B = 0
-C = -0x2f
+C = 0x93818d82
 if (C != A + B):
-    print("77-th")
+    print("Error: A + B, 77-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb337
+A = -0xbb6d55c42d0a508ed0bd6a
 B = 0
-C = 0xb337
+C = -0xbb6d55c42d0a508ed0bd6a
 if (C != A + B):
-    print("78-th")
+    print("Error: A + B, 78-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x41ef411b
+A = 0x614711a89d07
 B = 0
-C = -0x41ef411b
+C = 0x614711a89d07
 if (C != A + B):
-    print("79-th")
+    print("Error: A + B, 79-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8785050854a802
+A = -0xfa91d5
 B = 0
-C = -0x8785050854a802
+C = -0xfa91d5
 if (C != A + B):
-    print("80-th")
+    print("Error: A + B, 80-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd12ee5c04e49e5
+A = -0xdd05aac8c1d735
 B = 0
-C = -0xd12ee5c04e49e5
+C = -0xdd05aac8c1d735
 if (C != A + B):
-    print("81-th")
+    print("Error: A + B, 81-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8a964239a0cdc4414d777f033836e9
+A = 0x2bcaa71d06
 B = 0
-C = -0x8a964239a0cdc4414d777f033836e9
+C = 0x2bcaa71d06
 if (C != A + B):
-    print("82-th")
+    print("Error: A + B, 82-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x95eea8
+A = -0xc0a4
 B = 0
-C = 0x95eea8
+C = -0xc0a4
 if (C != A + B):
-    print("83-th")
+    print("Error: A + B, 83-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xad30c30fcf474c6f5e
+A = -0xad
 B = 0
-C = 0xad30c30fcf474c6f5e
+C = -0xad
 if (C != A + B):
-    print("84-th")
+    print("Error: A + B, 84-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbe13ad0369ebc7eba564
+A = 0xa7fe613a2c
 B = 0
-C = 0xbe13ad0369ebc7eba564
+C = 0xa7fe613a2c
 if (C != A + B):
-    print("85-th")
+    print("Error: A + B, 85-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x442
+A = 0x108e6398e19632d46590fc2b3a
 B = 0
-C = -0x442
+C = 0x108e6398e19632d46590fc2b3a
 if (C != A + B):
-    print("86-th")
+    print("Error: A + B, 86-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x22bc10436b
+A = 0xb0705fe3
 B = 0
-C = -0x22bc10436b
+C = 0xb0705fe3
 if (C != A + B):
-    print("87-th")
+    print("Error: A + B, 87-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x279334615723f7
+A = 0x89f3cb05f6467064
 B = 0
-C = -0x279334615723f7
+C = 0x89f3cb05f6467064
 if (C != A + B):
-    print("88-th")
+    print("Error: A + B, 88-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1012de
+A = -0x97af68ac0e84f915599177ab9aa
 B = 0
-C = -0x1012de
+C = -0x97af68ac0e84f915599177ab9aa
 if (C != A + B):
-    print("89-th")
+    print("Error: A + B, 89-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9d8abc279129a3dece7c
+A = 0x97ba0baf99294f1cde44771289
 B = 0
-C = -0x9d8abc279129a3dece7c
+C = 0x97ba0baf99294f1cde44771289
 if (C != A + B):
-    print("90-th")
+    print("Error: A + B, 90-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x96
+A = 0x1f1294e2
 B = 0
-C = 0x96
+C = 0x1f1294e2
 if (C != A + B):
-    print("91-th")
+    print("Error: A + B, 91-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x89db04e1
+A = -0xc1c73dbd
 B = 0
-C = -0x89db04e1
+C = -0xc1c73dbd
 if (C != A + B):
-    print("92-th")
+    print("Error: A + B, 92-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5e70064e91cc2466
+A = -0x20ebc20819c748249175671eac
 B = 0
-C = -0x5e70064e91cc2466
+C = -0x20ebc20819c748249175671eac
 if (C != A + B):
-    print("93-th")
+    print("Error: A + B, 93-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x97a99c8a276f7f09c091
+A = 0x54d725a83f577d14d4
 B = 0
-C = 0x97a99c8a276f7f09c091
+C = 0x54d725a83f577d14d4
 if (C != A + B):
-    print("94-th")
+    print("Error: A + B, 94-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x44071
+A = -0x52748658139122a1e8f737
 B = 0
-C = 0x44071
+C = -0x52748658139122a1e8f737
 if (C != A + B):
-    print("95-th")
+    print("Error: A + B, 95-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x55facf58703a51779935
+A = -0x6cd506
 B = 0
-C = 0x55facf58703a51779935
+C = -0x6cd506
 if (C != A + B):
-    print("96-th")
+    print("Error: A + B, 96-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x802c1055b3ac5b5bec246f
+A = 0x6a6f832eeef0303acf4d4a
 B = 0
-C = -0x802c1055b3ac5b5bec246f
+C = 0x6a6f832eeef0303acf4d4a
 if (C != A + B):
-    print("97-th")
+    print("Error: A + B, 97-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb5970de58b12b707173eb32b2b9bec
+A = -0x2d81bfaad0f37d751459dbba411a
 B = 0
-C = 0xb5970de58b12b707173eb32b2b9bec
+C = -0x2d81bfaad0f37d751459dbba411a
 if (C != A + B):
-    print("98-th")
+    print("Error: A + B, 98-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd45da4d79afa46683ad44653710
+A = -0xa20276d7959bccfc899ba29
 B = 0
-C = 0xd45da4d79afa46683ad44653710
+C = -0xa20276d7959bccfc899ba29
 if (C != A + B):
-    print("99-th")
+    print("Error: A + B, 99-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7bf9
+A = 0xe839c256e18929e2fc03
 B = 0
-C = -0x7bf9
+C = 0xe839c256e18929e2fc03
 if (C != A + B):
-    print("100-th")
+    print("Error: A + B, 100-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9f7b689743
+A = -0x27323852ac1b2c
 B = 0
-C = 0x9f7b689743
+C = -0x27323852ac1b2c
 if (C != A + B):
-    print("101-th")
+    print("Error: A + B, 101-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x34
+A = -0xf22b7ea1dee5
 B = 0
-C = 0x34
+C = -0xf22b7ea1dee5
 if (C != A + B):
-    print("102-th")
+    print("Error: A + B, 102-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa7
+A = -0x3def73d54e1ae8
 B = 0
-C = -0xa7
+C = -0x3def73d54e1ae8
 if (C != A + B):
-    print("103-th")
+    print("Error: A + B, 103-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd0730cdc58bb0dc4b9afc89a1222
+A = 0xddf5ba26d5
 B = 0
-C = 0xd0730cdc58bb0dc4b9afc89a1222
+C = 0xddf5ba26d5
 if (C != A + B):
-    print("104-th")
+    print("Error: A + B, 104-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5b39b3dfc9
+A = 0x43847bb388e3c83409
 B = 0
-C = -0x5b39b3dfc9
+C = 0x43847bb388e3c83409
 if (C != A + B):
-    print("105-th")
+    print("Error: A + B, 105-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x926b7abb5eb3030b7e335a
+A = 0x58bca3de62ed02cc053a3379f41ebb
 B = 0
-C = 0x926b7abb5eb3030b7e335a
+C = 0x58bca3de62ed02cc053a3379f41ebb
 if (C != A + B):
-    print("106-th")
+    print("Error: A + B, 106-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x69821be8cb3e1679c88dceb9dd
+A = -0xb2db5c1e5a3c1b4db7424df2
 B = 0
-C = -0x69821be8cb3e1679c88dceb9dd
+C = -0xb2db5c1e5a3c1b4db7424df2
 if (C != A + B):
-    print("107-th")
+    print("Error: A + B, 107-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x94c72da8fa3ad69a44b049b6415f
+A = 0x16ad4b42b5e8243a95
 B = 0
-C = -0x94c72da8fa3ad69a44b049b6415f
+C = 0x16ad4b42b5e8243a95
 if (C != A + B):
-    print("108-th")
+    print("Error: A + B, 108-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9474277eba39a33c6e1847b69b
+A = -0xd1
 B = 0
-C = 0x9474277eba39a33c6e1847b69b
+C = -0xd1
 if (C != A + B):
-    print("109-th")
+    print("Error: A + B, 109-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x88fc8b142311ee0453a2d995183
+A = 0x7c734df9900f34
 B = 0
-C = 0x88fc8b142311ee0453a2d995183
+C = 0x7c734df9900f34
 if (C != A + B):
-    print("110-th")
+    print("Error: A + B, 110-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xec5aa934ebe7
+A = -0xc311ddc69bb1754e20d15ccf0407
 B = 0
-C = -0xec5aa934ebe7
+C = -0xc311ddc69bb1754e20d15ccf0407
 if (C != A + B):
-    print("111-th")
+    print("Error: A + B, 111-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7723
+A = -0xa903ea41
 B = 0
-C = -0x7723
+C = -0xa903ea41
 if (C != A + B):
-    print("112-th")
+    print("Error: A + B, 112-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdc38b3d3c135202a0c231e249f73df
+A = 0xd1e270f4c5e590d4
 B = 0
-C = 0xdc38b3d3c135202a0c231e249f73df
+C = 0xd1e270f4c5e590d4
 if (C != A + B):
-    print("113-th")
+    print("Error: A + B, 113-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf8bdd26a
+A = 0xcf77c02cadb5ebb0dcf41481
 B = 0
-C = -0xf8bdd26a
+C = 0xcf77c02cadb5ebb0dcf41481
 if (C != A + B):
-    print("114-th")
+    print("Error: A + B, 114-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2364909ce190357f16bd61e6e2
+A = 0x4ef5cf9a2700
 B = 0
-C = 0x2364909ce190357f16bd61e6e2
+C = 0x4ef5cf9a2700
 if (C != A + B):
-    print("115-th")
+    print("Error: A + B, 115-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf554ec85605f280da69de27eb3a310
+A = -0x506591bef5327f69b477
 B = 0
-C = -0xf554ec85605f280da69de27eb3a310
+C = -0x506591bef5327f69b477
 if (C != A + B):
-    print("116-th")
+    print("Error: A + B, 116-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfe7a9cdbb51
+A = 0x7e7f7d10abebef40
 B = 0
-C = 0xfe7a9cdbb51
+C = 0x7e7f7d10abebef40
 if (C != A + B):
-    print("117-th")
+    print("Error: A + B, 117-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2bb
+A = 0x757aac161a
 B = 0
-C = -0x2bb
+C = 0x757aac161a
 if (C != A + B):
-    print("118-th")
+    print("Error: A + B, 118-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xceb76f9542518fc78a2d
+A = 0xa6ad56992f84e3dff42
 B = 0
-C = 0xceb76f9542518fc78a2d
+C = 0xa6ad56992f84e3dff42
 if (C != A + B):
-    print("119-th")
+    print("Error: A + B, 119-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf71f9b992a228359db02910ac4
+A = -0x2e7e44f36f1a3b
 B = 0
-C = -0xf71f9b992a228359db02910ac4
+C = -0x2e7e44f36f1a3b
 if (C != A + B):
-    print("120-th")
+    print("Error: A + B, 120-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xff5b1667cd38b4ca290e5b6789e5
+A = -0x4ce448
 B = 0
-C = -0xff5b1667cd38b4ca290e5b6789e5
+C = -0x4ce448
 if (C != A + B):
-    print("121-th")
+    print("Error: A + B, 121-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe
+A = -0x4010539ad7609ac66377d57d44
 B = 0
-C = 0xe
+C = -0x4010539ad7609ac66377d57d44
 if (C != A + B):
-    print("122-th")
+    print("Error: A + B, 122-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd82ab305a6b60ec3d2
+A = 0x220fb8b5241ef5ae2bed
 B = 0
-C = 0xd82ab305a6b60ec3d2
+C = 0x220fb8b5241ef5ae2bed
 if (C != A + B):
-    print("123-th")
+    print("Error: A + B, 123-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcac0b74303d5b5da591a
+A = -0xec1163c134a192666f034f1046da8f
 B = 0
-C = 0xcac0b74303d5b5da591a
+C = -0xec1163c134a192666f034f1046da8f
 if (C != A + B):
-    print("124-th")
+    print("Error: A + B, 124-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8b6cd5c60387ff49
+A = 0x8b
 B = 0
-C = 0x8b6cd5c60387ff49
+C = 0x8b
 if (C != A + B):
-    print("125-th")
+    print("Error: A + B, 125-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x11650e4b8ba07ee4a6e2
+A = 0x9caae4724a03a2360cce0ff199
 B = 0
-C = 0x11650e4b8ba07ee4a6e2
+C = 0x9caae4724a03a2360cce0ff199
 if (C != A + B):
-    print("126-th")
+    print("Error: A + B, 126-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x504351fa47f20ab189c74dffe656
+A = 0xe06c8d7cc6
 B = 0
-C = -0x504351fa47f20ab189c74dffe656
+C = 0xe06c8d7cc6
 if (C != A + B):
-    print("127-th")
+    print("Error: A + B, 127-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc6865458869db0daca267404f04ce8
+A = -0x28bd57fd64
 B = 0
-C = 0xc6865458869db0daca267404f04ce8
+C = -0x28bd57fd64
 if (C != A + B):
-    print("128-th")
+    print("Error: A + B, 128-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x716ca5d907d902ce95baacd76e2efb
+A = -0xefc0e996827cb7b4c2431a23fd8df6
 B = 0
-C = 0x716ca5d907d902ce95baacd76e2efb
+C = -0xefc0e996827cb7b4c2431a23fd8df6
 if (C != A + B):
-    print("129-th")
+    print("Error: A + B, 129-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbfdb68
+A = -0xcc81b75f5471390c185d
 B = 0
-C = 0xbfdb68
+C = -0xcc81b75f5471390c185d
 if (C != A + B):
-    print("130-th")
+    print("Error: A + B, 130-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9a74b9
+A = -0x650a68ff6d5db07772bc61f68d8c25
 B = 0
-C = 0x9a74b9
+C = -0x650a68ff6d5db07772bc61f68d8c25
 if (C != A + B):
-    print("131-th")
+    print("Error: A + B, 131-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xefba
+A = -0x416d9aa838b11274a523016594
 B = 0
-C = -0xefba
+C = -0x416d9aa838b11274a523016594
 if (C != A + B):
-    print("132-th")
+    print("Error: A + B, 132-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb19f
+A = 0xd9d0ae52d2d258
 B = 0
-C = -0xb19f
+C = 0xd9d0ae52d2d258
 if (C != A + B):
-    print("133-th")
+    print("Error: A + B, 133-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa9cfc7d2d8b95839e6
+A = -0x82ae2b
 B = 0
-C = 0xa9cfc7d2d8b95839e6
+C = -0x82ae2b
 if (C != A + B):
-    print("134-th")
+    print("Error: A + B, 134-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1463dc1b5cf1b7044f07d4d0cca1
+A = -0xf65052dfa60d7eb436ecbc91c1
 B = 0
-C = -0x1463dc1b5cf1b7044f07d4d0cca1
+C = -0xf65052dfa60d7eb436ecbc91c1
 if (C != A + B):
-    print("135-th")
+    print("Error: A + B, 135-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x707f714daca72194ab2bb0
+A = -0x70fef10f20c6d17b99c27ce6
 B = 0
-C = 0x707f714daca72194ab2bb0
+C = -0x70fef10f20c6d17b99c27ce6
 if (C != A + B):
-    print("136-th")
+    print("Error: A + B, 136-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x35
+A = -0x72a1956970d8c5
 B = 0
-C = 0x35
+C = -0x72a1956970d8c5
 if (C != A + B):
-    print("137-th")
+    print("Error: A + B, 137-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe080fcf009e904
+A = -0x1623f685d38db9cf81ebcbfb76ab
 B = 0
-C = 0xe080fcf009e904
+C = -0x1623f685d38db9cf81ebcbfb76ab
 if (C != A + B):
-    print("138-th")
+    print("Error: A + B, 138-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc8b8c7b361722da31c38b4c2
+A = -0x49803199038786a
 B = 0
-C = 0xc8b8c7b361722da31c38b4c2
+C = -0x49803199038786a
 if (C != A + B):
-    print("139-th")
+    print("Error: A + B, 139-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x701c089de1e9
+A = 0xeae0197d5f
 B = 0
-C = -0x701c089de1e9
+C = 0xeae0197d5f
 if (C != A + B):
-    print("140-th")
+    print("Error: A + B, 140-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x660f0744
+A = -0x93e0094c9fa0de418d8802afba9d8d
 B = 0
-C = 0x660f0744
+C = -0x93e0094c9fa0de418d8802afba9d8d
 if (C != A + B):
-    print("141-th")
+    print("Error: A + B, 141-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x937d43cd09657d07e1c1
+A = 0x5d2ffc45
 B = 0
-C = 0x937d43cd09657d07e1c1
+C = 0x5d2ffc45
 if (C != A + B):
-    print("142-th")
+    print("Error: A + B, 142-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x484d486f1307fa671c9969e4
+A = -0x5cb4bf14be0291e405c6
 B = 0
-C = -0x484d486f1307fa671c9969e4
+C = -0x5cb4bf14be0291e405c6
 if (C != A + B):
-    print("143-th")
+    print("Error: A + B, 143-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xea6e76fab6a0a12ed56e75
+A = -0x3d27c1852d073ea535a031
 B = 0
-C = 0xea6e76fab6a0a12ed56e75
+C = -0x3d27c1852d073ea535a031
 if (C != A + B):
-    print("144-th")
+    print("Error: A + B, 144-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf48e
+A = 0x1e7debfdc7c7bbf81adb0b8e
 B = 0
-C = 0xf48e
+C = 0x1e7debfdc7c7bbf81adb0b8e
 if (C != A + B):
-    print("145-th")
+    print("Error: A + B, 145-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa5482efec940e8a9672985eb0c
+A = 0x5303a7963abdc421a1427592
 B = 0
-C = 0xa5482efec940e8a9672985eb0c
+C = 0x5303a7963abdc421a1427592
 if (C != A + B):
-    print("146-th")
+    print("Error: A + B, 146-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1f7b08e624c1f750b71eaa0c70c2ba
+A = -0xd8feefaa30af21a18d73
 B = 0
-C = -0x1f7b08e624c1f750b71eaa0c70c2ba
+C = -0xd8feefaa30af21a18d73
 if (C != A + B):
-    print("147-th")
+    print("Error: A + B, 147-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4029d0ea022b9a43d60039a1dc3
+A = -0xe60219df98232c8fc1
 B = 0
-C = 0x4029d0ea022b9a43d60039a1dc3
+C = -0xe60219df98232c8fc1
 if (C != A + B):
-    print("148-th")
+    print("Error: A + B, 148-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5b7d
+A = -0x674eb0167211529e20cacda5e5
 B = 0
-C = -0x5b7d
+C = -0x674eb0167211529e20cacda5e5
 if (C != A + B):
-    print("149-th")
+    print("Error: A + B, 149-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe2da23
+A = 0xd37c51754a
 B = 0
-C = -0xe2da23
+C = 0xd37c51754a
 if (C != A + B):
-    print("150-th")
+    print("Error: A + B, 150-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf1999707f
+A = -0xaa588e1df1
 B = 0
-C = -0xf1999707f
+C = -0xaa588e1df1
 if (C != A + B):
-    print("151-th")
+    print("Error: A + B, 151-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc7aa7b3ddaee45d27dc792
+A = 0xaf6418c3d485b6db
 B = 0
-C = -0xc7aa7b3ddaee45d27dc792
+C = 0xaf6418c3d485b6db
 if (C != A + B):
-    print("152-th")
+    print("Error: A + B, 152-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x94e571d17638bdaebaf76a
+A = 0x6162fb58f47afb
 B = 0
-C = -0x94e571d17638bdaebaf76a
+C = 0x6162fb58f47afb
 if (C != A + B):
-    print("153-th")
+    print("Error: A + B, 153-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xce4c4fe4861a1c
+A = -0xcdaae6930e
 B = 0
-C = 0xce4c4fe4861a1c
+C = -0xcdaae6930e
 if (C != A + B):
-    print("154-th")
+    print("Error: A + B, 154-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb900
+A = 0x4d652bf2649ad5c4ae899cb2c9e37e
 B = 0
-C = 0xb900
+C = 0x4d652bf2649ad5c4ae899cb2c9e37e
 if (C != A + B):
-    print("155-th")
+    print("Error: A + B, 155-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x63a4cc
+A = 0xd9b0613bac26
 B = 0
-C = -0x63a4cc
+C = 0xd9b0613bac26
 if (C != A + B):
-    print("156-th")
+    print("Error: A + B, 156-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbcd7
+A = 0x3cb1bc4dc0b15e45
 B = 0
-C = -0xbcd7
+C = 0x3cb1bc4dc0b15e45
 if (C != A + B):
-    print("157-th")
+    print("Error: A + B, 157-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x262835d057fd0d385ba9044c9772
+A = 0xb92bb469
 B = 0
-C = -0x262835d057fd0d385ba9044c9772
+C = 0xb92bb469
 if (C != A + B):
-    print("158-th")
+    print("Error: A + B, 158-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5e6dc2f44c9c7d7666c03a399b8541
+A = -0xfe2fe2cfbcd6775ba8
 B = 0
-C = -0x5e6dc2f44c9c7d7666c03a399b8541
+C = -0xfe2fe2cfbcd6775ba8
 if (C != A + B):
-    print("159-th")
+    print("Error: A + B, 159-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd555c5ee87a34
+A = 0xce99d797b7d365
 B = 0
-C = -0xd555c5ee87a34
+C = 0xce99d797b7d365
 if (C != A + B):
-    print("160-th")
+    print("Error: A + B, 160-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd62cdde3fbcc8b
+A = -0x332a9fbad6431b1df875
 B = 0
-C = -0xd62cdde3fbcc8b
+C = -0x332a9fbad6431b1df875
 if (C != A + B):
-    print("161-th")
+    print("Error: A + B, 161-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcce0af90b80ce72ed75630b459a3d3
+A = 0xed40
 B = 0
-C = -0xcce0af90b80ce72ed75630b459a3d3
+C = 0xed40
 if (C != A + B):
-    print("162-th")
+    print("Error: A + B, 162-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcc6bbbd47d07
+A = -0xd9
 B = 0
-C = 0xcc6bbbd47d07
+C = -0xd9
 if (C != A + B):
-    print("163-th")
+    print("Error: A + B, 163-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc3c343046f303a26515029b218369a
+A = 0x67
 B = 0
-C = -0xc3c343046f303a26515029b218369a
+C = 0x67
 if (C != A + B):
-    print("164-th")
+    print("Error: A + B, 164-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x73ff
+A = -0x460125b3
 B = 0
-C = 0x73ff
+C = -0x460125b3
 if (C != A + B):
-    print("165-th")
+    print("Error: A + B, 165-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
@@ -3329,1661 +3329,1661 @@ if (cnt == 0):
     print("ALL TRUE!")
 print("### Case 3: A > 0 and B < 0, C = A - |B| ###\n")
 cnt = 0
-A = 0x9a2e
-B = -0xf291eb8b0086e70c1c886ce178d8
-C = -0xf291eb8b0086e70c1c886ce0deaa
+A = 0x1ecac0b07766
+B = -0xef41a0e890310c22b2da34418afe
+C = -0xef41a0e890310c22940f73911398
 if (C != A + B):
-    print("0-th")
+    print("Error: A + B, 0-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9c8ec083a043
-B = -0xbea06fbfc4dc232365a637
-C = -0xbea06fbfc43f9462e205f4
+A = 0x15814f0b2f17
+B = -0x78332d8966c20d
+C = -0x781dac3a5b92f6
 if (C != A + B):
-    print("1-th")
+    print("Error: A + B, 1-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe4a2e643
-B = -0x678ae2e2581367b853c236a1041ed0
-C = -0x678ae2e2581367b853c235bc61388d
+A = 0x8ed481cd7d56312d8ca9dcac2f0e25
+B = -0x59eb00fc42e4c2aab810
+C = 0x8ed481cd7cfc462c9066f7e9845615
 if (C != A + B):
-    print("2-th")
+    print("Error: A + B, 2-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6d18
-B = -0x5280683c81776cfaba08c2e5244389
-C = -0x5280683c81776cfaba08c2e523d671
+A = 0x1b435e4d2e
+B = -0x59039cb7dbb71bfde587fb4
+C = -0x59039cb7dbb71a49afa3286
 if (C != A + B):
-    print("3-th")
+    print("Error: A + B, 3-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9a34f68156afad3f
-B = -0xb9c272868862eb71ce0cf1d8fa57
-C = -0xb9c272868862513cd78b9b294d18
+A = 0xda1b5e4aa740cf2eafa078d1205452
+B = -0x407410078db3a85f0e
+C = 0xda1b5e4aa7408eba9f98eb1d77f544
 if (C != A + B):
-    print("4-th")
+    print("Error: A + B, 4-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8b4dcc27398cfbe27fbf
-B = -0xac4ef4
-C = 0x8b4dcc27398cfb3630cb
+A = 0x7d958458f8d3077daa36b18258ef37
+B = -0x39a39d02
+C = 0x7d958458f8d3077daa36b148b55235
 if (C != A + B):
-    print("5-th")
+    print("Error: A + B, 5-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa5
-B = -0x236ee72c
-C = -0x236ee687
+A = 0xc3d3142eb718a2
+B = -0x9a504ffde1fbdb2ec8a0cd1ce19f
+C = -0x9a504ffde1fbda6af58c9e65c8fd
 if (C != A + B):
-    print("6-th")
+    print("Error: A + B, 6-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb4055afb
-B = -0x9e4963c654d8ee4b187fbed4d
-C = -0x9e4963c654d8ee4b0d3f69252
+A = 0x33dd25ec
+B = -0xd08cba9e
+C = -0x9caf94b2
 if (C != A + B):
-    print("7-th")
+    print("Error: A + B, 7-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd42bf15e4a99e092538812b5
-B = -0xc5fd17166946
-C = 0xd42bf15e4a991a953c71a96f
+A = 0xeca033b1b030c67689a5
+B = -0x527883ba90204dc414fe00
+C = -0x518be386de701cfd9e745b
 if (C != A + B):
-    print("8-th")
+    print("Error: A + B, 8-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdf50a24b44726496e56be21ee5
-B = -0xb35b25dffa0b4105
-C = 0xdf50a24b43bf09710571d6dde0
+A = 0xb9d662c048cd9e
+B = -0x876db8eabbc0e20aa8
+C = -0x876cff145900993d0a
 if (C != A + B):
-    print("9-th")
+    print("Error: A + B, 9-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2b4cf1037c8ad3130
-B = -0xf38f3dd850cb42fa6c
-C = -0xf0da6ec8190295c93c
+A = 0xf9690df6
+B = -0xa1f7db73435df8c5
+C = -0xa1f7db7249f4eacf
 if (C != A + B):
-    print("10-th")
+    print("Error: A + B, 10-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x854103f5bf648a2fb20f001
-B = -0xcb74d4
-C = 0x854103f5bf648a2fa557b2d
+A = 0xe6b1b3e6dbf93aecb8
+B = -0x6235e79a4d92cc6c0adfbdac
+C = -0x6235e6b39bdee59011a4d0f4
 if (C != A + B):
-    print("11-th")
+    print("Error: A + B, 11-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2e9e788f839d3a4bdb0b58
-B = -0x364ee6f2ae
-C = 0x2e9e788f839d03fcf418aa
+A = 0x8b3eef72
+B = -0xc0bd4e6af967be591992
+C = -0xc0bd4e6af967331a2a20
 if (C != A + B):
-    print("12-th")
+    print("Error: A + B, 12-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf43f6eb3b00e26d9ee
-B = -0xcaf4ce95f7e96163c90629e41944
-C = -0xcaf4ce95f6f521f515561bbd3f56
+A = 0xebd0778515802986
+B = -0x92983494e331a45a
+C = 0x593842f0324e852c
 if (C != A + B):
-    print("13-th")
+    print("Error: A + B, 13-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbd3a4dc4c39d
-B = -0x597b5218
-C = 0xbd39f4497185
+A = 0x842003a51b
+B = -0x1dd2d38deb
+C = 0x664d301730
 if (C != A + B):
-    print("14-th")
+    print("Error: A + B, 14-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf8490da45af2
-B = -0x1ea7f561574d169976
-C = -0x1ea7f4690e3f723e84
+A = 0x9904b28062
+B = -0xc1
+C = 0x9904b27fa1
 if (C != A + B):
-    print("15-th")
+    print("Error: A + B, 15-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xccc834
-B = -0xb53054350ddf1c
-C = -0xb53054344116e8
+A = 0xde0918
+B = -0xe845a1c7242754a4ca63f1
+C = -0xe845a1c7242754a3ec5ad9
 if (C != A + B):
-    print("16-th")
+    print("Error: A + B, 16-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x678106eb34ccd40f0add019bbede
-B = -0xd6517ca116ef
-C = 0x678106eb34ccd40e348b84faa7ef
+A = 0xf75dd73566c20557316b
+B = -0x103d35ad3defc628bb8de87b4d
+C = -0x103d34b5e01890c1f9889149e2
 if (C != A + B):
-    print("17-th")
+    print("Error: A + B, 17-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x34f1eba57d30
-B = -0xda6d1b4
-C = 0x34f1ddfeab7c
+A = 0x9926766d9d208255
+B = -0x492aed884f5e6102732aa5
+C = -0x492aecef28e7f36552a850
 if (C != A + B):
-    print("18-th")
+    print("Error: A + B, 18-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf38190ec02875934c9a872c46
-B = -0xcdc2123fbf
-C = 0xf38190ec02875927ed874ec87
+A = 0x83b1d8092d2aea26023e23382b2aa0
+B = -0x789fed747cc6
+C = 0x83b1d8092d2aea2601c5834ab6adda
 if (C != A + B):
-    print("19-th")
+    print("Error: A + B, 19-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x10e27882583b
-B = -0xf266c90cd478
-C = -0xe184508a7c3d
+A = 0x87135a108cb894d2b5f1
+B = -0x8e13cacc3eda6e
+C = 0x8713598278edc893db83
 if (C != A + B):
-    print("20-th")
+    print("Error: A + B, 20-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3e209db4596cddc57a6f588716381d
-B = -0x83d16b
-C = 0x3e209db4596cddc57a6f58869266b2
+A = 0xe82b79fbce4141a8d8e3
+B = -0x33e5406c08821362687d49ca49
+C = -0x33e53f83dd081794273ba0f166
 if (C != A + B):
-    print("21-th")
+    print("Error: A + B, 21-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xeb92380ada488
-B = -0xfc58
-C = 0xeb92380aca830
+A = 0xc8a4
+B = -0x7ad2d
+C = -0x6e489
 if (C != A + B):
-    print("22-th")
+    print("Error: A + B, 22-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5f15e2761586a40eaaf75c9624db
-B = -0xad3667c4f69c82
-C = 0x5f15e2761586a361748f979f8859
+A = 0x9c9cc872e44f6829f6a75d6dff08
+B = -0x4c0b5075db
+C = 0x9c9cc872e44f6829f65b521d892d
 if (C != A + B):
-    print("23-th")
+    print("Error: A + B, 23-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2fe236
-B = -0x547f3d91cee5
-C = -0x547f3d61ecaf
+A = 0x4d
+B = -0x7528d3f9
+C = -0x7528d3ac
 if (C != A + B):
-    print("24-th")
+    print("Error: A + B, 24-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd6443f1b3ab663e1cc83
-B = -0x66effa081db02a3418a5537168330f
-C = -0x66effa081cd9e5f4fd6a9d0d86668c
+A = 0xe0bb792284fc732fb8c554f9
+B = -0x11b2
+C = 0xe0bb792284fc732fb8c54347
 if (C != A + B):
-    print("25-th")
+    print("Error: A + B, 25-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x47e463e2ac
-B = -0x17351a70f0fb704bae12
-C = -0x17351a70f0b38be7cb66
+A = 0x9593c2c1
+B = -0xce3e32eae571b4
+C = -0xce3e325551aef3
 if (C != A + B):
-    print("26-th")
+    print("Error: A + B, 26-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb5dacde1479151541b7b2e12
-B = -0x4f1cb1bff373a886952a23a322
-C = -0x4e66d6f2122c1735410ea87510
+A = 0x88ce5883fbd5
+B = -0x8cfe3938852857098cfadf9c
+C = -0x8cfe39388527ce3b3476e3c7
 if (C != A + B):
-    print("27-th")
+    print("Error: A + B, 27-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x17cf1849b706b676a23da875064a
-B = -0x5ce5e98c90078e1e42
-C = 0x17cf1849b6a9d08d15ada0e6e808
+A = 0x19f3f881b9eb68845938
+B = -0x47220a19
+C = 0x19f3f881b9eb21624f1f
 if (C != A + B):
-    print("28-th")
+    print("Error: A + B, 28-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x48f5826f6044c49f7a24
-B = -0xc4360aca58ff00
-C = 0x48f581ab2a39fa467b24
+A = 0x84aa284490
+B = -0x89a6
+C = 0x84aa27baea
 if (C != A + B):
-    print("29-th")
+    print("Error: A + B, 29-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfa4005e85c
-B = -0xf2047cdd83d9e999b7671a8d
-C = -0xf2047cdd83d9e89f77613231
+A = 0xb2
+B = -0x593baafe33f79f1e2fbb3545
+C = -0x593baafe33f79f1e2fbb3493
 if (C != A + B):
-    print("30-th")
+    print("Error: A + B, 30-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x91ab9e5d7d74fd327dedc1
-B = -0xeece8b57a8ef
-C = 0x91ab9e5d7c862ea72644d2
+A = 0x25713a839b0dd74318db3f75
+B = -0xcf73f910d77cc890277a
+C = 0x25706b0fa1fcffc6504b17fb
 if (C != A + B):
-    print("31-th")
+    print("Error: A + B, 31-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xae7e90c7e1586bbcd9
-B = -0xbf
-C = 0xae7e90c7e1586bbc1a
+A = 0xa62108e6818c3d0de362
+B = -0x90d49794f00b3d0f4f33b24866ae
+C = -0x90d4979449ea3428cda7753a834c
 if (C != A + B):
-    print("32-th")
+    print("Error: A + B, 32-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7d91524ec5dfb5aee0b0ce73ae
-B = -0x7f340bc65b
-C = 0x7d91524ec5dfb5ae617cc2ad53
+A = 0x12e665d00add9558817287
+B = -0xddab71d35f459e0a64f97583
+C = -0xdd988b6d8f3ac0750c7802fc
 if (C != A + B):
-    print("33-th")
+    print("Error: A + B, 33-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd50126a90eb22f7d2679f66914d776
-B = -0xf5c9bf4546761f
-C = 0xd50126a90eb22f7c30b03723ce6157
+A = 0x7013
+B = -0xc30bc5c2ebcc95f5be3e918369600b
+C = -0xc30bc5c2ebcc95f5be3e918368eff8
 if (C != A + B):
-    print("34-th")
+    print("Error: A + B, 34-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x377bea0e32669df8718dc38cdd3
-B = -0x89253db357
-C = 0x377bea0e32669df868fb6fb1a7c
+A = 0xe6261b1b0f0a0c31af
+B = -0x5c9b6e611ea212ab15508d
+C = -0x5c9a883b038703a1091ede
 if (C != A + B):
-    print("35-th")
+    print("Error: A + B, 35-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa2e16dddb38c74a60745d13c
-B = -0xd0
-C = 0xa2e16dddb38c74a60745d06c
+A = 0xaf888d212e
+B = -0xee0a3852e9cb9f7f
+C = -0xee0a37a3613e7e51
 if (C != A + B):
-    print("36-th")
+    print("Error: A + B, 36-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3bcc64cf0cc999d4eadcfd
-B = -0x81f64482c842d07762ac35feeddf7f
-C = -0x81f644828c766ba855e29c2a030282
+A = 0xcd432214eb99390f
+B = -0x88ae4b6d56a6
+C = 0xcd429966a02be269
 if (C != A + B):
-    print("37-th")
+    print("Error: A + B, 37-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x893de6d9394b78921bcd8ffcc6
-B = -0x22f469171f577adc8d5f1760604758
-C = -0x22f3dfd9387e419114ccfb92d04a92
+A = 0xe0f2c0f1
+B = -0xb962e9b20423e7b158dcddd8ee14e0
+C = -0xb962e9b20423e7b158dcdcf7fb53ef
 if (C != A + B):
-    print("38-th")
+    print("Error: A + B, 38-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe1e5d186fcfad992a2104f
-B = -0x58f42fbd66a082
-C = 0xe1e5d186a406a9d53b6fcd
+A = 0xa9a2d363dff2d3b455
+B = -0x89e4099dbc35
+C = 0xa9a2d2d9fbe935f820
 if (C != A + B):
-    print("39-th")
+    print("Error: A + B, 39-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa8f4375aa3ef8f621084b855
-B = -0x3fa43bc27eea3ed20cdd5662
-C = 0x694ffb982505509003a761f3
+A = 0x77ec62a3af
+B = -0xda6188aa87662909e225
+C = -0xda6188aa86ee3ca73e76
 if (C != A + B):
-    print("40-th")
+    print("Error: A + B, 40-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4c34edd310bfc950897f1caa6a
-B = -0x71251a922e547b5ddd9d418eba5a1
-C = -0x7120574351236f614894a99cefb37
+A = 0x6ebf224c9f3dc0a489
+B = -0x1c8bf1708e
+C = 0x6ebf224c82b1cf33fb
 if (C != A + B):
-    print("41-th")
+    print("Error: A + B, 41-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc9a16c2e
-B = -0x8d64b601e342da49d559d59108c4ef
-C = -0x8d64b601e342da49d559d4c76758c1
+A = 0xc1c53fb73e350c529d57f3b0e2
+B = -0xcadb04ee4ef0724ca3efa1a10
+C = 0xb5178f685946052dd318f996d2
 if (C != A + B):
-    print("42-th")
+    print("Error: A + B, 42-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcf5d73bd86514b
-B = -0x5c3c038484fde3
-C = 0x73217039015368
+A = 0x10d69434f2b89ee423
+B = -0x48542849a9de
+C = 0x10d693ec9e90553a45
 if (C != A + B):
-    print("43-th")
+    print("Error: A + B, 43-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8a2a9e48b54e4280364d388dc80d
-B = -0xb3c786ac8b
-C = 0x8a2a9e48b54e4280359971071b82
+A = 0xb5181ecf83c0e2297e4c
+B = -0x76793d5506
+C = 0xb5181ecf834a68ec2946
 if (C != A + B):
-    print("44-th")
+    print("Error: A + B, 44-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x88a96e2eaba59b8e0e9ee06c
-B = -0xacf126ea46991d
-C = 0x88a96e2eaaf8aa672458474f
+A = 0x248fdf62ad
+B = -0xc4cdcc8a7f05
+C = -0xc4a93cab1c58
 if (C != A + B):
-    print("45-th")
+    print("Error: A + B, 45-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe651dc7ba890
-B = -0xbea6aa102fbda081af390862e3
-C = -0xbea6aa102fbd9f9b5d5c8cba53
+A = 0xa614
+B = -0x4ac51
+C = -0x4063d
 if (C != A + B):
-    print("46-th")
+    print("Error: A + B, 46-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd7977f3d8bb1
-B = -0x517dba
-C = 0xd7977eec0df7
+A = 0xdcac3b
+B = -0xd35157c54e211ded
+C = -0xd35157c54d4471b2
 if (C != A + B):
-    print("47-th")
+    print("Error: A + B, 47-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3521a85d
-B = -0x28bafe
-C = 0x34f8ed5f
+A = 0xe4588753ed9f32f57
+B = -0x371d622b342489c640
+C = -0x28d7d9b5f54a9696e9
 if (C != A + B):
-    print("48-th")
+    print("Error: A + B, 48-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdf0c3adc5b0947
-B = -0xc351ee6c1946a63e
-C = -0xc272e2313ceb9cf7
+A = 0x9f19034010d48b
+B = -0x4ee48aa41846
+C = 0x9eca1eb56cbc45
 if (C != A + B):
-    print("49-th")
+    print("Error: A + B, 49-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x52d413cc49101a9b16be75f37596bc
-B = -0xce1b9d9d3ae645
-C = 0x52d413cc49101a9a48a2d8563ab077
+A = 0x3945a1e0cf64e54639401b7a50
+B = -0x426004d927422962063834f8b6b4
+C = -0x4226bf374672c47cbffef4dd3c64
 if (C != A + B):
-    print("50-th")
+    print("Error: A + B, 50-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa8ab7360c24352492864c1b6fcc5
-B = -0xe
-C = 0xa8ab7360c24352492864c1b6fcb7
+A = 0x45e648dde2
+B = -0x72f845f16f221db3cd5702a9b7c9
+C = -0x72f845f16f221db3cd111c60d9e7
 if (C != A + B):
-    print("51-th")
+    print("Error: A + B, 51-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x14f9a883f320541178
-B = -0xb5842211
-C = 0x14f9a883f26acfef67
+A = 0x10fa7f9a36b26fd63cfe3427d0
+B = -0xa332
+C = 0x10fa7f9a36b26fd63cfe33849e
 if (C != A + B):
-    print("52-th")
+    print("Error: A + B, 52-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x45de0e64c71b
-B = -0x4c50f170e8dd1ed70196d8
-C = -0x4c50f170e89740c89ccfbd
+A = 0x656a66e9123f0d8d001b0a0775
+B = -0xc8d76671c5e16b7a7f24aa47
+C = 0x64a18f82a0792c21859be55d2e
 if (C != A + B):
-    print("53-th")
+    print("Error: A + B, 53-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x49
-B = -0x7dd2981b33bc1151
-C = -0x7dd2981b33bc1108
+A = 0xcfb1e34e32b2d72282882a
+B = -0xe6da2747
+C = 0xcfb1e34e32b2d63ba860e3
 if (C != A + B):
-    print("54-th")
+    print("Error: A + B, 54-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa0a4d1b5d21677ef17fbb9f151417c
-B = -0xdbf45153cf82e337829e8a91
-C = 0xa0a4d0d9ddc5241f9518826eb2b6eb
+A = 0x4fb1
+B = -0xac79a3b41c3b
+C = -0xac79a3b3cc8a
 if (C != A + B):
-    print("55-th")
+    print("Error: A + B, 55-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x379a22d50a7820c8a1f3eb5dfc
-B = -0x506e741e051562e891
-C = 0x379a22d4ba09acaa9cde88756b
+A = 0xe7bfbce261fc1b
+B = -0xefcf724dee
+C = 0xe7becd12efae2d
 if (C != A + B):
-    print("56-th")
+    print("Error: A + B, 56-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x80253c10ae2d4e3db95b56436c
-B = -0x40af22e4ba9e459af536108999e1
-C = -0x402efda8a9f0184cb77cb5335675
+A = 0x5f4b22d6f7df
+B = -0xf72b633c9c32
+C = -0x97e04065a453
 if (C != A + B):
-    print("57-th")
+    print("Error: A + B, 57-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8293eacf372a938f1afa
-B = -0xea7d42188cdb692c667ce2a5
-C = -0xea7cbf84a20c3201d2edc7ab
+A = 0x394b9d4bf5d4e72596
+B = -0x79641de83667d3ee3e727e
+C = -0x7963e49c991bde19574ce8
 if (C != A + B):
-    print("58-th")
+    print("Error: A + B, 58-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf27966d53dd6c235f3fe8b576f3a3e
-B = -0x90df281cfbe991ae0da39c5a39
-C = 0xf278d5f615b9c64c62507db3d2e005
+A = 0xc4fd
+B = -0x712f3aeb46d6315b2dbcefc24694a8
+C = -0x712f3aeb46d6315b2dbcefc245cfab
 if (C != A + B):
-    print("59-th")
+    print("Error: A + B, 59-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x733d786b43e76b12d6
-B = -0x8de0ccedacbdd0f1
-C = 0x72af979e563aad41e5
+A = 0x18167da678
+B = -0x5bf51024a88fc2eb7ba70d
+C = -0x5bf51024a88faad4fe0095
 if (C != A + B):
-    print("60-th")
+    print("Error: A + B, 60-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc17a61b8b74f3330dbf2bb9a916a
-B = -0x3af1969b
-C = 0xc17a61b8b74f3330dbf280a8facf
+A = 0xec287131ca97d78a3d
+B = -0x491eac0f685549e1c
+C = 0xe7968670d41282ec21
 if (C != A + B):
-    print("61-th")
+    print("Error: A + B, 61-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb7a0907f2134fe6fb62f
-B = -0x535cb3b11477b81af5f5
-C = 0x6443dcce0cbd4654c03a
+A = 0x1cdb09d5e19eb9e1560d4e7a45
+B = -0x3d64bfdcd5d3fff6295c37e673
+C = -0x2089b606f4354614d34ee96c2e
 if (C != A + B):
-    print("62-th")
+    print("Error: A + B, 62-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3dd9bb1679e31d82
-B = -0xce36e54c26ffbc8e
-C = -0x905d2a35ad1c9f0c
+A = 0xb8d420af14304700b6b6
+B = -0x82bc47
+C = 0xb8d420af1430467dfa6f
 if (C != A + B):
-    print("63-th")
+    print("Error: A + B, 63-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x83caefb301f7
-B = -0x2a069e04195b
-C = 0x59c451aee89c
+A = 0x51fdbe622d6b0f24cf
+B = -0xcfff076b1600
+C = 0x51fdbd922e63a40ecf
 if (C != A + B):
-    print("64-th")
+    print("Error: A + B, 64-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb5603d64b58f343316
-B = -0xa814bebd
-C = 0xb5603d64b4e71f7459
+A = 0xa78b9a126915
+B = -0x714ff782e84c1c6faf159ce53e95
+C = -0x714ff782e84c1c6f078a02d2d580
 if (C != A + B):
-    print("65-th")
+    print("Error: A + B, 65-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x77
-B = -0x972f903deac946e83f0a
-C = -0x972f903deac946e83e93
+A = 0x37676413ca52f6c33866ef
+B = -0x9f1b5789fa91df73c0d38a
+C = -0x67b3f376303ee8b0886c9b
 if (C != A + B):
-    print("66-th")
+    print("Error: A + B, 66-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa39434ca4f
-B = -0x17dc71e773734c70
-C = -0x17dc7143df3e8221
+A = 0x13cbea9dbbaab7b40417e648d66e
+B = -0xa7ad0796257d75
+C = 0x13cbea9dbbaab70c5710502358f9
 if (C != A + B):
-    print("67-th")
+    print("Error: A + B, 67-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4c455dd5b0
-B = -0xbaca3c4737d3dfe4fa
-C = -0xbaca3c46eb8e820f4a
+A = 0xd693f55d6c217571b89e
+B = -0xdb
+C = 0xd693f55d6c217571b7c3
 if (C != A + B):
-    print("68-th")
+    print("Error: A + B, 68-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8ba5e37dcf80
-B = -0x8736fc41ab11a928ed3f2303dd
-C = -0x8736fc41ab11a89d475ba5345d
+A = 0x8cce5cf05cecd97e2ae283b6
+B = -0x9e8a836db9a4be82854e
+C = 0x8ccdbe65d97f1fd96c5ffe68
 if (C != A + B):
-    print("69-th")
+    print("Error: A + B, 69-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1817412be82d44910fa753cf004a7d
-B = -0x90952b073073987b99d768ee
-C = 0x1817409b53023d609c0ed83528e18f
+A = 0x8893010540c58f55d2ea9a
+B = -0x5f73b73134e0956ea5fd2e
+C = 0x291f49d40be4f9e72ced6c
 if (C != A + B):
-    print("70-th")
+    print("Error: A + B, 70-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x94cbc64c
-B = -0x22c985951c5bb766
-C = -0x22c98594878ff11a
+A = 0xa8
+B = -0xd
+C = 0x9b
 if (C != A + B):
-    print("71-th")
+    print("Error: A + B, 71-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x30868842c6c96c4211
-B = -0x4ae81d2d5345228722250b27240d96
-C = -0x4ae81d2d5344f20099e2445db7cb85
+A = 0x5eb743944213608a46
+B = -0x488f6d62bc
+C = 0x5eb74393f983f3278a
 if (C != A + B):
-    print("72-th")
+    print("Error: A + B, 72-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x21fc12d3f4d4fb57fcac
-B = -0xac88d1f372ae599912f895f9b2c4
-C = -0xac88d1f350b246c51e239aa1b618
+A = 0x6601af086fe9ae73
+B = -0x3a02448df1bb666795809b
+C = -0x3a024427f00c5df7abd228
 if (C != A + B):
-    print("73-th")
+    print("Error: A + B, 73-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x27f46ad1ba12b98cb3bad6
-B = -0x5b69
-C = 0x27f46ad1ba12b98cb35f6d
+A = 0xeaecb280
+B = -0x7f50d09fdf91e5f43faf4ea72bea
+C = -0x7f50d09fdf91e5f43fae63ba796a
 if (C != A + B):
-    print("74-th")
+    print("Error: A + B, 74-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x146664c87a357238951c600
-B = -0xe10c448ce521197ff8ee
-C = 0x1458540431672026fd1cd12
+A = 0x7a5b01f7
+B = -0x4f43bf013306333097
+C = -0x4f43bf01328bd82ea0
 if (C != A + B):
-    print("75-th")
+    print("Error: A + B, 75-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xada5d3bd9895209aed
-B = -0xfd75e222957b1ec808
-C = -0x4fd00e64fce5fe2d1b
+A = 0x8f02ba5d2c4e243bd3702121adb7
+B = -0xb07cd8db67fa82583137
+C = 0x8f02ba5c7bd14b606b759ec97c80
 if (C != A + B):
-    print("76-th")
+    print("Error: A + B, 76-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2febf156d4aa68e8
-B = -0xa75630780d7edf62d7a08d
-C = -0xa7563048218d888e2d37a5
+A = 0xfdfe7ed2166fe56b
+B = -0x5abe59f56ec8
+C = 0xfdfe2413bc7a76a3
 if (C != A + B):
-    print("77-th")
+    print("Error: A + B, 77-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x849a91a56ef8ac0a08ac1e8b38aa
-B = -0xf6be539e5822e2e0467ce4
-C = 0x849a90aeb0a50db1e5c93e44bbc6
+A = 0x6d12
+B = -0xd99f0e2b
+C = -0xd99ea119
 if (C != A + B):
-    print("78-th")
+    print("Error: A + B, 78-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2754d9b60c5b70
-B = -0xa175f7
-C = 0x2754d9b56ae579
+A = 0xe363298909e20a79a9
+B = -0xda317fc10a98ee76062256d3ff0b
+C = -0xda317fc109b58b4c7d1874c98562
 if (C != A + B):
-    print("79-th")
+    print("Error: A + B, 79-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5d4e0db756cde1e4
-B = -0xcdf5480f2886bf986f37
-C = -0xcdf4eac11acf68ca8d53
+A = 0x2e76951f644cd8ca29
+B = -0x822637a23
+C = 0x2e76951f5c2a755006
 if (C != A + B):
-    print("80-th")
+    print("Error: A + B, 80-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfde859a9
-B = -0xb85a814fcd13aecc
-C = -0xb85a814ecf2b5523
+A = 0x368c329eb04d6eff04828dc5e954c1
+B = -0xe42ea75be02534
+C = 0x368c329eb04d6efe2053e66a092f8d
 if (C != A + B):
-    print("81-th")
+    print("Error: A + B, 81-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x24f4fa4595c2
-B = -0x81148c31a59d0eb1fd604d14
-C = -0x81148c31a59ce9bd031ab752
+A = 0xb4d41218771656738041a42ed4491d
+B = -0x4b
+C = 0xb4d41218771656738041a42ed448d2
 if (C != A + B):
-    print("82-th")
+    print("Error: A + B, 82-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x86a3df75897b7d
-B = -0x7be848467f0b
-C = 0x8627f72d42fc72
+A = 0x7dbf61f67cf819fad152b1
+B = -0xb4db9a
+C = 0x7dbf61f67cf819fa1c7717
 if (C != A + B):
-    print("83-th")
+    print("Error: A + B, 83-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2c1abaea186a
-B = -0xf22cfeaacbacd85d558e4c124b
-C = -0xf22cfeaacbacd8313ad361f9e1
+A = 0x300a5e28a72ffbac982d0a48df07
+B = -0x3591fe138b5b3cc8ade073
+C = 0x300a5df31531e8213cf0419afe94
 if (C != A + B):
-    print("84-th")
+    print("Error: A + B, 84-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc092f777
-B = -0xc9f4d06e3ce4946c68f5
-C = -0xc9f4d06e3ce3d3d9717e
+A = 0x65ae6e51bb6146aa4f
+B = -0x2b3d
+C = 0x65ae6e51bb61467f12
 if (C != A + B):
-    print("85-th")
+    print("Error: A + B, 85-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc0aeef
-B = -0x6dc94fdb9e064aa3bb47b4565e775d
-C = -0x6dc94fdb9e064aa3bb47b4559dc86e
+A = 0x525c297fed3496b7
+B = -0xd73839e4
+C = 0x525c297f15fc5cd3
 if (C != A + B):
-    print("86-th")
+    print("Error: A + B, 86-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x70f381a746
-B = -0x9a7459e72892386ed62f9021
-C = -0x9a7459e7289237fde2ade8db
+A = 0x22
+B = -0x105251102fd8965ce59b81
+C = -0x105251102fd8965ce59b5f
 if (C != A + B):
-    print("87-th")
+    print("Error: A + B, 87-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcc5a5aa9c22a6db4dfb
-B = -0x46fc98697a380d1e465798ae
-C = -0x46fc8ba3d48d70fb9f7c4ab3
+A = 0x6d71ebaf9608eb9d63b9aa3883
+B = -0xa811f1cea855e1bdecb45a631ed24f
+C = -0xa811845cbca64bb50116f6a97499cc
 if (C != A + B):
-    print("88-th")
+    print("Error: A + B, 88-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb8dc3e5adf4bd3597d5ef1a04f1412
-B = -0xccdeaee819537257fe9d2b5c64
-C = 0xb8db717c3063ba060b06f30323b7ae
+A = 0x16bd
+B = -0x67fb56ddc47a06e769fc8c
+C = -0x67fb56ddc47a06e769e5cf
 if (C != A + B):
-    print("89-th")
+    print("Error: A + B, 89-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5c22b6119b15ef1d58
-B = -0x132abcc0658d3d115cfd5afcaa55
-C = -0x132abcc065311a5b4b62450d8cfd
+A = 0xc33d
+B = -0xbf9994d18a
+C = -0xbf99940e4d
 if (C != A + B):
-    print("90-th")
+    print("Error: A + B, 90-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1b
-B = -0xe2830d007400fb28c2
-C = -0xe2830d007400fb28a7
+A = 0xa00ad0ee8657d362efd78cb68e55fd
+B = -0x489b405588179342eac5
+C = 0xa00ad0ee860f38229a4f75234b6b38
 if (C != A + B):
-    print("91-th")
+    print("Error: A + B, 91-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xec04bec6
-B = -0xdc4cc735be84c2db6096dada24ed
-C = -0xdc4cc735be84c2db6095eed56627
+A = 0x9092
+B = -0xf1ae07f48c229bacbca2641c
+C = -0xf1ae07f48c229bacbca1d38a
 if (C != A + B):
-    print("92-th")
+    print("Error: A + B, 92-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe4f1673e664abfe6f91a
-B = -0x4b310459fbc2b2
-C = 0xe4f166f3354665eb3668
+A = 0x9739066e52
+B = -0x6aa900fbf3
+C = 0x2c9005725f
 if (C != A + B):
-    print("93-th")
+    print("Error: A + B, 93-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x22be8d40fb0d3afa0561
-B = -0xcb0d4c7606c511d23991bf524b2e
-C = -0xcb0d4c75e40684913e84845845cd
+A = 0x3ed9fb517151bc1c9a853ae824
+B = -0x6fb81ca500
+C = 0x3ed9fb517151bc1c2acd1e4324
 if (C != A + B):
-    print("94-th")
+    print("Error: A + B, 94-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6771593a57a6cc2f2ac393df55db
-B = -0x1ce7e5
-C = 0x6771593a57a6cc2f2ac393c26df6
+A = 0xdc7a606ef188894c597bc4bf995249
+B = -0x1e29e5d28825c76b895f282e1c1e87
+C = 0xbe507a9c6962c1e0d01c9c917d33c2
 if (C != A + B):
-    print("95-th")
+    print("Error: A + B, 95-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x644f6e0b17fa023e6a
-B = -0xdeeb7d6f4a1e79fc35ce518f8fda
-C = -0xdeeb7d6f49ba2a8e2ab6578d5170
+A = 0xc721cd
+B = -0x3166f81e2b1ccabda6755ce5
+C = -0x3166f81e2b1ccabda5ae3b18
 if (C != A + B):
-    print("96-th")
+    print("Error: A + B, 96-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x207d
-B = -0x4f830af2c62c
-C = -0x4f830af2a5af
+A = 0x1e6d
+B = -0x769ca21ad0f0a33c2f06b3
+C = -0x769ca21ad0f0a33c2ee846
 if (C != A + B):
-    print("97-th")
+    print("Error: A + B, 97-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8ac0c9d4
-B = -0x7844
-C = 0x8ac05190
+A = 0xa
+B = -0x4b7343e952b0b10c55a01269
+C = -0x4b7343e952b0b10c55a0125f
 if (C != A + B):
-    print("98-th")
+    print("Error: A + B, 98-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4d3960114603feb8
-B = -0x4d0b80cf330def87
-C = 0x2ddf4212f60f31
+A = 0x75220a7db3f86b6765a974c1
+B = -0x99925a9a55e1
+C = 0x75220a7db3f7d1d50b0f1ee0
 if (C != A + B):
-    print("99-th")
+    print("Error: A + B, 99-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5346bd2a
-B = -0x39aaf73da4
-C = -0x3957b0807a
+A = 0x566519eaadfaa215a87f0da2a1e971
+B = -0x58a92af55136d595c2e4ac
+C = 0x566519ea555177205748380cdf04c5
 if (C != A + B):
-    print("100-th")
+    print("Error: A + B, 100-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x47ed73fe4947bd0923ea
-B = -0x3d8e319ee3a34a2198
-C = 0x47afe5ccaa6419bf0252
+A = 0x992e931d8b5c7181dc3475
+B = -0x6e30
+C = 0x992e931d8b5c7181dbc645
 if (C != A + B):
-    print("101-th")
+    print("Error: A + B, 101-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5d
-B = -0xcc6a2cb7ae
-C = -0xcc6a2cb751
+A = 0x96426f30d3d17229dade91c5
+B = -0x44c4c3800622
+C = 0x96426f30d3d12d65175e8ba3
 if (C != A + B):
-    print("102-th")
+    print("Error: A + B, 102-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xce859469c965b8864f
-B = -0x31b806d6475afc63d651eac7f517
-C = -0x31b806d6468c76cf6c88850f6ec8
+A = 0x446c7895527c40e0199f181d24
+B = -0xb533
+C = 0x446c7895527c40e0199f1767f1
 if (C != A + B):
-    print("103-th")
+    print("Error: A + B, 103-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2bb5
-B = -0x1b035aae5fe7
-C = -0x1b035aae3432
+A = 0x956583d0bb77
+B = -0xaf65bf3bc6790b144b1de5
+C = -0xaf65bf3bc5e3a5907a626e
 if (C != A + B):
-    print("104-th")
+    print("Error: A + B, 104-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2697a6
-B = -0xf879
-C = 0x259f2d
+A = 0x9e7cb51c9221549d1af8
+B = -0xc351ab764924
+C = 0x9e7cb51bcecfa926d1d4
 if (C != A + B):
-    print("105-th")
+    print("Error: A + B, 105-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8d90fef34790
-B = -0xa40ed2933b5634a4fccc9632
-C = -0xa40ed2933b55a713fdd94ea2
+A = 0xac52ad
+B = -0xc22e1252afc0589c8a210e2e
+C = -0xc22e1252afc0589c8974bb81
 if (C != A + B):
-    print("106-th")
+    print("Error: A + B, 106-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x15c39b44704c69f5dbbc8927648f
-B = -0x4323ef98e102404c542903f9d23c
-C = -0x2d60545470b5d656786c7ad26dad
+A = 0xbfce0ff64aee72d1dc
+B = -0x45f0
+C = 0xbfce0ff64aee728bec
 if (C != A + B):
-    print("107-th")
+    print("Error: A + B, 107-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2dbfe385ce36c9dbf05d1b4a
-B = -0xdc1a2fc48b32bc6960320d93cfbe82
-C = -0xdc1a2f96cb4f369b296831a372a338
+A = 0x68e8807822c99eaeb94272bf21cf
+B = -0xdbeb78ceadb582
+C = 0x68e8807822c99dd2cdc9a4116c4d
 if (C != A + B):
-    print("108-th")
+    print("Error: A + B, 108-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa830
-B = -0x53
-C = 0xa7dd
+A = 0xad26e5702b3bb86d91
+B = -0xa20045420f0ceefa88b909b2
+C = -0xa2004494e8277ecf4d009c21
 if (C != A + B):
-    print("109-th")
+    print("Error: A + B, 109-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xde9ab17984edbe7401b061
-B = -0xe14f4e
-C = 0xde9ab17984edbe73206113
+A = 0x1ecd215f01
+B = -0xc176dd478295d949cc8b9ee80e5d20
+C = -0xc176dd478295d949cc8b801aecfe1f
 if (C != A + B):
-    print("110-th")
+    print("Error: A + B, 110-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4c4de50a2d8880f3081994ce
-B = -0x3cef0288d6732e2c22aed3e23a
-C = -0x3ca2b4a3cc45a5ab2fa6ba4d6c
+A = 0x33da72d2eba4c5c019efbf8d679d87
+B = -0xe27470aa17c8bffe7fb55f277bf2
+C = 0x32f7fe62418cfd001b700a2e402195
 if (C != A + B):
-    print("111-th")
+    print("Error: A + B, 111-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc483c1
-B = -0x17
-C = 0xc483aa
+A = 0x876b1dae316a33b8bde34f9cce
+B = -0x302e70bf80103386cd7f9b9985af24
+C = -0x302de9546262021c99c6ddb6361256
 if (C != A + B):
-    print("112-th")
+    print("Error: A + B, 112-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe5ca55e9
-B = -0x4de846b633e1118b
-C = -0x4de846b54e16bba2
+A = 0xef
+B = -0x21e62d8efa15e16ee73f5bafea
+C = -0x21e62d8efa15e16ee73f5baefb
 if (C != A + B):
-    print("113-th")
+    print("Error: A + B, 113-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbf5732f44f
-B = -0x800d41b8f139b9a939d3c72e
-C = -0x800d41b8f139b8e9e2a0d2df
+A = 0x8a
+B = -0x1e0c
+C = -0x1d82
 if (C != A + B):
-    print("114-th")
+    print("Error: A + B, 114-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6f9f8bf951d0330ab5ce10e0
-B = -0x6137780d6d5ac
-C = 0x6f9f8bf951ca1f9334f73b34
+A = 0x268f43296dbc4bf2fb20fd
+B = -0xb4dd3b3bc8df3151166c4a
+C = -0x8e4df8125b22e55e1b4b4d
 if (C != A + B):
-    print("115-th")
+    print("Error: A + B, 115-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8e9f2572599c1e2c4fb4
-B = -0x88592f4ed3addb33a18bed
-C = -0x87ca902961543f15753c39
+A = 0x9b354a3a8e719b918edefb0cc5cac7
+B = -0xc11bf8875a5fdabf42745230e7
+C = 0x9b34891e95ea4131b41fb8987399e0
 if (C != A + B):
-    print("116-th")
+    print("Error: A + B, 116-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcfeac9a3f3930f
-B = -0xbb9c76
-C = 0xcfeac9a337f699
+A = 0x81
+B = -0xa67c935986dcd7d9e86d54
+C = -0xa67c935986dcd7d9e86cd3
 if (C != A + B):
-    print("117-th")
+    print("Error: A + B, 117-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x68b4c4398bf6b47faa
-B = -0x5e45f9cc5510
-C = 0x68b4c3db45fce82a9a
+A = 0x9f8aaaa347e09a813574c7
+B = -0x2efd
+C = 0x9f8aaaa347e09a813545ca
 if (C != A + B):
-    print("118-th")
+    print("Error: A + B, 118-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7f8b7ff7a95f
-B = -0x1a5ccfb01970a4
-C = -0x19dd443021c745
+A = 0x38c1f848d94c017f4d4a0994ef6dcf
+B = -0xa95cb3879b5ba9620d69
+C = 0x38c1f848d8a2a4cbc5aeadeb8d6066
 if (C != A + B):
-    print("119-th")
+    print("Error: A + B, 119-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x78cf969df28460c2a488be52
-B = -0x4fcdc5a3bf428a2701389ad0be5e5d
-C = -0x4fcdc52aefabec347cd7d82c35a00b
+A = 0xcf72f679d363a7
+B = -0x3d
+C = 0xcf72f679d3636a
 if (C != A + B):
-    print("120-th")
+    print("Error: A + B, 120-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe4c13fec8000b35cb443
-B = -0xa319ba0e5150ca7bd756
-C = 0x41a785de2eafe8e0dced
+A = 0xb1
+B = -0x205657c686905fea76d78c167d
+C = -0x205657c686905fea76d78c15cc
 if (C != A + B):
-    print("121-th")
+    print("Error: A + B, 121-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb412928552
-B = -0xf5ea17b3f05b9fcd1231b30ef1419c
-C = -0xf5ea17b3f05b9fcd1230fefc5ebc4a
+A = 0xb96a2
+B = -0x3ec3b2eda2bd
+C = -0x3ec3b2e20c1b
 if (C != A + B):
-    print("122-th")
+    print("Error: A + B, 122-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x79f6f16ad0f59d820c0470fa
-B = -0xf702b46758e078
-C = 0x79f6f16acffe9acda4ab9082
+A = 0x4a3d6786a1cdb9934b8b60b9f6
+B = -0x3547b029e061575a47a06daabc39
+C = -0x34fd72c259bf89a0b454e24a0243
 if (C != A + B):
-    print("123-th")
+    print("Error: A + B, 123-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd3b077302457
-B = -0x61328e2426fccc7f8895
-C = -0x61328e23534c554f643e
+A = 0xee0f99efa7772a2194c796ea51
+B = -0x159764c2c58710a0ffe0bf650f
+C = 0xd878352ce1f0198094e6d78542
 if (C != A + B):
-    print("124-th")
+    print("Error: A + B, 124-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x726034c1efc5
-B = -0x5c678ec0624d
-C = 0x15f8a6018d78
+A = 0x94bbdaea97234ef4e7f4
+B = -0xfa31b360043dcabc
+C = 0x94bae0b8e3c34ab71d38
 if (C != A + B):
-    print("125-th")
+    print("Error: A + B, 125-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd1b96bbd9772501575f5
-B = -0x7580b297a4a8
-C = 0xd1b96bbd21f19d7dd14d
+A = 0xb7e8f0c01cf0c9
+B = -0xe1
+C = 0xb7e8f0c01cefe8
 if (C != A + B):
-    print("126-th")
+    print("Error: A + B, 126-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9ba0429f772c89
-B = -0xd334bcf1b2ba63fefea6d9b4
-C = -0xd334bcf1b21ec3bc5f2fad2b
+A = 0xc7a7733e5fced53f
+B = -0x98a
+C = 0xc7a7733e5fcecbb5
 if (C != A + B):
-    print("127-th")
+    print("Error: A + B, 127-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa2
-B = -0xbab538e5fb497311cfb3
-C = -0xbab538e5fb497311cf11
+A = 0x5ec49bbdf4ebc70d22
+B = -0x9dfff0c24c9511f0b56c53
+C = -0x9dff91fdb0d71d04ee5f31
 if (C != A + B):
-    print("128-th")
+    print("Error: A + B, 128-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x94349960
-B = -0xf9dce54a158477eea209dd9684
-C = -0xf9dce54a158477eea175a8fd24
+A = 0x1faed6df
+B = -0xc26f8dd603e82222
+C = -0xc26f8dd5e4394b43
 if (C != A + B):
-    print("129-th")
+    print("Error: A + B, 129-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x928e5abd89e2de5ff6c3
-B = -0x74fb2bb397bd0d737676e1546bb0
-C = -0x74fb2bb3052eb2b5ec9402f474ed
+A = 0xee
+B = -0xfb566ae4f41303996f7b6e5e221c4a
+C = -0xfb566ae4f41303996f7b6e5e221b5c
 if (C != A + B):
-    print("130-th")
+    print("Error: A + B, 130-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf3ced5326b3b00351cd9f315ec
-B = -0xec9abdddbc53870147
-C = 0xf3ced5317ea0425760866c14a5
+A = 0x9a31e8cce3b061579e7deed7
+B = -0x2d01ce6da615958e76
+C = 0x9a31e89fe1e1f3b188e86061
 if (C != A + B):
-    print("131-th")
+    print("Error: A + B, 131-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcc5d513d062a87887a
-B = -0x1268cc281b34ae5d8bd
-C = -0x5a2f7144ad205e5043
+A = 0xc68369b5e0157c1d430e51
+B = -0xa0
+C = 0xc68369b5e0157c1d430db1
 if (C != A + B):
-    print("132-th")
+    print("Error: A + B, 132-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa8ca8
-B = -0x6b24884b1c403eb0bc
-C = -0x6b24884b1c40342414
+A = 0xb31954
+B = -0x6f755c
+C = 0x43a3f8
 if (C != A + B):
-    print("133-th")
+    print("Error: A + B, 133-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2f1c4e8b8d6a44bb86bb81177120
-B = -0x47a43c293d9a214ba2cc8261a019
-C = -0x1887ed9db02fdc901c11014a2ef9
+A = 0x7a6c83f65adbd9
+B = -0x6a6a83cfd81a13cb
+C = -0x69f0174be1bf37f2
 if (C != A + B):
-    print("134-th")
+    print("Error: A + B, 134-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x589eb855ccc3e4742415ffcc92a0
-B = -0xf1
-C = 0x589eb855ccc3e4742415ffcc91af
+A = 0x21ae0c4bbb26d22219d0
+B = -0xc9d8b4cfd34e0c7f756325
+C = -0xc9b706c38792e5ad534955
 if (C != A + B):
-    print("135-th")
+    print("Error: A + B, 135-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7cecb6892b69
-B = -0x9d3be999fa58fa7803c485
-C = -0x9d3be999f9dc0dc17a991c
+A = 0x35bf68
+B = -0xb52198
+C = -0x7f6230
 if (C != A + B):
-    print("136-th")
+    print("Error: A + B, 136-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xada3
-B = -0xae31f312dcef830e866da472d300d8
-C = -0xae31f312dcef830e866da472d25335
+A = 0x98
+B = -0x5c18b50d
+C = -0x5c18b475
 if (C != A + B):
-    print("137-th")
+    print("Error: A + B, 137-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa95d4def6abb9528b5
-B = -0xac7b
-C = 0xa95d4def6abb947c3a
+A = 0xf16fb6bd96858eaadcb2
+B = -0x9b
+C = 0xf16fb6bd96858eaadc17
 if (C != A + B):
-    print("138-th")
+    print("Error: A + B, 138-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2e05eee20af7
-B = -0x8220ef297253b4770c33c6
-C = -0x8220ef297225ae882a28cf
+A = 0xb6eed0e397034af74d
+B = -0x64b7126768e9e2228a0b
+C = -0x640023968552ded792be
 if (C != A + B):
-    print("139-th")
+    print("Error: A + B, 139-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x20b6e9ccd736
-B = -0x7314668259
-C = 0x2043d56654dd
+A = 0x8aa6dac7b3
+B = -0x4f1ce6b6bd39d0
+C = -0x4f1c5c0fe2721d
 if (C != A + B):
-    print("140-th")
+    print("Error: A + B, 140-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xabb2
-B = -0x656021b2a8
-C = -0x65602106f6
+A = 0x6954f230140258b891
+B = -0xd27c7b31537e2ff35d7cefac70
+C = -0xd27c7b30ea293dc3497a96f3df
 if (C != A + B):
-    print("141-th")
+    print("Error: A + B, 141-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x55f5d4c2dcf224672a
-B = -0x72fd482fd04b15dd0e69f99be1f3
-C = -0x72fd482fcff520084b8d07777ac9
+A = 0xf74beb18343a79a7902f3a
+B = -0x18
+C = 0xf74beb18343a79a7902f22
 if (C != A + B):
-    print("142-th")
+    print("Error: A + B, 142-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb7a7f71bc0328866a4938a39
-B = -0xd807b59060af4e4e044804f2
-C = -0x205fbe74a07cc5e75fb47ab9
+A = 0xaa90068ec5e28c4a
+B = -0x616af0
+C = 0xaa90068ec581215a
 if (C != A + B):
-    print("143-th")
+    print("Error: A + B, 143-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x743db5
-B = -0x69806479ac881d6b7ba
-C = -0x69806479ac881627a05
+A = 0x83bd02d9779fbe0666
+B = -0x510ab991e638091099
+C = 0x32b249479167b4f5cd
 if (C != A + B):
-    print("144-th")
+    print("Error: A + B, 144-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x58fcab3aedceeb7564
-B = -0xcd
-C = 0x58fcab3aedceeb7497
+A = 0xef79e1e2ed5fdda6fb13ffbc6869
+B = -0x47cf1d3d6e4048568dc2b211fda8
+C = 0xa7aac4a57f1f95506d514daa6ac1
 if (C != A + B):
-    print("145-th")
+    print("Error: A + B, 145-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4fb4c5390d3740e67
-B = -0xd96e
-C = 0x4fb4c5390d37334f9
+A = 0xba077659718d
+B = -0x6e
+C = 0xba077659711f
 if (C != A + B):
-    print("146-th")
+    print("Error: A + B, 146-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x314c1139ffdd771d05472a71
-B = -0x75281d1d
-C = 0x314c1139ffdd771c901f0d54
+A = 0x9961160431e962d5ad614a82246
+B = -0xe9b90729075aafe09b482d533bc5
+C = -0xe022f5c8c43c19b3407218ab197f
 if (C != A + B):
-    print("147-th")
+    print("Error: A + B, 147-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xec
-B = -0xc3b78ecbc8d21efd
-C = -0xc3b78ecbc8d21e11
+A = 0x35d30c0ca64e3
+B = -0xc080e5eff60bcbcd9b9db22350
+C = -0xc080e5eff60bc8706adce7be6d
 if (C != A + B):
-    print("148-th")
+    print("Error: A + B, 148-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf40ae7b21c37ece2af353743f392
-B = -0xf6890c1655cd2d039aa9
-C = 0xf40ae7b125aee0cc59680a4058e9
+A = 0x7069
+B = -0x32271154b20e3ab5604d73
+C = -0x32271154b20e3ab55fdd0a
 if (C != A + B):
-    print("149-th")
+    print("Error: A + B, 149-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2b73702dc89d2e02
-B = -0xa926bc7e3b20bfd1292c24ad442406
-C = -0xa926bc7e3b20bfa5b5bbf6e4a6f604
+A = 0x34
+B = -0xf74abd0d35d4c4d7
+C = -0xf74abd0d35d4c4a3
 if (C != A + B):
-    print("150-th")
+    print("Error: A + B, 150-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdf49
-B = -0xeacef165bf7eedc05cf0efa517f37a
-C = -0xeacef165bf7eedc05cf0efa5171431
+A = 0x936d69c5586656302a97274d5bc6
+B = -0xb83824
+C = 0x936d69c5586656302a97269523a2
 if (C != A + B):
-    print("151-th")
+    print("Error: A + B, 151-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1d4612f4281a68588d9f074f1fdc
-B = -0x861064c5c56b0db47c1cef746f5d
-C = -0x68ca51d19d50a55bee7de8254f81
+A = 0xd1aa046a67a72f62551f3506
+B = -0x2b1af7dfc209
+C = 0xd1aa046a67a704475d3f72fd
 if (C != A + B):
-    print("152-th")
+    print("Error: A + B, 152-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6b0751d880b930
-B = -0x38339230d95ee1db13e7dbd6f020
-C = -0x38339230d95ee1700c96035636f0
+A = 0x999cbf44137c1623ba2c1521
+B = -0x99a93f50bc
+C = 0x999cbf44137c158a10ecc465
 if (C != A + B):
-    print("153-th")
+    print("Error: A + B, 153-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x857499f2c67f98c7
-B = -0xd9931593
-C = 0x857499f1ecec8334
+A = 0x8f7adc0a
+B = -0x3df72e6c9c8c94f682c67d069962
+C = -0x3df72e6c9c8c94f682c5ed8bbd58
 if (C != A + B):
-    print("154-th")
+    print("Error: A + B, 154-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbad0aba6a2b7faf5bb0138caa0e0
-B = -0xd281ebe0b85657d1c66f
-C = 0xbad0aba5d0360f1502aae0f8da71
+A = 0x6e29b26795e451a0
+B = -0x330cff2e
+C = 0x6e29b26762d75272
 if (C != A + B):
-    print("155-th")
+    print("Error: A + B, 155-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x25b6e68a45c30f0b
-B = -0x988af98e2505
-C = 0x25b64dff4c34ea06
+A = 0xdfa388375528863110236e
+B = -0xcd30dd62
+C = 0xdfa3883755288563df460c
 if (C != A + B):
-    print("156-th")
+    print("Error: A + B, 156-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xaf81cedc5281a1007a59e703
-B = -0x239ef482b663e0fa9d84d439a44fbb
-C = -0x239ef3d3349504a81be3d3bf4a68b8
+A = 0xcee2e4abf8a6c0
+B = -0x743d2d044035ceec21392c4004b8
+C = -0x743d2d044035ce1d3e5480475df8
 if (C != A + B):
-    print("157-th")
+    print("Error: A + B, 157-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x945305e9c7b25b75541053eb4ffc00
-B = -0xc6
-C = 0x945305e9c7b25b75541053eb4ffb3a
+A = 0xe1617474d339218a
+B = -0xdaa775c595f4
+C = 0xe16099cd5d738b96
 if (C != A + B):
-    print("158-th")
+    print("Error: A + B, 158-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3afc638608d7e0eba86275f050b2
-B = -0x9ab0
-C = 0x3afc638608d7e0eba86275efb602
+A = 0xb11f238820e4ea964c0391
+B = -0x3c5b2b99
+C = 0xb11f238820e4ea59f0d7f8
 if (C != A + B):
-    print("159-th")
+    print("Error: A + B, 159-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8ecae4ac313433c6a86722
-B = -0x7d47
-C = 0x8ecae4ac313433c6a7e9db
+A = 0xe90469c51923
+B = -0x374509b4188587c24ba4cc50c09
+C = -0x374509b4188587b3bb5e2fff2e6
 if (C != A + B):
-    print("160-th")
+    print("Error: A + B, 160-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc4edf14f4d17ceef432354
-B = -0xe776d9a2aa23f78b9ff11e
-C = -0x2288e8535d0c289c5ccdca
+A = 0xabe584
+B = -0x236ff30031ac
+C = -0x236ff2544c28
 if (C != A + B):
-    print("161-th")
+    print("Error: A + B, 161-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x44a6d1cffe1d5c4595e6de
-B = -0xcec82888
-C = 0x44a6d1cffe1d5b76cdbe56
+A = 0x4171a16428285d7840e276374e8046
+B = -0xe3da741767bb083156
+C = 0x4171a1642827799dcccb0e7c464ef0
 if (C != A + B):
-    print("162-th")
+    print("Error: A + B, 162-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xddff
-B = -0x316daf09dc3c90fb63ae88ae
-C = -0x316daf09dc3c90fb63adaaaf
+A = 0x2b06
+B = -0x84cf9a7165e5677b40ed116bd5
+C = -0x84cf9a7165e5677b40ed1140cf
 if (C != A + B):
-    print("163-th")
+    print("Error: A + B, 163-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe107b7206
-B = -0x8b18fd3affb8f1a
-C = -0x8b18fc59f801d14
+A = 0x4c0d40df8a9640c40a6d57
+B = -0xb6e987
+C = 0x4c0d40df8a9640c35383d0
 if (C != A + B):
-    print("164-th")
+    print("Error: A + B, 164-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2d7ddeaf3af6b2
-B = -0x10
-C = 0x2d7ddeaf3af6a2
+A = 0x540444920292de0749b3ac635d83
+B = -0x5c4064ac85da526a13f2cbdf
+C = 0x5403e8519de6582cf749987091a4
 if (C != A + B):
-    print("165-th")
+    print("Error: A + B, 165-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
@@ -4993,1661 +4993,1661 @@ if (cnt == 0):
     print("ALL TRUE!")
 print("### Case 4: A < 0 and B > 0, C = B - |A| ###\n")
 cnt = 0
-A = -0xa544c3d8093a2d13a445d0233747
-B = 0x7003973d
-C = -0xa544c3d8093a2d13a445601fa00a
+A = -0xee861d86
+B = 0xd88070d609136ff4826521c9
+C = 0xd88070d609136ff393df0443
 if (C != A + B):
-    print("0-th")
+    print("Error: A + B, 0-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xdaa5a3358f193625169ba4448d8b23
-B = 0x149dc3e90022ad
-C = -0xdaa5a3358f19362501fde05b8d6876
+A = -0x1b8507522dec81032b
+B = 0x36089ddb
+C = -0x1b8507522db6786550
 if (C != A + B):
-    print("1-th")
+    print("Error: A + B, 1-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3d3c1f5d8d4f31
-B = 0x70fddeab454c10f06018069b
-C = 0x70fddeab450ed4d1028ab76a
+A = -0xa4dfc7166e9233b2aa864e32144045
+B = 0x63d9addc1f7c
+C = -0xa4dfc7166e9233b2aa2274843820c9
 if (C != A + B):
-    print("2-th")
+    print("Error: A + B, 2-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6b0f11e4deaa400c
-B = 0x2035e7525fe2
-C = -0x6b0ef1aef757e02a
+A = -0x3d8932764237326c046dddda
+B = 0x40f90723075e1cae9eae4a
+C = -0x3d48396f1f2fd44f55cf2f90
 if (C != A + B):
-    print("3-th")
+    print("Error: A + B, 3-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x567be6dbf6decdde8b66afcf
-B = 0x29be33da85dee5a9b
-C = -0x567be6d95afb90362d785534
+A = -0xd7739becda1ff4d97422ed
+B = 0x78ff15fae2938df66e58cfb1d7da4
+C = 0x78ff15ed6b59cf28cc59821a95ab7
 if (C != A + B):
-    print("4-th")
+    print("Error: A + B, 4-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcb23a5c4b2
-B = 0x9997d09c9d
-C = -0x318bd52815
+A = -0x35c80d61f598067b1a7aad9c
+B = 0x7dd917b2baf1b9213c029c
+C = -0x354a344a42dd14c1f93eab00
 if (C != A + B):
-    print("5-th")
+    print("Error: A + B, 5-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x26347ebb66dcb750
-B = 0xa7ebb3e89f04
-C = -0x2633d6cfb2f4184c
+A = -0xd1
+B = 0x4be7321128268371
+C = 0x4be73211282682a0
 if (C != A + B):
-    print("6-th")
+    print("Error: A + B, 6-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xdff38832df92
-B = 0x9ce0e562e66450a3a00c
-C = 0x9ce0e5620670c870c07a
+A = -0x4d
+B = 0xa2f06843259f17c56cb71073c9fc
+C = 0xa2f06843259f17c56cb71073c9af
 if (C != A + B):
-    print("7-th")
+    print("Error: A + B, 7-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3918d5b321
-B = 0x4deff1b11a64ba8417a8
-C = 0x4deff1b11a2ba1ae6487
+A = -0x6f5aadbf0bad7579b881d4
+B = 0xbb6ff017fba0a92bdb
+C = -0x6f59f24f1b9579d90f55f9
 if (C != A + B):
-    print("8-th")
+    print("Error: A + B, 8-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5ca3451d718ba234
-B = 0x52f4589ca18a55
-C = -0x5c5050c4d4ea17df
+A = -0xc21f022b9
+B = 0xc8b3d8c8cc8fa1ec64
+C = 0xc8b3d8c8c06db1c9ab
 if (C != A + B):
-    print("9-th")
+    print("Error: A + B, 9-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x69
-B = 0xba2dd243b3c57d72243c93a9a
-C = 0xba2dd243b3c57d72243c93a31
+A = -0x2329a5850db9
+B = 0xe47a46
+C = -0x2329a4a09373
 if (C != A + B):
-    print("10-th")
+    print("Error: A + B, 10-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5ad50c7763e28d
-B = 0xb76f93409727716a1d76
-C = 0xb76f92e5c21afa063ae9
+A = -0x3b33b34af40a7f
+B = 0x8e6bfde6
+C = -0x3b33b2bc880c99
 if (C != A + B):
-    print("11-th")
+    print("Error: A + B, 11-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5d0eff40850f650c
-B = 0xeaaac19407ff7556429fa9ec73
-C = 0xeaaac19407a26657021a9a8767
+A = -0x9a2e7131bc37fc4d26e6a5
+B = 0x1df2cb1d4a58e963
+C = -0x9a2e7113c96cdf02cdfd42
 if (C != A + B):
-    print("12-th")
+    print("Error: A + B, 12-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x39045903e0f373387c51
-B = 0x7eab3a75e39bf5071fb73b9a85
-C = 0x7eab3a3cdf42f1262c44031e34
+A = -0x5e66d32f04ce
+B = 0x6c379ccf523379416caeface859c
+C = 0x6c379ccf523379410e48279f80ce
 if (C != A + B):
-    print("13-th")
+    print("Error: A + B, 13-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9a
-B = 0x8b42f9c9ee550b05
-C = 0x8b42f9c9ee550a6b
+A = -0xda53562aa3488158f52b3a
+B = 0xc955
+C = -0xda53562aa3488158f461e5
 if (C != A + B):
-    print("14-th")
+    print("Error: A + B, 14-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc09418
-B = 0xb41df331353056
-C = 0xb41df330749c3e
+A = -0xfbf28735390529e9
+B = 0x881a48
+C = -0xfbf28735387d0fa1
 if (C != A + B):
-    print("15-th")
+    print("Error: A + B, 15-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xdedf844e0efed8b9f0d86d07
-B = 0x95f9d9b3045423326a1937c2752d
-C = 0x95f8fad380061433915f46ea0826
+A = -0x7dd525
+B = 0x86
+C = -0x7dd49f
 if (C != A + B):
-    print("16-th")
+    print("Error: A + B, 16-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf90f123a68de5b28082ec3ee080484
-B = 0xd3b16b51abdc
-C = -0xf90f123a68de5b28075b1282b658a8
+A = -0xc93085d102296355c0a8c2
+B = 0x5639
+C = -0xc93085d102296355c05289
 if (C != A + B):
-    print("17-th")
+    print("Error: A + B, 17-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x90490e9ddce44a9d453d63fbb79
-B = 0xb3
-C = -0x90490e9ddce44a9d453d63fbac6
+A = -0xe90401e596ce157d3e5048
+B = 0x6e8622c0
+C = -0xe90401e596ce150eb82d88
 if (C != A + B):
-    print("18-th")
+    print("Error: A + B, 18-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x910be55b1f11b8085ee1a4384d
-B = 0x413caf81f6f53a99
-C = -0x910be55b1ed07b58dceaaefdb4
+A = -0x8b58e5b5
+B = 0x85d6cc774ec1e0fda43a93
+C = 0x85d6cc774ec1e0724b54de
 if (C != A + B):
-    print("19-th")
+    print("Error: A + B, 19-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2a8489ecb52001562a1fa0
-B = 0xf4a23
-C = -0x2a8489ecb52001561ad57d
+A = -0xaf8c622d
+B = 0x5bab13ee22836e75
+C = 0x5bab13ed72f70c48
 if (C != A + B):
-    print("20-th")
+    print("Error: A + B, 20-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x59fd49ee
-B = 0x4cf
-C = -0x59fd451f
+A = -0x5a8c8d7b9567de04fa
+B = 0x1b
+C = -0x5a8c8d7b9567de04df
 if (C != A + B):
-    print("21-th")
+    print("Error: A + B, 21-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x98
-B = 0x702ab4bc8e628b
-C = 0x702ab4bc8e61f3
+A = -0x1f1e2d3531cca68460774a0b
+B = 0x174756c7c7
+C = -0x1f1e2d3531cca66d19208244
 if (C != A + B):
-    print("22-th")
+    print("Error: A + B, 22-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x46ea4a
-B = 0xce6a3a96
-C = 0xce23504c
+A = -0x94
+B = 0xc30f9f0750ba2482fa8d
+C = 0xc30f9f0750ba2482f9f9
 if (C != A + B):
-    print("23-th")
+    print("Error: A + B, 23-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf5e6dcf703
-B = 0xfe2d13491087c2
-C = 0xfe2c1d623390bf
+A = -0x275838a0070b34bdd008
+B = 0x535115
+C = -0x275838a0070b346a7ef3
 if (C != A + B):
-    print("24-th")
+    print("Error: A + B, 24-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6491f7a2dd04c59a0101
-B = 0x4853cb28b282ff47e53de4
-C = 0x47ef39310fa5fa824b3ce3
+A = -0x63b55a6b7e9a
+B = 0xf1304cd864b41e0a
+C = 0xf12fe9230a489f70
 if (C != A + B):
-    print("25-th")
+    print("Error: A + B, 25-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcbd1
-B = 0x6dd5b5
-C = 0x6d09e4
+A = -0xc491aed6f38a130b241dca918b038
+B = 0x85237fb769
+C = -0xc491aed6f38a130b241578598f8cf
 if (C != A + B):
-    print("26-th")
+    print("Error: A + B, 26-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2422f6
-B = 0x1a0cb8cd55b83bbc22727a44e55767
-C = 0x1a0cb8cd55b83bbc22727a44c13471
+A = -0xebdbc5f39c51a50a6b1cdd85
+B = 0x2040fd4bb0989169f1
+C = -0xebdbc5d35b545959d28b7394
 if (C != A + B):
-    print("27-th")
+    print("Error: A + B, 27-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd968c8ffb2c170a5
-B = 0x92ea7de349eacd79ecadf3f77b89
-C = 0x92ea7de349e9f41123ae41360ae4
+A = -0x130d466f8357
+B = 0x8e4651
+C = -0x130d45e13d06
 if (C != A + B):
-    print("28-th")
+    print("Error: A + B, 28-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc83c
-B = 0xbf3493ab55c5b
-C = 0xbf3493ab4941f
+A = -0xe12917331afc60e000c3a22b0bd1
+B = 0xd2
+C = -0xe12917331afc60e000c3a22b0aff
 if (C != A + B):
-    print("29-th")
+    print("Error: A + B, 29-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x264dcd0ed2446e
-B = 0x2472b7094cf818504ea5922e4e24
-C = 0x2472b7094cf8182a00d8835c09b6
+A = -0xdd
+B = 0x83c833856d
+C = 0x83c8338490
 if (C != A + B):
-    print("30-th")
+    print("Error: A + B, 30-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2d20871db3969f6ff8275fc176ca52
-B = 0xe4d2b7480ff7a43c73a7892429445b
-C = 0xb7b2302a5c6104cc7b802962b27a09
+A = -0x4cdd
+B = 0x1c
+C = -0x4cc1
 if (C != A + B):
-    print("31-th")
+    print("Error: A + B, 31-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xffc9c4ea80e7b0b9a55e25ba51
-B = 0xb02c60d739
-C = -0xffc9c4ea80e7b0b8f531c4e318
+A = -0xf52fdb53b685338d3946910536
+B = 0xf6160fa2c3d84bccaf39
+C = -0xf52fda5da07590c960fac455fd
 if (C != A + B):
-    print("32-th")
+    print("Error: A + B, 32-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc3
-B = 0x5551f156ab9fe3fe96
-C = 0x5551f156ab9fe3fdd3
+A = -0xd32724078f0cc93b8bc395
+B = 0xe0c8aea178dbcb1ce664b9af
+C = 0xdff5877d714cbe53aad8f61a
 if (C != A + B):
-    print("33-th")
+    print("Error: A + B, 33-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe02d39047abec6fb85c292aaeae1
-B = 0x8d4d1fa83f8f8111
-C = -0xe02d39047abe39ae661a531b69d0
+A = -0x1b476f3aec1d02a8
+B = 0xeb19bd261d7496df8bb4b760
+C = 0xeb19bd26022d27a49f97b4b8
 if (C != A + B):
-    print("34-th")
+    print("Error: A + B, 34-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8da1
-B = 0x7b5345a2e381fb
-C = 0x7b5345a2e2f45a
+A = -0xc1210791d13a20d623ba
+B = 0x98de0da2cb37b4bf9963
+C = -0x2842f9ef06026c168a57
 if (C != A + B):
-    print("35-th")
+    print("Error: A + B, 35-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9c64cc91a115223ba542
-B = 0x3092
-C = -0x9c64cc91a115223b74b0
+A = -0xba8fe55c453bb054a306
+B = 0x146fb219833689d9417fef
+C = 0x13b5223426f14e28ecdce9
 if (C != A + B):
-    print("36-th")
+    print("Error: A + B, 36-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3720507aed
-B = 0xc5f16086cf9f
-C = 0xc5ba403654b2
+A = -0xbeb14a56fb
+B = 0xa495f88d982b0f0c7f1e2bcf
+C = 0xa495f88d982b0e4dcdd3d4d4
 if (C != A + B):
-    print("37-th")
+    print("Error: A + B, 37-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa3841e8be84dd8d0
-B = 0x88470f0cf16d7c3008f0
-C = 0x88466b88d2e193e23020
+A = -0xf15abf9625
+B = 0xdffb8db72ed
+C = 0xd0e5e1bdcc8
 if (C != A + B):
-    print("38-th")
+    print("Error: A + B, 38-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf2a57ae8a03650d02890636964
-B = 0xde5e7d5d46e00b6a4e0f97
-C = -0xf2a49c8a22d909f01d261559cd
+A = -0xf9f72f72
+B = 0x2ae03c8b5f2202cda21f417b638c
+C = 0x2ae03c8b5f2202cda21e4784341a
 if (C != A + B):
-    print("39-th")
+    print("Error: A + B, 39-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x42647510429804d2c7
-B = 0x1ac8c54279c1f4
-C = -0x42645a477d558b10d3
+A = -0x8b6f57020909
+B = 0xcb41188c599d51337b49d8
+C = 0xcb41188c5911e1dc7940cf
 if (C != A + B):
-    print("40-th")
+    print("Error: A + B, 40-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x48503d135b8e7f2cd27b937d
-B = 0x6fd66544f4f4e
-C = -0x48503d135b8781c67e2c442f
+A = -0x4379808a61
+B = 0xd732f9a12f
+C = 0x93b97916ce
 if (C != A + B):
-    print("41-th")
+    print("Error: A + B, 41-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc23360e1
-B = 0xd169
-C = -0xc2328f78
+A = -0x248e72f812aeb51fcf66a5c7
+B = 0x96f37d2a
+C = -0x248e72f812aeb51f3873289d
 if (C != A + B):
-    print("42-th")
+    print("Error: A + B, 42-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xdfd1f73f4f5900a44f9101
-B = 0xf7647be814fbbb2913b2
-C = -0xdeda92c3674404e9267d4f
+A = -0x96f5b0cf845f0caf1b
+B = 0x49a7feb26a596a
+C = -0x96f5672785aca255b1
 if (C != A + B):
-    print("43-th")
+    print("Error: A + B, 43-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa8423ac58bc16a0874
-B = 0x750bbf9da6c33838d8c5a8b8f728ba
-C = 0x750bbf9da6c28ff69e001cf78d2046
+A = -0xa63ddafe51143ca23337ad0238
+B = 0x93af18b81f74
+C = -0xa63ddafe51143c0e841ef4e2c4
 if (C != A + B):
-    print("44-th")
+    print("Error: A + B, 44-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x60c41d83e6d8
-B = 0xc53f7
-C = -0x60c41d7792e1
+A = -0x974f239865fab2e6fbcb
+B = 0x865f4cf2f96e0ec1c24a815702a078
+C = 0x865f4cf2f8d6bf9e29e486a41ba4ad
 if (C != A + B):
-    print("45-th")
+    print("Error: A + B, 45-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3b8f149ea7ee
-B = 0x82c751723b
-C = -0x3b0c4d4d35b3
+A = -0xf0b12bdd21346a2fc522be
+B = 0x65
+C = -0xf0b12bdd21346a2fc52259
 if (C != A + B):
-    print("46-th")
+    print("Error: A + B, 46-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x542720e8
-B = 0x234a1014d1fdc1
-C = 0x234a0fc0aadcd9
+A = -0xa9d30c6d3934dba15fb7e5ad90
+B = 0xbe8aefb3723f4
+C = -0xa9d30c6d3934cfb8b0bcae899c
 if (C != A + B):
-    print("47-th")
+    print("Error: A + B, 47-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6cc6a4020d5fa7a026b77d003c3b4f
-B = 0x44ecbf6a606ac87eeb55261b6f98d4
-C = -0x27d9e497acf4df213b6256e4cca27b
+A = -0x3458
+B = 0x1d91797aab787dd0
+C = 0x1d91797aab784978
 if (C != A + B):
-    print("48-th")
+    print("Error: A + B, 48-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xba9ede921e6c8f72cb3722f6bfefde
-B = 0xaf111e
-C = -0xba9ede921e6c8f72cb3722f610dec0
+A = -0x9e6d85d5f99fc3
+B = 0x14e50354083f
+C = -0x9e58a0d2a59784
 if (C != A + B):
-    print("49-th")
+    print("Error: A + B, 49-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xeab3
-B = 0x3579ea
-C = 0x348f37
+A = -0x3ee2b50c9995692f477ac7
+B = 0x9254aee192
+C = -0x3ee2b50c9994d6da989935
 if (C != A + B):
-    print("50-th")
+    print("Error: A + B, 50-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb845b4d9
-B = 0x53543d30888e90
-C = 0x53543c7842d9b7
+A = -0x59b5d9
+B = 0xc554c9a727a5459d7
+C = 0xc554c9a7279faa3fe
 if (C != A + B):
-    print("51-th")
+    print("Error: A + B, 51-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7a12314432088c1311
-B = 0x270d
-C = -0x7a12314432088bec04
+A = -0xb3a95fbe18f8
+B = 0x96be223611
+C = -0xb312a19be2e7
 if (C != A + B):
-    print("52-th")
+    print("Error: A + B, 52-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x97bb9993bd9899ee9f3be9
-B = 0x786ea4c47b0fe75f
-C = -0x97bb991b4ef3d5738f548a
+A = -0xf5d498dae232
+B = 0x27fe
+C = -0xf5d498daba34
 if (C != A + B):
-    print("53-th")
+    print("Error: A + B, 53-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc08e
-B = 0xf5bff40a
-C = 0xf5bf337c
+A = -0x64cba824bbf408af
+B = 0xebb8fb
+C = -0x64cba824bb084fb4
 if (C != A + B):
-    print("54-th")
+    print("Error: A + B, 54-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xac987190b52578e7
-B = 0xec29adea
-C = -0xac98718fc8fbcafd
+A = -0x13c6310ee1d2b685e90eb5f0ab9069
+B = 0xd8eef9743c
+C = -0x13c6310ee1d2b685e90ddd01b21c2d
 if (C != A + B):
-    print("55-th")
+    print("Error: A + B, 55-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfd34a02ac72909608ae91b462eec3f
-B = 0xb4038d42dbe0afcb
-C = -0xfd34a02ac72908ac875bd86a4e3c74
+A = -0x4cac66dfca2f88cb6018b657515c
+B = 0x68e9
+C = -0x4cac66dfca2f88cb6018b656e873
 if (C != A + B):
-    print("56-th")
+    print("Error: A + B, 56-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc0b2e61856df15bd864fc780
-B = 0xe666ca62b49f747e3d5f
-C = -0xc0b1ffb18c7c611e11d18a21
+A = -0xc9fb0f7b8896f0
+B = 0xc71b0212b5d0d3d7a781efebb8bf
+C = 0xc71b0212b5d0d30dac72746321cf
 if (C != A + B):
-    print("57-th")
+    print("Error: A + B, 57-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc7892b6e53a97a66c9349b32c2e2
-B = 0x902e80aea4f2a0636fefd8b7d88cc7
-C = 0x8f66f783369ef6e90926a41ca5c9e5
+A = -0xd43ff128a7f15c768f
+B = 0x65ee
+C = -0xd43ff128a7f15c10a1
 if (C != A + B):
-    print("58-th")
+    print("Error: A + B, 58-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6c1080f4bdf42754da8ab260f1f
-B = 0x118263a8b70c2ca9bd0e7c2cb00d
-C = 0xac15b996b2cea346f65d106a0ee
+A = -0x3a07acd7a9
+B = 0xd7
+C = -0x3a07acd6d2
 if (C != A + B):
-    print("59-th")
+    print("Error: A + B, 59-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x89675708080fecbd9ace5c
-B = 0x56472e3e
-C = -0x89675708080fec6753a01e
+A = -0x9917ac7d240f9f3d
+B = 0x9f6b9141f69537a5187f
+C = 0x9f6af82a4a1813957942
 if (C != A + B):
-    print("60-th")
+    print("Error: A + B, 60-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x882f2b481c
-B = 0xb533f180d139
-C = 0xb4abc255891d
+A = -0xf28bfeef25ac492a895d19e2d7
+B = 0xe6
+C = -0xf28bfeef25ac492a895d19e1f1
 if (C != A + B):
-    print("61-th")
+    print("Error: A + B, 61-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8b
-B = 0xc5e77f79651683f37326fc79
-C = 0xc5e77f79651683f37326fbee
+A = -0x38a85d1616
+B = 0x6b63426b064483c9be6cd0
+C = 0x6b63426b06444b216156ba
 if (C != A + B):
-    print("62-th")
+    print("Error: A + B, 62-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x23da570f9020900e4b57185948
-B = 0x46419d38a1e0a99e3a976b
-C = -0x23da10cdf2e7ee2da1b8ddc1dd
+A = -0x41507bf99131
+B = 0xa1
+C = -0x41507bf99090
 if (C != A + B):
-    print("63-th")
+    print("Error: A + B, 63-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1028
-B = 0x14410c3c767602d50395
-C = 0x14410c3c767602d4f36d
+A = -0xd9f517a4
+B = 0x2bbe21a4dd33a580d1
+C = 0x2bbe21a4dc59b0692d
 if (C != A + B):
-    print("64-th")
+    print("Error: A + B, 64-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x21
-B = 0xe8e2b5115ec7a98e45df
-C = 0xe8e2b5115ec7a98e45be
+A = -0x242760e8050f9b0f12
+B = 0x8497e0f555a9c02c52
+C = 0x6070800d509a251d40
 if (C != A + B):
-    print("65-th")
+    print("Error: A + B, 65-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb1fe6be4dbeee0d1519d66a9
-B = 0x35
-C = -0xb1fe6be4dbeee0d1519d6674
+A = -0x932a84bef2ba47
+B = 0xa546af292dc19502121611
+C = 0xa546af289a9710431f5bca
 if (C != A + B):
-    print("66-th")
+    print("Error: A + B, 66-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfd7680c7fff06947
-B = 0x557cdd5d15e03297f7461d4fd1
-C = 0x557cdd5d14e2bc172f462ce68a
+A = -0x5b1edf47009320dcad47b7b1ecdd9f
+B = 0x9fd9566501dee0
+C = -0x5b1edf47009320dc0d6e614ceafebf
 if (C != A + B):
-    print("67-th")
+    print("Error: A + B, 67-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcbf84285b29a05b1ba482d
-B = 0xa184f3e2e201c9cb50e08f84
-C = 0xa0b8fba05c4f2fc59f264757
+A = -0x301dc88e
+B = 0x15850a6e49c87a3447f9f
+C = 0x15850a6e49c877326b711
 if (C != A + B):
-    print("68-th")
+    print("Error: A + B, 68-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x65
-B = 0xc4ef24a9dbfc7b6f5b40ec
-C = 0xc4ef24a9dbfc7b6f5b4087
+A = -0x925541
+B = 0xcf052f0da84ff30c44b5
+C = 0xcf052f0da84ff279ef74
 if (C != A + B):
-    print("69-th")
+    print("Error: A + B, 69-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x964dbc396a5d8b
-B = 0xb5
-C = -0x964dbc396a5cd6
+A = -0x27
+B = 0xc973a173
+C = 0xc973a14c
 if (C != A + B):
-    print("70-th")
+    print("Error: A + B, 70-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3d22f7742cc06559a544bd7cdcfe
-B = 0x9a8633f76af5c5f84ba2efd61778a9
-C = 0x9a4910fff6c90592f1fdab189a9bab
+A = -0x664c5e
+B = 0xe1fda738a0
+C = 0xe1fd40ec42
 if (C != A + B):
-    print("71-th")
+    print("Error: A + B, 71-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x10
-B = 0x8263c6e06df4518329
-C = 0x8263c6e06df4518319
+A = -0xd7ba
+B = 0xc372bb28168ee8afbd
+C = 0xc372bb28168ee7d803
 if (C != A + B):
-    print("72-th")
+    print("Error: A + B, 72-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x272c2c0a6dcd918f77
-B = 0x15d5b8bb9213b8a30bfa4adf9d
-C = 0x15d5b8bb6ae78c989e2cb95026
-if (C != A + B):
-    print("73-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x8f57fe356fe2f321cd
-B = 0x10ad0bb62caad0dbc8c48b4545eac0
-C = 0x10ad0bb62caa4183ca8f1b6252c8f3
-if (C != A + B):
-    print("74-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xdda2219dfad1183d71a92f
-B = 0x7683c0413e2b
-C = -0xdda2219dfa5a947d306b04
-if (C != A + B):
-    print("75-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x4a9a4f9421
-B = 0x1cf77864ca
-C = -0x2da2d72f57
-if (C != A + B):
-    print("76-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x70
-B = 0x5434bf84fc0fa87cef198703fe60b4
-C = 0x5434bf84fc0fa87cef198703fe6044
-if (C != A + B):
-    print("77-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x6b1a96eaebfb
-B = 0x74
-C = -0x6b1a96eaeb87
-if (C != A + B):
-    print("78-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x691cc63dc524f888c8
-B = 0x2c55cedd8bf3
-C = -0x691cc6116f561afcd5
-if (C != A + B):
-    print("79-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x6284ac0e415de68e333adba3
-B = 0x662b41
-C = -0x6284ac0e415de68e32d4b062
-if (C != A + B):
-    print("80-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x7d10d621c4aff1
-B = 0x59ce7409b192a01a7b82248a
-C = 0x59ce7409b1158f4459bd7499
-if (C != A + B):
-    print("81-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x62af558019ed32b0454f2c005f7f5a
-B = 0xfc3502d40427f9a08
-C = -0x62af558019ed22ecf521ebbddfe552
-if (C != A + B):
-    print("82-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xeead67f14862d8e87d15be2fd797
-B = 0xd6d82173ca08b348be74208b
-C = -0xeeac911926ef0edfc9ccffbbb70c
-if (C != A + B):
-    print("83-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x4ea3bd3cf0d0109022ddc46d872c
-B = 0xca
-C = -0x4ea3bd3cf0d0109022ddc46d8662
-if (C != A + B):
-    print("84-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x2252
-B = 0x8745b3d4796e
-C = 0x8745b3d4571c
-if (C != A + B):
-    print("85-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xb260edb3e02f7efb
-B = 0xcfc955
-C = -0xb260edb3df5fb5a6
-if (C != A + B):
-    print("86-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x81f7da
-B = 0xe55e17
-C = 0x63663d
-if (C != A + B):
-    print("87-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x1c0c4bd7fecedc
-B = 0xab4482c88c8be6dfd8b3
-C = 0xab4482ac80400ee109d7
-if (C != A + B):
-    print("88-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xc10cf355
-B = 0xa2c4f0
-C = -0xc06a2e65
-if (C != A + B):
-    print("89-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xdf8ace13c07c49b0
-B = 0x36e7181819c8a545e86f87c2bc1df4
-C = 0x36e7181819c8a4665da174023fd444
-if (C != A + B):
-    print("90-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x90c85150c5
-B = 0xe861e5e913a7
-C = 0xe7d11d97c2e2
-if (C != A + B):
-    print("91-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x2d995fe527c72a0b
-B = 0xdf1c87
-C = -0x2d995fe526e80d84
-if (C != A + B):
-    print("92-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x502a2aaf7c9cccee69b9c30fa802
-B = 0x23d1fc67d523
-C = -0x502a2aaf7c9cccee45e7c6a7d2df
-if (C != A + B):
-    print("93-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xa5304f8e
-B = 0xbcdf99277dc188f03f02226d85
-C = 0xbcdf99277dc188f03e5cf21df7
-if (C != A + B):
-    print("94-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xefb30ef424d83eec8a1bdecdca20b7
-B = 0xfd16e6984d5e784c
-C = -0xefb30ef424d83def733546806ba86b
-if (C != A + B):
-    print("95-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xd7b1ae03
-B = 0x50363245
-C = -0x877b7bbe
-if (C != A + B):
-    print("96-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xc568
-B = 0x8b1525898a62817794ef
-C = 0x8b1525898a628176cf87
-if (C != A + B):
-    print("97-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x94480d8b920c7b
-B = 0xaa0d7c183c74
-C = -0x939e000f79d007
-if (C != A + B):
-    print("98-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x9ee1bc375163dd
-B = 0x67f7
-C = -0x9ee1bc3750fbe6
-if (C != A + B):
-    print("99-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x752f2c57433d5b2cc4
-B = 0xa398283c81ca188fe76c70f1
-C = 0xa39827c7529dc14caa11442d
-if (C != A + B):
-    print("100-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x7b2909fc73
-B = 0x7ddf13c68c
-C = 0x2b609ca19
-if (C != A + B):
-    print("101-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x306653cd32e699cf2dfe85d301ee
-B = 0xc2da100101dfaa888e88
-C = -0x306653cc700c89ce2c1edb4a7366
-if (C != A + B):
-    print("102-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xc
-B = 0x3df0c0a56f4fc18e57de94b5368b82
-C = 0x3df0c0a56f4fc18e57de94b5368b76
-if (C != A + B):
-    print("103-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x7b168444314379
-B = 0xf4944d
-C = -0x7b1684433caf2c
-if (C != A + B):
-    print("104-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x20d3
-B = 0x6ef8f26a8f
-C = 0x6ef8f249bc
-if (C != A + B):
-    print("105-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xb4997180
-B = 0x63fee265c38aa00cbe18c95ec2bda
-C = 0x63fee265c38aa00cbe18be152ba5a
-if (C != A + B):
-    print("106-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xc850a9abeffa135b17699a2e
-B = 0xdba16a67310083f85da4b58a
-C = 0x1350c0bb4106709d463b1b5c
-if (C != A + B):
-    print("107-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x1e1958fd3754fe294977130e5516
-B = 0x6359ec69e81b07bc90cad6c0c8
-C = -0x1db5ff10cd6ce3218ce64837944e
-if (C != A + B):
-    print("108-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x621db6f96c47f3f46f2cf507ec2952
-B = 0x5480815c06
-C = -0x621db6f96c47f3f46f2ca0876acd4c
-if (C != A + B):
-    print("109-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xa519da6e9830bb662fde16
-B = 0x99
-C = -0xa519da6e9830bb662fdd7d
-if (C != A + B):
-    print("110-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xf1b95c04cca7ea6fe5cddc1
-B = 0x9f59
-C = -0xf1b95c04cca7ea6fe5c3e68
-if (C != A + B):
-    print("111-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x93686b57ab7863
-B = 0x3bde83351f5c
-C = -0x932c8cd4765907
-if (C != A + B):
-    print("112-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xbb2cc2889da7400bf2801343
-B = 0x59280657cf82b1
-C = -0xbb2cc2889d4e18059ab09092
-if (C != A + B):
-    print("113-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x3042b4652800b01a4bfa13d00e0b5f
-B = 0xbf9a68d48e8f232197a4c6ca4e0a75
-C = 0x8f57b46f668e73074baab2fa3fff16
-if (C != A + B):
-    print("114-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xf58b16b644c67891a3151b300a16
-B = 0x3838e8d1eb77d2c88f4335582b
-C = -0xf552ddcd72db00beda85d7fab1eb
-if (C != A + B):
-    print("115-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x77e8a68e46f4deb482bbb7a9f5
-B = 0xc04cadb29657
-C = -0x77e8a68e46f4ddf4360e05139e
-if (C != A + B):
-    print("116-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xc4
-B = 0xceef0b725dc46106808b70b7
-C = 0xceef0b725dc46106808b6ff3
-if (C != A + B):
-    print("117-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x3eb7a99407a141fc1eac0cf9e8
-B = 0x3ffb43b2a7ddf731e32f
-C = -0x3eb7a9540c5d8f5440b4db16b9
-if (C != A + B):
-    print("118-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xa505c1c0ed
-B = 0xbfa8b61066a4
-C = 0xbf03b04ea5b7
-if (C != A + B):
-    print("119-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xbd5c03b6b1
-B = 0x16ab2e935332a7
-C = 0x16aa71374f7bf6
-if (C != A + B):
-    print("120-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xec
-B = 0x1f0a
-C = 0x1e1e
-if (C != A + B):
-    print("121-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xfca3ed3ba4f464470564
-B = 0x12e8b7871fa65ef7f6672e63a1
-C = 0x12e8b68a7bb923530202e75e3d
-if (C != A + B):
-    print("122-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x3954a45471723b8fbd
-B = 0x38b82220d659
-C = -0x3954a41bb9501ab964
-if (C != A + B):
-    print("123-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xa41
-B = 0xa14f0a897365f7
-C = 0xa14f0a89735bb6
-if (C != A + B):
-    print("124-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x1c1bc35700c205
-B = 0x60
-C = -0x1c1bc35700c1a5
-if (C != A + B):
-    print("125-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x34ce9420353a244ae20cf331f2
-B = 0xcc2a1d
-C = -0x34ce9420353a244ae20c2707d5
-if (C != A + B):
-    print("126-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x29f9286be8a2e685b8d92c3442
-B = 0x4b600ecba72a1e
-C = -0x29f9286be8a29b25aa0d850a24
-if (C != A + B):
-    print("127-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x6243da045029f4c127cd
-B = 0xf7bdb1fe016d88c8e09a
-C = 0x9579d7f9b1439407b8cd
-if (C != A + B):
-    print("128-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x90539fb9acb95a
-B = 0x82
-C = -0x90539fb9acb8d8
-if (C != A + B):
-    print("129-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x7b775a5843b063
-B = 0x51abe619be42c32d0b47
-C = 0x51abe59e46e86ae95ae4
-if (C != A + B):
-    print("130-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x78996ab8b3f09
-B = 0xc89ef19c15b1f17d2a5fc6a09ce9bc
-C = 0xc89ef19c15b1f17d22d62ff511aab3
-if (C != A + B):
-    print("131-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xb1f28639
-B = 0xa7add5bc094cedf2ccb1d8
-C = 0xa7add5bc094ced40da2b9f
-if (C != A + B):
-    print("132-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x49dc3a
-B = 0xfbe6dece
-C = 0xfb9d0294
-if (C != A + B):
-    print("133-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x3fefa7
-B = 0x2135f00603fe2bc9
-C = 0x2135f00603be3c22
-if (C != A + B):
-    print("134-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x5af226f73a5169273c1911d776f0
-B = 0x1bf6df30add0608626b8d6d3afbc
-C = -0x3efb47c68c8108a115603b03c734
-if (C != A + B):
-    print("135-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xee5ac2455f3feb55
-B = 0x5c00ac3f33da2f7ef58e28bc89
-C = 0x5c00ac3f32ebd4bcb02ee8d134
-if (C != A + B):
-    print("136-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x506c0263d653
-B = 0x65ab6f31738874
-C = 0x655b032f0fb221
-if (C != A + B):
-    print("137-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xf28ad1d83933
-B = 0x5954d3a9cbb
-C = -0xecf5849d9c78
-if (C != A + B):
-    print("138-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xe27ea562
-B = 0xb0a797b3a
-C = 0xa27fad5d8
-if (C != A + B):
-    print("139-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x8a3b52b4
-B = 0x64ddf8bd7c
-C = 0x6453bd6ac8
-if (C != A + B):
-    print("140-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x4121a5a42e
-B = 0x1
-C = -0x4121a5a42d
-if (C != A + B):
-    print("141-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x3c0278f122
+A = -0x987790808d
 B = 0x4c
-C = -0x3c0278f0d6
+C = -0x9877908041
 if (C != A + B):
-    print("142-th")
+    print("Error: A + B, 73-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6301a727dfa48b542d8a15d07683
-B = 0x82e3947c0c28
-C = -0x6301a727dfa48b53aaa681546a5b
+A = -0x662acc2ec298deae2ee65c675
+B = 0xe5cbc832e32b04fe6b3a5a197b
+C = 0xdf691b6ff7017713884bf45306
 if (C != A + B):
-    print("143-th")
+    print("Error: A + B, 74-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xea79a58dba3a55ecc911d02d
-B = 0xaaa200a892adab35f57178fc5f75
-C = 0xaaa1162eed1ff0fb9f84afea8f48
+A = -0x4dd096c10877587c
+B = 0xc69f04d152b56e5b3bb05200d3e9
+C = 0xc69f04d152b5208aa4ef49897b6d
 if (C != A + B):
-    print("144-th")
+    print("Error: A + B, 75-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa948d22e19
-B = 0x54
-C = -0xa948d22dc5
+A = -0xc3d75504bc85d719e1aade835d
+B = 0x11842dfbd940a59724
+C = -0xc3d75504ab01a91e086a38ec39
 if (C != A + B):
-    print("145-th")
+    print("Error: A + B, 76-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x337b
-B = 0x2ed42c92a084771a3f3cd46dabb0
-C = 0x2ed42c92a084771a3f3cd46d7835
+A = -0xb5f09d64dde4c589ea
+B = 0x37560763e8ed2ad3
+C = -0xb5b9475d79fbd85f17
 if (C != A + B):
-    print("146-th")
+    print("Error: A + B, 77-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1e7208351df9d010e3
-B = 0x3df330525baef191b5d4b2a1190
-C = 0x3df3305259c7d10e63f515a00ad
+A = -0x51bee25002d261a1afa46561
+B = 0x11e5b6
+C = -0x51bee25002d261a1af927fab
 if (C != A + B):
-    print("147-th")
+    print("Error: A + B, 78-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc4b3
-B = 0x3d2b8e49601faa5d5ea67a2e
-C = 0x3d2b8e49601faa5d5ea5b57b
+A = -0xa9dfe6b5
+B = 0xce23
+C = -0xa9df1892
 if (C != A + B):
-    print("148-th")
+    print("Error: A + B, 79-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2f49
-B = 0xa9ac9da7d9d17bbad08d6dcfbdad
-C = 0xa9ac9da7d9d17bbad08d6dcf8e64
+A = -0x9c6c64d
+B = 0xf657cbe963f0169857
+C = 0xf657cbe963e64fd20a
 if (C != A + B):
-    print("149-th")
+    print("Error: A + B, 80-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc7a475ad
-B = 0x39725889e7ceb051be85
-C = 0x39725889e7cde8ad48d8
+A = -0xdeb7
+B = 0x5017b0032b
+C = 0x5017af2474
 if (C != A + B):
-    print("150-th")
+    print("Error: A + B, 81-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfb58c1279c5dbacca8
-B = 0x7549f268a83242ded6b0c5448d4a41
-C = 0x7549f268a8314786158928e6d27d99
+A = -0x4b43bff372027a05eb26
+B = 0xcbf27a237da1f0f8916a785c8b59
+C = 0xcbf27a23325e31051f67fe56a033
 if (C != A + B):
-    print("151-th")
+    print("Error: A + B, 82-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3a35edb8d0d689946999617d2a6c
-B = 0xae6c5aceb08c460916daa3
-C = -0x3a35ed0a647bbae3dd5358664fc9
+A = -0x522f14bcd764f163941a002fe4b025
+B = 0xf1a2ebe20d0e
+C = -0x522f14bcd764f16393285d4402a317
 if (C != A + B):
-    print("152-th")
+    print("Error: A + B, 83-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6a95d27bfd1018fe54ab553d
-B = 0xc349
-C = -0x6a95d27bfd1018fe54aa91f4
+A = -0x9358415d9b16d48cd6f3fb
+B = 0xb55cf4ec3e33b9997a8af777b52e
+C = 0xb55cf458e5f25bfe63b66aa0c133
 if (C != A + B):
-    print("153-th")
+    print("Error: A + B, 84-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd8
-B = 0x3bce8066b3aa6c
-C = 0x3bce8066b3a994
+A = -0x9f
+B = 0x2e9cf409aad0
+C = 0x2e9cf409aa31
 if (C != A + B):
-    print("154-th")
+    print("Error: A + B, 85-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xff
-B = 0x8c59ee73c7c326558fd9f699685349
-C = 0x8c59ee73c7c326558fd9f69968524a
+A = -0xef6fd4d49b52cee65191177e98
+B = 0xd
+C = -0xef6fd4d49b52cee65191177e8b
 if (C != A + B):
-    print("155-th")
+    print("Error: A + B, 86-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5
-B = 0x3a1fa23b6d555f908dc129
-C = 0x3a1fa23b6d555f908dc124
+A = -0x34313d4441a35c
+B = 0xe7063ef975af237305
+C = 0xe7060ac8386ae1cfa9
 if (C != A + B):
-    print("156-th")
+    print("Error: A + B, 87-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x87e604
-B = 0x320e26aa2ac2995b06dc
-C = 0x320e26aa2ac298d320d8
+A = -0x5df64ec3f12e573aa0ed0c2ff7ce07
+B = 0x266505849a4e22224c20067656e708
+C = -0x3791493f56e0351854cd05b9a0e6ff
 if (C != A + B):
-    print("157-th")
+    print("Error: A + B, 88-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb1c2ed6dbe71e2
-B = 0x86e5735a92b1d019707d59846a
-C = 0x86e5735a92b11e56830f9b1288
+A = -0xc5da7266bdfdaccba381fb1613
+B = 0x8cf2bfa82ab2ffea
+C = -0xc5da7266bd70ba0bfb57481629
 if (C != A + B):
-    print("158-th")
+    print("Error: A + B, 89-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3a3da9c9d8cb0542ae207b2546
-B = 0x7a8db330bc05937907
-C = -0x3a3da9c95e3d5211f21ae7ac3f
+A = -0xe4b8a83c61294cc64844f97e
+B = 0x31b9a679528f779e0a4bda7da9d361
+C = 0x31b9a59499e73b3ce0ff143564d9e3
 if (C != A + B):
-    print("159-th")
+    print("Error: A + B, 90-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x76187465d85b
-B = 0xb4f394a2cf5497d60c0c7e6b
-C = 0xb4f394a2cf5421bd97a6a610
+A = -0x691d9d86da5bef23b6bd
+B = 0x8fd6692fa71
+C = -0x691d9d86d15e8890bc4c
 if (C != A + B):
-    print("160-th")
+    print("Error: A + B, 91-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x444a7cc3
-B = 0x7c65d10f9420c0d272
-C = 0x7c65d10f93dc7655af
+A = -0xef1480e1ec19e0211c40
+B = 0x521c13d882da90aff6a8e97
+C = 0x520d229074bbcf11f497257
 if (C != A + B):
-    print("161-th")
+    print("Error: A + B, 92-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6fb25eb95a261da3
-B = 0xdcaea20a
-C = -0x6fb25eb87d777b99
+A = -0xf3629207e88bdba8a72352d46ef5
+B = 0x4ed2d325aeb109fd
+C = -0xf3629207e88b8cd5d3fda42364f8
 if (C != A + B):
-    print("162-th")
+    print("Error: A + B, 93-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8a21a18c1121f92c5f
-B = 0xc52d7b366a2c2f3a59
-C = 0x3b0bd9aa590a360dfa
+A = -0xdf360c423f5903
+B = 0x39f63a51ecb5546c3c33bb655c
+C = 0x39f63a51ecb475362ff17c0c59
 if (C != A + B):
-    print("163-th")
+    print("Error: A + B, 94-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x62f6a57c60df5b5641
-B = 0xf3a1b8b0524e1a18ff9528c8959b9d
-C = 0xf3a1b8b0524db7225a18c7e93a455c
+A = -0x502235b0107628f90851eb09
+B = 0x2755d374ce64f3
+C = -0x502235b0104ed32593838616
 if (C != A + B):
-    print("164-th")
+    print("Error: A + B, 95-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4db7ae927d81dc03e80700fe
-B = 0x4197d6d3
-C = -0x4db7ae927d81dc03a66f2a2b
+A = -0xa4af5eb4c883cbd139459d71
+B = 0x34ea857e1095765b6188c7b7c3cc
+C = 0x34e9e0ceb1e0add795b78e72265b
 if (C != A + B):
-    print("165-th")
+    print("Error: A + B, 96-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x40
+B = 0xda763140121b1c14722299ef
+C = 0xda763140121b1c14722299af
+if (C != A + B):
+    print("Error: A + B, 97-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x290ddd2f
+B = 0xb3861b38
+C = 0x8a783e09
+if (C != A + B):
+    print("Error: A + B, 98-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x54edfefa54164cea1c32e6b68b
+B = 0x81ade80beefe648223976f
+C = -0x54ed7d4c6c0a5debb7b0c31f1c
+if (C != A + B):
+    print("Error: A + B, 99-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xab88a9e2ebf72a6ef5ca
+B = 0x4980aaf81dc823a9d1df2f645f82
+C = 0x4980aaf7723f79c6e5e804f569b8
+if (C != A + B):
+    print("Error: A + B, 100-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x363fb02a418966f6ef3df0
+B = 0x66b7a04a697dfdb4274eec44
+C = 0x6681609a3f3c744d305fae54
+if (C != A + B):
+    print("Error: A + B, 101-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x825f
+B = 0x31e05415b91c12996d8e7a7d5905c1
+C = 0x31e05415b91c12996d8e7a7d588362
+if (C != A + B):
+    print("Error: A + B, 102-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x864ff6a29a52134a53a7
+B = 0xd158fffc3243c9c2
+C = -0x864f25499a55e10689e5
+if (C != A + B):
+    print("Error: A + B, 103-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x57c525ef43
+B = 0x973d618907aa353ea9a50a
+C = 0x973d618907a9dd7983b5c7
+if (C != A + B):
+    print("Error: A + B, 104-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xb4f2
+B = 0xd15d2d4b
+C = 0xd15c7859
+if (C != A + B):
+    print("Error: A + B, 105-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x844380f385
+B = 0xa01c1329b0
+C = 0x1bd892362b
+if (C != A + B):
+    print("Error: A + B, 106-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xfb6244485a8d03
+B = 0x70e403a97300b48880
+C = 0x70e308472eb859fb7d
+if (C != A + B):
+    print("Error: A + B, 107-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xdb8ae70e2b2da6df
+B = 0xfc61
+C = -0xdb8ae70e2b2caa7e
+if (C != A + B):
+    print("Error: A + B, 108-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x84d806d0f2f1
+B = 0xf4a
+C = -0x84d806d0e3a7
+if (C != A + B):
+    print("Error: A + B, 109-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x2571
+B = 0x4e9b9674
+C = 0x4e9b7103
+if (C != A + B):
+    print("Error: A + B, 110-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x3b
+B = 0x631ee2df55c58984
+C = 0x631ee2df55c58949
+if (C != A + B):
+    print("Error: A + B, 111-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x3c19525e
+B = 0x298e03e37af7
+C = 0x298dc7ca2899
+if (C != A + B):
+    print("Error: A + B, 112-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xcd
+B = 0x20
+C = -0xad
+if (C != A + B):
+    print("Error: A + B, 113-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x577ebe37
+B = 0x59320d34f8129516dc53e9166b82
+C = 0x59320d34f8129516dc539197ad4b
+if (C != A + B):
+    print("Error: A + B, 114-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x15b5e1d37eaefd
+B = 0x54ca
+C = -0x15b5e1d37e5a33
+if (C != A + B):
+    print("Error: A + B, 115-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xe1
+B = 0xdcdce59e3cac
+C = 0xdcdce59e3bcb
+if (C != A + B):
+    print("Error: A + B, 116-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x4106627eb3fc
+B = 0x3900c63e92
+C = -0x40cd61b8756a
+if (C != A + B):
+    print("Error: A + B, 117-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x1eea7f93
+B = 0x991ec6c7ad2f2e
+C = 0x991ec6a8c2af9b
+if (C != A + B):
+    print("Error: A + B, 118-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x51ae1fec
+B = 0x587455019446d6a298eb
+C = 0x58745501944684f478ff
+if (C != A + B):
+    print("Error: A + B, 119-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xa98bbebe33cfe1e1
+B = 0xd22dcd9ddccca8eba8efe3
+C = 0xd22dccf4510deab7d90e02
+if (C != A + B):
+    print("Error: A + B, 120-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x57ae408e43ae0adf9d32956e
+B = 0xd7a4e770e7d862bc01
+C = -0x57ae3fb69ec699f7c4cfd96d
+if (C != A + B):
+    print("Error: A + B, 121-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xdf
+B = 0x471cc4921ae019583faf7b6662
+C = 0x471cc4921ae019583faf7b6583
+if (C != A + B):
+    print("Error: A + B, 122-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x8a80437a6a17d9
+B = 0xb741bf0458b4
+C = -0x89c901bb65bf25
+if (C != A + B):
+    print("Error: A + B, 123-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x94521dda
+B = 0xaaac8cd
+C = -0x89a7550d
+if (C != A + B):
+    print("Error: A + B, 124-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x2e604b3543be
+B = 0x4bd22b20ba91fbfffc15
+C = 0x4bd22b208c31b0cab857
+if (C != A + B):
+    print("Error: A + B, 125-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xb975285c
+B = 0x35
+C = -0xb9752827
+if (C != A + B):
+    print("Error: A + B, 126-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x223ac14f2bfb62522b02a54c37
+B = 0xedd29e
+C = -0x223ac14f2bfb62522b01b77999
+if (C != A + B):
+    print("Error: A + B, 127-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x75366d7693
+B = 0x8c3e0b76c8a4ecbc72af43955098
+C = 0x8c3e0b76c8a4ecbc723a0d27da05
+if (C != A + B):
+    print("Error: A + B, 128-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x7e096d2be8afd44a
+B = 0xec6dddc6
+C = -0x7e096d2afc41f684
+if (C != A + B):
+    print("Error: A + B, 129-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xbe4891e5c3ab3d6532c0dd83b
+B = 0x9f
+C = -0xbe4891e5c3ab3d6532c0dd79c
+if (C != A + B):
+    print("Error: A + B, 130-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x8dcd5741
+B = 0x1959f4
+C = -0x8db3fd4d
+if (C != A + B):
+    print("Error: A + B, 131-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x8a42acde
+B = 0xb14d832e68a53c4e7d076ce64c
+C = 0xb14d832e68a53c4e7c7d2a396e
+if (C != A + B):
+    print("Error: A + B, 132-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x36e1ea7635cabbc928a80f3689
+B = 0x820ab739e267
+C = -0x36e1ea7635cabb471df0d55422
+if (C != A + B):
+    print("Error: A + B, 133-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x5a0c78
+B = 0x27302ffbd012f86ab85b
+C = 0x27302ffbd012f810abe3
+if (C != A + B):
+    print("Error: A + B, 134-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xdc08960378a08249f1732
+B = 0xc616a3b952
+C = -0xdc089603789420dfb5de0
+if (C != A + B):
+    print("Error: A + B, 135-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xbdf53534a72bfddbab4693a04abb
+B = 0xe213acdbf355d7e67666
+C = -0xbdf53533c51850ffb7f0bbb9d455
+if (C != A + B):
+    print("Error: A + B, 136-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xfe0b
+B = 0xa5bf988843d752b4720e7a86170624
+C = 0xa5bf988843d752b4720e7a86160819
+if (C != A + B):
+    print("Error: A + B, 137-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xb6fbf865267031018c9019f2
+B = 0xff538187e5979dd7
+C = -0xb6fbf864271caf79a6f87c1b
+if (C != A + B):
+    print("Error: A + B, 138-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xc3eca71fd405
+B = 0x1f8227fd27
+C = -0xc3cd24f7d6de
+if (C != A + B):
+    print("Error: A + B, 139-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xa9
+B = 0xa9464aef7470
+C = 0xa9464aef73c7
+if (C != A + B):
+    print("Error: A + B, 140-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xb5e84
+B = 0x74
+C = -0xb5e10
+if (C != A + B):
+    print("Error: A + B, 141-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x699992d0bdd39743
+B = 0x4d11c6e1697736
+C = -0x694c8109dc6a200d
+if (C != A + B):
+    print("Error: A + B, 142-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x938
+B = 0xc0b03527b6cec1137ea5e831
+C = 0xc0b03527b6cec1137ea5def9
+if (C != A + B):
+    print("Error: A + B, 143-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x94c5aab6d79592fdecf2405e4a7352
+B = 0x2faf67ac391b39
+C = -0x94c5aab6d79592fdbd42d8b2115819
+if (C != A + B):
+    print("Error: A + B, 144-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x1
+B = 0xf51a0befffaf4b9646368b7606e15e
+C = 0xf51a0befffaf4b9646368b7606e15d
+if (C != A + B):
+    print("Error: A + B, 145-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x3e22095791a0
+B = 0x8a10844ad2cb803f634d
+C = 0x8a10844a94a976e7d1ad
+if (C != A + B):
+    print("Error: A + B, 146-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x728640fc9090d5bfa8b11b0c840387
+B = 0xa8bc69be9f3b5f995a53df4cff5c
+C = -0x71dd8492d1f19a600f56c72d37042b
+if (C != A + B):
+    print("Error: A + B, 147-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x6f
+B = 0xeb018366c3c955fad069ef
+C = 0xeb018366c3c955fad06980
+if (C != A + B):
+    print("Error: A + B, 148-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x4337bd0b6cb6bb3e48e26
+B = 0xd039
+C = -0x4337bd0b6cb6bb3e3bded
+if (C != A + B):
+    print("Error: A + B, 149-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x344213e571c3b70cbe1342d91d2496
+B = 0xbbfa4110b7bee8
+C = -0x344213e571c3b70c021901c86565ae
+if (C != A + B):
+    print("Error: A + B, 150-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x2ce470a6d3a5
+B = 0xf6f55e7b62cee996
+C = 0xf6f53196f22815f1
+if (C != A + B):
+    print("Error: A + B, 151-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x2c1beba155
+B = 0x38
+C = -0x2c1beba11d
+if (C != A + B):
+    print("Error: A + B, 152-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x2e7a134db3f0
+B = 0x7be785d402f4
+C = 0x4d6d72864f04
+if (C != A + B):
+    print("Error: A + B, 153-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xa548f543da3d9443
+B = 0x98b184cbb55d9af7f99fe3
+C = 0x98b184266c68571dbc0ba0
+if (C != A + B):
+    print("Error: A + B, 154-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x35e62c160aa23faeed
+B = 0x17876ee362
+C = -0x35e62c15f31ad0cb8b
+if (C != A + B):
+    print("Error: A + B, 155-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xf295bb87e7f6f0affc64
+B = 0x222d7d2f12df6bf68577b95fb9
+C = 0x222d7c3c7d23e40e8e87096355
+if (C != A + B):
+    print("Error: A + B, 156-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x9832f25bec4344894c0e6d7a785bfc
+B = 0xacb0fbabe237fa9d
+C = -0x9832f25bec4343dc9b12c19840615f
+if (C != A + B):
+    print("Error: A + B, 157-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x8622a9a813a62cd872710c3ba2a3
+B = 0x64495c8ed674aca6e6
+C = -0x8622a9a81341e37be39a978efbbd
+if (C != A + B):
+    print("Error: A + B, 158-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x97e0892ab193d7
+B = 0x370883be
+C = -0x97e088f3a91019
+if (C != A + B):
+    print("Error: A + B, 159-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x90db177ca8061303
+B = 0xe303c6d487c0e3bf9def68da
+C = 0xe303c6d3f6e5cc42f5e955d7
+if (C != A + B):
+    print("Error: A + B, 160-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x61e848789c0db9
+B = 0xb674a2a1
+C = -0x61e847c2276b18
+if (C != A + B):
+    print("Error: A + B, 161-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xf074
+B = 0xbb850984511e7a1bfb4cd8066a23
+C = 0xbb850984511e7a1bfb4cd80579af
+if (C != A + B):
+    print("Error: A + B, 162-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x357e6ed4fe13
+B = 0xc7745b60c7ec35a81f8d6e8c12
+C = 0xc7745b60c7ec3572a11e998dff
+if (C != A + B):
+    print("Error: A + B, 163-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x34610f66e7
+B = 0xd67a12b8ae4dc619266
+C = 0xd67a12b8ab07b522b7f
+if (C != A + B):
+    print("Error: A + B, 164-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x929bc7f794333a9ff1cc7dd8
+B = 0x2e
+C = -0x929bc7f794333a9ff1cc7daa
+if (C != A + B):
+    print("Error: A + B, 165-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
@@ -6657,1661 +6657,1661 @@ if (cnt == 0):
     print("ALL TRUE!")
 print("### Case 5: wordlen(A) ≥ wordlen(B) ###\n")
 cnt = 0
-A = -0x78c01e44
-B = -0x5700
-C = -0x78c07544
+A = -0x94c02bbcc596158f507
+B = -0x2b1d
+C = -0x94c02bbcc5961592024
 if (C != A + B):
-    print("0-th")
+    print("Error: A + B, 0-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfbeb5c3f28008eebaaab623054
-B = -0xd1048f9003
-C = 0xfbeb5c3f28008eec7baff1c057
+A = 0xeb86cb021760b6ed36264ed69b3f
+B = -0x7e8c1362ffc90b7f04a9
+C = 0xeb86cb0295ecca5035ef5a559fe8
 if (C != A + B):
-    print("1-th")
+    print("Error: A + B, 1-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe1427ce408eeccd586e6595204fe6b
-B = -0x430d80ff64803b
-C = -0xe1427ce408eeccd5c9f3da51697ea6
+A = -0xb2d80b0c7bd0
+B = -0x34b407b5
+C = -0xb2d83fc08385
 if (C != A + B):
-    print("2-th")
+    print("Error: A + B, 2-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbfe40e0a93
-B = -0xf42d4ce7
-C = 0xc0d83b577a
+A = -0x4f2ac54e749fabfe
+B = -0x5b2e5f512c
+C = -0x4f2ac5a9a2fefd2a
 if (C != A + B):
-    print("3-th")
+    print("Error: A + B, 3-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x76b4c284948bb025534af7a890
-B = -0xb28dd86f1fa30750
-C = -0x76b4c284953e3dfdc26a9aafe0
+A = 0x8084da8aa50aedbfb7df
+B = -0x3fd16b8b
+C = 0x8084da8aa50b2d91236a
 if (C != A + B):
-    print("4-th")
+    print("Error: A + B, 4-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xbdce13c901
-B = -0xad01b6
-C = 0xbdcec0cab7
+A = -0x7392e4cb06b96346f9505135751b
+B = -0xe6ece90c
+C = -0x7392e4cb06b96346f95138225e27
 if (C != A + B):
-    print("5-th")
+    print("Error: A + B, 5-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x433951bb21dd8b00050cf7
-B = -0x5ff058eb45
-C = 0x433951bb21ddeaf05df83c
+A = -0x8d99cea87077fb120172e62a431f
+B = -0x97dd64e2205b614b7bbb9d
+C = -0x8d99cf404ddcdd325cd431a5febc
 if (C != A + B):
-    print("6-th")
+    print("Error: A + B, 6-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7c992021eef2
-B = -0xa920eb
-C = -0x7c9920cb0fdd
+A = 0x6cf757446040092b5662
+B = -0xf
+C = 0x6cf757446040092b5671
 if (C != A + B):
-    print("7-th")
+    print("Error: A + B, 7-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x78fa2c6440d063f67423
-B = -0x6dd3b626
-C = 0x78fa2c6440d0d1ca2a49
+A = 0x31d7bbc96e23
+B = -0xa9
+C = 0x31d7bbc96ecc
 if (C != A + B):
-    print("8-th")
+    print("Error: A + B, 8-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb1565ba5ba2966f9ea9e041046
-B = -0xe1742cd5c80c
-C = 0xb1565ba5ba2967db5ecad9d852
+A = 0xaca0d610152fa6ac928a45e72a4f68
+B = -0x54a9
+C = 0xaca0d610152fa6ac928a45e72aa411
 if (C != A + B):
-    print("9-th")
+    print("Error: A + B, 9-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9ff687f12f583ffbdf
-B = -0x1ef72e
-C = 0x9ff687f12f585ef30d
+A = -0x5479eb21
+B = -0x43
+C = -0x5479eb64
 if (C != A + B):
-    print("10-th")
+    print("Error: A + B, 10-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1df1eb79fc6934108f0b099405
-B = -0x2ee7ea6b
-C = 0x1df1eb79fc6934108f39f17e70
+A = -0xe8d8e06fa4b14f46d954e09d
+B = -0x2a80a8
+C = -0xe8d8e06fa4b14f46d97f6145
 if (C != A + B):
-    print("11-th")
+    print("Error: A + B, 11-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x167df099e0e6d3a54b77e850dd1d
-B = -0x694a5846a86524cafebfc10312
-C = 0x16e73af2278f38ca1676a811e02f
+A = -0x528eb4704e4f896ac8f3fcb4
+B = -0xbc628e1f191206c060
+C = -0x528eb52cb0dda883dafabd14
 if (C != A + B):
-    print("12-th")
+    print("Error: A + B, 12-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x72b5f5e464957874a16c
-B = -0x56f9
-C = -0x72b5f5e464957874f865
+A = -0xcf891d856f1e8b3d007d
+B = -0xfb3d54519eb5c13a14
+C = -0xd0845ad9c0bd40fe3a91
 if (C != A + B):
-    print("13-th")
+    print("Error: A + B, 13-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x54506a1b1fc7
-B = -0xb8
-C = 0x54506a1b207f
+A = -0x4fc8dd543d
+B = -0xa47b4f615e
+C = -0xf4442cb59b
 if (C != A + B):
-    print("14-th")
+    print("Error: A + B, 14-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfe189ff35da250958d
-B = -0x7ae0
-C = -0xfe189ff35da251106d
+A = -0x13021c51656e257e40e846
+B = -0xaf49
+C = -0x13021c51656e257e41978f
 if (C != A + B):
-    print("15-th")
+    print("Error: A + B, 15-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3a082526794bd3f9d3c2675ce2ef
-B = -0x11eea44862a4bac27dc5
-C = 0x3a0825268b3a78423667221f60b4
+A = 0x7030e4cc43b7117f10439ebf
+B = -0xe488da2f3672279e09
+C = 0x7030e5b0cc9140b5826b3cc8
 if (C != A + B):
-    print("16-th")
+    print("Error: A + B, 16-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5c3aca97c2136835af459415a7
-B = -0x5fd07822df
-C = -0x5c3aca97c21368360f160c3886
+A = 0xecc78b62a2
+B = -0x334dcecc92
+C = 0x120155a2f34
 if (C != A + B):
-    print("17-th")
+    print("Error: A + B, 17-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x96eade4e09d581414f83cf
-B = -0x27575b2b2349
-C = -0x96eade4e09fcd89c7aa718
+A = 0x4e2ff2115d2394dfcf7f9ba
+B = -0xc1f4395992
+C = 0x4e2ff2115d23a0ff131534c
 if (C != A + B):
-    print("18-th")
+    print("Error: A + B, 18-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbd0d4ce2099138d7c0
-B = -0x3f9f4ea3a980c170
-C = -0xbd4cec30ad3ab99930
+A = 0xf5931a62cdb761e5710729454e
+B = -0xf70ee9da
+C = 0xf5931a62cdb761e571fe382f28
 if (C != A + B):
-    print("19-th")
+    print("Error: A + B, 19-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc62913a1
-B = -0xf1
-C = -0xc6291492
+A = 0xdbca30330039c3a753fd
+B = -0x803f50
+C = 0xdbca30330039c427934d
 if (C != A + B):
-    print("20-th")
+    print("Error: A + B, 20-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe8b75a5b
-B = -0x6fe0
-C = 0xe8b7ca3b
+A = -0x906e6c0d2d95
+B = -0x598309a0f7
+C = -0x90c7ef16ce8c
 if (C != A + B):
-    print("21-th")
+    print("Error: A + B, 21-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1ff3d87bebde
-B = -0xedda02
-C = 0x1ff3d969c5e0
+A = -0xcbbccf0aeb
+B = -0x84
+C = -0xcbbccf0b6f
 if (C != A + B):
-    print("22-th")
+    print("Error: A + B, 22-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5b9d4774a78c052c76
-B = -0xf764ab151d45
-C = 0x5b9d486c0c371a49bb
+A = 0xd84e7c0625a3f98e35036e5f
+B = -0xef26b6fefa9dc3eb1e118c
+C = 0xd93da2bd249e975220217feb
 if (C != A + B):
-    print("23-th")
+    print("Error: A + B, 23-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3ea582aa92af78080532
-B = -0x9ffcbbf7564ad66864
-C = -0x3f457f668a05c2de6d96
+A = 0x6a0793e8ce7381306178ab68c2
+B = -0x6e4654
+C = 0x6a0793e8ce738130617919af16
 if (C != A + B):
-    print("24-th")
+    print("Error: A + B, 24-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe851b7f7d06bd0ddb4e3389ddaf7
-B = -0xc477d2a8d8bd65c761
-C = 0xe851b7f7d13048b05dbbf603a258
+A = -0x1c43b987b33fba683b348d8f69
+B = -0xc43fe866af
+C = -0x1c43b987b33fba68ff7475f618
 if (C != A + B):
-    print("25-th")
+    print("Error: A + B, 25-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc686b46e4131ae6ad837074e36
-B = -0xf9f503390439881b7c38b86d
-C = -0xc780a9717a35e7f2f3b34006a3
+A = -0x73aa43df259fa7a5b8cb0ae198
+B = -0x3464d13d0daf304bac
+C = -0x73aa43df5a0478e2c67a3b2d44
 if (C != A + B):
-    print("26-th")
+    print("Error: A + B, 26-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5fb95e562b19b240038184
-B = -0x8348051da4b61f93176f48
-C = 0xe3016373cfcfd1d31af0cc
+A = 0xb706
+B = -0xa0
+C = 0xb7a6
 if (C != A + B):
-    print("27-th")
+    print("Error: A + B, 27-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x88be3426fd2ac9ad7db0a96fce
-B = -0x65e18a24ad65
-C = -0x88be3426fd2aca135f3ace1d33
+A = 0xe94ab336ae4022f3d927cc
+B = -0x72e42b641c6554
+C = 0xe94ab33721244e57f58d20
 if (C != A + B):
-    print("28-th")
+    print("Error: A + B, 28-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x90ed08c15bc12188c08
-B = -0x514a71de
-C = -0x90ed08c15bc6362fde6
+A = -0xaa89326b4fccace0e1
+B = -0x8d21775c53a
+C = -0xaa89327421e422a61b
 if (C != A + B):
-    print("29-th")
+    print("Error: A + B, 29-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4e6ed1712ea5ad6d465c99
-B = -0xc6228dae3f3d
-C = -0x4e6ed1712f6bcffaf49bd6
+A = -0x3ac95cb78c6dab2a117e
+B = -0xe8944ce582e1
+C = -0x3ac95cb87501f80f945f
 if (C != A + B):
-    print("30-th")
+    print("Error: A + B, 30-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9b6aac3ac4a3228b8d
-B = -0xeca02cda28897d
-C = 0x9b6b98daf17d4b150a
+A = -0x7f7aaf4936
+B = -0x7e7afa90
+C = -0x7ff92a43c6
 if (C != A + B):
-    print("31-th")
+    print("Error: A + B, 31-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcf24b71768384fe8908be94259b82b
-B = -0x4a964bf757eb6573
-C = 0xcf24b7176838503326d7e09a451d9e
+A = 0x954cccdd40e50adf96cf
+B = -0x3dcb35da58
+C = 0x954cccdd4122d6157127
 if (C != A + B):
-    print("32-th")
+    print("Error: A + B, 32-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe4893c832100c0292e
-B = -0x1e18
-C = -0xe4893c832100c04746
+A = 0x9867187a0f8826434431e03737b6
+B = -0xcd50d7ba79d2af33257ef48345
+C = 0x99346951ca01f8f277575f2bbafb
 if (C != A + B):
-    print("33-th")
+    print("Error: A + B, 33-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xada329b1efd5
-B = -0xa9b9446d
-C = 0xada3d36b3442
+A = 0xefaebb0ad26dc92bd9e0c38791
+B = -0xdef54aa8a898ff
+C = 0xefaebb0ad26ea82124896c2090
 if (C != A + B):
-    print("34-th")
+    print("Error: A + B, 34-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x43578a8e90be529f00d05b
-B = -0x25d2553c5b039c2de273a
-C = 0x45b4afe2566e8c61def795
+A = -0xd186
+B = -0x4c
+C = -0xd1d2
 if (C != A + B):
-    print("35-th")
+    print("Error: A + B, 35-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x827b2b421db7cd63e819e6
-B = -0x4b6953b6
-C = 0x827b2b421db7cdaf516d9c
+A = 0x68a6df64b48507b88435c09f84
+B = -0xee6a2f7f849dfd4fd5f2
+C = 0x68a6e0531eb4873d2233107576
 if (C != A + B):
-    print("36-th")
+    print("Error: A + B, 36-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x40d76e7c4a9e09906225a62262af3e
-B = -0x92f
-C = 0x40d76e7c4a9e09906225a62262b86d
+A = -0xeb8d98086d823424f54db3294c1456
+B = -0x32a6f1bdd666
+C = -0xeb8d98086d823424f5805a1b09eabc
 if (C != A + B):
-    print("37-th")
+    print("Error: A + B, 37-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc9b72b4e479261014163
-B = -0x8173a40953a7caf581
-C = 0xca389ef250e608cc36e4
+A = -0x40d7654866b8880c
+B = -0xbed9
+C = -0x40d7654866b946e5
 if (C != A + B):
-    print("38-th")
+    print("Error: A + B, 38-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe6fdae87ce65296d0083b881d33b80
-B = -0x929fe784c8c0d4
-C = -0xe6fdae87ce65296d9323a0069bfc54
+A = -0x1d1e52b137e3f4
+B = -0x3533
+C = -0x1d1e52b1381927
 if (C != A + B):
-    print("39-th")
+    print("Error: A + B, 39-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1677a0abef506ea9fbe095
-B = -0xddeeb97e9ffa
-C = -0x1677a0abf02e5d637a808f
+A = 0xa76d793edbc0b5606cb423
+B = -0xdf
+C = 0xa76d793edbc0b5606cb502
 if (C != A + B):
-    print("40-th")
+    print("Error: A + B, 40-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd02b11dd9a56d5ec86e2dc81671989
-B = -0xd28cfe624e2b6e6a5ba5
-C = -0xd02b11dd9b2962eae93107efd1752e
+A = -0x75b9140d72b3ff41
+B = -0x1a5bec04e91078
+C = -0x75d36ff9779d0fb9
 if (C != A + B):
-    print("41-th")
+    print("Error: A + B, 41-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2963c380846ed6812924d2cd
-B = -0x6c752a8794e0
-C = 0x2963c380846f42f653ac67ad
+A = 0x2f571cc43462
+B = -0x3386331dfd5e
+C = 0x62dd4fe231c0
 if (C != A + B):
-    print("42-th")
+    print("Error: A + B, 42-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6002e3b3c086d0dcbb770410d87ed4
-B = -0xdbb96ba471b185477d94e9
-C = 0x6002e3b49c403c812d2889585613bd
+A = 0x66c201665d
+B = -0x3fe026be96
+C = 0xa6a22824f3
 if (C != A + B):
-    print("43-th")
+    print("Error: A + B, 43-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xddd64cb8b6bc2b14d6c2bf6e
-B = -0xed9d03475e
-C = 0xddd64cb8b6bc2c0273c606cc
+A = -0x4f281575649413
+B = -0x301859184d70
+C = -0x4f582dce7ce183
 if (C != A + B):
-    print("44-th")
+    print("Error: A + B, 44-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcec3492ff7b5f202
-B = -0xd7a76e1302c21204
-C = -0x1a66ab742fa780406
+A = 0x5953347d34
+B = -0x8cbe75
+C = 0x5953c13ba9
 if (C != A + B):
-    print("45-th")
+    print("Error: A + B, 45-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x666e91bbf5ad13621a01f9e4cdc0b3
-B = -0xbcc229aa4791aa491e65
-C = -0x666e91bbf669d58bc4498b8f16df18
+A = -0xbc156c69c89497b009f6f39a4f
+B = -0x2ef80b63542540
+C = -0xbc156c69c894c6a8155a47bf8f
 if (C != A + B):
-    print("46-th")
+    print("Error: A + B, 46-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2045699295ef2d2e57d65b99966c66
-B = -0xc9
-C = 0x2045699295ef2d2e57d65b99966d2f
+A = 0x249634ab1b90f5399266
+B = -0x84a1e45f29
+C = 0x249634ab1c15971df18f
 if (C != A + B):
-    print("47-th")
+    print("Error: A + B, 47-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9c8e389d17a5a12658d8
-B = -0x527a021ad06e9479
-C = 0x9c8e8b1719c07194ed51
+A = -0x93a91402a9118bd200ec28ed22f900
+B = -0x9c92965c376374
+C = -0x93a91402a9118bd29d7ebf495a5c74
 if (C != A + B):
-    print("48-th")
+    print("Error: A + B, 48-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1186d00f56f923b17a49737fa2c3
-B = -0xede2a1f106
-C = -0x1186d00f56f923b17b37562193c9
+A = -0xbe4b4c8cc0126f
+B = -0x175c78
+C = -0xbe4b4c8cd76ee7
 if (C != A + B):
-    print("49-th")
+    print("Error: A + B, 49-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6ee096822f62c42ab9d0ed71f88522
-B = -0x6ae7c0acfd0898f26242
-C = 0x6ee096822fcdabeb66cdf60aeae764
+A = 0xbf4c5b
+B = -0xb2
+C = 0xbf4d0d
 if (C != A + B):
-    print("50-th")
+    print("Error: A + B, 50-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdb0cc1f1
-B = -0xcf
-C = 0xdb0cc2c0
+A = 0x8ba3da37cf636705
+B = -0xa542e1d709
+C = 0x8ba3dadd12453e0e
 if (C != A + B):
-    print("51-th")
+    print("Error: A + B, 51-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9d16688a1d63a8b6
-B = -0x5a298d549879fe
-C = -0x9d70921771fc22b4
+A = 0xa994612d485c3e8976745afc
+B = -0xd234b15b8460
+C = 0xa994612d485d10be27cfdf5c
 if (C != A + B):
-    print("52-th")
+    print("Error: A + B, 52-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2492740a294379a954fd617a905c
-B = -0x767e267c340ea2729fd4e3398733
-C = 0x9b109a865d521c1bf4d244b4178f
+A = -0x80f5591d7923e6a3
+B = -0xc930dd677e
+C = -0x80f559e6aa014e21
 if (C != A + B):
-    print("53-th")
+    print("Error: A + B, 53-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf6bfe1ce854e3a3f0556169f80
-B = -0xfbef1592bbfb
-C = -0xf6bfe1ce854e3b3af46ba95b7b
+A = 0x8eb17ec157
+B = -0x18a82f
+C = 0x8eb1976986
 if (C != A + B):
-    print("54-th")
+    print("Error: A + B, 54-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb2780b0e9db03468ad09fc68
-B = -0x189607f26cb8b4de
-C = -0xb2780b0eb6463c5b19c2b146
+A = 0x41e9dc8ad27144
+B = -0x3e39708f
+C = 0x41e9dcc90be1d3
 if (C != A + B):
-    print("55-th")
+    print("Error: A + B, 55-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x84c8637588
-B = -0x4cfca9
-C = -0x84c8b07231
+A = 0x27d581ee742278c85c41de3a
+B = -0xf0fc93c1f35404a7
+C = 0x27d581ef651f0c8a4f95e2e1
 if (C != A + B):
-    print("56-th")
+    print("Error: A + B, 56-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x151a138a39163c
-B = -0xb6d3
-C = 0x151a138a39cd0f
+A = 0x11dfc5def42fd983d3eac0
+B = -0xd5
+C = 0x11dfc5def42fd983d3eb95
 if (C != A + B):
-    print("57-th")
+    print("Error: A + B, 57-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x65730891
-B = -0x1dfdceca
-C = -0x8370d75b
+A = -0xbf156568c358249ee2
+B = -0x6d13e27b8e72c3
+C = -0xbf15d27ca5d3b311a5
 if (C != A + B):
-    print("58-th")
+    print("Error: A + B, 58-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbdc53e2e71ac0bb4ffb2fb6
-B = -0x6b8324
-C = -0xbdc53e2e71ac0bb5066b2da
+A = 0x1896a660
+B = -0xa19
+C = 0x1896b079
 if (C != A + B):
-    print("59-th")
+    print("Error: A + B, 59-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x622672
-B = -0xb27091
-C = 0x1149703
+A = 0x6a7de9be81fc16
+B = -0x8c65
+C = 0x6a7de9be82887b
 if (C != A + B):
-    print("60-th")
+    print("Error: A + B, 60-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xedd787f9e6424cd2f822aa71
-B = -0x7967fd8cb741
-C = 0xedd787f9e642c63af5af61b2
+A = -0xef64c9b3653d969c9150a55d686c3b
+B = -0xf07a
+C = -0xef64c9b3653d969c9150a55d695cb5
 if (C != A + B):
-    print("61-th")
+    print("Error: A + B, 61-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5a7493482abf09b404c16b0c723944
-B = -0x9e1487a34fa34914
-C = 0x5a7493482abf0a5219490e5c158258
+A = 0x55a248417a03164cb83e062a7dddb2
+B = -0xed9023b72ebfecb1
+C = 0x55a248417a03173a4861bd593dca63
 if (C != A + B):
-    print("62-th")
+    print("Error: A + B, 62-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd3bb6ad96f2261ceb36029aa7239
-B = -0xb39aa6299950196491c526e8c7
-C = -0xd46f057f98bbb1e817f1eed15b00
+A = 0xc990f832ff2d61901185db07
+B = -0x44ef0b8497673184
+C = 0xc990f833441c6d14a8ed0c8b
 if (C != A + B):
-    print("63-th")
+    print("Error: A + B, 63-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xaa8859ed14
-B = -0x1ed7
-C = -0xaa885a0beb
+A = 0x9ababc12c98a9ac47dab489cd73a
+B = -0xf26537c6cbc61deb70f1bf
+C = 0x9ababd052ec2619043c9340dc8f9
 if (C != A + B):
-    print("64-th")
+    print("Error: A + B, 64-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x76
-B = -0x2c
-C = -0xa2
+A = 0x95742c460d13e81b305f7a
+B = -0x625a57277e94030028
+C = 0x95748ea0643b66af335fa2
 if (C != A + B):
-    print("65-th")
+    print("Error: A + B, 65-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8d17107a2370864b6a83354a2cb0
-B = -0x395e77d5c4
-C = 0x8d17107a2370864b6abc93c20274
+A = 0x69175d309a0bb66feabc0a5cc8948f
+B = -0x4dada08106f32aa013a8e0
+C = 0x69175d30e7b956f0f1af34fcdc3d6f
 if (C != A + B):
-    print("66-th")
+    print("Error: A + B, 66-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x328455ca6bfee5cbc174
-B = -0x16
-C = -0x328455ca6bfee5cbc18a
+A = -0x495bd683e0f537ab
+B = -0xd048d164
+C = -0x495bd684b13e090f
 if (C != A + B):
-    print("67-th")
+    print("Error: A + B, 67-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe620e7e8aee7b4906c0bf7074681
-B = -0xe8761c7e941ce826806d
-C = 0xe620e7e9975dd10f0028df2dc6ee
+A = -0x26012b823bba02b48edddb97f18a8c
+B = -0x7581
+C = -0x26012b823bba02b48edddb97f2000d
 if (C != A + B):
-    print("68-th")
+    print("Error: A + B, 68-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1ed87680147c0b07201abc95
-B = -0x7e11669b827dd6a7f4761121
-C = 0x9ce9dd1b96f9e1af1490cdb6
+A = 0x1c81515f7b4f04936c09
+B = -0x75f0b4e338
+C = 0x1c81515f7bc4f5484f41
 if (C != A + B):
-    print("69-th")
+    print("Error: A + B, 69-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x47bce87617a0466bce9b4f20
-B = -0xc24a05
-C = 0x47bce87617a0466bcf5d9925
+A = -0x9b4025818ee9ce68f984479797
+B = -0x2974d5
+C = -0x9b4025818ee9ce68f984710c6c
 if (C != A + B):
-    print("70-th")
+    print("Error: A + B, 70-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8fcc01abbfc821a4c785003521b7
-B = -0xfe3c19
-C = 0x8fcc01abbfc821a4c78501335dd0
+A = -0x76f55263681277eae5
+B = -0xd426d1b98864ca62
+C = -0x77c97935219adcb547
 if (C != A + B):
-    print("71-th")
+    print("Error: A + B, 71-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5df382556fb4cfcc
-B = -0x3da0aa
-C = 0x5df382556ff27076
+A = 0xc95a21565d0ce3c2830b4b68
+B = -0xe1
+C = 0xc95a21565d0ce3c2830b4c49
 if (C != A + B):
-    print("72-th")
+    print("Error: A + B, 72-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4d6c6c2e492e
-B = -0xbd43039eb1de
-C = -0x10aaf6fccfb0c
+A = 0x9c34a92b02
+B = -0x91
+C = 0x9c34a92b93
 if (C != A + B):
-    print("73-th")
+    print("Error: A + B, 73-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x99039c405247469df1d
-B = -0x2cc3e3534848bdf7c4
-C = 0x9bcfda7586cbd27d6e1
+A = -0x1874e561409b7d97ede1c4e7e2bb94
+B = -0xc940a2015c
+C = -0x1874e561409b7d97ede28e2884bcf0
 if (C != A + B):
-    print("74-th")
+    print("Error: A + B, 74-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2dabb492bcc9fba8d08e5a31
-B = -0x7388a8c67467954886e5
-C = -0x2dac281b6590701065d6e116
+A = 0x74288
+B = -0x8e9cda
+C = 0x95df62
 if (C != A + B):
-    print("75-th")
+    print("Error: A + B, 75-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa2084b217dceeee0cf937664af760f
-B = -0xb214
-C = -0xa2084b217dceeee0cf937664b02823
+A = -0x46880af535a3571
+B = -0x442492
+C = -0x46880af539e5a03
 if (C != A + B):
-    print("76-th")
+    print("Error: A + B, 76-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4449ab2af170b8e851c605b4
-B = -0x11929f89c6
-C = 0x4449ab2af170b8f9e4658f7a
+A = -0xdfbcace3a50ef21185ec21dd9a
+B = -0x64261261c17befbe
+C = -0xdfbcace3a5731823e7ad9dcd58
 if (C != A + B):
-    print("77-th")
+    print("Error: A + B, 77-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x442927a6f481c3488b9965ef59
-B = -0x79f1b92c92ad1b
-C = 0x442927a6f4823d3a44c5f89c74
+A = -0x4e484ec6fbc22c6d4d
+B = -0x4ed5cd918d668dd
+C = -0x4e4d3c23d4db02d62a
 if (C != A + B):
-    print("78-th")
+    print("Error: A + B, 78-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd09ec408a2e417794c0a9e
-B = -0x68a940b9
-C = 0xd09ec408a2e417e1f54b57
+A = 0x5eea438f395dca6247538a
+B = -0xa278de38
+C = 0x5eea438f395dcb04c031c2
 if (C != A + B):
-    print("79-th")
+    print("Error: A + B, 79-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2d8389048e64d955387c5a41
-B = -0xb873201f976514eafd
-C = 0x2d8389bd0184f8ec9d91453e
+A = -0xb7dc32ae6a5230d37cecd795c8
+B = -0x73ce0bee3ca4686af67719
+C = -0xb7dca67c76406d77e557ce0ce1
 if (C != A + B):
-    print("80-th")
+    print("Error: A + B, 80-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xae0f5d31a409ad69580f2514
-B = -0x1ce21b24a648b1
-C = -0xae0f5d31a4268f847cb56dc5
+A = -0xc3c97fd068675ae509903752e7df87
+B = -0x3d48b6f218dc57a2
+C = -0xc3c97fd068675b225247296bc43729
 if (C != A + B):
-    print("81-th")
+    print("Error: A + B, 81-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf7ed3eee6c1e5e8801a985d3ec6
-B = -0x79d39e0101219d0a62ff91
-C = -0xf7ed468ba5fe6e9a1b7a2c03e57
+A = -0x50d2dd0850e11d79aa0004f6
+B = -0xce1e3915ef
+C = -0x50d2dd0850e11e47c8391ae5
 if (C != A + B):
-    print("82-th")
+    print("Error: A + B, 82-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc815cfbed347811c5e0070730107
-B = -0xdb5ef76faecf04c1f32bce807c
-C = 0xc8f12eb642f650211ff39c418183
+A = -0x44d9fd31a1a319d7102416d3
+B = -0x104543725067577b
+C = -0x44d9fd31b1e85d49608b6e4e
 if (C != A + B):
-    print("83-th")
+    print("Error: A + B, 83-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe8c0fe9b6cdf0fd7c1fc932ad9a5
-B = -0xc3
-C = -0xe8c0fe9b6cdf0fd7c1fc932ada68
+A = -0x8889ec17473c1f0049bc
+B = -0x59b2
+C = -0x8889ec17473c1f00a36e
 if (C != A + B):
-    print("84-th")
+    print("Error: A + B, 84-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x471ca36325ed41e05d338
-B = -0x6fe127a46ef4ac5226d4f0
-C = -0x7452f1daa15380702ca828
+A = -0xef848c8b9d7b945093c876216c60
+B = -0x1ba5958cc80578e0
+C = -0xef848c8b9d7baff629553e26e540
 if (C != A + B):
-    print("85-th")
+    print("Error: A + B, 85-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x26cf578d453dda0242e93e91
-B = -0x679149
-C = 0x26cf578d453dda024350cfda
+A = -0x1c345cf01dd7cd
+B = -0x153ea4
+C = -0x1c345cf0331671
 if (C != A + B):
-    print("86-th")
+    print("Error: A + B, 86-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x275da932c336f1b56a05e6654b7f
-B = -0x216c49ff379b186536
-C = -0x275da932c3585dff693d817db0b5
+A = -0xecb7cbf16ebb088636
+B = -0x491a62
+C = -0xecb7cbf16ebb51a098
 if (C != A + B):
-    print("87-th")
+    print("Error: A + B, 87-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x917e7d3f1f8927ba7d9c541461
-B = -0x11d61cde9296ed70569
-C = -0x917e7d403ceaf5a3a70b2b19ca
+A = -0x1654b58ec27d
+B = -0x5736fe
+C = -0x1654b5e5f97b
 if (C != A + B):
-    print("88-th")
+    print("Error: A + B, 88-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd0b378dfe32601fb5735f7df32e4ed
-B = -0x7e
-C = -0xd0b378dfe32601fb5735f7df32e56b
+A = 0xa6b5773e6ac480ce5f
+B = -0x94a446066e06
+C = 0xa6b577d30f0a873c65
 if (C != A + B):
-    print("89-th")
+    print("Error: A + B, 89-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4c513ca2f95eaa3ab4f6
-B = -0x723bcade60d450c1
-C = 0x4c51aedec43d0b0f05b7
+A = -0x7c2475d240f2cd870d3b51b1
+B = -0xba203271
+C = -0x7c2475d240f2cd87c75b8422
 if (C != A + B):
-    print("90-th")
+    print("Error: A + B, 90-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xed36a5e3d04975a2dfc9246215d8e7
-B = -0x92e40a
-C = -0xed36a5e3d04975a2dfc92462a8bcf1
+A = 0xa35f19ec42ba7b6a13d7bfcc82ec
+B = -0xb5
+C = 0xa35f19ec42ba7b6a13d7bfcc83a1
 if (C != A + B):
-    print("91-th")
+    print("Error: A + B, 91-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x84af6051cf6746b233aa74115a2
-B = -0x6bc0a2d1d660bfa8ce
-C = -0x84af6051d62350df5110800be70
+A = 0x577166f0f4ba1a29e5b
+B = -0xf268047a59c2800e
+C = 0x57808d713c5fb651e69
 if (C != A + B):
-    print("92-th")
+    print("Error: A + B, 92-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6c14861b2775f4d8b733f38b3e
-B = -0x4ec8afa3f51a6d9e8ff984
-C = 0x6c14d4e3d719e9f324d28384c2
+A = -0xeddb1374c638
+B = -0x9dea25
+C = -0xeddb1412b05d
 if (C != A + B):
-    print("93-th")
+    print("Error: A + B, 93-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x125066b25e02
-B = -0x68a297d6e92
-C = 0x18da902fcc94
+A = -0x1dd44f86ab52dca129a4
+B = -0x48ce64dbd26f82a006
+C = -0x1e1d1deb87254c23c9aa
 if (C != A + B):
-    print("94-th")
+    print("Error: A + B, 94-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1426bd49e2aa899a9356bf8a6750
-B = -0x94ba488784c8a1326b
-C = -0x1426bd49e33f43e31adb882b99bb
+A = -0x13a23dcce1adc779cbcd
+B = -0x251e
+C = -0x13a23dcce1adc779f0eb
 if (C != A + B):
-    print("95-th")
+    print("Error: A + B, 95-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4dac3433
-B = -0x8d309c
-C = -0x4e3964cf
+A = -0x18296d
+B = -0xfe1e
+C = -0x19278b
 if (C != A + B):
-    print("96-th")
+    print("Error: A + B, 96-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7d0ff998ac395c473d0c
-B = -0xa1
-C = -0x7d0ff998ac395c473dad
+A = 0xba22efb47bc4864c253a2760c3
+B = -0x2829ed2b71
+C = 0xba22efb47bc4864c4d64148c34
 if (C != A + B):
-    print("97-th")
+    print("Error: A + B, 97-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x330f1b631f79d6cd
-B = -0x8d0a1308733ee1e3
-C = 0xc0192e6b92b8b8b0
+A = -0x6a38f8738fc5864d50e865a433ae
+B = -0x86f97f9
+C = -0x6a38f8738fc5864d50e86e13cba7
 if (C != A + B):
-    print("98-th")
+    print("Error: A + B, 98-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7131f4dad0ddc0bf97b3de
-B = -0x4765d0291e
-C = 0x7131f4dad0de082567dcfc
+A = 0xa6f6a68ed352eeedc7a88e42
+B = -0x75896468a27579748d44
+C = 0xa6f71c1837bb9163411d1b86
 if (C != A + B):
-    print("99-th")
+    print("Error: A + B, 99-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe0a27828cff4966eb9e7
-B = -0x9295
-C = -0xe0a27828cff4966f4c7c
+A = -0x9fc5fd7639718bd51727af96
+B = -0x491b14aa0cd9
+C = -0x9fc5fd763971d4f02bd1bc6f
 if (C != A + B):
-    print("100-th")
+    print("Error: A + B, 100-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x26d319fe7bc4d8d032aae8437e5f
-B = -0x80b02a56b780b1ca
-C = 0x26d319fe7bc559805d019fc43029
+A = -0xace3b28ad511986e298f
+B = -0x90abdcea814f676d
+C = -0xace44336b1fc19bd90fc
 if (C != A + B):
-    print("101-th")
+    print("Error: A + B, 101-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2342f50488fe93
-B = -0x10d9beb447ab
-C = -0x2353cec33d463e
+A = 0x525e5a651086c5dac5af
+B = -0xa9b44118c977a868
+C = 0x525f0419519f8f526e17
 if (C != A + B):
-    print("102-th")
+    print("Error: A + B, 102-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5870
-B = -0xe139
-C = -0x139a9
+A = 0x49c2e815e33c72
+B = -0xb42e02bdf2c7
+C = 0x4a771618a12f39
 if (C != A + B):
-    print("103-th")
+    print("Error: A + B, 103-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3d7753bab4bd5c0b72130d
-B = -0x56ce08a88
-C = -0x3d7753bab4bd6178529d95
+A = -0xbe320d4325435
+B = -0x902bbcaea61b
+C = -0xc734c90e0fa50
 if (C != A + B):
-    print("104-th")
+    print("Error: A + B, 104-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x37b884b6d7fcf541a1
-B = -0xadd7e1a3
-C = 0x37b884b6d8aacd2344
+A = 0x93a263e39327dc58568ba2
+B = -0x6283efb60a2120
+C = 0x93a263e3f5abcc0e60acc2
 if (C != A + B):
-    print("105-th")
+    print("Error: A + B, 105-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1329
-B = -0xd5ea
-C = 0xe913
+A = 0x313c21b6f39547765f09fb5916d0af
+B = -0x8226a775fc08ec92a83
+C = 0x313c21b6f39d69e0d669bbe7dffb32
 if (C != A + B):
-    print("106-th")
+    print("Error: A + B, 106-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcd551a85c9fe13f12a3e8919281e
-B = -0xd6c0b6dc7aac8ce631cdcce7ca
-C = 0xce2bdb3ca678c07e107056e60fe8
+A = -0x392d25495b46391edd66cf96bd3e
+B = -0x4456bde4aaa3c5399d05f2f1
+C = -0x392d69a0192ae3c2a2a06c9cb02f
 if (C != A + B):
-    print("107-th")
+    print("Error: A + B, 107-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8b4b
-B = -0x14
-C = 0x8b5f
+A = 0xf0a2e8eafe6d908e03cd0525
+B = -0x31487b4c1524394fe81183
+C = 0xf0d431664a82b4c753b516a8
 if (C != A + B):
-    print("108-th")
+    print("Error: A + B, 108-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7ec402e0c5de
-B = -0xaa3527f0
-C = -0x7ec4ad15edce
+A = -0xcdf1b2e64a8bc5e917
+B = -0xbd
+C = -0xcdf1b2e64a8bc5e9d4
 if (C != A + B):
-    print("109-th")
+    print("Error: A + B, 109-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x71be439d4e04dc940686e7
-B = -0x3132
-C = 0x71be439d4e04dc9406b819
+A = -0xf6d393fdd72adfb872e7aa80fb37a4
+B = -0xe1
+C = -0xf6d393fdd72adfb872e7aa80fb3885
 if (C != A + B):
-    print("110-th")
+    print("Error: A + B, 110-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf7992648e0a42bef0513
-B = -0x9873
-C = -0xf7992648e0a42bef9d86
+A = -0x9e8887f76d3564cc
+B = -0x2efe307828
+C = -0x9e8888266b65dcf4
 if (C != A + B):
-    print("111-th")
+    print("Error: A + B, 111-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xdde15a5fd899b8577194515d7b6292
-B = -0xf21de0566ad9db28
-C = -0xdde15a5fd899b9498f74a7c8553dba
+A = -0x6498dcb9bb555d4777f58193bac4ec
+B = -0x1ca1d4e054bd578f05596a
+C = -0x6498dcb9d7f73227ccb2d922c01e56
 if (C != A + B):
-    print("112-th")
+    print("Error: A + B, 112-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xdbe871c19a7d
-B = -0x356a72fffb
-C = -0xdc1ddc349a78
+A = -0x90bebeb315
+B = -0x760a
+C = -0x90bebf291f
 if (C != A + B):
-    print("113-th")
+    print("Error: A + B, 113-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa2fa795a0582c0bf34afa6fc8b6c
-B = -0xe4febd88dad27e49
-C = -0xa2fa795a0583a5bdf23881cf09b5
+A = -0x94b3fbf8f63df064a2ed58
+B = -0xa7759a2576970a702f
+C = -0x94b4a36e906366fbad5d87
 if (C != A + B):
-    print("114-th")
+    print("Error: A + B, 114-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe754d5988f2ffc1f1325b61710aff7
-B = -0x99895f65654b219dbc11
-C = 0xe754d5988fc9857e788b0138ae6c08
+A = 0x4040098ab7a3a2ef78636828878e
+B = -0xa643b7e1b7f7df2200005c5338
+C = 0x40e64d42995b9ace9a636884dac6
 if (C != A + B):
-    print("115-th")
+    print("Error: A + B, 115-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf30e75ca80d060c8364454
-B = -0xa537ac3eb50775d6a6f3
-C = 0xf3b3ad76bf85683e0ceb47
+A = -0xe176
+B = -0xc1
+C = -0xe237
 if (C != A + B):
-    print("116-th")
+    print("Error: A + B, 116-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfb46a884d0b9ddbab27bec842d7a2d
-B = -0x9dd263ae
-C = 0xfb46a884d0b9ddbab27bed21ffdddb
+A = 0xd535a0a7186c16cc0435f5317a9c
+B = -0x8f0cb0929d8084d3c5911bc7d678
+C = 0x164425139b5ec9b9fc9c710f95114
 if (C != A + B):
-    print("117-th")
+    print("Error: A + B, 117-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1117969e42b5
-B = -0x5acf
-C = 0x1117969e9d84
+A = -0xffbffe128ca74585ba6e7213cac987
+B = -0x8df6a80ba1a
+C = -0xffbffe128ca74585ba77517e4b83a1
 if (C != A + B):
-    print("118-th")
+    print("Error: A + B, 118-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x532414e84d0b19ae0087551ced41
-B = -0xbc
-C = -0x532414e84d0b19ae0087551cedfd
+A = -0x6857cc18
+B = -0x94
+C = -0x6857ccac
 if (C != A + B):
-    print("119-th")
+    print("Error: A + B, 119-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd3fe3812ff5965bf86f8
-B = -0x9242362a02
-C = 0xd3fe3812ffeba7f5b0fa
+A = -0x3012754a
+B = -0xf056503b
+C = -0x12068c585
 if (C != A + B):
-    print("120-th")
+    print("Error: A + B, 120-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfda2cc560ada4343bf2fe72747
-B = -0x7f7c4fc680491e16974c
-C = -0xfda2ccd5872a09c4084dfdbe93
+A = 0x74580aa8644c4d9a9f685290
+B = -0xea
+C = 0x74580aa8644c4d9a9f68537a
 if (C != A + B):
-    print("121-th")
+    print("Error: A + B, 121-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3efb79ee698e48a2ec
-B = -0x793b3ac1
-C = 0x3efb79ee6a0783ddad
+A = 0xf1550e1cd5ab4dcc8e66417b21accc
+B = -0xf8bd644c96e64c
+C = 0xf1550e1cd5ab4dcd8723a5c7b89318
 if (C != A + B):
-    print("122-th")
+    print("Error: A + B, 122-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa88de71bcfa1ddd03bfe49c631
-B = -0xa7a08d3239de492616cb4d54
-C = -0xa93587a901dbbc196215151385
+A = -0xfe1186476ea20b7bb4
+B = -0xe91a5adbf0
+C = -0xfe11864857bc6657a4
 if (C != A + B):
-    print("123-th")
+    print("Error: A + B, 123-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x67a71ea6
-B = -0x385b8f
-C = -0x67df7a35
+A = -0x9fb02b9053c221f7e4f2d37b7cae9c
+B = -0x60579e51
+C = -0x9fb02b9053c221f7e4f2d3dbd44ced
 if (C != A + B):
-    print("124-th")
+    print("Error: A + B, 124-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfc4af403249f124847800a1c8a
-B = -0x262ce0
-C = -0xfc4af403249f1248478030496a
+A = -0x9e2db3e6989accf8ea35b85a4f
+B = -0x5a
+C = -0x9e2db3e6989accf8ea35b85aa9
 if (C != A + B):
-    print("125-th")
+    print("Error: A + B, 125-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfe8d8992f8023b9faf46b8119fe3a6
-B = -0x390e16aa16ce
-C = -0xfe8d8992f8023b9faf7fc62849fa74
+A = -0xcd33ad16afedc25b2599
+B = -0xccd25b283e216a92
+C = -0xcd3479e90b16007c902b
 if (C != A + B):
-    print("126-th")
+    print("Error: A + B, 126-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2e78867205d7f5d4afa9b7a7
-B = -0x3c14c61cac78
-C = 0x2e78867205d831e975c6641f
+A = 0xd8973c9e4bd97c402b72a8
+B = -0xecb8
+C = 0xd8973c9e4bd97c402c5f60
 if (C != A + B):
-    print("127-th")
+    print("Error: A + B, 127-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9eeae0ef9a2e3ab9c3985263d6
-B = -0x1515bd19260f
-C = -0x9eeae0ef9a2e3aced9556b89e5
+A = -0xe5d256bb5bddab8a5a9452
+B = -0xe1cfd035bb7e431be4
+C = -0xe5d3388b2c1367089db036
 if (C != A + B):
-    print("128-th")
+    print("Error: A + B, 128-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x9436c87afc9d6805c6d7dc
-B = -0xcc1016
-C = -0x9436c87afc9d680692e7f2
+A = -0x2ca5eb18
+B = -0x520c
+C = -0x2ca63d24
 if (C != A + B):
-    print("129-th")
+    print("Error: A + B, 129-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x54015a97345146e1bd50d02394
-B = -0x24aa
-C = 0x54015a97345146e1bd50d0483e
+A = 0x6ddeb6ea6753715b295eb2d0010350
+B = -0x760e
+C = 0x6ddeb6ea6753715b295eb2d001795e
 if (C != A + B):
-    print("130-th")
+    print("Error: A + B, 130-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6f75646747dc817884f67613b130
-B = -0x13b4a1c7699f8a
-C = 0x6f75646747dc818c39983d7d50ba
+A = -0xbe5a0e53ab84ca6c6a90a2187a
+B = -0x5f99169f
+C = -0xbe5a0e53ab84ca6c6af03b2f19
 if (C != A + B):
-    print("131-th")
+    print("Error: A + B, 131-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1405ed786a7abba8ce
-B = -0x75015d3f2a
-C = -0x1405ed78df7c18e7f8
+A = -0xf34b5a8769e01773174179b7b0
+B = -0xe2a4324d
+C = -0xf34b5a8769e0177318241de9fd
 if (C != A + B):
-    print("132-th")
+    print("Error: A + B, 132-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf2094d22b183ab0b10a46ae550a0ae
-B = -0x96e9d8
-C = -0xf2094d22b183ab0b10a46ae5e78a86
+A = 0x6483372b49e1024bbc92354c
+B = -0x7b
+C = 0x6483372b49e1024bbc9235c7
 if (C != A + B):
-    print("133-th")
+    print("Error: A + B, 133-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xad24fa91c55b2d650c4d95668166d0
-B = -0xed897f1f664
-C = -0xad24fa91c55b2d650c5c6dfe735d34
+A = 0x92c0580b427773cdd821860091
+B = -0xbd82aec8d6
+C = 0x92c0580b427773ce95a434c967
 if (C != A + B):
-    print("134-th")
+    print("Error: A + B, 134-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x35b3a3d23ebdbca43498911ae97f
-B = -0xd7296a4718ff3b349b7f
-C = -0x35b3a3d315e726eb4d97cc4f84fe
+A = 0x1f8f9bcea98d2a22328f6f
+B = -0xefae23d90c5e959bd6b7
+C = 0x207f49f2829988b7ce6626
 if (C != A + B):
-    print("135-th")
+    print("Error: A + B, 135-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb70e99235e24462e50a166c86885
-B = -0x622d37141737d4771fe0
-C = 0xb70e9923c0517d4267d93b3f8865
+A = 0x4d356312690c66e9d5d0acca
+B = -0x874725
+C = 0x4d356312690c66e9d657f3ef
 if (C != A + B):
-    print("136-th")
+    print("Error: A + B, 136-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xaf17e5d52d865b
-B = -0xc10544cfc6
-C = 0xaf18a6da725621
+A = -0x542ab6c506972d
+B = -0xced8891f
+C = -0x542ab793df204c
 if (C != A + B):
-    print("137-th")
+    print("Error: A + B, 137-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x30a7153701656b1e4c50f84220
-B = -0xc3becebdf3f7c2
-C = 0x30a7153701662edd1b0eec39e2
+A = 0xc4571ed9b9d7e34c
+B = -0x64
+C = 0xc4571ed9b9d7e3b0
 if (C != A + B):
-    print("138-th")
+    print("Error: A + B, 138-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcb2f449c841d77
-B = -0xa8792ddbfe7cf5
-C = -0x173a87278829a6c
+A = 0xaa631ea2a0d997760191d3e4
+B = -0x31c8a8dafc4d752eaaec
+C = 0xaa63506b49b493c376c07ed0
 if (C != A + B):
-    print("139-th")
+    print("Error: A + B, 139-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x2129a0e8f2898649398ea1c7
-B = -0xc4ab
-C = 0x2129a0e8f2898649398f6672
+A = 0x9cb41f187f91b99a0bd522
+B = -0x18e913b076cda6f2489291
+C = 0xb59d32c8f65f608c5467b3
 if (C != A + B):
-    print("140-th")
+    print("Error: A + B, 140-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfed11c876d23376b23527b47af44
-B = -0x6711beff0b9dc568a27d46
-C = -0xfed11cee7ee23676c117e3ea2c8a
+A = -0x34bc19c38f228bf780c2bca59b
+B = -0x2ab42442
+C = -0x34bc19c38f228bf780ed70c9dd
 if (C != A + B):
-    print("141-th")
+    print("Error: A + B, 141-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8faab61f481ef2ee09086d585b8
-B = -0xa6a76758102f2288
-C = -0x8faab61f48295d647e89704a840
+A = -0x22ff363655fe4c0fb1621b
+B = -0x83d0fa9eef250d29
+C = -0x22ff36ba26f8eafed66f44
 if (C != A + B):
-    print("142-th")
+    print("Error: A + B, 142-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1f10ae04ac57a1a3dc9e7380bd44
-B = -0x13fe01a8cba9b3e1cd2bc109a6f
-C = -0x20508e1f39123ce1f9712f9157b3
+A = -0x6ab8d3864072c256f04308f2
+B = -0x98eaf3812f7b8388
+C = -0x6ab8d386d95db5d81fbe8c7a
 if (C != A + B):
-    print("143-th")
+    print("Error: A + B, 143-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x376f9c006c5dbf8806514cea
-B = -0x1
-C = -0x376f9c006c5dbf8806514ceb
+A = -0x9a054539fc1adc6c2b6882409cb9f4
+B = -0x3054eeccd68793be758956
+C = -0x9a05453a2c6fcb3901f015ff12434a
 if (C != A + B):
-    print("144-th")
+    print("Error: A + B, 144-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x97048cbaa2a8b9b9ed2e54
-B = -0x20
-C = -0x97048cbaa2a8b9b9ed2e74
+A = 0x14ab386efbc71290
+B = -0xf03a905e64f803
+C = 0x159b72ff5a2c0a93
 if (C != A + B):
-    print("145-th")
+    print("Error: A + B, 145-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbcc0537f4a07a0145e4337cf0f43
-B = -0x8c183cf584549226
-C = -0xbcc0537f4a082c2c9b38bc23a169
+A = 0x763a469a0743d6
+B = -0x325405a4c872
+C = 0x766c9a9fac0c48
 if (C != A + B):
-    print("146-th")
+    print("Error: A + B, 146-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x16e4070232a4f624c4bd
-B = -0x57d779cb9e
-C = -0x16e4070232fccd9e905b
+A = 0x642a49ebc891e85acaad4b6dc59f
+B = -0xfe4e
+C = 0x642a49ebc891e85acaad4b6ec3ed
 if (C != A + B):
-    print("147-th")
+    print("Error: A + B, 147-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdf557115541489
-B = -0xaca693d1
-C = 0xdf5571c1faa85a
+A = 0xb0850e4dd222fe7c0eb5
+B = -0x234fd5b124644741
+C = 0xb085319da7d422e055f6
 if (C != A + B):
-    print("148-th")
+    print("Error: A + B, 148-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf4ae32a07ebeec2d40d75d
-B = -0x327a034e8fedbe8aa232c9
-C = 0x1272835ef0eacaab7e30a26
+A = -0x5849d56e066d46f2
+B = -0xc42500
+C = -0x5849d56e07316bf2
 if (C != A + B):
-    print("149-th")
+    print("Error: A + B, 149-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3c
-B = -0x97
-C = -0xd3
+A = 0xc3859da2fff51c2fd6bfed48a6e8bc
+B = -0xcd72651f2067ba
+C = 0xc3859da2fff51c30a4325267c75076
 if (C != A + B):
-    print("150-th")
+    print("Error: A + B, 150-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb6c32073ae0e142fc96c
-B = -0x5b2c75bcb7ae3d41541e
-C = 0x111ef963065bc51711d8a
+A = 0xe2d0e626ef
+B = -0xc4b4
+C = 0xe2d0e6eba3
 if (C != A + B):
-    print("151-th")
+    print("Error: A + B, 151-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbf8f1100acaa5238857e57
-B = -0xb7823d75fb
-C = -0xbf8f1100acab09bac2f452
+A = 0xf014b2cf13327244a330abd3ce9926
+B = -0x20e49d8f64c9d5d5
+C = 0xf014b2cf1332726587ce3b38986efb
 if (C != A + B):
-    print("152-th")
+    print("Error: A + B, 152-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbbb28c6e73ca32f39125
-B = -0x7b36e88ce5c
-C = -0xbbb28c6e7b7da17c5f81
+A = -0x39161d1c5a6dcb70d5b2c76f600eb
+B = -0x4c54554cc593
+C = -0x39161d1c5a6dcb70da780cc42c67e
 if (C != A + B):
-    print("153-th")
+    print("Error: A + B, 153-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3d5264287db2f2b71555f8
-B = -0xe63f664224d
-C = -0x3d5264287dc156ad797845
+A = -0x5286ba9a92b1fec29a03
+B = -0x39466aa32ba707
+C = -0x5286bad3d91ca1ee410a
 if (C != A + B):
-    print("154-th")
+    print("Error: A + B, 154-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x26a784ed7468
-B = -0x5821e97c
-C = -0x26a7dd0f5de4
+A = -0xd492fc417ba920d05347baeb93d4
+B = -0xd7
+C = -0xd492fc417ba920d05347baeb94ab
 if (C != A + B):
-    print("155-th")
+    print("Error: A + B, 155-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x18e5d883e5bd2ae7
-B = -0xb2bd0368e8b064
-C = 0x199895874ea5db4b
+A = -0x5b1937a33aafdeaf0aca4b083871a6
+B = -0x3377f82a3375a1f
+C = -0x5b1937a33aafdeb24249cdab6fcbc5
 if (C != A + B):
-    print("156-th")
+    print("Error: A + B, 156-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8d3e9af7eadd9325
-B = -0xa2
-C = -0x8d3e9af7eadd93c7
+A = 0xca3077d86039443057818d
+B = -0x425ffe
+C = 0xca3077d86039443099e18b
 if (C != A + B):
-    print("157-th")
+    print("Error: A + B, 157-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf52d6800754ab1a7074823
-B = -0x991c959191e9f22f
-C = -0xf52d689991e04338f13a52
+A = -0x13d2313fefd677cf76ff8726
+B = -0xde
+C = -0x13d2313fefd677cf76ff8804
 if (C != A + B):
-    print("158-th")
+    print("Error: A + B, 158-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa82539cf994b2484f45cd5
-B = -0x381aa8b337
-C = -0xa82539cf994b5c9f9d100c
+A = -0xdccc
+B = -0x9126
+C = -0x16df2
 if (C != A + B):
-    print("159-th")
+    print("Error: A + B, 159-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6935dfd834c3d2f5f8294f703046d2
-B = -0x7ee053d18ef3eab8bde6e3bf10a1
-C = -0x69b4c02c0652c6e0b0e73653ef5773
+A = -0x6659c5f86992dd94f95448e68371
+B = -0xc07f4f63
+C = -0x6659c5f86992dd94f9550965d2d4
 if (C != A + B):
-    print("160-th")
+    print("Error: A + B, 160-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x410f04213d597d
-B = -0x7de9457781531a
-C = 0xbef84998beac97
+A = -0x9eaa1254fb89d84e84f351
+B = -0x68d5af3f41
+C = -0x9eaa1254fb8a4124343292
 if (C != A + B):
-    print("161-th")
+    print("Error: A + B, 161-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa3d65e04bae2046cacf5cb29a76100
-B = -0x9a
-C = -0xa3d65e04bae2046cacf5cb29a7619a
+A = -0xa2b3f00c6c00c90f6006da
+B = -0x45eb4e71
+C = -0xa2b3f00c6c00c9554b554b
 if (C != A + B):
-    print("162-th")
+    print("Error: A + B, 162-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1d92774086c398ce4c336b7c
-B = -0xdce65
-C = 0x1d92774086c398ce4c4139e1
+A = 0xfd0c22bc154c315fb2976fb488
+B = -0x52de50418b0691e5bbc995
+C = 0xfd0c759a658dbc66447d2b7e1d
 if (C != A + B):
-    print("163-th")
+    print("Error: A + B, 163-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x48d606d205ac219cb24ca50fcbc6
-B = -0xfca57900e2a126
-C = -0x48d606d205ac229957c5a5f26cec
+A = -0xf0edcd26fde0d6402c809dda834b0e
+B = -0x96cbb077bb1b5584087c
+C = -0xf0edcd26fe77a1f0a43bb93007538a
 if (C != A + B):
-    print("164-th")
+    print("Error: A + B, 164-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd5d3c0d42392641c8a9c8941
-B = -0x5a5d632ff9ade53bad1330
-C = 0xd62e1e37538c1201c6499c71
+A = 0x1de602482e2fd6fa
+B = -0xfd08
+C = 0x1de602482e30d402
 if (C != A + B):
-    print("165-th")
+    print("Error: A + B, 165-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
@@ -8321,1661 +8321,1661 @@ if (cnt == 0):
     print("ALL TRUE!")
 print("### Case 6: wordlen(A) < wordlen(B) ###\n")
 cnt = 0
-A = 0x5b
-B = 0x6a8aa1da52fb1cd9876ceaade933
-C = 0x6a8aa1da52fb1cd9876ceaade98e
+A = -0x57
+B = -0xbb3c3b4a9118
+C = -0xbb3c3b4a916f
 if (C != A + B):
-    print("0-th")
+    print("Error: A + B, 0-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc1f956e16559fa8723d8fc
-B = -0x448aa2baa592c120a6db4614f4f738
-C = -0x448aa2bb678c18020c35409c18d034
+A = 0x41d7add68b
+B = 0xc214aa20bfa91740e8b1
+C = 0xc214aa20bfeaeeeebf3c
 if (C != A + B):
-    print("1-th")
+    print("Error: A + B, 1-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb57435
-B = -0x9dd55fb07e0d6bf22d
-C = -0x9dd55fb07e0e216662
+A = 0xd5743c4cadf9a3
+B = 0x2cca10d35b33dd26b90e446a
+C = 0x2cca10d35c09516305bc3e0d
 if (C != A + B):
-    print("2-th")
+    print("Error: A + B, 2-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8697
-B = 0xbacbfbd84d3430
-C = 0xbacbfbd84dbac7
+A = -0x1e5f17ba4a0177
+B = -0x1fccdbd416f91880b3
+C = -0x1fccfa332eb362822a
 if (C != A + B):
-    print("3-th")
+    print("Error: A + B, 3-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc2
-B = 0xa932a04d241673
-C = 0xa932a04d241735
+A = -0xb73588914c00
+B = -0x7e1c9aee31afb9
+C = -0x7ed3d076c2fbb9
 if (C != A + B):
-    print("4-th")
+    print("Error: A + B, 4-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4b8c2131011e7abf92
-B = -0x1205095bcb86945c0e736ac7312
-C = -0x1205095bd03f566f1e8552732a4
+A = -0x885f9605d24e3b
+B = -0x3f0cb2056a45f88133484bdea4
+C = -0x3f0cb2056a4680e0c94e1e2cdf
 if (C != A + B):
-    print("5-th")
+    print("Error: A + B, 5-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7d44b28d
-B = -0x69b4799cc526f3e65a
-C = -0x69b4799cc5a43898e7
+A = 0xccca
+B = 0x65b060a7826d065802c2505a4d446d
+C = 0x65b060a7826d065802c2505a4e1137
 if (C != A + B):
-    print("6-th")
+    print("Error: A + B, 6-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x51286a
-B = 0x6d8fa4ec5ed559968a34e94696f6
-C = 0x6d8fa4ec5ed559968a34e997bf60
+A = 0x5d
+B = 0xf141750de5c234
+C = 0xf141750de5c291
 if (C != A + B):
-    print("7-th")
+    print("Error: A + B, 7-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x44be81c3c9e8
-B = -0xc523530d970220
-C = -0xc568118f5acc08
+A = 0x241
+B = 0xae62a3e26e434bf0fe1ed6db47
+C = 0xae62a3e26e434bf0fe1ed6dd88
 if (C != A + B):
-    print("8-th")
+    print("Error: A + B, 8-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x90e5a9d93aeec69aba
-B = -0xcf4d1a6223a276ba3fe313cedf
-C = -0xcf4d1a62b48820937ad1da6999
+A = 0xac2bcc315f336863eb77
+B = 0x22086bd1b6e27445cb3342914ebc
+C = 0x22086bd2630e40772a66aaf53a33
 if (C != A + B):
-    print("9-th")
+    print("Error: A + B, 9-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbe
-B = -0x7bbada16f995ec74c31425
-C = -0x7bbada16f995ec74c314e3
+A = 0x45f72d3b72904b106fd794d6
+B = 0x8d4abdf14d948d07786cc553db1f26
+C = 0x8d4abe3744c1c87a08b7d5c3b2b3fc
 if (C != A + B):
-    print("10-th")
+    print("Error: A + B, 10-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc4d9f76d
-B = -0xb38a8e51e87e5f2952
-C = -0xb38a8e51e9433920bf
+A = 0xef96e1b92925
+B = 0x6f95770eb0b1ca
+C = 0x70850df069daef
 if (C != A + B):
-    print("11-th")
+    print("Error: A + B, 11-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe9fcd60d3
-B = -0x6987f241b61c3a6e4330d055f9b6
-C = -0x6987f241b61c3a6e433f70235a89
+A = -0xce
+B = -0x985a01c4b49372fda07f4020cc2c
+C = -0x985a01c4b49372fda07f4020ccfa
 if (C != A + B):
-    print("12-th")
+    print("Error: A + B, 12-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb7fdf4a2d607d610479b
-B = -0x477820614b14c40e28cff9dcf99f
-C = -0x477820620312b8b0fed7cfed413a
+A = 0x965e
+B = 0xe33da246586baa9f22
+C = 0xe33da246586bab3580
 if (C != A + B):
-    print("13-th")
+    print("Error: A + B, 13-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x814633ae447b
-B = -0xd37407a9aa089ba425255977aef714
-C = -0xd37407a9aa089ba425a69fab5d3b8f
+A = -0x80dc
+B = -0x76b15402e996c1
+C = -0x76b15402ea179d
 if (C != A + B):
-    print("14-th")
+    print("Error: A + B, 14-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc746aeec37af99ce1187f4
-B = -0x712472430e5d44e99175dc4966
-C = -0x71253989bd497c992b43edd15a
+A = -0x4a
+B = -0x1b81e6cba7ec4a63bd84870a59a9
+C = -0x1b81e6cba7ec4a63bd84870a59f3
 if (C != A + B):
-    print("15-th")
+    print("Error: A + B, 15-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3bf3dc15ac686546
-B = -0xe2066f1a2cf68c3dec668bc8
-C = -0xe2066f1a68ea685398cef10e
+A = 0xf008a9c8d2a9c48b29ea
+B = 0x4e2c0e66f033bee4aa5e041e95
+C = 0x4e2c0f56f8dd87b754228f487f
 if (C != A + B):
-    print("16-th")
+    print("Error: A + B, 16-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x5ea418ad2bbe2e721a
-B = -0x11ba19b4725a03c598f283c9c255a8
-C = -0x11ba19b4725a6269b19faf87f0c7c2
+A = -0xc4b0967819
+B = -0xa717a963bfd32
+C = -0xa723f46d2754b
 if (C != A + B):
-    print("17-th")
+    print("Error: A + B, 17-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xacf1c1d6
-B = -0x8c0601451b5e34561513f249fc0bc4
-C = -0x8c0601451b5e34561513f2f6edcd9a
+A = 0x5563b61b341668
+B = 0x78fca5dbb072eb5f1fa4
+C = 0x78fca63114290693360c
 if (C != A + B):
-    print("18-th")
+    print("Error: A + B, 18-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xd775345ff24a25
-B = 0xad33397e459caf478998640f0aa4
-C = 0xad33397e459cb01efeccc40154c9
+A = 0xf99306a44ae275e085901f
+B = 0x8468ccbefb85bec058ad2c28
+C = 0x85625fc59fd0a1363932bc47
 if (C != A + B):
-    print("19-th")
+    print("Error: A + B, 19-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa9ec79f52661
-B = 0x43c0c78ad26b15ff8091163002
-C = 0x43c0c78ad26b16a96d0b0b5663
+A = 0x2453f2021b6cf4e
+B = 0xd90a466488242eb6e9728f03c7bd
+C = 0xd90a4664882430fc2892b0ba970b
 if (C != A + B):
-    print("20-th")
+    print("Error: A + B, 20-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcadf
-B = -0x9ee9a46b071603
-C = -0x9ee9a46b07e0e2
+A = 0xcd808e
+B = 0x2b43f33074936eb8
+C = 0x2b43f3307560ef46
 if (C != A + B):
-    print("21-th")
+    print("Error: A + B, 21-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x693d
-B = -0x9edee8cb48f0
-C = -0x9edee8cbb22d
+A = -0x71fa807dc05266d591
+B = -0xee750f6f2140d7867a7ec579faa3
+C = -0xee750f6f21b2d206f83f17e0d034
 if (C != A + B):
-    print("22-th")
+    print("Error: A + B, 22-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe07d0788ac88c5
-B = 0x99bede06a665aee0
-C = 0x9a9f5b0e2f1237a5
+A = -0xa8ab
+B = -0xf737e50d9ed23c75669b91d1c6d118
+C = -0xf737e50d9ed23c75669b91d1c779c3
 if (C != A + B):
-    print("23-th")
+    print("Error: A + B, 23-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe185ab53
-B = -0x7754a795abbb88056a0a86
-C = -0x7754a795abbb88e6efb5d9
+A = 0x31a1107fb0
+B = 0x8772e745959b
+C = 0x87a48856154b
 if (C != A + B):
-    print("24-th")
+    print("Error: A + B, 24-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6e507586
-B = 0xe639bbb2e7cf
-C = 0xe63a2a035d55
+A = 0x8670
+B = 0x48923c7b7b8d151bab0a14
+C = 0x48923c7b7b8d151bab9084
 if (C != A + B):
-    print("25-th")
+    print("Error: A + B, 25-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x86
-B = 0xdb6015
-C = 0xdb609b
+A = -0xaac6895980f2
+B = -0xfe07dec68990cd9c
+C = -0xfe08898d12ea4e8e
 if (C != A + B):
-    print("26-th")
+    print("Error: A + B, 26-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x85c3845a14
-B = -0x184811f5c06ba5537eda5551642e5e
-C = -0x184811f5c06ba5537edadb14e88872
+A = 0xa1c990283c38
+B = 0xb5000c967281a939dedf
+C = 0xb5000c97144b39621b17
 if (C != A + B):
-    print("27-th")
+    print("Error: A + B, 27-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x49b7abd3818d1b95ba8e602fd573
-B = -0x34ebce526e572fd8b295a9335b7c22
-C = -0x353585fe41d8bcf4485037938b5195
+A = 0x36df44bdd4f0
+B = 0xca1abd98fc8ce880ac272060
+C = 0xca1abd98fc8d1f5ff0e4f550
 if (C != A + B):
-    print("28-th")
+    print("Error: A + B, 28-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc
-B = 0x9372
-C = 0x937e
+A = -0xa806
+B = -0x801d2616ed18dfcc
+C = -0x801d2616ed1987d2
 if (C != A + B):
-    print("29-th")
+    print("Error: A + B, 29-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x29727b404539afa593dd56f1
-B = -0x279d5110a2173927e9d68cc97ec9
-C = -0x279d7a831d577e61997c20a6d5ba
+A = -0x19d49f2c51e652
+B = -0x9bdd044932271885ddeaa5ea9e5b
+C = -0x9bdd04493227189fb289d23c84ad
 if (C != A + B):
-    print("30-th")
+    print("Error: A + B, 30-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xde82b5c3a005
-B = -0xb7201a7461bbc0cf3ae01fbe4a
-C = -0xb7201a7461bbc1adbd95e35e4f
+A = 0x3d9166b60597c6b4871ad05
+B = 0xb795bf8a1d4e3a8182ce55e76864ce
+C = 0xb795bf8df664a5e1dc4ac12fda11d3
 if (C != A + B):
-    print("31-th")
+    print("Error: A + B, 31-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe843ae2aa
-B = -0x5af3ba59b9c7dba749ce355dea
-C = -0x5af3ba59b9c7dba75852704094
+A = 0x2266a3ca2cd635
+B = 0x491724273baf0a34f49bbc
+C = 0x491724275e15adff2171f1
 if (C != A + B):
-    print("32-th")
+    print("Error: A + B, 32-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x217c4a35303415c389db06
-B = -0xa288a79e3646d643dfd9b207720fc
-C = -0xa288a7a04e0b7996e31b0e400fc02
+A = 0xbbb61e53
+B = 0xfb8ce2a3e9e105a7
+C = 0xfb8ce2a4a59723fa
 if (C != A + B):
-    print("33-th")
+    print("Error: A + B, 33-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xcc672de3f9adec0c
-B = 0xb5b18e09fa0d97df3f4a2e8f
-C = 0xb5b18e0ac674c5c338f81a9b
+A = -0x39eab413
+B = -0x6c461b78e0df6dc8d11c1813f4c763
+C = -0x6c461b78e0df6dc8d11c184ddf7b76
 if (C != A + B):
-    print("34-th")
+    print("Error: A + B, 34-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3dc2
-B = -0xafbe93
-C = -0xaffc55
+A = 0x5f371b
+B = 0xeb1665ea5311
+C = 0xeb1666498a2c
 if (C != A + B):
-    print("35-th")
+    print("Error: A + B, 35-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc636cbebc3
-B = 0x2a477e1f9739cbe65a10f11
-C = 0x2a477e1f9739d849c6cfad4
+A = -0x68c066
+B = -0xd36d7aa12a5e54a7679de2
+C = -0xd36d7aa12a5e54a7d05e48
 if (C != A + B):
-    print("36-th")
+    print("Error: A + B, 36-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb7eb299068
-B = -0xa304b46d26fc4a54870811105
-C = -0xa304b46d26fc4a6005baaa16d
+A = 0x3c2a4728
+B = 0x5753a5437e725c1d961cf769
+C = 0x5753a5437e725c1dd2473e91
 if (C != A + B):
-    print("37-th")
+    print("Error: A + B, 37-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x60880f47aed87a
-B = -0x4db344ff335819c621
-C = -0x4db3a587429fc89e9b
+A = -0xe4fa
+B = -0x697dff672df3512235
+C = -0x697dff672df352072f
 if (C != A + B):
-    print("38-th")
+    print("Error: A + B, 38-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2fdfd346f67f8d4794
-B = -0x798ebd1f2cd76bb4e337
-C = -0x79be9cf273cdeb422acb
+A = 0x58fc
+B = 0xa37e73d09bdc16
+C = 0xa37e73d09c3512
 if (C != A + B):
-    print("39-th")
+    print("Error: A + B, 39-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7875b9
-B = -0x21508b1bda613a147a2484
-C = -0x21508b1bda613a14f29a3d
+A = 0xee327aba0c
+B = 0x9766ca41d5b6cd7ca2865fced0bd
+C = 0x9766ca41d5b6cd7ca37492498ac9
 if (C != A + B):
-    print("40-th")
+    print("Error: A + B, 40-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6260c47f3ed8
-B = 0xbee51a9ae89a864833c72e99
-C = 0xbee51a9ae89ae8a8f8466d71
+A = 0x6946b07a
+B = 0xe8606e299f1924906a5b57
+C = 0xe8606e299f1924f9b10bd1
 if (C != A + B):
-    print("41-th")
+    print("Error: A + B, 41-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x56b62166f8d9d29caeaf2587
-B = 0xfcac8fe6d7916c8d9c2c0734cf
-C = 0xfd0346083e8a466038dab65a56
+A = 0x3214
+B = 0x50ac09
+C = 0x50de1d
 if (C != A + B):
-    print("42-th")
+    print("Error: A + B, 42-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xac84
-B = -0xeeb47c5b2e4
-C = -0xeeb47c65f68
+A = -0x40
+B = -0x7f418aeb89241dffbfe267
+C = -0x7f418aeb89241dffbfe2a7
 if (C != A + B):
-    print("43-th")
+    print("Error: A + B, 43-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3b36
-B = 0x8539ba8a9d1370
-C = 0x8539ba8a9d4ea6
+A = -0x2c084c83d98b8a7da5
+B = -0x33e7108ddc69131d567b9893c7
+C = -0x33e7108e08715fa1300723116c
 if (C != A + B):
-    print("44-th")
+    print("Error: A + B, 44-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa2fcb6b2
-B = -0x3127e7e02578f4d8ffa1b
-C = -0x3127e7e02578ff08cb0cd
+A = 0x69f5
+B = 0x9771a8a05cbb7f9f
+C = 0x9771a8a05cbbe994
 if (C != A + B):
-    print("45-th")
+    print("Error: A + B, 45-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe1e339807d54
-B = 0x639edd70ef6aa1b1161ba033afc3
-C = 0x639edd70ef6aa1b1f7fed9b42d17
+A = -0x8fd957
+B = -0xc74c39a743e14d5085735655eb2d
+C = -0xc74c39a743e14d50857356e5c484
 if (C != A + B):
-    print("46-th")
+    print("Error: A + B, 46-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1078580f93cfba72a2
-B = 0xc53bd5a1e4b495b97f2117a8f4
-C = 0xc53bd5a1f52cedc912f0d21b96
+A = 0x4cb4b26b
+B = 0x7624725591e451d2c44c6b
+C = 0x7624725591e4521f78fed6
 if (C != A + B):
-    print("47-th")
+    print("Error: A + B, 47-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd2efbc1e
-B = -0x81b5901246ba0100bf920310
-C = -0x81b5901246ba01019281bf2e
+A = -0x46
+B = -0xe24c45deb0efc74115
+C = -0xe24c45deb0efc7415b
 if (C != A + B):
-    print("48-th")
+    print("Error: A + B, 48-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfd0d99
-B = 0xfa1350b35cbed5a47c17d94
-C = 0xfa1350b35cbed5a48be8b2d
+A = -0x4e1d93
+B = -0xe3a69203b7ef6aa87e549964a430
+C = -0xe3a69203b7ef6aa87e5499b2c1c3
 if (C != A + B):
-    print("49-th")
+    print("Error: A + B, 49-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x95
-B = 0x28c57c3e1b3509a295c250841f2c7f
-C = 0x28c57c3e1b3509a295c250841f2d14
+A = -0x924f0418
+B = -0x9a3664d8c773dbb030
+C = -0x9a3664d8c8062ab448
 if (C != A + B):
-    print("50-th")
+    print("Error: A + B, 50-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x821a48bd20d977052bbe11a66b
-B = -0xeb9424fcab7450c81ecaf63bf854bf
-C = -0xeb94a716f43171a195d021fa09fb2a
+A = 0xa521e0b2c7
+B = 0xf88932712bd8149c
+C = 0xf88933164db8c763
 if (C != A + B):
-    print("51-th")
+    print("Error: A + B, 51-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6297
-B = -0xd75188b3eb9367c4e32efa1c7
-C = -0xd75188b3eb9367c4e32f0045e
+A = -0x2b
+B = -0x897e7e
+C = -0x897ea9
 if (C != A + B):
-    print("52-th")
+    print("Error: A + B, 52-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xc240
-B = 0x63360c19e879
-C = 0x63360c1aaab9
+A = 0xce3d
+B = 0x49b4f93f9db6d73f
+C = 0x49b4f93f9db7a57c
 if (C != A + B):
-    print("53-th")
+    print("Error: A + B, 53-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0xb0a99ce9d15ea3
+B = 0x1c94fe4ee3c7baf0
+C = 0x1d45a7ebcd991993
+if (C != A + B):
+    print("Error: A + B, 54-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0xc86211eac61ac6d7dd
+B = -0xa7faf1173b90858cedc8dbde
+C = -0xa7faf1df9da27053088fb3bb
+if (C != A + B):
+    print("Error: A + B, 55-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = 0x92
+B = 0x924b7c6f6a633c
+C = 0x924b7c6f6a63ce
+if (C != A + B):
+    print("Error: A + B, 56-th")
+    print("A = {}".format(hex(A)))
+    print("B = {}".format(hex(B)))
+    print("C = {}".format(hex(C)))
+    print("A + B = {}".format(hex(A+B)))
+    cnt = cnt + 1
+A = -0x83ec7bad25853780a07c13
+B = -0x6b658afda673b322b003766e
+C = -0x6be977795399385a30a3f281
+if (C != A + B):
+    print("Error: A + B, 57-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
 A = -0x2f
-B = -0x76a887230123
-C = -0x76a887230152
+B = -0xd9c2dd58e4575849151be7d7
+C = -0xd9c2dd58e4575849151be806
 if (C != A + B):
-    print("54-th")
+    print("Error: A + B, 58-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x76acdb
-B = 0xeaceeae78d45b4cf651ba8
-C = 0xeaceeae78d45b4cfdbc883
+A = 0x97
+B = 0xf8e8b89ae7
+C = 0xf8e8b89b7e
 if (C != A + B):
-    print("55-th")
+    print("Error: A + B, 59-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x88c71a
-B = -0xe23b3dc6db68
-C = -0xe23b3e4fa282
+A = 0x4f
+B = 0xa9f46a27c50bf2a38e
+C = 0xa9f46a27c50bf2a3dd
 if (C != A + B):
-    print("56-th")
+    print("Error: A + B, 60-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x224f57
-B = -0x8c431960f16163e65c0528e00496
-C = -0x8c431960f16163e65c05290253ed
+A = 0xc3919a2e
+B = 0x7ab7ed4ba957f23a48d1653d6f
+C = 0x7ab7ed4ba957f23a4994f6d79d
 if (C != A + B):
-    print("57-th")
+    print("Error: A + B, 61-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe607cfed9bcb9dd21
-B = -0xe210868d64e22e05f8f7
-C = -0xe21ee70a63bbeabfd618
+A = -0x2fdfe136c27ae95e64
+B = -0x77984b2a0f4a7922bd41cd
+C = -0x77987b09f0813b9da6a031
 if (C != A + B):
-    print("58-th")
+    print("Error: A + B, 62-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x37f5b47ffeaff779
-B = 0xc939c9cd4e4ed59df5
-C = 0xc971bf81ce4d85956e
+A = 0xa4f5a939f3539c395809664a
+B = 0xc7b70bb457d788d55f9ccbb019
+C = 0xc85c015d91cadc7198f4d51663
 if (C != A + B):
-    print("59-th")
+    print("Error: A + B, 63-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb9af155068
-B = 0xc69135fe8825c0328b76
-C = 0xc69135fe88df6f47dbde
+A = 0x7622fb30fe6d191226
+B = 0xb933848ab6b4c9670d26630b
+C = 0xb9338500d9affa657a3f7531
 if (C != A + B):
-    print("60-th")
+    print("Error: A + B, 64-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x57fe691e
-B = 0x3e3122a8c80968
-C = 0x3e312300c67286
+A = -0x6bf146a23889b80dd9910d
+B = -0x7ae1e0604e6c6f3dc6dc4ecc
+C = -0x7b4dd1a6f0a4f8f5d4b5dfd9
 if (C != A + B):
-    print("61-th")
+    print("Error: A + B, 65-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8d37c04aa51fa89a6f27219
-B = -0xb6d5bd8d1160d14eed27a0f3276bbf
-C = -0xb6d5bd95e4dcd5f93f222a9a19ddd8
+A = -0x78bb
+B = -0x575e557ac77d3c104d2af02ba146
+C = -0x575e557ac77d3c104d2af02c1a01
 if (C != A + B):
-    print("62-th")
+    print("Error: A + B, 66-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3bcca8
-B = -0x1d5e9fbf42ce60f08b
-C = -0x1d5e9fbf42ce9cbd33
+A = -0xdaaba8363a658cac
+B = -0xd30382764c1d5e733181082ec9c459
+C = -0xd30382764c1d5f4ddd293e692f5105
 if (C != A + B):
-    print("63-th")
+    print("Error: A + B, 67-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5bcc4cb9b097
-B = 0x6a20da63a430bc16570e
-C = 0x6a20da63fffd08d007a5
+A = 0x888b7b
+B = 0xdf0f863d9d
+C = 0xdf100ec918
 if (C != A + B):
-    print("64-th")
+    print("Error: A + B, 68-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xf92382ac0907e24d20
-B = 0xac6122221dd86b9e7bc634
-C = 0xac621b45a08474a65e1354
+A = -0xa4926ad2
+B = -0x5631689ad2c0
+C = -0x56320d2d3d92
 if (C != A + B):
-    print("65-th")
+    print("Error: A + B, 69-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb8786e
-B = 0x97c0455acead9ec055
-C = 0x97c0455aceae5738c3
+A = -0x1f0b362a
+B = -0xe8b7221359d9369009f3186c
+C = -0xe8b7221359d9369028fe4e96
 if (C != A + B):
-    print("66-th")
+    print("Error: A + B, 70-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1157f643
-B = 0xb7fa10e7bfb99d13d
-C = 0xb7fa10e7c0cf1c780
+A = -0x6e12
+B = -0x890496a7f89b3ca7ad95b327
+C = -0x890496a7f89b3ca7ad962139
 if (C != A + B):
-    print("67-th")
+    print("Error: A + B, 71-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xeb2a
-B = -0xb688a9f204d3605e61be20a8c4bd7d
-C = -0xb688a9f204d3605e61be20a8c5a8a7
+A = 0xf131538ef17baddb6403ec3d07
+B = 0x77350483fa2177039b9a70eff68ea7
+C = 0x7735f5b54db0687f4975d4f3e2cbae
 if (C != A + B):
-    print("68-th")
+    print("Error: A + B, 72-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x2008
-B = -0xb22f42d97f2f69d939dd4d00
-C = -0xb22f42d97f2f69d939dd6d08
+A = -0x6d886028431210
+B = -0x81b1997c2b90cb49990f8c
+C = -0x81b1997c99192b71dc219c
 if (C != A + B):
-    print("69-th")
+    print("Error: A + B, 73-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x7adfbc06676f48c11f0964f906
-B = -0x4c5d9c0fe0f986f155616a1a172c
-C = -0x4cd87bcbe760f63a1680737f1032
+A = -0x6a
+B = -0x4c69b7a007685fcb
+C = -0x4c69b7a007686035
 if (C != A + B):
-    print("70-th")
+    print("Error: A + B, 74-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3d7
-B = -0x8820e2a919
-C = -0x8820e2acf0
+A = -0xa83f255f3c6fad
+B = -0x262424d45f5eee419cea835618
+C = -0x262424d45f5f9680c249bfc5c5
 if (C != A + B):
-    print("71-th")
+    print("Error: A + B, 75-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfca379903ed6f83c
-B = 0xc2f90e1c317fd7cd935a6563c
-C = 0xc2f90e1c414a0f669747d4e78
+A = -0xfc
+B = -0x451bfc68f3f242a814b0b87edfc737
+C = -0x451bfc68f3f242a814b0b87edfc833
 if (C != A + B):
-    print("72-th")
+    print("Error: A + B, 76-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5b34e879ec71
-B = 0xb09b5ca17717dd97ffaa3f
-C = 0xb09b5ca1777312807996b0
+A = -0x65be058071
+B = -0x5c3a69e1988c4c6c2588e00653f9
+C = -0x5c3a69e1988c4c6c25ee9e0bd46a
 if (C != A + B):
-    print("73-th")
+    print("Error: A + B, 77-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc2b085215cd330edffc2d9
-B = -0xb3b42518d9130f0b8f12f6648c72
-C = -0xb3b425db899830686243e4644f4b
+A = -0xf7a62069f3f6dd75f621
+B = -0x36120a936a19a965a25839
+C = -0x3709b0b3d40da043184e5a
 if (C != A + B):
-    print("74-th")
+    print("Error: A + B, 78-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x801b05
-B = -0xddb7db96f25e892220a91ea7f561
-C = -0xddb7db96f25e892220a91f281066
+A = -0xb7
+B = -0x2fcbd365b686772e9a
+C = -0x2fcbd365b686772f51
 if (C != A + B):
-    print("75-th")
+    print("Error: A + B, 79-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3be13ea49591061a07
-B = 0x2052aae4b385d9bbdbd58
-C = 0x205668f89dcf32cc3d75f
+A = -0xcd52f29b7825af7d
+B = -0x701301bf3edebd3cfe5d3bf4eca1
+C = -0x701301bf3edf8a8ff0f8b41a9c1e
 if (C != A + B):
-    print("76-th")
+    print("Error: A + B, 80-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x60a83c19d22b
-B = -0x450b5131a5811cf9e8
-C = -0x450b51924dbd36cc13
+A = 0xceda560e2e4bafd791
+B = 0xdb7e49888951bb98d88916a737
+C = 0xdb7e4989582c11a706d4c67ec8
 if (C != A + B):
-    print("77-th")
+    print("Error: A + B, 81-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xbb9617
-B = -0xc4b10c6d44a6
-C = -0xc4b10d28dabd
+A = 0xef9268df884ab306b1ca
+B = 0xcd41c5f9f2785a5ade6ee37b
+C = 0xcd42b58c5b57e2a591759545
 if (C != A + B):
-    print("78-th")
+    print("Error: A + B, 82-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4584
-B = 0xe0c89f56fda819103f6c806bebc7
-C = 0xe0c89f56fda819103f6c806c314b
+A = -0x7d713c1b4939f6
+B = -0x5cd1eb230aef88c593841b
+C = -0x5cd1eb238860c4e0dcbe11
 if (C != A + B):
-    print("79-th")
+    print("Error: A + B, 83-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb665
-B = 0x844362
-C = 0x84f9c7
+A = 0x650bec67907badb305b1
+B = 0x620566c7b815570ab366f233a869
+C = 0x620566c81d21437243e29fe6ae1a
 if (C != A + B):
-    print("80-th")
+    print("Error: A + B, 84-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8f11187c
-B = -0x3ecb41b51e3c1f
-C = -0x3ecb42442f549b
+A = -0xaf85cbc0ca
+B = -0x3bcfe848e0a7936f859f92
+C = -0x3bcfe848e0a842f551605c
 if (C != A + B):
-    print("81-th")
+    print("Error: A + B, 85-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x71ca89
-B = -0x8da35f58a8599e2a7fb501
-C = -0x8da35f58a8599e2af17f8a
+A = 0xae7d143e
+B = 0x5228400ef8
+C = 0x52d6bd2336
 if (C != A + B):
-    print("82-th")
+    print("Error: A + B, 86-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd74694c03ec359
-B = -0x9961422e6069c4c7567499abf960fe
-C = -0x9961422e6069c4c82dbb2e6c382457
+A = 0x6b
+B = 0xdd01ed4f
+C = 0xdd01edba
 if (C != A + B):
-    print("83-th")
+    print("Error: A + B, 87-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdb9cd3b5898e60b10
-B = 0x28e66ed7cf3b6052821c063cb604f0
-C = 0x28e66ed7cf3b6e0c4f575ed59c1000
+A = -0x75102620
+B = -0x8589162491487a94aa
+C = -0x8589162491bd8abaca
 if (C != A + B):
-    print("84-th")
+    print("Error: A + B, 88-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x3d622125afc43cd7d251692c
-B = 0xb1ae422ea639747e75951dde5fc
-C = 0xb1b21850b89470c2431242f4f28
+A = -0x1a57ec46e130
+B = -0xa4d773c9dcea401ba99de127ad3053
+C = -0xa4d773c9dcea401ba9b83913f41183
 if (C != A + B):
-    print("85-th")
+    print("Error: A + B, 89-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe3869d67d82273c0511238
-B = 0x49371e8f1c42e672c625b060022dc5
-C = 0x49371e8fffc983da9e482420533ffd
+A = -0x971d23bd86fef5a3
+B = -0xabb9783a777281aea28418c
+C = -0xabb97843e944bd87127372f
 if (C != A + B):
-    print("86-th")
+    print("Error: A + B, 90-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7b107418b66b05b9
-B = 0x3fd6668d5ea4b17a5036cfae575d
-C = 0x3fd6668d5ea52c8ac44f86195d16
+A = 0x33c601
+B = 0xe48f3c46e18ae6c4
+C = 0xe48f3c46e1beacc5
 if (C != A + B):
-    print("87-th")
+    print("Error: A + B, 91-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1b1e1f6272bb
-B = 0x7ad361b506fb5dff80494dbef6
-C = 0x7ad361b506fb5e1a9e68b031b1
+A = 0xdb9376ba9c03000c7946aa2451
+B = 0xabdf4bb1ef677cfc258e1141e340
+C = 0xacbadf28aa037ffc320757ec0791
 if (C != A + B):
-    print("88-th")
+    print("Error: A + B, 92-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xd7b6e1
-B = -0xb77e5af803ffde89d9d1a92e0e27
-C = -0xb77e5af803ffde89d9d1aa05c508
+A = 0x9698b80f
+B = 0x4696bb749f83d7fa8f3348c8
+C = 0x4696bb749f83d7fb25cc00d7
 if (C != A + B):
-    print("89-th")
+    print("Error: A + B, 93-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x33810d0e41
-B = -0x6a86e87a9755c129f73
-C = -0x6a86e87a9a8dd1fadb4
+A = 0x9bcb7a54
+B = 0x416e8c9174
+C = 0x420a580bc8
 if (C != A + B):
-    print("90-th")
+    print("Error: A + B, 94-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x4d
-B = 0x8f2c5c4f9ad41614e05dd62d16
-C = 0x8f2c5c4f9ad41614e05dd62d63
+A = -0x9f56048a38a81f
+B = -0x3ec2b7307eb63ac0b9d45afb
+C = -0x3ec2b7307f5590c5440d031a
 if (C != A + B):
-    print("91-th")
+    print("Error: A + B, 95-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6bf099b70f
-B = 0xee496bf59667
-C = 0xeeb55c8f4d76
+A = -0xa6e80a
+B = -0x72e1f3442855e3d68ed74e
+C = -0x72e1f3442855e3d735bf58
 if (C != A + B):
-    print("92-th")
+    print("Error: A + B, 96-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x32216751
-B = -0x74a22f71b4bf4ec7
-C = -0x74a22f71e6e0b618
+A = -0xa794fd67ea
+B = -0xc01914904ff54c
+C = -0xc019bc254d5d36
 if (C != A + B):
-    print("93-th")
+    print("Error: A + B, 97-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1eb0309e1bbd13516f7f
-B = 0x3b720eff89fc8addcd7dfd296a233b
-C = 0x3b720eff8a1b3b0e6b99ba3cbb92ba
+A = 0xdd
+B = 0x340919
+C = 0x3409f6
 if (C != A + B):
-    print("94-th")
+    print("Error: A + B, 98-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x94
-B = -0x91715bb9
-C = -0x91715c4d
+A = -0x9ff1b45feed4fa229ef5b4
+B = -0x9ba09e3e0cc5b32ee1e1b80de8
+C = -0x9ba13e2fc125a203dc0457039c
 if (C != A + B):
-    print("95-th")
+    print("Error: A + B, 99-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb60144ef5eef1a662e93ce9a
-B = -0x33c18e2f13e0afc0bdf4a8347cf9
-C = -0x33c2443058d00eafd85ad6c84b93
+A = -0x7f14798c049d0584
+B = -0xd00fdb1bbde4d0996e9c
+C = -0xd0105a303770d5367420
 if (C != A + B):
-    print("96-th")
+    print("Error: A + B, 100-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe15102a8f451
-B = 0xfc36945addd5ef
-C = 0xfd17e55d86ca40
+A = -0xf041fef4
+B = -0x5fb6a1760fbad2b1
+C = -0x5fb6a176fffcd1a5
 if (C != A + B):
-    print("97-th")
+    print("Error: A + B, 101-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6b2006aaf5ee46b051
-B = 0xe8f7c3c111c4d0911aa5
-C = 0xe962e3c7bcbabed7caf6
+A = 0x35036921
+B = 0x84d7f7b890
+C = 0x850cfb21b1
 if (C != A + B):
-    print("98-th")
+    print("Error: A + B, 102-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcc1
-B = -0xe53c4f9162c3b
-C = -0xe53c4f91638fc
+A = -0xb59f8a6e409fe9e398a2712e
+B = -0x52492fc3702afbcc965cf2eeed
+C = -0x52fecf4dde6b9bb679f595601b
 if (C != A + B):
-    print("99-th")
+    print("Error: A + B, 103-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x38
-B = -0x85e8
-C = -0x8620
+A = 0x47a60e363
+B = 0xda896152a9ac6302210b9d
+C = 0xda896152a9ac677c81ef00
 if (C != A + B):
-    print("100-th")
+    print("Error: A + B, 104-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf3a619
-B = -0xfb9bdeee9e99805c2c9de8d2
-C = -0xfb9bdeee9e99805c2d918eeb
+A = -0x8f83
+B = -0x45ca5b3fb166
+C = -0x45ca5b4040e9
 if (C != A + B):
-    print("101-th")
+    print("Error: A + B, 105-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4d7d1a69887953
-B = -0x1a35a1fceb5ba0641354674011
-C = -0x1a35a1fceb5bede12dbdefb964
+A = 0x3b68
+B = 0xc0487003
+C = 0xc048ab6b
 if (C != A + B):
-    print("102-th")
+    print("Error: A + B, 106-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xaa
-B = 0x1586389d46
-C = 0x1586389df0
+A = 0x88697c2417
+B = 0x7b6631661f39
+C = 0x7bee9ae24350
 if (C != A + B):
-    print("103-th")
+    print("Error: A + B, 107-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xb57041697e
-B = -0x38d5c839fea83a1eef55
-C = -0x38d5c839ff5daa6058d3
+A = 0x98cc3e430cf83b
+B = 0x886e9e2d3fc9ab22c3133
+C = 0x886e9e36cc8d8f539296e
 if (C != A + B):
-    print("104-th")
+    print("Error: A + B, 108-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7a201c10b2e86db9
-B = 0xf7c66c49a567b051b11
-C = 0xf7ce0e4b6672ded88ca
+A = 0x467dbd
+B = 0x65806a37ea019651e7208567
+C = 0x65806a37ea019651e7670324
 if (C != A + B):
-    print("105-th")
+    print("Error: A + B, 109-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xe71730f2f5
-B = 0xc8f6e070526e5e21f3
-C = 0xc8f6e07139858f14e8
+A = 0xf006bedb7bca2a1b247
+B = 0x320012745cbcf91f78ba47
+C = 0x320f12e04a74b5c21a6c8e
 if (C != A + B):
-    print("106-th")
+    print("Error: A + B, 110-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x629bef4a79b7f75
-B = 0x675bc1856fd5e2c2eeea9b76b4e208
-C = 0x675bc1856fd5e2c918a9901e50617d
+A = 0xeda4784d873f4a
+B = 0x8a40fc54ce3b1dfe
+C = 0x8b2ea0cd1bc25d48
 if (C != A + B):
-    print("107-th")
+    print("Error: A + B, 111-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7422
-B = 0xe0c83ea83b8ff
-C = 0xe0c83ea842d21
+A = 0x9321a0
+B = 0xd5aac748f484c5b58994675c
+C = 0xd5aac748f484c5b58a2788fc
 if (C != A + B):
-    print("108-th")
+    print("Error: A + B, 112-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x4ead6d8d6b
-B = -0x254407404622fa5fc5
-C = -0x2544074094d067ed30
+A = -0x30
+B = -0xe91168f725c819a9852fdd
+C = -0xe91168f725c819a985300d
 if (C != A + B):
-    print("109-th")
+    print("Error: A + B, 113-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5ca4c99daf
-B = 0xcd45a47a943c77
-C = 0xcd46011f5dda26
+A = 0x21
+B = 0x1cbedc
+C = 0x1cbefd
 if (C != A + B):
-    print("110-th")
+    print("Error: A + B, 114-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa562f6ec0be666644a05
-B = -0xf058f5ce06d0a1dac2fbb49122
-C = -0xf058f67369c78de6a96218db27
+A = 0x3d29cc2b8c
+B = 0xd2b9a2687b748f
+C = 0xd2b9df9247a01b
 if (C != A + B):
-    print("111-th")
+    print("Error: A + B, 115-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8eb67dade4
-B = -0x638403bb6984f0704158926b9792
-C = -0x638403bb6984f07041e748e94576
+A = -0x2d38e9
+B = -0x53394cb2c9cff6a71bff22c8812a
+C = -0x53394cb2c9cff6a71bff22f5ba13
 if (C != A + B):
-    print("112-th")
+    print("Error: A + B, 116-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x69d2788a
-B = -0x4e5978342809
-C = -0x4e59e206a093
+A = 0xef00514eab
+B = 0x9d46066832ccfad0da2ccc20c1
+C = 0x9d46066832ccfad1c92d1d6f6c
 if (C != A + B):
-    print("113-th")
+    print("Error: A + B, 117-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3a90
-B = -0x569aba92
-C = -0x569af522
+A = 0xcccd64a9d4ad6a
+B = 0x132db9faac7768429c02c8ec0
+C = 0x132db9faac843518e6a013c2a
 if (C != A + B):
-    print("114-th")
+    print("Error: A + B, 118-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa7f5d5c215
-B = 0x16b8a031f02bcf
-C = 0x16b94827c5ede4
+A = -0x6b66
+B = -0x2031956a1a7a28e91914aedfba2e36
+C = -0x2031956a1a7a28e91914aedfba999c
 if (C != A + B):
-    print("115-th")
+    print("Error: A + B, 119-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xa4f32a
-B = -0x99a3739d158e83e129b791518021be
-C = -0x99a3739d158e83e129b791522514e8
+A = -0xf9d9d65137ec
+B = -0x3ad39e7da3a30ef2156
+C = -0x3ad39e8d41407405942
 if (C != A + B):
-    print("116-th")
+    print("Error: A + B, 120-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb30018
-B = 0xff1ca8e86de7c3d94174c3708807fa
-C = 0xff1ca8e86de7c3d94174c3713b0812
+A = 0xfce8d7769b79
+B = 0x78a9286342f427840146f44832
+C = 0x78a9286342f42880ea1e6ae3ab
 if (C != A + B):
-    print("117-th")
+    print("Error: A + B, 121-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7af6
-B = 0x93f856
-C = 0x94734c
+A = 0x863d
+B = 0x7720663df7c930
+C = 0x7720663df84f6d
 if (C != A + B):
-    print("118-th")
+    print("Error: A + B, 122-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x5daa07f9bef0a1d0
-B = 0xf2461f1ccc0f707e8f49
-C = 0xf2467cc6d4092f6f3119
+A = -0xf748fb4c3c2adb94a8d5
+B = -0xa39efe33f480581dab49bfca85
+C = -0xa39eff2b3d7ba459d62554735a
 if (C != A + B):
-    print("119-th")
+    print("Error: A + B, 123-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x8e
-B = 0x64b8839cba45665fe338
-C = 0x64b8839cba45665fe3c6
+A = -0x24007a6b67b1a014972a9e
+B = -0xb1e4fcf2996ccc4af6a65714
+C = -0xb208fd6d04d47deb0b3d81b2
 if (C != A + B):
-    print("120-th")
+    print("Error: A + B, 124-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xc64f0d80991328334428
-B = -0xf754b44cb3cb07d4cca6a72f888dd9
-C = -0xf754b44cb49156e24d3fba57bbd201
+A = 0xf6
+B = 0xfb9d26fd5
+C = 0xfb9d270cb
 if (C != A + B):
-    print("121-th")
+    print("Error: A + B, 125-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x1110f2eb937c
-B = -0x8dae19fc49b3045a01564e44059eda
-C = -0x8dae19fc49b3045a01675f36f13256
+A = 0xbe0f9b64893e0b9c95
+B = 0x4ce5adafd5ecd3254e435899f5fe
+C = 0x4ce5adafd6aae2c0b2cc96a59293
 if (C != A + B):
-    print("122-th")
+    print("Error: A + B, 126-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x36ac20
-B = 0x41c50bd21958a6b9f31951d2e6
-C = 0x41c50bd21958a6b9f319887f06
+A = -0x3a4c6f266cfd6e8184
+B = -0x41755d08213197d5b019e4
+C = -0x41759754905804d31e9b68
 if (C != A + B):
-    print("123-th")
+    print("Error: A + B, 127-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x3b
-B = -0x1f2cec5a952a
-C = -0x1f2cec5a9565
+A = 0x14ad97f3aada5fe4d5
+B = 0x3596e31395ca74423347aa
+C = 0x3596f7c12dbe1f1c932c7f
 if (C != A + B):
-    print("124-th")
+    print("Error: A + B, 128-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xcfa7d88d81d0075e46
-B = -0x8090ba7406afb548bd1ea86beea461
-C = -0x8090ba7406b084f095ac2a3bf602a7
+A = 0xed8
+B = 0x738e4e85f447c1
+C = 0x738e4e85f45699
 if (C != A + B):
-    print("125-th")
+    print("Error: A + B, 129-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6764
-B = -0x48b862dec05ada7bb9
-C = -0x48b862dec05adae31d
+A = 0xb1
+B = 0xc5f6c1e70ab64b4c75913e4b64
+C = 0xc5f6c1e70ab64b4c75913e4c15
 if (C != A + B):
-    print("126-th")
+    print("Error: A + B, 130-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xeda8a7c56cc4
-B = 0x47f0f26f2eb10d543efadf35e3e4
-C = 0x47f0f26f2eb10d552ca386fb50a8
+A = 0xe69ebb9eca831d5ea1
+B = 0x9b45986efa4de0556a01aa76da0687
+C = 0x9b45986efa4ec6f425a074f9f76528
 if (C != A + B):
-    print("127-th")
+    print("Error: A + B, 131-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x243553ced647c2
-B = -0x57e77b25d664ee613a4fba
-C = -0x57e77b25fa9a423010977c
+A = 0x90ed
+B = 0x169c7f6d059364bde2eeaf7f423a
+C = 0x169c7f6d059364bde2eeaf7fd327
 if (C != A + B):
-    print("128-th")
+    print("Error: A + B, 132-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x26
-B = -0x9ae3310c5a275c15aa
-C = -0x9ae3310c5a275c15d0
+A = -0x3f
+B = -0x830b736a01345fab60faf5cd211f
+C = -0x830b736a01345fab60faf5cd215e
 if (C != A + B):
-    print("129-th")
+    print("Error: A + B, 133-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x942d40
-B = -0x1f581508a58422b2f601ee34
-C = -0x1f581508a58422b2f6961b74
+A = -0x74e2c341941926
+B = -0x3498659ea6906f77a2a5105f
+C = -0x3498659ea705523ae4392985
 if (C != A + B):
-    print("130-th")
+    print("Error: A + B, 134-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x17
-B = 0xbfe312
-C = 0xbfe329
+A = -0xc751b8948a7412
+B = -0xfd926729923eee7c9e8b6f6e8780
+C = -0xfd926729923eef43f04403f8fb92
 if (C != A + B):
-    print("131-th")
+    print("Error: A + B, 135-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x7d
-B = 0x6130b766
-C = 0x6130b7e3
+A = 0x8304
+B = 0x80da9f48a315073
+C = 0x80da9f48a31d377
 if (C != A + B):
-    print("132-th")
+    print("Error: A + B, 136-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x26abf6
-B = -0xc9140a0bd8e7fd96fabd16
-C = -0xc9140a0bd8e7fd9721690c
+A = -0x613494c8
+B = -0x240baa3a03d6bd
+C = -0x240baa9b386b85
 if (C != A + B):
-    print("133-th")
+    print("Error: A + B, 137-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x82
-B = -0xf4f96ce672
-C = -0xf4f96ce6f4
+A = -0xe8d5b8d04f92c6c5c19527
+B = -0xd35dadb76c3ccd665e68a1a430
+C = -0xd35e968d250d1cf9252e633957
 if (C != A + B):
-    print("134-th")
+    print("Error: A + B, 138-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x8f96357b46da32eb45
-B = -0xa66036757a101cd394a6
-C = -0xa6efccaaf556f7067feb
+A = 0x5a3009f6fc5f26
+B = 0xcf2c523f139057d409
+C = 0xcf2cac6f1d8754332f
 if (C != A + B):
-    print("135-th")
+    print("Error: A + B, 139-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x70ab27352a39
-B = -0x85ebad94a35db315b094a9
-C = -0x85ebad94a3ce5e3ce5bee2
+A = 0xbce102ba5d2ec640
+B = 0x7db9152e867f171a76
+C = 0x7e75f63140dc45e0b6
 if (C != A + B):
-    print("136-th")
+    print("Error: A + B, 140-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9abf
-B = 0x954333a1109d6d8bdeacafcc352365
-C = 0x954333a1109d6d8bdeacafcc35be24
+A = -0x3f
+B = -0xb217
+C = -0xb256
 if (C != A + B):
-    print("137-th")
+    print("Error: A + B, 141-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x230ebcc3a32b
-B = -0x213226225a4a6
-C = -0x236311ee947d1
+A = 0x5fc6
+B = 0x4c7d7faaf1fd135fa0
+C = 0x4c7d7faaf1fd13bf66
 if (C != A + B):
-    print("138-th")
+    print("Error: A + B, 142-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6c
-B = -0xebd4fd93
-C = -0xebd4fdff
+A = 0x57f0f8c9
+B = 0x9a1987e508761a9b59fdc9b3d72d
+C = 0x9a1987e508761a9b59fe21a4cff6
 if (C != A + B):
-    print("139-th")
+    print("Error: A + B, 143-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x1d43e5f590
-B = 0xc168bc4119be376610
-C = 0xc168bc4137021d5ba0
+A = 0xe714b8a6a2420d9d1f
+B = 0xcb2535cc1fbd2ba92bbeb3bc387f15
+C = 0xcb2535cc1fbe12bde46555fe461c34
 if (C != A + B):
-    print("140-th")
+    print("Error: A + B, 144-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x947d66dc28f0f4
-B = -0x5b80953b4b160604b5476407171888
-C = -0x5b80953b4b16060549c4cae340097c
+A = 0x1c0ee801d5a8897b
+B = 0x7c3f4d655fde00013480bc493bc9
+C = 0x7c3f4d655fde1c101c8291f1c544
 if (C != A + B):
-    print("141-th")
+    print("Error: A + B, 145-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfcda93
-B = 0x9993a3761cf5ad
-C = 0x9993a37719d040
+A = -0x56f8c1aa98
+B = -0x172a593a8814c8
+C = -0x172ab03349bf60
 if (C != A + B):
-    print("142-th")
+    print("Error: A + B, 146-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x55288f1fe88614e5cba0
-B = 0x12d69d643ba77008342584fdbf80
-C = 0x12d69d6490cfff281cab99e38b20
+A = -0x17e010d7a0
+B = -0xf8099dfe39b4255ecd51ab
+C = -0xf8099dfe39b43d3ede294b
 if (C != A + B):
-    print("143-th")
+    print("Error: A + B, 147-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x80
-B = -0x843648eede
-C = -0x843648ef5e
+A = 0xb836c485f05a5767836656
+B = 0xb8f45f390f795e9f6dac7aeb
+C = 0xb9ac95fd9569b8f6d52fe141
 if (C != A + B):
-    print("144-th")
+    print("Error: A + B, 148-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xb9434dadd87ea52695
-B = 0xb296adc04d3de0229a616c3cd202c3
-C = 0xb296adc04d3e9965e80f44bb772958
+A = 0x978c848adeefb67c2b12d734
+B = 0xc23ed282ffd31876117651fb55a8
+C = 0xc23f6a0f845df765c7f27d0e2cdc
 if (C != A + B):
-    print("145-th")
+    print("Error: A + B, 149-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xdd35842b6e3f
-B = 0x7b643ed9b1d95f6bca
-C = 0x7b643fb6e75d8ada09
+A = 0x4f0d8eb1e05bf01663e5
+B = 0x5315a1f00df27d8e8cdd856
+C = 0x531a92c8f910834d8e43c3b
 if (C != A + B):
-    print("146-th")
+    print("Error: A + B, 150-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x6bd056b85
-B = 0x989eb3d6c83812
-C = 0x989eba93cda397
+A = -0x7840
+B = -0x9c024483
+C = -0x9c02bcc3
 if (C != A + B):
-    print("147-th")
+    print("Error: A + B, 151-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xf162ca
-B = -0x2c04793bd9fc02e1c83aeb
-C = -0x2c04793bd9fc02e2b99db5
+A = -0x2dadbdd8f0d0697580abf33319
+B = -0x57bfc852888a0e07b68c13c154b82
+C = -0x57c2a32e66191b0e4de41e8087e9b
 if (C != A + B):
-    print("148-th")
+    print("Error: A + B, 152-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xfebf76ca25fff42d1de
-B = 0xca7a336df1eea2bdc250c8f12ced12
-C = 0xca7a336df1fe8eb52ef328f06fbef0
+A = 0x63227c79
+B = 0x7f992f773d7aebf8
+C = 0x7f992f77a09d6871
 if (C != A + B):
-    print("149-th")
+    print("Error: A + B, 153-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x690e
-B = -0xa6ffd66157f0d370
-C = -0xa6ffd66157f13c7e
+A = -0xa93746844759c7
+B = -0x3ac5820e4049f0da05a37887f897e
+C = -0x3ac5820e4049f0e49917e0cc6e345
 if (C != A + B):
-    print("150-th")
+    print("Error: A + B, 154-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x86950097
-B = 0x46b5bad48a23f62c
-C = 0x46b5bad510b8f6c3
+A = 0xcb
+B = 0xfe6bd9c18e26180f36f50d05
+C = 0xfe6bd9c18e26180f36f50dd0
 if (C != A + B):
-    print("151-th")
+    print("Error: A + B, 155-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x30
-B = 0xd7583c203b00910a4f02dcc1975737
-C = 0xd7583c203b00910a4f02dcc1975767
+A = -0x38dd9a3db8c9
+B = -0x89d2d23a4291dc0ed4
+C = -0x89d2d273202c19c79d
 if (C != A + B):
-    print("152-th")
+    print("Error: A + B, 156-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x6208d65b82
-B = -0x8729bf8da7f7
-C = -0x878bc8640379
+A = -0xb1dcee01ad618a
+B = -0x1cfb665c63bd885787c38c
+C = -0x1cfb665d159a7659352516
 if (C != A + B):
-    print("153-th")
+    print("Error: A + B, 157-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xfd7f
-B = -0x3abf87032ab4cb5a87a0599b7dbf
-C = -0x3abf87032ab4cb5a87a0599c7b3e
+A = 0x220ac0
+B = 0x8402a50f50b54c09212eb0
+C = 0x8402a50f50b54c09433970
 if (C != A + B):
-    print("154-th")
+    print("Error: A + B, 158-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x216c52a6
-B = -0x82a94bac34b2e036
-C = -0x82a94bac561f32dc
+A = 0xe744fddaa5a2
+B = 0x1f94165e5cb2556e
+C = 0x1f94fda35a8cfb10
 if (C != A + B):
-    print("155-th")
+    print("Error: A + B, 159-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0x962a
-B = -0xa30f3497070a8f68f4fb1e
-C = -0xa30f3497070a8f68f59148
+A = 0x8b1396f68ab4
+B = 0x8fbb74f1a4cd3fbc96f1
+C = 0x8fbb74f22fe0d6b321a5
 if (C != A + B):
-    print("156-th")
+    print("Error: A + B, 160-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x86044f5904345c
-B = 0xcf16cc0acd0d93cab4bc
-C = 0xcf16cc90d15ceccee918
+A = -0x83
+B = -0x851a
+C = -0x859d
 if (C != A + B):
-    print("157-th")
+    print("Error: A + B, 161-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xda63bbef80f8ceb6
-B = 0x19016e2d00e8ce00ca0ce4c5
-C = 0x19016e2ddb4c89f04b05b37b
+A = 0xf94d6aab
+B = 0x63dcf0d9514e68d48b77
+C = 0x63dcf0d9514f6221f622
 if (C != A + B):
-    print("158-th")
+    print("Error: A + B, 162-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = -0xe23aaec8256b04
-B = -0x52b00637022988f4
-C = -0x539240e5ca4ef3f8
+A = -0x17da9d73cb
+B = -0x4c18a02837c10b13db7c09
+C = -0x4c18a02837c122ee78efd4
 if (C != A + B):
-    print("159-th")
+    print("Error: A + B, 163-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0x9dafed64
-B = 0xd418ec232138145d3035348f05
-C = 0xd418ec232138145d30d2e47c69
+A = -0x9d1721e1073e4
+B = -0x12d5b88a0bd4b16b93
+C = -0x12d5c25b7df2c1df77
 if (C != A + B):
-    print("160-th")
+    print("Error: A + B, 164-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))
     print("A + B = {}".format(hex(A+B)))
     cnt = cnt + 1
-A = 0xa75b
-B = 0x799bb02c5e0014f5f89
-C = 0x799bb02c5e0015006e4
+A = 0x797d54e99cfa7edfedf7e1
+B = 0xa309f9c996b7f08b670e0350d2877e
+C = 0xa309f9ca1035457504088230c07f5f
 if (C != A + B):
-    print("161-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0x948e8198154b
-B = -0xd17be207802e79
-C = -0xd21070891843c4
-if (C != A + B):
-    print("162-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xbd
-B = -0x4e711f4988
-C = -0x4e711f4a45
-if (C != A + B):
-    print("163-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = -0xc6cc8a5a7b9c36b8770fef3d
-B = -0xc0df2e8bc12d5f700173684cc9915
-C = -0xc0df3af889d30729c4deefbdc8852
-if (C != A + B):
-    print("164-th")
-    print("A = {}".format(hex(A)))
-    print("B = {}".format(hex(B)))
-    print("C = {}".format(hex(C)))
-    print("A + B = {}".format(hex(A+B)))
-    cnt = cnt + 1
-A = 0x262121798715b0f8862935e1
-B = 0x537db381a4e205591dd3e8ecd8
-C = 0x53a3d4a31e691b0a165a1222b9
-if (C != A + B):
-    print("165-th")
+    print("Error: A + B, 165-th")
     print("A = {}".format(hex(A)))
     print("B = {}".format(hex(B)))
     print("C = {}".format(hex(C)))

@@ -1,24 +1,83 @@
 #include "bi.h"
 #include "bi_op.h"
 
-word pow2(int a)
+int bi_bit_cnt(bigint *A)
 {
-    word x = 1;
-    return (x << a);
+    if (A->wordlen < 1)
+        return -1; /* error */
+
+    int t = bitlen(A->a[A->wordlen - 1]);    /* t =  A의 최상위워드의 비트 길이 */
+    int bitlen_A = w * (A->wordlen - 1) + t; /* bitlen(A) = (w * wordlen(A)) + t */
+    return bitlen_A;
 }
 
-int bitlen(word a)
-{
-    word cnt = 0;
+// word bi_get_j_bit(bigint *A, int j)
+// {
+//     int n = A->wordlen;
+//     // len: A의 비트길이
+//     int len = 0;
+//     if (j > n * w)
+//     {
+//         printf("찾고자 하는 j번째 비트가 A의 비트길이를 벗어납니다.\n");
+//         return -1;
+//     }
 
-    do
+//     if (n == 1)
+//         len = bitlen(A->a[0]);
+//     else
+//         len = (n - 1) * w + bitlen(A->a[n - 1]);
+
+//     int q = j / w;
+//     int r = j % w;
+
+//     word t = (A->a[q] >> r) & 0x1;
+
+//     return t;
+// }
+
+void bi_XOR(bigint **C, bigint *A, bigint *B)
+{
+    if (A->wordlen <= B->wordlen)
+        bi_resize(&A, B->wordlen);
+    else
+        bi_resize(&B, A->wordlen);
+    bi_new(C, A->wordlen);
+    for (int j = 0; j < A->wordlen; j++)
     {
-        a = a >> 1;
-        cnt++;
-    } while (a > 0);
+        // check;
+        (*C)->a[j] = A->a[j] ^ B->a[j];
+    }
 
-    return cnt;
+    bi_refine(*C);
+
+    bi_refine(A);
+    bi_refine(B);
 }
+
+void bi_xor_asg(IN OUT bigint **C, IN bigint *A)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C);
+
+    if (A->wordlen < T->wordlen)
+        bi_resize(&A, T->wordlen);
+    else
+        bi_resize(&T, A->wordlen);
+
+    bi_new(C, A->wordlen);
+
+    for (int j = 0; j < A->wordlen; j++)
+    {
+        // check;
+        (*C)->a[j] = A->a[j] ^ T->a[j];
+    }
+
+    bi_refine(*C);
+    bi_refine(A);
+
+    bi_delete(&T);
+}
+
 void bi_word_lshift(OUT bigint **A, IN int x)
 {
     if (bi_is_zero(*A) == true)

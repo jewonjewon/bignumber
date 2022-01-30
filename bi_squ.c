@@ -28,10 +28,9 @@ void bi_SQU_A(OUT bigint **C, word A)
     bi_new(&T, 2);
 
     bi_MUL_AB(&T, A0, A1);
-
     bi_lshift(&T, w / 2 + 1);
+    bi_addc_asg(C, T);
 
-    bi_ADDC(C, *C, T);
     bi_delete(&T);
 }
 
@@ -45,36 +44,37 @@ void bi_SQU_A(OUT bigint **C, word A)
 void bi_SQUC(OUT bigint **C, IN bigint *A)
 {
     // bi_new(C, 2 * A->wordlen);
+    int n = A->wordlen; /* n is wordlen(A) */
 
+    bigint *C0 = NULL;
     bigint *C1 = NULL;
-    bigint *C2 = NULL;
 
-    bi_new(&C1, 1);
-    bi_new(&C2, 1);
+    bi_set_zero(&C0);
+    bi_set_zero(&C1);
 
+    bigint *T0 = NULL;
     bigint *T1 = NULL;
-    bigint *T2 = NULL;
 
-    for (int j = 0; j < A->wordlen; j++)
+    for (int j = 0; j < n; j++)
     {
-        bi_SQU_A(&T1, A->a[j]);
-        bi_word_lshift(&T1, 2 * j);
-        bi_ADDC(&C1, T1, C1);
+        bi_SQU_A(&T0, A->a[j]);
+        bi_word_lshift(&T0, 2 * j); /* T0 <<= 2jw  */
+        bi_addc_asg(&C0, T0);       /* C0 += T0 */
 
-        for (int i = j + 1; i < A->wordlen; i++)
+        for (int i = j + 1; i < n; i++)
         {
-            bi_MUL_AB(&T2, A->a[j], A->a[i]);
-            bi_word_lshift(&T2, i + j);
-            bi_ADD(&C2, C2, T2);
+            bi_MUL_AB(&T1, A->a[j], A->a[i]);
+            bi_word_lshift(&T1, i + j); /* T1 <<= 2jw  */
+            bi_addc_asg(&C1, T1);       /* C1 += T1 */
         }
     }
-    bi_lshift(&C2, 1);
-    bi_ADD(C, C1, C2);
+    bi_lshift(&C1, 1);
+    bi_ADD(C, C0, C1);
 
+    bi_delete(&C0);
     bi_delete(&C1);
-    bi_delete(&C2);
+    bi_delete(&T0);
     bi_delete(&T1);
-    bi_delete(&T2);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -98,19 +98,12 @@ void bi_SQU(OUT bigint **C, IN bigint *A)
     bi_SQUC(C, A);
 }
 
-void bi_SQU_assign(OUT bigint **C)
+void bi_squ_asg(OUT bigint **C)
 {
     bigint *T = NULL;
-    bi_assign(&T, *C);
-    // Case 1: A = 0 or A = 1 or A = -1
-    if (bi_is_zero(T) == true or bi_is_one(T) == true or bi_is_minus_one(T) == true)
-    {
-        bi_abs(*C);
-        return;
-    }
 
-    // Case 2: Otherwise
-    bi_SQUC(C, T);
+    bi_assign(&T, *C);
+    bi_SQU(C, T);
 
     bi_delete(&T);
 }
@@ -119,7 +112,8 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
 {
     int sign_A = A->sign;
 
-    int flag = 5;
+    int flag = 3;
+
     if (flag >= A->wordlen)
     {
         bi_SQUC(C, A);
@@ -148,8 +142,7 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
 
     bi_assign(&R, T1);
     bi_word_lshift(&R, 2 * l);
-    bi_ADD(&R, R, T0);
-    // bi_concatenation(&R, T1, T0);
+    bi_add_asg(&R, T0);
 
     bigint *S = NULL;
     bi_MULC_karatsuba(&S, A1, A0);
@@ -178,4 +171,14 @@ void bi_KSQU(OUT bigint **C, IN bigint *A)
 
     // Case 2: Otherwise
     bi_SQUC_karatsuba(C, A);
+}
+
+void bi_ksqu_asg(OUT bigint **C)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C);
+
+    bi_KSQU(C, T);
+
+    bi_delete(&T);
 }

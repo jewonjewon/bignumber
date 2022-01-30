@@ -1,0 +1,33 @@
+#ifndef __BENCHMARK_H__
+#define __BENCHMARK_H__
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stdbool.h>
+
+#include "bi.h"
+#include "bi_op.h"
+#include "bi_test.h"
+
+void bench_bi_ADD(IN int TEST);
+
+void bench_ADD();
+
+/* == == == == == BENCHMARKING MUL == == == == == */
+void bench_bi_MUL(IN int TEST, int len);
+void bench_bi_KMUL(IN int TEST, int len);
+void bench_bi_check_KMUL(IN int TEST, int FLAG);
+void bi_check_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B, int FLAG);
+void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLAG);
+
+void bench_MUL();
+
+void bench_bi_long_div_bin(IN int TEST);
+void bench_bi_DIV(IN int TEST);
+void bench_DIV();
+
+void bench_lshift();
+
+#endif

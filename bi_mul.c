@@ -10,7 +10,6 @@
 //  bi_MUL_AB(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
 void bi_MUL_AB(OUT bigint **C, IN word A, IN word B)
 {
-    // 이 부분 new 해줘도 안해줘도 둘다 컴파일 되는데 어떤거 쓰는지 궁금
     bi_new(C, 2);
 
     // A1, B1 = A, B의 상위 w/2비트
@@ -50,27 +49,19 @@ void bi_MUL_AB(OUT bigint **C, IN word A, IN word B)
 // bi_MULC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
 void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    bi_new(C, A->wordlen + B->wordlen);
+    bi_set_zero(C);
+
+    int n = A->wordlen; /* n is wordlen(A) */
+    int m = B->wordlen; /* m is wordlen(B) */
+
     bigint *T = NULL;
 
-    for (int j = 0; j < A->wordlen; j++)
-        for (int i = 0; i < B->wordlen; i++)
+    for (int j = 0; j < n; j++)
+        for (int i = 0; i < m; i++)
         {
-            // bi_resize 함수 안쓰고 ADD 함수로 대체하는 방법도 있음 어느것을 쓸지 고민 중
-            bi_resize(C, A->wordlen + B->wordlen);
-            bi_new(&T, 2);
-
             bi_MUL_AB(&T, A->a[j], B->a[i]);
-            // printf("1. T = ");
-            // bi_print(T);
-
-            bi_word_lshift(&T, i + j);
-            // printf("2. T = ");
-            // bi_print(T);
-
-            bi_ADDC(C, *C, T);
-            // printf("3. C = ");
-            // bi_print(*C);
+            bi_word_lshift(&T, i + j); /*T ← T << (i+j)w */
+            bi_addc_asg(C, T);         /* C += T */
         }
 
     bi_delete(&T);
@@ -130,62 +121,21 @@ void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
     (*C)->sign = t1 ^ t0;
 }
 
-// bi_MUL_assign(출력: bigint형 배열, 입력: 임의의 정수) → C *= A
-void bi_MUL_assign(IN OUT bigint **C, IN bigint *A)
+// bi_mul_asg(출력: bigint형 배열, 입력: 임의의 정수) → C *= A
+void bi_mul_asg(IN OUT bigint **C, IN bigint *A)
 {
     bigint *T = NULL;
-    bi_assign(&T, *C);
+    bi_assign(&T, *C); /* T ← C */
 
-    // Case 1: A = 0 or C = 0 then C = 0
-    if (bi_is_zero(A) == true or bi_is_zero(T) == true)
-    {
-        bi_set_zero(C);
-        return;
-    }
-
-    // Case 2: A = 1 then C = 1 * C
-    if (bi_is_one(A) == true)
-    {
-        bi_assign(C, T);
-        return;
-    }
-    // Case 3: A = -1 then C = -(1) * T
-    else if (bi_is_minus_one(A) == true)
-    {
-        bi_assign(C, T);
-        (*C)->sign = NEGATIVE;
-        return;
-    }
-    // Case 4: T = 1 then C = 1 * A
-    if (bi_is_one(T) == true)
-    {
-        bi_assign(C, A);
-        return;
-    }
-    // Case 5: T = -1 then C = -(1) * A
-    else if (bi_is_minus_one(T) == true)
-    {
-        bi_assign(C, A);
-        (*C)->sign = NEGATIVE;
-        return;
-    }
-    // Case 6: Otherwise
-    int t1 = A->sign;
-    int t0 = T->sign;
-
-    bi_abs(A);
-    bi_abs(T);
-    bi_MULC(C, A, T);
-    A->sign = t1;
-    T->sign = t0;
-    (*C)->sign = t1 ^ t0;
+    bi_MUL(C, T, A);
 
     bi_delete(&T);
 }
 
 void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    int flag = 5;
+
+    int flag = 3; /* flag = 3일 때 가장 빠름 */
 
     if (flag >= bi_min(A->wordlen, B->wordlen))
     {
@@ -236,8 +186,7 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
 
     bi_assign(&R, T1);
     bi_word_lshift(&R, 2 * l);
-    bi_ADD(&R, R, T0);
-    // bi_concatenation(&R, T1, T0);
+    bi_add_asg(&R, T0);
 
     bigint *S1 = NULL;
     bigint *S0 = NULL;
@@ -278,41 +227,12 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     // printf("#1.   S = ");
     // bi_print(S);
     // newline;
+    bi_add_asg(&S, T1);    /* S += T1 */
+    bi_add_asg(&S, T0);    /* S += T0 */
+    bi_word_lshift(&S, l); /* R <<= l*w */
+    bi_add_asg(&R, S);     /* R += S */
 
-    bi_ADD(&S, S, T1);
-
-    //
-    // printf("# T1 = ");
-    // bi_print(T1);
-
-    // printf("#2.   S = ");
-    // bi_print(S);
-    // newline;
-
-    bi_ADD(&S, S, T0);
-
-    //
-    // printf("#3.   S = ");
-    // bi_print(S);
-    // newline;
-
-    bi_word_lshift(&S, l);
-
-    //
-    // printf("#4.   S = ");
-    // bi_print(S);
-    // newline;
-
-    bi_ADD(&R, R, S);
-    // 함수를 두개 만들기
-    // z = x + y, z = z + x
-
-    //
-    // printf("#  R = ");
-    // bi_print(R);
-    // newline;
-
-    bi_assign(C, R);
+    bi_assign(C, R); /* Return C(= R)  */
 
     bi_delete(&A1);
     bi_delete(&A0);
@@ -376,4 +296,15 @@ void bi_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B)
     A->sign = t1;
     B->sign = t0;
     (*C)->sign = t1 ^ t0;
+}
+
+// bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_kmul_asg(OUT bigint **C, IN bigint *A)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C);
+
+    bi_KMUL(C, T, A);
+
+    bi_delete(&T);
 }

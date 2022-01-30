@@ -55,6 +55,7 @@ void bi_new(IN OUT bigint **A, IN int wordlen);
 void bi_refine(bigint *A);
 void bi_assign(IN OUT bigint **y, IN bigint *x);
 void bi_resize(IN OUT bigint **A, IN int wordlen);
+
 void bi_init(IN OUT bigint **A);
 
 void bi_print(bigint *A);
@@ -75,9 +76,8 @@ int bi_cmp(IN bigint *A, IN bigint *B);
 void bi_abs(IN bigint *A);
 void bi_flip_sign(IN bigint *A);
 
+// 다른 곳에 두기
 int bi_min(IN int a, IN int b);
 int bi_max(IN int a, IN int b);
-
-void bi_concatenation(bigint **C, bigint *A, bigint *B);
 
 #endif

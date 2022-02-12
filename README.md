@@ -9,11 +9,11 @@
 - [x] Schoolbook 곱셈
 - [x] Schoolbook 제곱
 - [x] Karatsuba 곱셈
-- [ ] Karatsuba 제곱
-- [ ] 워드 단위 긴 나눗셈
-- [ ] 이진 긴 나눗셈
-- [ ] Left-To-Right binary Method
-- [ ] Right-To-Left binary Method
+- [x] Karatsuba 제곱
+- [x] 워드 단위 긴 나눗셈
+- [x] 이진 긴 나눗셈
+- [x] Left-To-Right binary Method
+- [x] Right-To-Left binary Method
 - [ ] Montgomery Ladder Method
 
 2. 검증 함수
@@ -23,11 +23,11 @@
 - [x] Schoolbook 곱셈
 - [x] Schoolbook 제곱
 - [x] Karatsuba 곱셈
-- [ ] Karatsuba 제곱
-- [ ] 워드 단위 긴 나눗셈
-- [ ] 이진 긴 나눗셈
-- [ ] Left-To-Right binary Method
-- [ ] Right-To-Left binary Method
+- [x] Karatsuba 제곱
+- [x] 워드 단위 긴 나눗셈
+- [x] 이진 긴 나눗셈
+- [x] Left-To-Right binary Method
+- [x] Right-To-Left binary Method
 - [ ] Montgomery Ladder Method
 
 3. 암호

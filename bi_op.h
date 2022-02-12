@@ -10,6 +10,7 @@ word pow2(int a);
 
 int bitlen(word a);
 int bi_bit_cnt(bigint *A);
+int bi_get_j_bit(bigint *A, int n);
 
 /* LOGICAL OPERATION */
 void bi_word_lshift(IN OUT bigint **A, IN int x);
@@ -21,6 +22,7 @@ void bi_word_rshift(OUT bigint **A, IN int x);
 void bi_rshift(OUT bigint **A, IN int x);
 
 void bi_word_reduction(OUT bigint **A, IN int r);
+void bi_red(OUT bigint **A, IN int x);
 
 int bi_get_j_bit(bigint *A, int n);
 
@@ -29,6 +31,8 @@ int bi_get_j_bit(bigint *A, int n);
 /* XOR */
 void bi_XOR(bigint **C, bigint *A, bigint *B);
 void bi_xor_asg(IN OUT bigint **C, IN bigint *A);
+
+void bi_or_asg(IN OUT bigint **C, IN bigint *A);
 
 /* ARITHMETIC OPERATION */
 void bi_ADD_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c);
@@ -45,6 +49,10 @@ void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B);
 void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 void bi_sub_asg(IN OUT bigint **C, IN bigint *A);
+
+void bi_sub_minus_one(bigint **A);
+
+void bi_sub_minus_a(IN OUT bigint **A, IN word a);
 
 /* MULTIPLICATION */
 void bi_MUL_AB(OUT bigint **C, IN word A, IN word B);
@@ -78,26 +86,34 @@ void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B);
 
 void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B);
 
-/* EXPONENTIATION */
-// 지수도 bigint로 처리
-void bi_l2r(bigint **C, bigint *x, bigint *n);
-void bi_r2l(bigint **C, bigint *A, int n);
-void bi_mns(bigint **C, bigint *A, int n);
-
 void bi_mod_asg(OUT bigint **R, IN bigint *A);
 void bi_div_asg(OUT bigint **Q, IN bigint *A);
 
+/* 임의의 정수 A와 B를 입력받아 !!몫(=Q)!!만 반환하는 나눗셈 함수 */
+void bi_div_q(OUT bigint **Q, IN bigint *A, IN bigint *B);
+void bi_div_r(OUT bigint **R, IN bigint *A, IN bigint *B);
+
+/* EXPONENTIATION */
+void bi_l2r(OUT bigint **C, IN bigint *A, IN bigint *n);
+void bi_r2l(OUT bigint **C, IN bigint *A, IN bigint *n);
+void bi_mns(OUT bigint **C, IN bigint *A, IN bigint *n);
+
 /* MODULAR EXPONENTIATION */
-void bi_mod_l2r(OUT bigint **C, IN bigint *A, IN int n, IN bigint *M);
+void bi_mod_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M);
+void bi_mod_r2l(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M);
+void bi_mod_mns(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M);
+
+void bi_mod_l2r_asg(OUT bigint **C, IN bigint *n, IN bigint *M);
 
 /* GCD ALG.*/
-// 유클리드 함수도 구현
-void bi_gcd_bin(bigint **C, bigint *A, bigint *B); /* binary euclide algoritm */
-
+void bi_ea_rcs(bigint **C, bigint *A, bigint *B);
+void bi_ea_itr(bigint **C, bigint *A, bigint *B);
+void bi_ea_bin_itr(bigint **C, bigint *A, bigint *B); /* Use binary euclide algoritm iterative ver. */
+void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B);
 /* XGCD ALG.*/
-void bi_eea_itr(OUT bigint **C, IN bigint *A, IN bigint *B); /* extended euclide algoritm (iteration ver.) */
-
-// void bi_xgcd_bin(bigint **C, bigint *A, bigint *B);
+void bi_eea_itr(OUT bigint **C, IN bigint *A, IN bigint *B);     /* extended euclide algoritm (iteration ver.) */
+void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B); /* binary extended euclide algoritm (iteration ver.) */
+void bi_eea_rcs(bigint **d, bigint **alpha, bigint **beta, bigint *a, bigint *b);
 
 void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R, IN bigint *N);
 

@@ -30,4 +30,10 @@ void bench_DIV();
 
 void bench_lshift();
 
+void bench_bi_gcd(IN int TEST, void (*func)(bigint **, bigint *, bigint *));
+void bench_gcd();
+
+void bench_bi_prime(IN int TEST, int (*func)(bigint *n, int k));
+void bench_prime();
+
 #endif

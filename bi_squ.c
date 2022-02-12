@@ -175,6 +175,7 @@ void bi_KSQU(OUT bigint **C, IN bigint *A)
 
 void bi_ksqu_asg(OUT bigint **C)
 {
+
     bigint *T = NULL;
     bi_assign(&T, *C);
 

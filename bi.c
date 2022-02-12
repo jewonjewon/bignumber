@@ -118,28 +118,8 @@ void bi_print(bigint *A)
             printf("%02x", A->a[j]);
     }
 #endif
+    // printf(", ");
     printf("\n");
-}
-
-void arr_rand(word *dst, IN int wordlen)
-{
-    unsigned char *p = (unsigned char *)dst;
-    int cnt = wordlen * sizeof(word);
-    while (cnt > 0)
-    {
-        *p = rand() & 0xff;
-        p++;
-        cnt--;
-    }
-}
-// bi_gen_rand()
-void bi_gen_rand(OUT bigint **A, IN int sign, IN int wordlen)
-{
-    bi_new(A, wordlen);
-    (*A)->sign = sign;
-    arr_rand((*A)->a, wordlen);
-
-    bi_refine(*A);
 }
 
 // 입력 배열을 1로 만드는 함수
@@ -189,6 +169,26 @@ int bi_is_one(IN bigint *A)
         if (A->a[j] != 0)
             return false;
     return true;
+}
+
+int bi_is_two(IN bigint *A)
+{
+    // Case: A < 0 or A[0] != 2
+    if (A->sign == NEGATIVE or A->a[0] != 2)
+        return false;
+
+    for (int j = A->wordlen - 1; j > 0; j--)
+        if (A->a[j] != 0)
+            return false;
+    return true;
+}
+
+int bi_is_even(IN bigint *A)
+{
+    // Case: A < 0 or A[0] != 2
+    if ((A->a[0] & 0x1) == 0)
+        return true;
+    return false;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

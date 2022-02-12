@@ -338,7 +338,6 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
 
         if (bi_cmp(*C, A) == 0)
         {
-            printf("# hello\n");
             return;
         }
         bi_assign(C, A);
@@ -355,7 +354,6 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
     // Case 5: 0 < A < B,  -C = B - A
     else if (A->sign == NON_NEGATIVE and B->sign == NON_NEGATIVE and bi_cmp(A, B) == -1)
     {
-
         bi_SUBC(C, B, A);
         (*C)->sign = NEGATIVE;
         return;
@@ -391,7 +389,6 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
     // Case 8: A > 0 and B < 0
     if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
     {
-        // printf("#수상\n");
         bi_abs(B);
         bi_ADD(C, A, B);
         B->sign = NEGATIVE;

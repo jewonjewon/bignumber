@@ -7,7 +7,7 @@
 #include <time.h>
 #include <stdbool.h>
 
-#define w 8 // w: 워드의 크기 지정
+#define w 64 // w: 워드의 크기 지정
 
 #define check printf("#?????\n")
 #define newline printf("\n")
@@ -69,6 +69,8 @@ void bi_set_zero(OUT bigint **A);
 int bi_is_zero(IN bigint *A);
 int bi_is_one(IN bigint *A);
 int bi_is_minus_one(IN bigint *A);
+int bi_is_two(IN bigint *A);
+int bi_is_even(IN bigint *A);
 
 int bi_compare_abs(IN bigint *A, IN bigint *B);
 int bi_cmp(IN bigint *A, IN bigint *B);

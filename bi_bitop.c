@@ -11,29 +11,15 @@ int bi_bit_cnt(bigint *A)
     return bitlen_A;
 }
 
-// word bi_get_j_bit(bigint *A, int j)
-// {
-//     int n = A->wordlen;
-//     // len: A의 비트길이
-//     int len = 0;
-//     if (j > n * w)
-//     {
-//         printf("찾고자 하는 j번째 비트가 A의 비트길이를 벗어납니다.\n");
-//         return -1;
-//     }
+int bi_get_j_bit(bigint *A, int n)
+{
+    int q = n / w;
+    int r = n % w;
 
-//     if (n == 1)
-//         len = bitlen(A->a[0]);
-//     else
-//         len = (n - 1) * w + bitlen(A->a[n - 1]);
+    int j_th_bit = get_j_bit(A->a[q], r); /* q번째 워드 블록의 r번 째 수가 찾고자 하는 비트 */
 
-//     int q = j / w;
-//     int r = j % w;
-
-//     word t = (A->a[q] >> r) & 0x1;
-
-//     return t;
-// }
+    return j_th_bit;
+}
 
 void bi_XOR(bigint **C, bigint *A, bigint *B)
 {
@@ -70,6 +56,30 @@ void bi_xor_asg(IN OUT bigint **C, IN bigint *A)
     {
         // check;
         (*C)->a[j] = A->a[j] ^ T->a[j];
+    }
+
+    bi_refine(*C);
+    bi_refine(A);
+
+    bi_delete(&T);
+}
+
+void bi_or_asg(IN OUT bigint **C, IN bigint *A)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C);
+
+    if (A->wordlen < T->wordlen)
+        bi_resize(&A, T->wordlen);
+    else
+        bi_resize(&T, A->wordlen);
+
+    bi_new(C, A->wordlen);
+
+    for (int j = 0; j < A->wordlen; j++)
+    {
+        // check;
+        (*C)->a[j] = A->a[j] & T->a[j];
     }
 
     bi_refine(*C);
@@ -124,6 +134,8 @@ void bi_lshift(bigint **A, int x)
         T->a[j + q] = ((*A)->a[j] << r) | ((*A)->a[j - 1] >> (w - r));
 
     T->a[n + q] = (*A)->a[n - 1] >> (w - r);
+
+    T->sign = (*A)->sign;
 
     bi_refine(T);
     bi_assign(A, T);
@@ -203,6 +215,8 @@ void bi_rshift(bigint **A, int x)
 
     T->a[T->wordlen - 1] = (*A)->a[n - 1] >> r;
 
+    T->sign = (*A)->sign;
+
     bi_refine(T);
     bi_assign(A, T);
     bi_delete(&T);
@@ -214,8 +228,29 @@ void bi_word_reduction(OUT bigint **A, IN int r)
         (*A)->a[j] = 0;
 
     bi_refine(*A);
+
+    /* if sign(A) = NEGATIVE */
+    if ((*A)->sign == NEGATIVE)
+    {
+        bigint *T = NULL;
+        bi_new(&T, r + 1);
+        T->a[T->wordlen - 1] = 0x1;
+        // printf("TTTTT =  ");
+        // bi_print(T);
+        bi_add_asg(A, T);
+        bi_delete(&T);
+    }
 }
 
+void bi_red(OUT bigint **A, IN int x)
+{
+    int q = x / w;
+    int r = x % w;
+
+    bi_word_reduction(A, q + 1);
+
+    (*A)->a[(*A)->wordlen - 1] &= (pow2(r) - 1);
+}
 // void bi_word_reduction(OUT bigint **A, IN int r)
 // {
 //     if (r > (*A)->wordlen)

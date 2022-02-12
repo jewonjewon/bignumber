@@ -11,6 +11,11 @@ void sage_show_sub(bigint **C, bigint *A, bigint *B, int j);
 void sage_show_mul(bigint **C, bigint *A, bigint *B, int j);
 void sage_show_squ(bigint **C, bigint *A, int j);
 void sage_show_div(bigint **Q, bigint **R, bigint *A, bigint *B, int j);
+void sage_show_exp(bigint **C, bigint *A, bigint *B, int j);
+void sage_show_mod_exp(bigint **C, bigint *A, bigint *n, bigint *M, int j);
+void sage_show_gcd(bigint **C, bigint *A, bigint *B, int j);
+void sage_show_xgcd(bigint **C, bigint *A, bigint *B, int j);
+void sage_show_is_prime(bigint *n, int k, int j);
 
 void bi_delete_3(bigint **C, bigint **A, bigint **B);
 void bi_delete_2(bigint **C, bigint **A);
@@ -92,5 +97,22 @@ void test_bi_word_lshift(int TEST);
 void test_bi_word_lshift2(int TEST);
 void test_bi_lshift(int TEST);
 void test_bi_rshift(int TEST);
+
+void test_bi_word_rshift(int TEST);
+void test_MULC_karastuba(int TEST);
+void test_bi_word_reduction(int TEST);
+void test_bi_long_div_2word(int TEST);
+void test_DIVCC(int TEST);
+void test_DIVC(int TEST);
+void test_DIV(int TEST);
+void test_long_div_bin(int TEST);
+void test_exp(int TEST, void (*func)(bigint **, bigint *, bigint *));
+void test_mod_exp(int TEST, void (*func)(bigint **, bigint *, bigint *, bigint *));
+void test_gcd(int TEST, void (*func)(bigint **, bigint *, bigint *));
+void test_xgcd(int TEST, void (*func)(bigint **, bigint *, bigint *));
+void test_mont_red(int TEST);
+
+/* PRIME */
+void test_is_prime(int TEST, int (*func)(bigint *, int k));
 
 #endif

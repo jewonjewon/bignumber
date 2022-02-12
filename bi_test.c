@@ -10,14 +10,13 @@ void sage_show_add(bigint **C, bigint *A, bigint *B, int j)
     bi_print(B);
     printf("C = ");
     bi_print(*C);
+
     printf("if (C != A + B):\n");
     printf("    print(\"Error: A + B, %d-th\")\n", j);
     printf("    print(\"A = {}\".format(hex(A)))\n");
     printf("    print(\"B = {}\".format(hex(B)))\n");
     printf("    print(\"C = {}\".format(hex(C)))\n");
     printf("    print(\"A + B = {}\".format(hex(A+B)))\n");
-    // printf("    print(\"{} : {}\".format(%d, A + B == C)) #%d\n", j, j);
-    printf("    cnt = cnt + 1\n");
 }
 
 void sage_show_sub(bigint **C, bigint *A, bigint *B, int j)
@@ -73,7 +72,7 @@ void sage_show_div(bigint **Q, bigint **R, bigint *A, bigint *B, int j)
     printf("    cnt = cnt + 1\n");
 }
 
-void sage_show_exp(bigint **C, bigint *A, int j)
+void sage_show_exp(bigint **C, bigint *A, bigint *B, int j)
 {
     printf("A = ");
     bi_print(A);
@@ -82,6 +81,73 @@ void sage_show_exp(bigint **C, bigint *A, int j)
     printf("if (C != A ** 2):\n");
     printf("    print(\"{} : {}\".format(%d, A ** 2 == C)) #%d\n", j, j);
     printf("    cnt = cnt + 1\n");
+}
+
+void sage_show_mod_exp(bigint **C, bigint *A, bigint *n, bigint *M, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("n = ");
+    bi_print(n);
+    printf("M = ");
+    bi_print(M);
+    printf("C = ");
+    bi_print(*C);
+
+    printf("if (C != power_mod(A, n, M)):\n");
+    printf("    print(\"Error: (A ^ n) mod M, %d-th\")\n", j);
+    printf("    print(\"A = {}\".format(hex(A)))\n");
+    printf("    print(\"n = {}\".format(hex(n)))\n");
+    printf("    print(\"M = {}\".format(hex(M)))\n");
+    printf("    print()\n");
+    printf("    print(\"C = {}\".format(hex(C)))\n");
+    printf("    print(\"(A ^ n) mod M = {}\".format(hex(power_mod(A, n, M))))\n");
+}
+
+void sage_show_gcd(bigint **C, bigint *A, bigint *B, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("B = ");
+    bi_print(B);
+    printf("C = ");
+    bi_print(*C);
+
+    printf("if (C != gcd(A, B)):\n");
+    printf("    print(\"Error: gcd(A, B), %d-th\")\n", j);
+    printf("    print(\"A = {}\".format(hex(A)))\n");
+    printf("    print(\"B = {}\".format(hex(B)))\n");
+    newline;
+    printf("    print(\"C = {}\".format(hex(C)))\n");
+    printf("    print(\"gcd(A, B) = {}\".format(hex(gcd(A, B))))\n");
+}
+
+void sage_show_xgcd(bigint **C, bigint *A, bigint *B, int j)
+{
+    printf("A = ");
+    bi_print(A);
+    printf("B = ");
+    bi_print(B);
+    printf("C = ");
+    bi_print(*C);
+
+    printf("if (C != A.xgcd(B)[1]):\n");
+    printf("    print(\"Error: A.xgcd(B)[1], %d-th\")\n", j);
+    printf("    print(\"A = {}\".format(hex(A)))\n");
+    printf("    print(\"B = {}\".format(hex(B)))\n");
+    newline;
+    printf("    print(\"C = {}\".format(hex(C)))\n");
+    printf("    print(\"A.xgcd(B)[1] = {}\".format(hex(A.xgcd(B)[1])))\n");
+}
+
+void sage_show_is_prime(bigint *n, int k, int j)
+{
+    printf("n = ");
+    bi_print(n);
+
+    printf("if (n.is_prime() == True):\n");
+    printf("    print(\"n is not prime, %d-th\")\n", j);
+    printf("    print(\"n = {}\".format(hex(n)))\n");
 }
 
 void bi_delete_3(bigint **C, bigint **A, bigint **B)
@@ -106,8 +172,7 @@ void bi_delete_2(bigint **C, bigint **A)
 // Case 1: A = 0, C = B
 void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("print(\"### Case 1: A = 0, C = B ###\\n\")\n");
-    printf("cnt = 0\n");
+    // printf("print(\"### Case 1: A = 0, C = B ###\\n\")\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -120,16 +185,15 @@ void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_ADD(C, A, B);
         sage_show_add(C, A, B, j);
     }
-    printf("if (cnt == 0):\n");
-    printf("    print(\"ALL TRUE!\")\n");
+    // printf("if (cnt == 0):\n");
+    // printf("    print(\"ALL TRUE!\")\n");
     bi_delete_3(C, &A, &B);
 }
 
 // Case 2: B = 0, C = A
 void sub_test_ADD2(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("print(\"### Case 2: B = 0, C = A ###\\n\")\n");
-    printf("cnt = 0\n");
+    // printf("print(\"### Case 2: B = 0, C = A ###\\n\")\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -143,16 +207,15 @@ void sub_test_ADD2(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         sage_show_add(C, A, B, j);
     }
-    printf("if (cnt == 0):\n");
-    printf("    print(\"ALL TRUE!\")\n");
+    // printf("if (cnt == 0):\n");
+    // printf("    print(\"ALL TRUE!\")\n");
     bi_delete_3(C, &A, &B);
 }
 
 // Case 3: A > 0 and B < 0, C = A - |B|
 void sub_test_ADD3(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("print(\"### Case 3: A > 0 and B < 0, C = A - |B| ###\\n\")\n");
-    printf("cnt = 0\n");
+    // printf("print(\"### Case 3: A > 0 and B < 0, C = A - |B| ###\\n\")\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -168,16 +231,15 @@ void sub_test_ADD3(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         sage_show_add(C, A, B, j);
     }
-    printf("if (cnt == 0):\n");
-    printf("    print(\"ALL TRUE!\")\n");
+    // printf("if (cnt == 0):\n");
+    // printf("    print(\"ALL TRUE!\")\n");
     bi_delete_3(C, &A, &B);
 }
 
 // Case 4: A < 0 and B > 0, C = B - |A|
 void sub_test_ADD4(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("print(\"### Case 4: A < 0 and B > 0, C = B - |A| ###\\n\")\n");
-    printf("cnt = 0\n");
+    // printf("print(\"### Case 4: A < 0 and B > 0, C = B - |A| ###\\n\")\n");
 
     for (int j = 0; j < TEST; j++)
     {
@@ -194,15 +256,14 @@ void sub_test_ADD4(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_ADD(C, A, B);
         sage_show_add(C, A, B, j);
     }
-    printf("if (cnt == 0):\n");
-    printf("    print(\"ALL TRUE!\")\n");
+    // printf("if (cnt == 0):\n");
+    // printf("    print(\"ALL TRUE!\")\n");
     bi_delete_3(C, &A, &B);
 }
 // Case 5: wordlen(A) ≥ wordlen(B)
 void sub_test_ADD5(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("print(\"### Case 5: wordlen(A) ≥ wordlen(B) ###\\n\")\n");
-    printf("cnt = 0\n");
+    // printf("print(\"### Case 5: wordlen(A) ≥ wordlen(B) ###\\n\")\n");
 
     int num1 = 0;
     int num2 = 0;
@@ -226,19 +287,18 @@ void sub_test_ADD5(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_ADD(C, A, B);
         //
-        B->sign = NEGATIVE;
+        // B->sign = NEGATIVE;
         sage_show_add(C, A, B, j);
     }
-    printf("if (cnt == 0):\n");
-    printf("    print(\"ALL TRUE!\")\n");
+    // printf("if (cnt == 0):\n");
+    // printf("    print(\"ALL TRUE!\")\n");
     bi_delete_3(C, &A, &B);
 }
 
 // Case 6: wordlen(A) < wordlen(B)
 void sub_test_ADD6(bigint **C, bigint *A, bigint *B, IN int TEST)
 {
-    printf("print(\"### Case 6: wordlen(A) < wordlen(B) ###\\n\")\n");
-    printf("cnt = 0\n");
+    // printf("print(\"### Case 6: wordlen(A) < wordlen(B) ###\\n\")\n");
 
     int num1 = 0;
     int num2 = 0;
@@ -263,8 +323,8 @@ void sub_test_ADD6(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         sage_show_add(C, A, B, j);
     }
-    printf("if (cnt == 0):\n");
-    printf("    print(\"ALL TRUE!\")\n");
+    // printf("if (cnt == 0):\n");
+    // printf("    print(\"ALL TRUE!\")\n");
     bi_delete_3(C, &A, &B);
 }
 
@@ -1039,4 +1099,543 @@ void test_bi_rshift(int TEST)
     }
 
     bi_delete(&A);
+}
+
+void test_bi_word_rshift(int TEST)
+{
+    bigint *A = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int x = rand() % 0xf + 1;
+        int num1 = rand() % 0x0f + 1;
+        // int x = 2;
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+
+        printf("A = ");
+        bi_print(A);
+
+        bi_word_rshift(&A, x);
+
+        printf("C = ");
+        bi_print(A);
+
+        printf("print(A >> (%d * %d) == C) #%d\n", x, w, j);
+    }
+
+    bi_delete(&A);
+}
+
+void test_MULC_karastuba(int TEST)
+{
+    printf("\n\n\n\n\n### 카라츄바 테스트\n\n");
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    // bi_MULC_karastuba TEST
+    for (int j = 0; j < TEST; j++)
+    {
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NON_NEGATIVE, 20);
+        bi_gen_rand(&B, NON_NEGATIVE, 20);
+        bi_MULC_karatsuba(&C, A, B);
+        printf("A = ");
+        bi_print(A);
+        printf("B = ");
+        bi_print(B);
+        printf("C = ");
+        bi_print(C);
+
+        printf("print(A * B == C) #%d\n", j);
+    }
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+void test_bi_word_reduction(int TEST)
+{
+    bigint *A = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int x = rand() % 0xf + 1;
+        int sign1 = rand() % 2;
+        int num1 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NEGATIVE, num1);
+
+        printf("A = ");
+        bi_print(A);
+
+        bi_word_reduction(&A, x);
+        printf("C = ");
+        bi_print(A);
+        printf("print(A %% (2 ** (%d * %d)) == C) #%d\n", x, w, j);
+    }
+
+    bi_delete(&A);
+}
+
+// void test_bi_long_div_2word(int TEST)
+// {
+//     bigint *A = NULL;
+//     bigint *B = NULL;
+//     word Q = 0;
+
+//     for (int j = 0; j < TEST; j++)
+//     {
+//         bi_gen_rand(&A, NON_NEGATIVE, 2);
+//         bi_gen_rand(&B, NON_NEGATIVE, 1);
+
+//         if (A->a[1] < B->a[0])
+//             printf("A1 ≥ B\n");
+
+//         Q = bi_long_div_2word(A, B->a[0]);
+
+//         printf("A = ");
+//         bi_print(A);
+//         printf("B = ");
+//         bi_print(B);
+//         printf("Q = %#llx\n", Q);
+
+//         printf("print(A // B == Q) #%d\n", j);
+//         printf("print(hex(A//B))\n");
+//     }
+//     bi_delete(&A);
+//     bi_delete(&B);
+// }
+
+// void test_DIVCC(int TEST)
+// {
+//     bigint *A = NULL;
+//     bigint *B = NULL;
+//     word Q = 0;
+//     bigint *R = NULL;
+
+//     for (int j = 0; j < TEST; j++)
+//     {
+//         // int num1 = rand() % 0x0f + 2;
+//         // int num2 = rand() % 0x0f + 1;
+//         // while (1)
+//         // {
+//         //     bi_gen_rand(&A, NON_NEGATIVE, num1);
+//         //     bi_gen_rand(&B, NON_NEGATIVE, num2);
+//         //     if (bi_cmp(B, A) == -1 and bi_cmp(B, A) == 0)
+//         //     {
+//         //         bigint *T = NULL;
+//         //         bi_new(&T, 1);
+//         //         bi_assign(&T, B);
+//         //         bi_word_lshift(&T, 1);
+//         //         if (bi_cmp(A, T) == -1)
+//         //             if (B->a[B->wordlen - 1] >= pow2(w - 1))
+//         //             {
+//         //                 printf("DIVCC 입력 조건 0 < B ≤ A < BW, B_{m-1} ≥ 2^{w-1} 성립!\n");
+//         //                 bi_delete(&T);
+//         //                 break;
+//         //             }
+//         //         bi_delete(&T);
+//         //     }
+//         //     check;
+//         // }
+
+//         int num1 = rand() % 0x0f + 1;
+//         // int num2 = rand() % 0x0f + 1;
+//         // while (num1 < num2)
+//         // {
+
+//         num1 = rand() % 0x0f + 1;
+//         // num2 = rand() % 0x0f + 1;
+
+//         bi_gen_rand(&A, NON_NEGATIVE, num1);
+//         bi_gen_rand(&B, NON_NEGATIVE, num1 - 1);
+//         // }
+
+//         if (bi_cmp(B, A) == -1 and bi_cmp(B, A) == 0)
+//         {
+//             bigint *T = NULL;
+//             bi_new(&T, 1);
+//             bi_assign(&T, B);
+//             bi_word_lshift(&T, 1);
+//             if (bi_cmp(A, T) == -1)
+//                 if (B->a[B->wordlen - 1] >= pow2(w - 1))
+//                 {
+//                     printf("DIVCC 입력 조건 0 < B ≤ A < BW, B_{m-1} ≥ 2^{w-1} 성립!\n");
+//                     bi_delete(&T);
+//                     break;
+//                 }
+//             bi_delete(&T);
+//         }
+
+//         bi_DIVCC(&Q, &R, A, B);
+
+//         printf("A = ");
+//         bi_print(A);
+//         printf("B = ");
+//         bi_print(B);
+//         printf("Q = %#llx\n", Q);
+//         printf("R = ");
+//         bi_print(R);
+
+//         printf("print(A // B == Q) #%d\n", j);
+//         printf("print(A %% B == R) #%d\n", j);
+
+//         printf("print(hex(A//B))\n");
+//         printf("print(hex(A%%B))\n");
+//     }
+//     bi_delete(&A);
+//     bi_delete(&B);
+//     bi_delete(&R);
+// }
+
+// void test_DIVC(int TEST)
+// {
+//     bigint *A = NULL;
+//     bigint *B = NULL;
+//     word Q = 0;
+//     bigint *R = NULL;
+
+//     for (int j = 0; j < TEST; j++)
+//     {
+
+//         int num1 = rand() % 0x0f + 1;
+
+//         bi_gen_rand(&A, NON_NEGATIVE, num1);
+//         bi_gen_rand(&B, NON_NEGATIVE, num1 - 1);
+
+//         // bi_gen_rand(&A, NON_NEGATIVE, 5);
+//         // bi_gen_rand(&B, NON_NEGATIVE, 3);
+
+//         ///
+//         bigint *T = NULL;
+
+//         bi_assign(&T, B);
+//         bi_word_lshift(&T, 1);
+
+//         if (bi_cmp(A, T) == -1)
+//         {
+//             if (B->a[B->wordlen - 1] >= pow2(w - 1))
+//             {
+//                 printf("DIVC 입력 조건 0 ≤ A < BW 성립!\n");
+//             }
+//         }
+//         bi_delete(&T);
+//         ///
+
+//         bi_DIVC(&Q, &R, A, B);
+
+//         printf("A = ");
+//         bi_print(A);
+//         printf("B = ");
+//         bi_print(B);
+//         printf("Q = %#llx\n", Q);
+//         printf("R = ");
+//         bi_print(R);
+
+//         printf("print(A // B == Q) #%d\n", j);
+//         printf("print(A %% B == R) #%d\n", j);
+
+//         printf("print(hex(A//B))\n");
+//         printf("print(hex(A%%B))\n");
+//     }
+//     bi_delete(&A);
+//     bi_delete(&B);
+//     bi_delete(&R);
+// }
+
+void test_DIV(int TEST)
+{
+    printf("print(\"### DIV TEST ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *Q = NULL;
+    bigint *R = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        while (1)
+        {
+            num1 = rand() % 0x0f + 1;
+            num2 = rand() % 0x0f + 1;
+
+            if (num1 >= num2)
+            {
+                bi_gen_rand(&A, NON_NEGATIVE, num1);
+                bi_gen_rand(&B, NON_NEGATIVE, num2);
+                if (bi_is_zero(B) == true)
+                    continue;
+                break;
+            }
+        }
+
+        bi_DIV(&Q, &R, A, B);
+        sage_show_div(&Q, &R, A, B, j);
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&Q);
+    bi_delete(&R);
+}
+
+void test_long_div_bin(int TEST)
+{
+    printf("print(\"### BINARY LONG DIVISION TEST ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *Q = NULL;
+    bigint *R = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        while (1)
+        {
+            num1 = rand() % 0x0f + 1;
+            num2 = rand() % 0x0f + 1;
+
+            if (num1 >= num2)
+            {
+                bi_gen_rand(&A, NON_NEGATIVE, num1);
+                bi_gen_rand(&B, NON_NEGATIVE, num2);
+                if (bi_is_zero(B) == true)
+                    continue;
+                break;
+            }
+        }
+
+        bi_long_div_bin(&Q, &R, A, B);
+        sage_show_div(&Q, &R, A, B, j);
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&Q);
+    bi_delete(&R);
+}
+
+void test_exp(int TEST, void (*func)(bigint **, bigint *, bigint *))
+{
+    printf("print(\"### exponentiation ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *A = NULL;
+    bigint *N = NULL;
+    bigint *C = NULL;
+
+    bi_new(&N, 1);
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int num1 = rand() % 0x0f + 1;
+
+        int n = rand() % 0xf;
+        N->a[0] = n;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+
+        printf("n = ");
+        bi_print(N);
+
+        printf("A = ");
+        bi_print(A);
+
+        func(&C, A, N);
+        bi_l2r(&C, A, N);
+
+        printf("C = ");
+        bi_print(C);
+        printf("print((A ** n) == C)\n");
+        // printf("print(hex(A**n))\n");
+    }
+
+    bi_delete_2(&C, &A);
+}
+
+void test_mod_exp(int TEST, void (*func)(bigint **, bigint *, bigint *, bigint *))
+{
+    printf("print(\"### mod_l2r ###\\n\")\n");
+
+    bigint *A = NULL; /* 밑수 */
+    bigint *n = NULL; /* 지수 */
+    bigint *M = NULL; /* Modulra value */
+    bigint *C = NULL; /* 결과값 */
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&M, NON_NEGATIVE, num2);
+        bi_gen_rand(&n, NON_NEGATIVE, 1);
+
+        func(&C, A, n, M);
+        // bi_mod_l2r(&C, A, n, M);
+        sage_show_mod_exp(&C, A, n, M, j);
+    }
+
+    bi_delete(&A);
+    bi_delete(&n);
+    bi_delete(&M);
+    bi_delete(&C);
+}
+
+void test_gcd(int TEST, void (*func)(bigint **, bigint *, bigint *))
+{
+    printf("print(\"### GCD TEST ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&B, NON_NEGATIVE, num2);
+
+        // while (1)
+        // {
+        //     num1 = rand() % 0x0f + 1;
+        //     num2 = rand() % 0x0f + 1;
+
+        //     if (num1 >= num2)
+        //     {
+        //         bi_gen_rand(&A, NON_NEGATIVE, num1 + 1);
+        //         bi_gen_rand(&B, NON_NEGATIVE, num2);
+        //         if (bi_is_zero(B) == true)
+        //             continue;
+        //         break;
+        //     }
+        // }
+
+        func(&C, A, B);
+        sage_show_gcd(&C, A, B, j);
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+void test_xgcd(int TEST, void (*func)(bigint **, bigint *, bigint *))
+{
+    printf("print(\"### EEA TEST ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *A = NULL;
+    bigint *B = NULL;
+    bigint *C = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&A, NON_NEGATIVE, num1);
+        bi_gen_rand(&B, NON_NEGATIVE, num2);
+
+        func(&C, A, B);
+        sage_show_xgcd(&C, A, B, j);
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&A);
+    bi_delete(&B);
+    bi_delete(&C);
+}
+
+void test_mont_red(int TEST)
+{
+    printf("print(\"### Montgomery Reduction TEST ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *x = NULL;
+    bigint *R = NULL; /* 워드 블록 형태 */
+    bigint *N = NULL;
+    bigint *C = NULL; /* OUTPUT */
+
+    for (int j = 0; j < TEST; j++)
+    {
+
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+        int num3 = rand() % 0x0f + 1;
+
+        int t = 3;
+
+        bi_gen_rand(&x, NON_NEGATIVE, num1);
+        bi_gen_rand(&N, NON_NEGATIVE, num2);
+
+        bi_new(&R, 2);
+        R->a[1] = 1;
+
+        bi_word_lshift(&R, t);
+
+        bi_mont_red(&C, x, R, N);
+
+        printf("x = ");
+        bi_print(x);
+        printf("R = ");
+        bi_print(R);
+        printf("N = ");
+        bi_print(N);
+        printf("C = ");
+        bi_print(C);
+        // printf("if (C != xgcd(A,B)[1]):\n");
+        // printf("    print(\"{} : {}\".format(%d, xgcd(A,B)[1] == C)) #%d\n", j, j);
+        // printf("    print(hex(xgcd(A,B)[1]))\n");
+        // printf("    cnt = cnt + 1\n");
+    }
+    // printf("if (cnt == 0):\n");
+    // printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&x);
+    bi_delete(&R);
+    bi_delete(&N);
+    bi_delete(&C);
+}
+
+void test_is_prime(int TEST, int (*func)(bigint *, int k))
+{
+    printf("print(\"### is_prime? TEST ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *n = NULL;
+    int k = 40;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int num1 = rand() % 0x0f + 1;
+        int num2 = rand() % 0x0f + 1;
+
+        bi_gen_rand(&n, NON_NEGATIVE, num1);
+
+        func(n, k);
+        sage_show_is_prime(n, k, j);
+    }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&n);
 }

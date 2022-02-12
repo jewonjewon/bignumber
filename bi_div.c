@@ -117,9 +117,15 @@ void bi_DIVC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 
 void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 {
+
+    // printf("AA = ");
+    // bi_print(A);
+    // printf("BB = ");
+    // bi_print(B);
+
     if (bi_is_zero(B) == true)
     {
-        printf("# B = 0,  정의 불가능\n");
+        printf("# bi_DIV Error: B = 0, 정의 불가능(분수가 0임)\n");
         return;
     }
     if (bi_is_zero(A) == true)
@@ -200,5 +206,22 @@ void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
             bi_set_one(&T);
         }
     }
+    bi_delete(&T);
+}
+
+void bi_div_q(OUT bigint **Q, IN bigint *A, IN bigint *B)
+{
+    bigint *T = NULL;
+    bi_DIV(Q, &T, A, B);
+
+    bi_delete(&T);
+}
+
+void bi_div_r(OUT bigint **R, IN bigint *A, IN bigint *B)
+{
+    bigint *T = NULL;
+
+    bi_DIV(&T, R, A, B);
+
     bi_delete(&T);
 }

@@ -33,6 +33,7 @@ int main()
     // test_xgcd(100, bi_eea_bin_itr);
 
     // test_is_prime(100, bi_is_prime);
+    // test_prime_gen(10, bi_gen_prime);
 
     // test_mont_red(1);
 #endif
@@ -51,7 +52,7 @@ int main()
     // test_SQUC(1);
     // test_MULC_karastuba(100);
 
-#if 0 // 벤치마킹
+#if 1 // 벤치마킹
       // for (int j = 0; j < 10; j++)
     // bench_MUL();
     // bench_ADD();
@@ -62,7 +63,7 @@ int main()
     bench_prime();
 #endif
 
-#if 1 // 부검
+#if 0 // 부검
     bigint *A = NULL;
     bigint *B = NULL;
     bigint *C = NULL;
@@ -71,11 +72,26 @@ int main()
     bigint *n = NULL;
     bigint *M = NULL;
 
-#if 1 // RSA
+#if 0 // RSA
     RSA_key *pk = NULL;
     RSA_key *sk = NULL;
     RSA_keygen(&pk, &sk);
 #endif
+
+    // bi_gen_rand(&A, NON_NEGATIVE, 32);
+
+    // printf("A = ");
+    // bi_print(A);
+
+    // bi_SPDM(&C, A);
+
+    // printf("C = ");
+    // bi_print(C);
+    // bi_SPDM(&C, A);
+    // if (bi_cmp(C, A) == -1)
+    //     printf("C < A \n");
+    // else
+    //     printf("Error!\n");
     // printf("print(\"### EEA TEST ###\\n\")\n");
     // // printf("cnt = 0\n");
     // newline;
@@ -95,6 +111,18 @@ int main()
     // printf("if (cnt == 0):\n");
     // printf("    print(\"ALL TRUE!\")\n");
 
+    // printf("C = ");
+    // bi_print(C);
+
+    // bi_new(&A, 1);
+    // A->a[0] = 0xa3;
+    // int ret = bi_is_prime(A, 40);
+
+    // if (ret == true)
+    //     printf("A is prime\n");
+    // else
+    //     printf("ERROR!\n");
+
     bi_delete_3(&Q, &R, &n);
     bi_delete_3(&A, &B, &C);
     bi_delete(&M);
@@ -102,34 +130,3 @@ int main()
 #endif
     return 0;
 }
-
-// void test_bi_j_bit(int TEST)
-// {
-//     printf("print(\"### get_j_bit test ###\\n\")\n");
-//     printf("cnt = 0\n");
-
-//     bigint *A = NULL;
-
-//     for (int j = 0; j < TEST; j++)
-//     {
-//         int x = rand() % 0xff;
-//         int num1 = rand() % 0x0f + 1;
-
-//         bi_gen_rand(&A, NON_NEGATIVE, num1);
-
-//         printf("A = ");
-//         bi_print(A);
-
-//         bi_get_j_bit(A, x);
-
-//         printf("if (C != gcd(A, B)):\n");
-//         printf("    print(\"{} : {}\".format(%d, (A >> j) & 0x1 == A)) #%d\n", j, j);
-//         printf("    print(hex(gcd(A, B)))\n");
-//         printf("    cnt = cnt + 1\n");
-//     }
-//     printf("if (cnt == 0):\n");
-//     printf("    print(\"ALL TRUE!\")\n");
-//     bi_delete(&A);
-// }
-
-// void bit_cnt() {}

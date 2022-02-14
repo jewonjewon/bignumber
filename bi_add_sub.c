@@ -439,3 +439,37 @@ void bi_sub_asg(IN OUT bigint **C, IN bigint *A)
 
     bi_delete(&T);
 }
+
+// /* C += a , a in [0,W) i.e. a is word */
+void bi_add_a(IN OUT bigint **A, IN word a)
+{
+    bigint *T0 = NULL;
+    bigint *T1 = NULL;
+
+    bi_new(&T0, 1);
+    T0->a[0] = a; /* T0 = 2 */
+
+    bi_assign(&T1, *A); /* T1 = A */
+
+    bi_ADD(A, T1, T0);
+
+    bi_delete(&T0);
+    bi_delete(&T1);
+}
+
+// /* C -= a , a in [0,W) i.e. a is word */
+void bi_sub_minus_a(IN OUT bigint **A, IN word a)
+{
+    bigint *T0 = NULL;
+    bigint *T1 = NULL;
+
+    bi_new(&T0, 1);
+    T0->a[0] = a; /* T0 = 2 */
+
+    bi_assign(&T1, *A); /* T1 = A */
+
+    bi_SUB(A, T1, T0);
+
+    bi_delete(&T0);
+    bi_delete(&T1);
+}

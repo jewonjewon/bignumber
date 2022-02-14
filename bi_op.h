@@ -42,6 +42,8 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B);
 void bi_addc_asg(IN OUT bigint **C, IN bigint *A);
 void bi_add_asg(IN OUT bigint **C, IN bigint *A);
 
+void bi_add_a(IN OUT bigint **A, IN word a);
+
 // void bi_ADDC2(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 void bi_SUB_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c);
@@ -115,6 +117,6 @@ void bi_eea_itr(OUT bigint **C, IN bigint *A, IN bigint *B);     /* extended euc
 void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B); /* binary extended euclide algoritm (iteration ver.) */
 void bi_eea_rcs(bigint **d, bigint **alpha, bigint **beta, bigint *a, bigint *b);
 
-void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R, IN bigint *N);
+void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R, IN bigint *N, bigint *nn);
 
 #endif

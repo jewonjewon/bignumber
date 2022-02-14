@@ -36,7 +36,7 @@ void bench_bi_prime(IN int TEST, int (*func)(bigint *n, int k))
 void bench_prime()
 {
     printf("# prime \n");
-    int cnt = 1000; /* cnt: 시행 횟수 */
+    int cnt = 10; /* cnt: 시행 횟수 */
 
     double start1, start2, start3, start4;
     double end1, end2, end3, end4;

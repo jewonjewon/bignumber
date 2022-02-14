@@ -7,8 +7,10 @@ void bi_mod_asg(OUT bigint **R, IN bigint *N)
         return;
 
     if (bi_is_zero(N) == true)
+    {
+        printf("# Error: R = R mod N. but, N is zero");
         return;
-
+    }
     bigint *q = NULL;
     bigint *T = NULL;
 
@@ -196,19 +198,16 @@ void bi_mod_mns(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
     bi_delete(&T1);
 }
 
-void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R, IN bigint *n)
+void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R,
+                 IN bigint *n, IN bigint *nn)
 {
 
     /* step 1. N의 역원구하기  (사전계산 가능)*/
-    bigint *nn = NULL; /* nn = -(inv_N) */
     bigint *m = NULL;
     bigint *t = NULL;
 
-    bi_eea_itr(&nn, n, R);
-    // bi_flip_sign(nn);
-
-    printf("nn = ");
-    bi_print(nn);
+    // bigint *nn = NULL; /* nn = -(inv_N) */
+    // bi_eea_itr(&nn, n, R);
 
     /* m = ((x mod R) * nn) mod R */
     bi_word_reduction(&x, R->wordlen - 1);
@@ -236,7 +235,40 @@ void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R, IN bigint *n)
 
     bi_assign(C, t);
 
-    bi_delete(&nn);
     bi_delete(&m);
     bi_delete(&t);
 }
+
+// void bi_mod_exp_mont_l2r(bigint **x, bigint *e, bigint *n,
+//                          bigint *nn, bigint *r, bigint *phi_1)
+// {
+//     bigint *phi_x = NULL;
+//     bigint *t = NULL;
+
+//     bi_assign(&phi_x, *x);
+
+//     bi_lshift(phi_x, bi_bit_cnt(r) - 1);
+
+//     bi_mod_asg(&phi_x, n);
+
+//     int l = bi_bit_cnt(r) - 1; /* l is bitlen(r). */
+
+//     bi_assign(&t, phi_1);
+
+//     for (int j = l - 1; j >= 0; j--) /* for j = bitlen(t)-1 to 0 do */
+//     {
+
+//         // SQU t
+//         bi_rshift(&e, 1);
+//         if (== 1)
+//             // t ← t * phi(x)
+//             return;
+//     }
+
+//     // t ← mont_red(t)
+
+//     bi_assign(x, t);
+
+//     bi_delete(&phi_x);
+//     bi_delete(&t);
+// }

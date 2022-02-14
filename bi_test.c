@@ -1,6 +1,7 @@
 #include "bi.h"
 #include "bi_op.h"
 #include "bi_test.h"
+#include "bi_prime.h"
 
 void sage_show_add(bigint **C, bigint *A, bigint *B, int j)
 {
@@ -140,12 +141,25 @@ void sage_show_xgcd(bigint **C, bigint *A, bigint *B, int j)
     printf("    print(\"A.xgcd(B)[1] = {}\".format(hex(A.xgcd(B)[1])))\n");
 }
 
-void sage_show_is_prime(bigint *n, int k, int j)
+void sage_show_is_prime(bigint *n, int k, int v, int j)
 {
     printf("n = ");
     bi_print(n);
 
-    printf("if (n.is_prime() == True):\n");
+    printf("if (n.is_prime() != %d):\n", v);
+    printf("    print(\"ERROR\")\n");
+    printf("    if (n.is_prime() != True):\n");
+    printf("        print (\"n is composite number!\")\n");
+    printf("    else:\n");
+    printf("        print (\"n is prime!\")\n");
+}
+
+void sage_show_prime_gen(bigint *n, int j)
+{
+    printf("n = ");
+    bi_print(n);
+
+    printf("if (n.is_prime() == False):\n");
     printf("    print(\"n is not prime, %d-th\")\n", j);
     printf("    print(\"n = {}\".format(hex(n)))\n");
 }
@@ -1575,7 +1589,8 @@ void test_mont_red(int TEST)
     bigint *x = NULL;
     bigint *R = NULL; /* 워드 블록 형태 */
     bigint *N = NULL;
-    bigint *C = NULL; /* OUTPUT */
+    bigint *C = NULL;  /* OUTPUT */
+    bigint *nn = NULL; /* nn = -(inv_N) */
 
     for (int j = 0; j < TEST; j++)
     {
@@ -1583,18 +1598,29 @@ void test_mont_red(int TEST)
         int num1 = rand() % 0x0f + 1;
         int num2 = rand() % 0x0f + 1;
         int num3 = rand() % 0x0f + 1;
-
-        int t = 3;
-
+        int t = 0;
         bi_gen_rand(&x, NON_NEGATIVE, num1);
         bi_gen_rand(&N, NON_NEGATIVE, num2);
+
+        do
+        {
+            num3 = rand() % 0x0f + 1;
+            t = num3 % 0xf + 1;
+
+        } while (N->wordlen > t);
 
         bi_new(&R, 2);
         R->a[1] = 1;
 
         bi_word_lshift(&R, t);
 
-        bi_mont_red(&C, x, R, N);
+        bi_lshift(&N, 1);
+
+        bi_add_a(&N, 1);
+
+        bi_eea_itr(&nn, N, R);
+
+        bi_mont_red(&C, x, R, N, nn);
 
         printf("x = ");
         bi_print(x);
@@ -1615,6 +1641,7 @@ void test_mont_red(int TEST)
     bi_delete(&R);
     bi_delete(&N);
     bi_delete(&C);
+    bi_delete(&nn);
 }
 
 void test_is_prime(int TEST, int (*func)(bigint *, int k))
@@ -1632,9 +1659,29 @@ void test_is_prime(int TEST, int (*func)(bigint *, int k))
 
         bi_gen_rand(&n, NON_NEGATIVE, num1);
 
-        func(n, k);
-        sage_show_is_prime(n, k, j);
+        int v = func(n, k);
+        sage_show_is_prime(n, k, v, j);
     }
+    printf("if (cnt == 0):\n");
+    printf("    print(\"ALL TRUE!\")\n");
+    bi_delete(&n);
+}
+
+void test_prime_gen(int TEST, void (*func)(bigint **, int))
+{
+    printf("print(\"### prime generation TEST ###\\n\")\n");
+    printf("cnt = 0\n");
+
+    bigint *n = NULL;
+
+    for (int j = 0; j < TEST; j++)
+    {
+        int num1 = rand() % 0x0f + 1; /* num1 is random bit length */
+
+        func(&n, 64); /* Choose random num1-bit prime n */
+        sage_show_prime_gen(n, j);
+    }
+
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
     bi_delete(&n);

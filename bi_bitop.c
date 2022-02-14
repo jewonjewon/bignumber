@@ -79,7 +79,7 @@ void bi_or_asg(IN OUT bigint **C, IN bigint *A)
     for (int j = 0; j < A->wordlen; j++)
     {
         // check;
-        (*C)->a[j] = A->a[j] & T->a[j];
+        (*C)->a[j] = A->a[j] | T->a[j];
     }
 
     bi_refine(*C);

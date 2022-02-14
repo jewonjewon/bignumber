@@ -106,28 +106,147 @@ void bi_gen_rand_range(OUT bigint **A, IN int sign, IN int lbound, int ubound)
 //     }
 // }
 
+// void bi_gen_rand_bit(bigint **C, bigint *A, int *bitlen_A)
+// {
+//     int k = bi_bit_cnt(A); /* k: A의 비트길이 */
+//     *bitlen_A = k;
+
+//     int q = k / w;
+//     int r = k % w;
+//     printf("q , r = %d, %d\n", q, r);
+
+//     bigint *K = NULL;
+//     bi_new(&K, A->wordlen);
+
+//     bi_gen_rand(&K, NON_NEGATIVE, K->wordlen);
+
+//     // if (r == 0)
+//     // else
+//     // {
+//     //     for (int j = 0; j < q; j++)
+//     //         for (int i = 0; i < (w / 8); i++)
+//     //         { /*  */
+//     //             K->a[j] = K->a[j] | ((rand() & (pow2(8) - 1)) << (8 * i));
+//     //             // bi_print(K);
+//     //             // check;
+//     //         }
+//     //     K->a[q] = rand() & (pow2(r) - 1);
+//     // }
+
+//     if (r != 0)
+//         K->a[K->wordlen - 1] &= (pow2(r) - 1);
+
+//     bi_assign(C, K);
+
+//     bi_delete(&K);
+// }
+
+// /* 0 ~ (A-1) 사이의 수를 랜덤하게 선택하는 함수 */
+// void bi_SPDM(bigint **C, bigint *A)
+// {
+//     bigint *K = NULL;
+//     bigint *D = NULL;
+//     bigint *T = NULL;
+//     bigint *TT = NULL;
+
+//     bi_assign(&T, A);
+//     bi_sub_minus_one(&T);
+
+//     // printf("A - 1 = ");
+//     // bi_print(T);
+
+//     int k = 0;
+
+//     bi_gen_rand_bit(&K, T, &k);
+
+//     // printf("K = ");
+//     // bi_print(K);
+
+//     printf("bitlen(A) = %d\n", bi_bit_cnt(A));
+//     printf("bitlen(K) = %d\n", bi_bit_cnt(K));
+
+//     while (1)
+//     {
+//         /* 난수 선택 범위 내 */
+//         if (bi_cmp(K, A) == -1)
+//         {
+
+//             bi_assign(C, K);
+//             bi_refine(*C);
+//             bi_delete(&D);
+//             bi_delete(&K);
+//             bi_delete(&T);
+//             bi_delete(&TT);
+//             return;
+//         }
+
+//         /* 난수 선택 범위 벗어남 */
+//         bigint *G = NULL;
+
+//         bi_set_one(&G);
+//         bi_sub_asg(&T, G); /* i-1 */
+
+//         bi_XOR(&G, K, T); /* c ^ (i-1) */
+
+//         // int d = k - bitlen(c ^ (i - 1)) - 1;
+//         // int d = k - bi_bit_cnt(G) - 1;
+
+//         int d = k - bi_bit_cnt(G);
+
+//         printf("d + 1 = %d\n", d);
+
+//         int qq = d / w;
+//         int rr = d % w;
+
+//         bigint *D = NULL;
+
+//         bi_new(&D, qq + 1);
+
+//         bi_gen_rand(&D, NON_NEGATIVE, D->wordlen);
+
+//         if (rr != 0)
+//             D->a[D->wordlen - 1] &= (pow2(rr) - 1);
+
+//         // printf("D = ");
+//         // bi_print(D);
+
+//         // if (rr != 0)
+//         //     D->a[D->wordlen - 1] &= (pow2(rr) - 1);
+
+//         // for (int j = 0; j < D->wordlen; j++)
+//         //     for (int i = 0; i < w / 8; i++)
+//         //         D->a[j] = D->a[j] | ((rand() & (pow2(8) - 1)) << (8 * i));
+
+//         // 숫자로 난수 뽑기
+//         // D = rand() % (1 << (d + 1));
+//         // bi_rshift(&K, d);
+//         bi_lshift(&K, d);
+//         bi_red(&K, k - d);
+//         // printf("K = ");
+//         // bi_print(K);
+
+//         bi_or_asg(&K, D);
+//     }
+// }
+
 void bi_gen_rand_bit(bigint **C, bigint *A, int *bitlen_A)
 {
     int k = bi_bit_cnt(A); /* k: A의 비트길이 */
-
     *bitlen_A = k;
 
     int q = k / w;
     int r = k % w;
 
     bigint *K = NULL;
-    bi_new(&K, q + 1);
+    bi_new(&K, A->wordlen);
 
-    if (r == 0)
-        bi_gen_rand(&K, NON_NEGATIVE, q);
-    else
-    {
-        for (int j = 0; j < q; j++)
-            for (int i = 0; i < w / 8; i++)
-                K->a[j] = K->a[j] & ((rand() & (pow2(8) - 1)) << (8 * i));
-        K->a[q] = rand() & (pow2(r) - 1);
-    }
+    bi_gen_rand(&K, NON_NEGATIVE, K->wordlen);
+
+    if (r != 0)
+        K->a[K->wordlen - 1] &= (pow2(r) - 1);
+
     bi_assign(C, K);
+
     bi_delete(&K);
 }
 
@@ -142,17 +261,10 @@ void bi_SPDM(bigint **C, bigint *A)
     bi_assign(&T, A);
     bi_sub_minus_one(&T);
 
-    // printf("A - 1 = ");
-    // bi_print(T);
-
     int k = 0;
 
     bi_gen_rand_bit(&K, T, &k);
 
-    // printf("K = ");
-    // bi_print(K);
-    // printf("bitlen(K) = %d\n", k);
-    // check;
     while (1)
     {
         /* 난수 선택 범위 내 */
@@ -176,28 +288,23 @@ void bi_SPDM(bigint **C, bigint *A)
 
         bi_XOR(&G, K, T); /* c ^ (i-1) */
 
-        // int d = k - bitlen(c ^ (i - 1)) - 1;
-        int d = k - bi_bit_cnt(G) - 1;
+        int d = k - bi_bit_cnt(G);
 
-        int qq = 0;
-        int rr = 0;
+        int qq = d / w;
+        int rr = d % w;
 
         bigint *D = NULL;
-        bi_new(&D, qq + 2);
 
-        for (int j = 0; j < D->wordlen; j++)
-            for (int i = 0; i < w / 8; i++)
-                D->a[j] = D->a[j] | ((rand() & (pow2(8) - 1)) << (8 * i));
+        bi_new(&D, qq + 1);
 
-        // 숫자로 난수 뽑기
-        // D = rand() % (1 << (d + 1));
-        bi_lshift(&K, d + 1);
+        bi_gen_rand(&D, NON_NEGATIVE, D->wordlen);
+
+        if (rr != 0)
+            D->a[D->wordlen - 1] &= (pow2(rr) - 1);
+
+        bi_lshift(&K, d);
         bi_red(&K, k - d);
-        printf("k = ");
-        bi_print(K);
-        printf("wordlen(D) = %d\n", D->wordlen);
-        printf("d = ");
-        bi_print(D);
+
         bi_or_asg(&K, D);
     }
 }

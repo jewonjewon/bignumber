@@ -1501,7 +1501,6 @@ void test_mod_exp(int TEST, void (*func)(bigint **, bigint *, bigint *, bigint *
         bi_gen_rand(&n, NON_NEGATIVE, 1);
 
         func(&C, A, n, M);
-        // bi_mod_l2r(&C, A, n, M);
         sage_show_mod_exp(&C, A, n, M, j);
     }
 
@@ -1526,21 +1525,6 @@ void test_gcd(int TEST, void (*func)(bigint **, bigint *, bigint *))
         int num2 = rand() % 0x0f + 1;
         bi_gen_rand(&A, NON_NEGATIVE, num1);
         bi_gen_rand(&B, NON_NEGATIVE, num2);
-
-        // while (1)
-        // {
-        //     num1 = rand() % 0x0f + 1;
-        //     num2 = rand() % 0x0f + 1;
-
-        //     if (num1 >= num2)
-        //     {
-        //         bi_gen_rand(&A, NON_NEGATIVE, num1 + 1);
-        //         bi_gen_rand(&B, NON_NEGATIVE, num2);
-        //         if (bi_is_zero(B) == true)
-        //             continue;
-        //         break;
-        //     }
-        // }
 
         func(&C, A, B);
         sage_show_gcd(&C, A, B, j);

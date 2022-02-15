@@ -1,41 +1,6 @@
 #include "bi.h"
 #include "bi_op.h"
 
-void bi_mod_asg(OUT bigint **R, IN bigint *N)
-{
-    if (bi_cmp(*R, N) == -1)
-        return;
-
-    if (bi_is_zero(N) == true)
-    {
-        printf("# Error: R = R mod N. but, N is zero");
-        return;
-    }
-    bigint *q = NULL;
-    bigint *T = NULL;
-
-    bi_assign(&T, *R);
-
-    bi_DIV(&q, R, T, N);
-
-    bi_delete(&q);
-    bi_delete(&T);
-}
-/* Q /= A */
-void bi_div_asg(OUT bigint **Q, IN bigint *A)
-{
-    bigint *r = NULL;
-    bigint *T = NULL;
-    if (bi_is_zero(A) == true)
-        return;
-    bi_assign(&T, *Q);
-
-    bi_DIV(Q, &r, T, A);
-
-    bi_delete(&r);
-    bi_delete(&T);
-}
-
 void bi_l2r(OUT bigint **C, IN bigint *A, IN bigint *n)
 {
     bigint *T = NULL;
@@ -102,7 +67,7 @@ void bi_mns(OUT bigint **C, IN bigint *A, IN bigint *n)
     bi_delete(&T1);
 }
 
-void bi_mod_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
+void bi_mod_exp_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
 {
     bigint *T = NULL;
     bi_set_one(&T);
@@ -130,15 +95,15 @@ void bi_mod_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
     bi_delete(&T);
 }
 
-void bi_mod_l2r_asg(OUT bigint **C, IN bigint *n, IN bigint *M)
+void bi_mod_exp_l2r_asg(OUT bigint **C, IN bigint *n, IN bigint *M)
 {
     bigint *T = NULL;
     bi_assign(&T, *C);
-    bi_mod_l2r(C, T, n, M);
+    bi_mod_exp_l2r(C, T, n, M);
     bi_delete(&T);
 }
 
-void bi_mod_r2l(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
+void bi_mod_exp_r2l(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
 {
     bigint *T0 = NULL;
     bigint *T1 = NULL;
@@ -164,7 +129,7 @@ void bi_mod_r2l(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
     bi_delete(&T1);
 }
 
-void bi_mod_mns(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
+void bi_mod_exp_mns(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
 {
     bigint *T0 = NULL;
     bigint *T1 = NULL;

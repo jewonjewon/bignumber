@@ -278,18 +278,8 @@ void bi_eea_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
 
         bi_assign(&U1, U2);
         bi_assign(&V1, V2);
-        // check;
-        // bi_print(T0);
-        // printf(" = ");
-        // bi_print(A);
-        // printf(" * ");
-        // bi_print(U0);
-        // printf(" + ");
-        // bi_print(B);
-        // printf(" * ");
-        // bi_print(V0);
-        // newline;
     }
+
     bi_assign(C, U0);
 
     bi_delete(&T0);
@@ -496,6 +486,5 @@ void bi_eea_rcs(bigint **d, bigint **alpha, bigint **beta, bigint *a, bigint *b)
     bi_delete(&t0);
     bi_delete(&t1);
     bi_delete(&t2);
-    // bi_delete_3(&t0, &t1, &t2);
     bi_delete(&T);
 }

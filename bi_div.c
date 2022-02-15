@@ -82,7 +82,6 @@ void bi_DIVCC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 
 void bi_DIVC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 {
-
     if (bi_cmp(A, B) == -1)
     {
         *Q = 0;
@@ -117,12 +116,6 @@ void bi_DIVC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 
 void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 {
-
-    // printf("AA = ");
-    // bi_print(A);
-    // printf("BB = ");
-    // bi_print(B);
-
     if (bi_is_zero(B) == true)
     {
         printf("# bi_DIV Error: B = 0, 정의 불가능(분수가 0임)\n");
@@ -148,26 +141,18 @@ void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     word q = 0;
 
     bigint *T = NULL;
-    bigint *TT = NULL;
-    bigint *TTT = NULL;
 
     for (int j = n - 1; j >= 0; j--)
     {
         bi_assign(&T, *R);
         bi_word_lshift(&T, 1);
 
-        bi_new(&TT, 1);
-        TT->a[0] = A->a[j];
-
-        bi_ADD(&TTT, T, TT);
-
-        bi_DIVC(&(*Q)->a[j], R, TTT, B);
+        bi_add_a(&T, A->a[j]);
+        bi_DIVC(&(*Q)->a[j], R, T, B);
     }
 
     bi_refine(*Q);
     bi_delete(&T);
-    bi_delete(&TT);
-    bi_delete(&TTT);
 }
 
 void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
@@ -186,20 +171,14 @@ void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     else
         bitlen_A = (n - 1) * w + bitlen(A->a[n - 1]);
 
-    // printf("# bitlen = %d\n", bitlen_A);
-
     for (int j = bitlen_A - 1; j >= 0; j--)
     {
         bi_lshift(R, 1);
         (*R)->a[0] ^= bi_get_j_bit(A, j);
-        // printf("R = ");
-        // bi_print(*R);
 
         if (bi_cmp(*R, B) == 1 or bi_cmp(*R, B) == 0)
         {
             bi_lshift(&T, j);
-            // printf("T = ");
-            // bi_print(T);
             bi_xor_asg(Q, T);
 
             bi_sub_asg(R, B); /* R -= B*/
@@ -209,6 +188,7 @@ void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     bi_delete(&T);
 }
 
+/* A와 B를 나누었을 때의 몫 Q를 반환하는 함수 */
 void bi_div_q(OUT bigint **Q, IN bigint *A, IN bigint *B)
 {
     bigint *T = NULL;
@@ -217,11 +197,48 @@ void bi_div_q(OUT bigint **Q, IN bigint *A, IN bigint *B)
     bi_delete(&T);
 }
 
+/* A와 B를 나누었을 때의 나머지 R을 반환하는 함수 */
 void bi_div_r(OUT bigint **R, IN bigint *A, IN bigint *B)
 {
     bigint *T = NULL;
-
     bi_DIV(&T, R, A, B);
 
+    bi_delete(&T);
+}
+
+/* R %= N */
+void bi_mod_asg(OUT bigint **R, IN bigint *N)
+{
+    if (bi_cmp(*R, N) == -1)
+        return;
+
+    if (bi_is_zero(N) == true)
+    {
+        printf("# Error: R = R mod N. but, N is zero");
+        return;
+    }
+    bigint *q = NULL;
+    bigint *T = NULL;
+
+    bi_assign(&T, *R);
+
+    bi_DIV(&q, R, T, N);
+
+    bi_delete(&q);
+    bi_delete(&T);
+}
+
+/* Q /= A */
+void bi_div_asg(OUT bigint **Q, IN bigint *A)
+{
+    bigint *r = NULL;
+    bigint *T = NULL;
+    if (bi_is_zero(A) == true)
+        return;
+    bi_assign(&T, *Q);
+
+    bi_DIV(Q, &r, T, A);
+
+    bi_delete(&r);
     bi_delete(&T);
 }

@@ -22,8 +22,8 @@ int main()
     // test_DIV(1000);
     // test_long_div_bin(1000);
 
-    // test_exp(1000, bi_l2r);
-    // test_mod_exp(10000, bi_mod_l2r);
+    // test_exp(10, bi_l2r);
+    // test_mod_exp(100, bi_mod_exp_l2r);
 
     // test_gcd(100, bi_ea_rcs);
     // test_gcd(10000, lehmer_gcd);
@@ -73,17 +73,23 @@ int main()
     bigint *M = NULL;
 
 #if 1 // RSA
-    // RSA_key *pk = NULL;
-    // RSA_key *sk = NULL;
-    // bigint *p = NULL; /* large prime(p != q) */
-    // bigint *q = NULL; /* large prime(q != p) */
-    // bigint *N = NULL; /* N = p*q */
-    // bigint *d = NULL; /* secret key k */
-    // bigint *e = NULL; /* public key */
-    // bigint *phi_N = NULL;
-    // RSA_keygen(p, q, N, phi_N, e, d);
 
-    RSA_1024();
+    // textbook_RSA(1024);
+    RSA_crt(512);
+
+    // bi_gen_random_element(&C, NON_NEGATIVE, 3);
+    // printf("C = ");
+    // bi_print(C);
+    // printf("bitlen(C) = %d\n", bi_bit_cnt(C));
+
+    // do
+    // {
+    //     bi_SPDM(C, A);
+    // } while (/* condition */);
+
+    // bi_gen_rand_range(&C, NON_NEGATIVE, 0, 30);
+
+    // bi_gen_rand_bit(C, A, 500);
 
     // printf("#   RSA-1024 Key list\n");
     // printf("p = ");

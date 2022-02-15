@@ -183,12 +183,13 @@ int bi_is_two(IN bigint *A)
     return true;
 }
 
+/* 임의의 정수 A가 짝수인지 판별하는 함수  */
 int bi_is_even(IN bigint *A)
 {
     // Case: A < 0 or A[0] != 2
     if ((A->a[0] & 0x1) == 0)
-        return true;
-    return false;
+        return true; /* A is even */
+    return false;    /* A is NOT even */
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

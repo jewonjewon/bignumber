@@ -50,7 +50,7 @@ int bi_is_composite(IN bigint *n, IN bigint *q, IN int l, IN bigint *a)
     bigint *r = NULL;
     bigint *nn = NULL;
 
-    bi_mod_l2r(&t, a, q, n);
+    bi_mod_exp_l2r(&t, a, q, n);
     bi_assign(&nn, n);
     bi_div_r(&r, t, n);
 

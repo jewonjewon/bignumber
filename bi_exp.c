@@ -110,7 +110,6 @@ void bi_mod_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
     for (int j = bi_bit_cnt(n) - 1; j >= 0; j--)
     {
         bi_ksqu_asg(&T);
-
         // printf("#  T = ");
         // bi_print(T);
         bi_mod_asg(&T, M);

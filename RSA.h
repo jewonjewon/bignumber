@@ -19,12 +19,23 @@ typedef struct
 
 void bi_euler_phi(bigint **phi_N, bigint *p, bigint *q);
 
-void RSA_keygen(RSA_key **pk, RSA_key **sk);
+// void RSA_keygen(RSA_key **pk, RSA_key **sk);
+void RSA_keygen(bigint **p, bigint **q, bigint **N,
+                bigint **phi_N, bigint **e, bigint **d);
 
-void RSA_enc(bigint **c, bigint *m, RSA_key *pk);
+// void RSA_enc(bigint **c, bigint *m, RSA_key *pk);
 
-void RSA_dec(bigint **m, bigint *c, RSA_key *sk);
+// void RSA_dec(bigint **m, bigint *c, RSA_key *sk);
 
-// void RSA_1024()
+void RSA_enc(OUT bigint **c, bigint *m, bigint *e, bigint *N);
+void RSA_dec(OUT bigint **m, bigint *c, bigint *d, bigint *N);
+void RSA_1024();
+
+void RSA_crt_keygen(bigint **p, bigint **q, bigint **N, bigint **phi_N,
+                    bigint **e, bigint **d, bigint **dp, bigint **dq, bigint **inv_qp);
+void RSA_crt_dec(OUT bigint **m, bigint *c, bigint *d, bigint *N,
+                 bigint *p, bigint *q, bigint *dp, bigint *dq, bigint *inv_qp);
+
+void RSA_crt_1024();
 
 #endif

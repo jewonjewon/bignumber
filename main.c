@@ -60,10 +60,10 @@ int main()
 
     // bench_lshift();
     // bench_gcd();
-    bench_prime();
+    // bench_prime();
 #endif
 
-#if 0 // 부검
+#if 1 // 부검
     bigint *A = NULL;
     bigint *B = NULL;
     bigint *C = NULL;
@@ -72,10 +72,33 @@ int main()
     bigint *n = NULL;
     bigint *M = NULL;
 
-#if 0 // RSA
-    RSA_key *pk = NULL;
-    RSA_key *sk = NULL;
-    RSA_keygen(&pk, &sk);
+#if 1 // RSA
+    // RSA_key *pk = NULL;
+    // RSA_key *sk = NULL;
+    // bigint *p = NULL; /* large prime(p != q) */
+    // bigint *q = NULL; /* large prime(q != p) */
+    // bigint *N = NULL; /* N = p*q */
+    // bigint *d = NULL; /* secret key k */
+    // bigint *e = NULL; /* public key */
+    // bigint *phi_N = NULL;
+    // RSA_keygen(p, q, N, phi_N, e, d);
+
+    RSA_1024();
+
+    // printf("#   RSA-1024 Key list\n");
+    // printf("p = ");
+    // bi_print(p);
+    // printf("q = ");
+    // bi_print(q);
+    // printf("N = ");
+    // bi_print(N);
+    // printf("phi(N) = ");
+    // bi_print(phi_N);
+    // printf("e = ");
+    // bi_print(e);
+    // printf("d = ");
+    // bi_print(d);
+
 #endif
 
     // bi_gen_rand(&A, NON_NEGATIVE, 32);

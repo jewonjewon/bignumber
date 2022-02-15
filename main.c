@@ -61,6 +61,8 @@ int main()
     // bench_lshift();
     // bench_gcd();
     // bench_prime();
+    bench_RSA();
+
 #endif
 
 #if 1 // 부검
@@ -72,7 +74,7 @@ int main()
     bigint *n = NULL;
     bigint *M = NULL;
 
-#if 1 // RSA
+#if 0 // RSA
 
     // textbook_RSA(1024);
     RSA_crt(512);

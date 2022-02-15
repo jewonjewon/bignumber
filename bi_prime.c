@@ -114,10 +114,10 @@ int bi_is_prime(bigint *n, int k)
         // printf("a = ");
         // bi_print(a);
 
-        // bi_ea_bin_itr(&d, a, n);
+        bi_ea_bin_itr(&d, a, n);
 
-        // if (bi_is_one(d) == false)
-        //     return false; /* n is NOT prime */
+        if (bi_is_one(d) == false)
+            return false; /* n is NOT prime */
 
         if (bi_is_composite(n, q, l, a) == true)
             return false; /* n is NOT prime */
@@ -144,7 +144,7 @@ void bi_gen_prime(bigint **p, int bitlen)
 
     while (1)
     {
-        bi_gen_rand(&n, NON_NEGATIVE, 8);
+        bi_gen_rand(&n, NON_NEGATIVE, len);
 
         x = bi_is_prime(n, k);
 

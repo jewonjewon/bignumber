@@ -36,9 +36,11 @@ void RSA_keygen(RSA_key *pk, RSA_key *sk, int n)
     pk->N = NULL;
     pk->e = NULL;
 
+    n >>= 1;
+
     /* 1. 512비트 크기의 서로 다른 두 소수 생성 */
-    bi_gen_prime(&sk->p, n / 2); /* Choose random prime p */
-    bi_gen_prime(&sk->q, n / 2); /* Choose random prime q */
+    bi_gen_prime(&sk->p, n); /* Choose random prime p */
+    bi_gen_prime(&sk->q, n); /* Choose random prime q */
 
     bi_KMUL(&pk->N, sk->p, sk->q); /* N = pq */
     bi_assign(&sk->N, pk->N);
@@ -91,8 +93,9 @@ void RSA_crt_keygen(RSA_key *pk, RSA_key *sk, int n)
     pk->e = NULL;
 
     /* 1. 512비트 크기의 서로 다른 두 소수 생성 */
-    bi_gen_prime(&sk->p, n / 2);   /* Choose random prime p */
-    bi_gen_prime(&sk->q, n / 2);   /* Choose random prime q */
+    n >>= 1;
+    bi_gen_prime(&sk->p, n);       /* Choose random prime p */
+    bi_gen_prime(&sk->q, n);       /* Choose random prime q */
     bi_KMUL(&pk->N, sk->p, sk->q); /* N = pq */
     bi_assign(&sk->N, pk->N);
 

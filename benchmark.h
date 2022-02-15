@@ -35,5 +35,6 @@ void bench_gcd();
 
 void bench_bi_prime(IN int TEST, int (*func)(bigint *n, int k));
 void bench_prime();
+void bench_RSA();
 
 #endif

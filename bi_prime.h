@@ -3,6 +3,11 @@
 
 #include "bi.h"
 #include "bi_op.h"
+#include "bi_prime.h"
+#include "bi_test.h"
+#include "benchmark.h"
+#include "bi_rand.h"
+#include "RSA.h"
 
 int bi_get_l(bigint *a);
 int bi_is_composite(IN bigint *n, IN bigint *q, IN int l, IN bigint *a);

@@ -1,7 +1,7 @@
 #include "bi.h"
 #include "bi_op.h"
 
-void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_sub(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * bi_ADD_ABc(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드, 입력: 해당 carry 값)
@@ -27,14 +27,14 @@ void bi_ADD_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_ADDC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드): 덧셈 core 함수
+ * bi_add_core(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드): 덧셈 core 함수
  * 기본 가정: A와 B의 부호는 같음, wordlen(A) ≥ wordlen(B)
  * 다중 워드 2개를 입력받아 덧셈 연산 수행 후 최대 wordlen(A) + 1의 워드 크기의 출력값을 반환하는 함수.
  * (오류 방지)덧셈 연산 수행을 위해 bi_resize()함수를 사용하여 B의 워드길이를 A의 워드길이와 동일하게 설정해줌
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-//  bi_ADDC(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
-void bi_ADDC(OUT bigint **C, IN bigint *A, IN bigint *B)
+//  bi_add_core(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
+void bi_add_core(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     bi_resize(&B, A->wordlen);
     bi_new(C, A->wordlen + 1);
@@ -51,13 +51,13 @@ void bi_ADDC(OUT bigint **C, IN bigint *A, IN bigint *B)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_ADD(출력: C = A + B, 입력: 임의의 정수, 입력: 임의의 정수)
+ * bi_add(출력: C = A + B, 입력: 임의의 정수, 입력: 임의의 정수)
  * 임의의 두 정수 A, B를 입력받아 덧셈 연산 수행 후 출력값 C(= A + B)를 반환하는 함수.
  * Case 별로 덧셈 연산 수행
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 #if 1
-//  bi_ADD(출력: C = A + B, 입력: 임의의 정수, 입력: 임의의 정수)
-void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
+//  bi_add(출력: C = A + B, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_add(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     if (bi_is_zero(A) == true and bi_is_zero(B))
     {
@@ -89,7 +89,7 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
     if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
     {
         bi_abs(B);
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         B->sign = NEGATIVE;
         return;
     }
@@ -98,7 +98,7 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
     if (A->sign == NEGATIVE and B->sign == NON_NEGATIVE)
     {
         bi_abs(A); /* A ← |A| */
-        bi_SUB(C, B, A);
+        bi_sub(C, B, A);
         A->sign = NEGATIVE;
         return;
     }
@@ -106,13 +106,13 @@ void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B)
     // Case 5: wordlen(A) ≥ wordlen(B)
     if (A->wordlen >= B->wordlen)
     {
-        bi_ADDC(C, A, B);
+        bi_add_core(C, A, B);
         return;
     }
     // Case 6: wordlen(A) < wordlen(B)
     else
     {
-        bi_ADDC(C, B, A);
+        bi_add_core(C, B, A);
         return;
     }
 }
@@ -142,14 +142,14 @@ void bi_SUB_AbB(OUT word *C, IN word A, IN word B, IN OUT int *b)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_SUBC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드): 뺄셈 core 함수
+ * bi_sub_core(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드): 뺄셈 core 함수
  * 기본 가정: A와 B의 부호는 같음, wordlen(A) ≥ wordlen(B)
  * 다중 워드 2개를 입력받아 뺄셈 연산 수행 후 최대 입력 배열 A의 워드 크기의 출력값을 반환하는 함수.
  * (오류 방지)뺄셈 연산 수행을 위해 bi_resize()함수를 사용하여 B의 워드 길이를 A의 워드 길이와 동일하게 설정해줌
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-//  bi_SUBC(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
-void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
+//  bi_sub_core(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
+void bi_sub_core(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     bi_resize(&B, A->wordlen);
     bi_new(C, A->wordlen);
@@ -164,13 +164,13 @@ void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_SUB(출력: C = A - B, 입력: 임의의 정수, 입력: 임의의 정수)
+ * bi_sub(출력: C = A - B, 입력: 임의의 정수, 입력: 임의의 정수)
  * 임의의 두 정수 A, B를 입력받아 뺄셈 연산 수행 후 출력값 C(= A - B)를 반환하는 함수.
  * Case 별로 뺄셈 연산 수행
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-//  bi_SUB(출력: C = A - B, 입력: 임의의 정수, 입력: 임의의 정수)
-void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
+//  bi_sub(출력: C = A - B, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_sub(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     // Case 1: A = B ,C = 0
     if (bi_cmp(A, B) == 0)
@@ -218,14 +218,14 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
     // Case 4: 0 < B ≤ A,  C = A - B
     if (A->sign == NON_NEGATIVE and B->sign == NON_NEGATIVE and bi_cmp(A, B) == 1)
     {
-        bi_SUBC(C, A, B);
+        bi_sub_core(C, A, B);
         return;
     }
 
     // Case 5: 0 < A < B,  -C = B - A
     else if (A->sign == NON_NEGATIVE and B->sign == NON_NEGATIVE and bi_cmp(A, B) == -1)
     {
-        bi_SUBC(C, B, A);
+        bi_sub_core(C, B, A);
         (*C)->sign = NEGATIVE;
         return;
     }
@@ -235,7 +235,7 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
         bi_abs(A);
         bi_abs(B);
 
-        bi_SUBC(C, B, A);
+        bi_sub_core(C, B, A);
 
         A->sign = NEGATIVE;
         B->sign = NEGATIVE;
@@ -248,7 +248,7 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
         bi_abs(A);
         bi_abs(B);
 
-        bi_SUBC(C, A, B);
+        bi_sub_core(C, A, B);
 
         A->sign = NEGATIVE;
         B->sign = NEGATIVE;
@@ -261,14 +261,14 @@ void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B)
     if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
     {
         bi_abs(B);
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
         B->sign = NEGATIVE;
         return;
     }
     else
     {
         bi_abs(A);
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
         bi_flip_sign(A);
         (*C)->sign = NEGATIVE;
         return;
@@ -282,9 +282,9 @@ void bi_addc_asg(IN OUT bigint **C, IN bigint *A)
     bi_assign(&T, *C); /* T ← C */
 
     if (bi_cmp(T, A) == 1) /* if C > B */
-        bi_ADDC(C, T, A);
+        bi_add_core(C, T, A);
     else /* if C ≤ B */
-        bi_ADDC(C, A, T);
+        bi_add_core(C, A, T);
 
     bi_delete(&T);
 }
@@ -295,7 +295,7 @@ void bi_add_asg(IN OUT bigint **C, IN bigint *A)
     bigint *T = NULL;
     bi_assign(&T, *C); /* T ← C */
 
-    bi_ADD(C, T, A);
+    bi_add(C, T, A);
 
     bi_delete(&T);
 }
@@ -306,13 +306,13 @@ void bi_sub_asg(IN OUT bigint **C, IN bigint *A)
     bigint *T = NULL;
     bi_assign(&T, *C); /* T ← C */
 
-    bi_SUB(C, T, A);
+    bi_sub(C, T, A);
 
     bi_delete(&T);
 }
 
 // /* C += a , a in [0,W) i.e. a is word */
-void bi_add_a(IN OUT bigint **A, IN word a)
+void bi_addi(IN OUT bigint **A, IN word a)
 {
     bigint *T0 = NULL;
     bigint *T1 = NULL;
@@ -322,14 +322,14 @@ void bi_add_a(IN OUT bigint **A, IN word a)
 
     bi_assign(&T1, *A); /* T1 = A */
 
-    bi_ADD(A, T1, T0);
+    bi_add(A, T1, T0);
 
     bi_delete(&T0);
     bi_delete(&T1);
 }
 
 // /* C -= a , a in [0,W) i.e. a is word */
-void bi_sub_minus_a(IN OUT bigint **A, IN word a)
+void bi_subi(IN OUT bigint **A, IN word a)
 {
     bigint *T0 = NULL;
     bigint *T1 = NULL;
@@ -339,7 +339,7 @@ void bi_sub_minus_a(IN OUT bigint **A, IN word a)
 
     bi_assign(&T1, *A); /* T1 = A */
 
-    bi_SUB(A, T1, T0);
+    bi_sub(A, T1, T0);
 
     bi_delete(&T0);
     bi_delete(&T1);

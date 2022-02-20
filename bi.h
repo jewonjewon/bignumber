@@ -58,7 +58,7 @@ void bi_resize(IN OUT bigint **A, IN int wordlen);
 
 void bi_init(IN OUT bigint **A);
 
-void bi_print(bigint *A);
+void bi_print(char *str, bigint *A);
 
 void arr_rand(word *dst, IN int wordlen);
 void bi_gen_rand(OUT bigint **A, IN int sign, IN int wordlen);

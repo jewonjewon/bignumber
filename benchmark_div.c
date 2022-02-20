@@ -32,7 +32,7 @@ void bench_bi_DIV(IN int TEST)
             }
         }
 
-        bi_DIV(&Q, &R, A, B);
+        bi_div(&Q, &R, A, B);
     }
 
     bi_delete(&A);

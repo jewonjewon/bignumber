@@ -33,8 +33,12 @@ void bench_lshift();
 void bench_bi_gcd(IN int TEST, void (*func)(bigint **, bigint *, bigint *));
 void bench_gcd();
 
-void bench_bi_prime(IN int TEST, int (*func)(bigint *n, int k));
+void bench_bi_SPDM(IN int TEST, void (*func)(bigint **, bigint *));
+void bench_SPDM();
+
+void bench_bi_prime(IN int TEST, void (*func)(bigint **n, int k));
 void bench_prime();
 void bench_RSA();
+// void TIME_MSRMN(void (*func)(RSA_key, RSA_key, int));
 
 #endif

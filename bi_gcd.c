@@ -1,18 +1,19 @@
 #include "bi.h"
 #include "bi_op.h"
 
+/* 유클리드 알고리듬을 이용한 gcd(A, B) 계산 함수 */
 void bi_ea_rcs(bigint **C, bigint *A, bigint *B)
 {
     if (bi_is_zero(B) == true)
     {
-        bi_assign(C, A);
+        bi_assign(C, A); /* if B = 0, then gcd(A, B) = A */
         return;
     }
 
-    bigint *T = NULL;
+    bigint *T = NULL; /* 임시 변수 */
     bi_assign(&T, A);
 
-    bi_mod_asg(&T, B);
+    bi_mod_asg(&T, B);  /* T %= B */
     bi_ea_rcs(C, B, T); /* bi_ea_rcs(C, B, A%B) */
 
     bi_delete(&T);
@@ -79,7 +80,7 @@ void bi_ea_bin_itr(bigint **C, bigint *A, bigint *B)
         }
     }
 
-    bi_KMUL(C, T0, T2);
+    bi_kmul(C, T0, T2);
 
     bi_delete(&T0);
     bi_delete(&T1);
@@ -188,32 +189,9 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
             bi_sub_asg(&U1, U0);
             bi_sub_asg(&V1, V0);
         }
-
-        // printf("# T1 = ");
-        // bi_print(T1);
-        // printf("U1 = ");
-        // bi_print(U1);
-        // printf("V1 = ");
-        // bi_print(V1);
-        // newline;
     }
 
     bi_assign(C, U1);
-
-    // printf("T0 = ");
-    // bi_print(T0);
-    // printf("T1 = ");
-    // bi_print(T1);
-    // printf("T2 = ");
-    // bi_print(T2);
-
-    // printf("U0 = ");
-    // bi_print(U0);
-
-    // printf("U1 = ");
-    // bi_print(U1);
-    // printf("print(\"# U0 = {}\".format(hex(U0)))\n");
-    // printf("print(\"# U1 = {}\".format(hex(U1)))\n");
 
     bi_delete(&T0);
     bi_delete(&T1);
@@ -260,18 +238,18 @@ void bi_eea_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
 
     while (bi_is_zero(T1) != true) /* T1 is not zero */
     {
-        bi_DIV(&Q, &R, T0, T1); /* Q, R = T0 / T1, T0 % T1 */
+        bi_div(&Q, &R, T0, T1); /* Q, R = T0 / T1, T0 % T1 */
 
         bi_assign(&T0, T1);
         bi_assign(&T1, R);
 
         /* U2 = U0 - Q*U1 */
         bi_kmul_asg(&Q, U1);
-        bi_SUB(&U2, U0, Q);
+        bi_sub(&U2, U0, Q);
 
         /* V2 = V0 - Q*V1 */
         bi_kmul_asg(&Q, V1);
-        bi_SUB(&V2, V0, Q);
+        bi_sub(&V2, V0, Q);
 
         bi_assign(&U0, U1);
         bi_assign(&V0, V1);
@@ -347,8 +325,8 @@ void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B)
         bi_set_zero(&c);
         bi_set_one(&d);
 
-        bi_ADD(&t0, y, c);
-        bi_ADD(&t1, y, d);
+        bi_add(&t0, y, c);
+        bi_add(&t1, y, d);
 
         while (1)
         {
@@ -358,8 +336,8 @@ void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B)
                 break;
             }
 
-            bi_ADD(&t2, x, b);
-            bi_ADD(&t3, x, a);
+            bi_add(&t2, x, b);
+            bi_add(&t3, x, a);
 
             bi_div_q(&q, t2, t0);
             bi_div_q(&qq, t3, t1);
@@ -370,7 +348,7 @@ void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B)
             /* 1. c ← a - q*c  */
             bi_assign(&t0, q);
             bi_kmul_asg(&t0, c);
-            bi_SUB(&t, a, t0);
+            bi_sub(&t, a, t0);
 
             bi_assign(&a, c); /* 2. a ← c */
 
@@ -379,7 +357,7 @@ void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B)
             /* 4. d ← b - q*d  */
             bi_assign(&t0, q);
             bi_kmul_asg(&t0, d);
-            bi_SUB(&t, b, t0);
+            bi_sub(&t, b, t0);
 
             bi_assign(&b, d); /* 5. b ← d */
 
@@ -388,7 +366,7 @@ void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B)
             /* 1. t ← x - q*y  */
             bi_assign(&t0, q);
             bi_kmul_asg(&t0, y);
-            bi_SUB(&t, x, t0);
+            bi_sub(&t, x, t0);
 
             bi_assign(&x, y); /* 2. x ← y */
             bi_assign(&y, t); /* 2. y ← t */
@@ -403,13 +381,13 @@ void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B)
         }
         else
         {
-            bi_KMUL(&t0, a, AA);
-            bi_KMUL(&t1, b, BB);
-            bi_ADD(&T, t0, t1);
+            bi_kmul(&t0, a, AA);
+            bi_kmul(&t1, b, BB);
+            bi_add(&T, t0, t1);
 
-            bi_KMUL(&t0, c, AA);
-            bi_KMUL(&t1, d, BB);
-            bi_ADD(&u, t0, t1);
+            bi_kmul(&t0, c, AA);
+            bi_kmul(&t1, d, BB);
+            bi_add(&u, t0, t1);
             bi_assign(&AA, T);
             bi_assign(&BB, u);
         }
@@ -455,11 +433,8 @@ void bi_eea_rcs(bigint **d, bigint **alpha, bigint **beta, bigint *a, bigint *b)
 
     bi_eea_rcs(d, alpha, beta, b, T);
 
-    printf("a = ");
-    bi_print(a);
-
-    printf("b = ");
-    bi_print(b);
+    bi_print("a", a);
+    bi_print("b", b);
 
     bigint *t0 = NULL;
     bigint *t1 = NULL;
@@ -474,12 +449,9 @@ void bi_eea_rcs(bigint **d, bigint **alpha, bigint **beta, bigint *a, bigint *b)
 
     bi_assign(&t2, T);
 
-    printf("t0 = ");
-    bi_print(t0);
-    printf("t1 = ");
-    bi_print(t1);
-    printf("t2 = ");
-    bi_print(t2);
+    bi_print("t0", t0);
+    bi_print("t1", t1);
+    bi_print("t2", t2);
 
     bi_assign(alpha, t1);
 

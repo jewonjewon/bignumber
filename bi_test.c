@@ -2,15 +2,13 @@
 #include "bi_op.h"
 #include "bi_test.h"
 #include "bi_prime.h"
+#include "RSA.h"
 
 void sage_show_add(bigint **C, bigint *A, bigint *B, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("B = ");
-    bi_print(B);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("B", B);
+    bi_print("C", *C);
 
     printf("if (C != A + B):\n");
     printf("    print(\"Error: A + B, %d-th\")\n", j);
@@ -22,12 +20,9 @@ void sage_show_add(bigint **C, bigint *A, bigint *B, int j)
 
 void sage_show_sub(bigint **C, bigint *A, bigint *B, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("B = ");
-    bi_print(B);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("B", B);
+    bi_print("C", *C);
     printf("if (C != A - B):\n");
     printf("    print(\"{} : {}\".format(%d, A - B == C)) #%d\n", j, j);
     printf("    cnt = cnt + 1\n");
@@ -35,12 +30,9 @@ void sage_show_sub(bigint **C, bigint *A, bigint *B, int j)
 
 void sage_show_mul(bigint **C, bigint *A, bigint *B, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("B = ");
-    bi_print(B);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("B", B);
+    bi_print("C", *C);
     printf("if (C != A * B):\n");
     printf("    print(\"{} : {}\".format(%d, A * B == C)) #%d\n", j, j);
     printf("    cnt = cnt + 1\n");
@@ -48,10 +40,8 @@ void sage_show_mul(bigint **C, bigint *A, bigint *B, int j)
 
 void sage_show_squ(bigint **C, bigint *A, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("C", *C);
     printf("if (C != A ** 2):\n");
     printf("    print(\"{} : {}\".format(%d, A ** 2 == C)) #%d\n", j, j);
     printf("    cnt = cnt + 1\n");
@@ -59,14 +49,11 @@ void sage_show_squ(bigint **C, bigint *A, int j)
 
 void sage_show_div(bigint **Q, bigint **R, bigint *A, bigint *B, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("B = ");
-    bi_print(B);
-    printf("Q = ");
-    bi_print(*Q);
-    printf("R = ");
-    bi_print(*R);
+    bi_print("A", A);
+    bi_print("B", B);
+    bi_print("Q", *Q);
+    bi_print("R", *R);
+
     printf("if ((Q != A // B) and (Q != A %% B)):\n");
     printf("    print(\"{} : {}\".format(%d, A // B == Q)) #%d\n", j, j);
     printf("    print(\"{} : {}\".format(%d, A %% B == R)) #%d\n", j, j);
@@ -75,10 +62,8 @@ void sage_show_div(bigint **Q, bigint **R, bigint *A, bigint *B, int j)
 
 void sage_show_exp(bigint **C, bigint *A, bigint *B, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("C", *C);
     printf("if (C != A ** 2):\n");
     printf("    print(\"{} : {}\".format(%d, A ** 2 == C)) #%d\n", j, j);
     printf("    cnt = cnt + 1\n");
@@ -86,14 +71,10 @@ void sage_show_exp(bigint **C, bigint *A, bigint *B, int j)
 
 void sage_show_mod_exp(bigint **C, bigint *A, bigint *n, bigint *M, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("n = ");
-    bi_print(n);
-    printf("M = ");
-    bi_print(M);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("n", n);
+    bi_print("M", M);
+    bi_print("C", *C);
 
     printf("if (C != power_mod(A, n, M)):\n");
     printf("    print(\"Error: (A ^ n) mod M, %d-th\")\n", j);
@@ -107,12 +88,9 @@ void sage_show_mod_exp(bigint **C, bigint *A, bigint *n, bigint *M, int j)
 
 void sage_show_gcd(bigint **C, bigint *A, bigint *B, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("B = ");
-    bi_print(B);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("B", B);
+    bi_print("C", *C);
 
     printf("if (C != gcd(A, B)):\n");
     printf("    print(\"Error: gcd(A, B), %d-th\")\n", j);
@@ -125,12 +103,9 @@ void sage_show_gcd(bigint **C, bigint *A, bigint *B, int j)
 
 void sage_show_xgcd(bigint **C, bigint *A, bigint *B, int j)
 {
-    printf("A = ");
-    bi_print(A);
-    printf("B = ");
-    bi_print(B);
-    printf("C = ");
-    bi_print(*C);
+    bi_print("A", A);
+    bi_print("B", B);
+    bi_print("C", *C);
 
     printf("if (C != A.xgcd(B)[1]):\n");
     printf("    print(\"Error: A.xgcd(B)[1], %d-th\")\n", j);
@@ -143,8 +118,7 @@ void sage_show_xgcd(bigint **C, bigint *A, bigint *B, int j)
 
 void sage_show_is_prime(bigint *n, int k, int v, int j)
 {
-    printf("n = ");
-    bi_print(n);
+    bi_print("n", n);
 
     printf("if (n.is_prime() != %d):\n", v);
     printf("    print(\"ERROR\")\n");
@@ -156,8 +130,7 @@ void sage_show_is_prime(bigint *n, int k, int v, int j)
 
 void sage_show_prime_gen(bigint *n, int j)
 {
-    printf("n = ");
-    bi_print(n);
+    bi_print("n", n);
 
     printf("if (n.is_prime() == False):\n");
     printf("    print(\"n is not prime, %d-th\")\n", j);
@@ -178,10 +151,6 @@ void bi_delete_2(bigint **C, bigint **A)
 }
 
 /////
-/////
-/////
-/////
-/////
 
 // Case 1: A = 0, C = B
 void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST)
@@ -196,7 +165,7 @@ void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_new(&A, 1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
         sage_show_add(C, A, B, j);
     }
     // printf("if (cnt == 0):\n");
@@ -217,7 +186,7 @@ void sub_test_ADD2(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_new(&B, 1);
 
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
 
         sage_show_add(C, A, B, j);
     }
@@ -241,7 +210,7 @@ void sub_test_ADD3(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
 
         sage_show_add(C, A, B, j);
     }
@@ -267,7 +236,7 @@ void sub_test_ADD4(bigint **C, bigint *A, bigint *B, IN int TEST)
             bi_gen_rand(&B, NON_NEGATIVE, num2);
         } while (bi_is_zero(B) == true);
 
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
         sage_show_add(C, A, B, j);
     }
     // printf("if (cnt == 0):\n");
@@ -299,7 +268,7 @@ void sub_test_ADD5(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign1, num2);
 
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
         //
         // B->sign = NEGATIVE;
         sage_show_add(C, A, B, j);
@@ -333,7 +302,7 @@ void sub_test_ADD6(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign1, num2);
 
-        bi_ADD(C, A, B);
+        bi_add(C, A, B);
 
         sage_show_add(C, A, B, j);
     }
@@ -371,7 +340,7 @@ void sub_test_SUB1(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_new(&A, 1);
         bi_new(&B, 1);
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -392,7 +361,7 @@ void sub_test_SUB2(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_new(&A, 1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -413,7 +382,7 @@ void sub_test_SUB3(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_new(&B, 1);
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -443,7 +412,7 @@ void sub_test_SUB4(bigint **C, bigint *A, bigint *B, IN int TEST)
                 break;
         }
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -475,7 +444,7 @@ void sub_test_SUB5(bigint **C, bigint *A, bigint *B, IN int TEST)
                 break;
         }
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -505,7 +474,7 @@ void sub_test_SUB6(bigint **C, bigint *A, bigint *B, IN int TEST)
                 break;
         }
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -535,7 +504,7 @@ void sub_test_SUB7(bigint **C, bigint *A, bigint *B, IN int TEST)
                 break;
         }
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -556,7 +525,7 @@ void sub_test_SUB8(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, NON_NEGATIVE, num1);
         bi_gen_rand(&B, NEGATIVE, num2);
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -579,7 +548,7 @@ void sub_test_SUB9(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, NEGATIVE, num1);
         bi_gen_rand(&B, NON_NEGATIVE, num2);
 
-        bi_SUB(C, A, B);
+        bi_sub(C, A, B);
         sage_show_sub(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -621,15 +590,12 @@ void test_MUL_AB(int TEST)
         bi_gen_rand(&A, NON_NEGATIVE, 1);
         bi_gen_rand(&B, NON_NEGATIVE, 1);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
-        printf("B = ");
-        bi_print(B);
+        bi_print("B", B);
 
         bi_MUL_AB(&C, A->a[0], B->a[0]);
-        printf("C = ");
-        bi_print(C);
+        bi_print("C", C);
 
         printf("print(A * B == C) #%d\n", j);
         printf("print(hex(A*B))\n");
@@ -652,16 +618,13 @@ void test_MULC(int TEST)
         bi_gen_rand(&A, NON_NEGATIVE, num1);
         bi_gen_rand(&B, NON_NEGATIVE, num2);
 
-        bi_MULC(&C, A, B);
+        bi_mul_core(&C, A, B);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
-        printf("B = ");
-        bi_print(B);
+        bi_print("B", B);
 
-        printf("C = ");
-        bi_print(C);
+        bi_print("C", C);
 
         printf("print(A * B == C) #%d\n", j);
     }
@@ -687,7 +650,7 @@ void sub_test_MUL1_1(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -711,7 +674,7 @@ void sub_test_MUL1_2(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_new(&B, 1);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -733,7 +696,7 @@ void sub_test_MUL1_3(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_new(&A, 1);
         bi_new(&B, 1);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -757,7 +720,7 @@ void sub_test_MUL2(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -782,7 +745,7 @@ void sub_test_MUL3(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -806,7 +769,7 @@ void sub_test_MUL4(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -831,7 +794,7 @@ void sub_test_MUL5(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -856,7 +819,7 @@ void sub_test_MUL6(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -895,10 +858,8 @@ void test_SQU_A(int TEST)
 
         bi_SQU_A(&C, A->a[0]);
 
-        printf("A = ");
-        bi_print(A);
-        printf("C = ");
-        bi_print(C);
+        bi_print("A", A);
+        bi_print("C", C);
         printf("print(\"{} : {}\".format(%d, A ** %d == C)) #%d\n", j, 2, j);
     }
 
@@ -911,20 +872,18 @@ void test_SQUC(int TEST)
     bigint *A = NULL;
     bigint *C = NULL;
 
-    // bi_SQUC TEST
+    // bi_squ_core TEST
     for (int j = 0; j < TEST; j++)
     {
         int num1 = rand() % 0x0f + 1;
 
         bi_gen_rand(&A, NON_NEGATIVE, num1);
 
-        bi_SQUC(&C, A);
+        bi_squ_core(&C, A);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
-        printf("C = ");
-        bi_print(C);
+        bi_print("C", C);
 
         printf("print(\"{} : {}\".format(%d, A ** %d == C)) #%d\n", j, 2, j);
     }
@@ -941,7 +900,7 @@ void sub_test_SQU1_1(bigint **C, bigint *A, IN int TEST)
     for (int j = 0; j < TEST; j++)
     {
         bi_new(&A, 1);
-        bi_SQU(C, A);
+        bi_squ(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");
@@ -959,7 +918,7 @@ void sub_test_SQU1_2(bigint **C, bigint *A, IN int TEST)
     {
         bi_new(&A, 1);
         A->a[0] = 1;
-        bi_SQU(C, A);
+        bi_squ(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");
@@ -978,7 +937,7 @@ void sub_test_SQU1_3(bigint **C, bigint *A, IN int TEST)
         bi_new(&A, 1);
         A->a[0] = 1;
         A->sign = NEGATIVE;
-        bi_SQU(C, A);
+        bi_squ(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");
@@ -998,7 +957,7 @@ void sub_test_SQU2(bigint **C, bigint *A, IN int TEST)
         int num1 = rand() % 0x0f + 1;
 
         bi_gen_rand(&A, sign1, num1);
-        bi_SQU(C, A);
+        bi_squ(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");
@@ -1031,43 +990,16 @@ void test_bi_word_lshift(int TEST)
 
         bi_gen_rand(&A, NON_NEGATIVE, num1);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
         bi_word_lshift(&A, x);
-        printf("C = ");
-        bi_print(A);
+        bi_print("A", A);
 
         printf("print(A << (%d * %d) == C) #%d\n", x, w, j);
     }
 
     bi_delete(&A);
 }
-// void test_bi_word_lshift2(int TEST)
-// {
-//     bigint *A = NULL;
-//     bigint *C = NULL;
-
-//     for (int j = 0; j < TEST; j++)
-//     {
-//         int x = rand() % 0xf + 1;
-//         int num1 = rand() % 0x0f + 1;
-
-//         bi_gen_rand(&A, NON_NEGATIVE, num1);
-
-//         printf("A = ");
-//         bi_print(A);
-
-//         bi_word_lshift2(&C, A, x);
-//         printf("C = ");
-//         bi_print(C);
-
-//         printf("print(A << (%d * %d) == C) #%d\n", x, w, j);
-//     }
-
-//     bi_delete(&A);
-//     bi_delete(&C);
-// }
 
 void test_bi_lshift(int TEST)
 {
@@ -1080,12 +1012,9 @@ void test_bi_lshift(int TEST)
 
         bi_gen_rand(&A, NON_NEGATIVE, num1);
 
-        printf("A = ");
-        bi_print(A);
-
+        bi_print("A", A);
         bi_lshift(&A, x);
-        printf("C = ");
-        bi_print(A);
+        bi_print("A", A);
         printf("print(\"{} : {}\".format(%d, A << %d == C)) #%d\n", j, x, j);
     }
 
@@ -1103,12 +1032,10 @@ void test_bi_rshift(int TEST)
 
         bi_gen_rand(&A, NON_NEGATIVE, num1);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
         bi_rshift(&A, x);
-        printf("C = ");
-        bi_print(A);
+        bi_print("A", A);
         printf("print(\"{} : {}\".format(%d, A >> %d == C)) #%d\n", j, x, j);
     }
 
@@ -1126,13 +1053,11 @@ void test_bi_word_rshift(int TEST)
         // int x = 2;
         bi_gen_rand(&A, NON_NEGATIVE, num1);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
         bi_word_rshift(&A, x);
 
-        printf("C = ");
-        bi_print(A);
+        bi_print("A", A);
 
         printf("print(A >> (%d * %d) == C) #%d\n", x, w, j);
     }
@@ -1155,13 +1080,10 @@ void test_MULC_karastuba(int TEST)
 
         bi_gen_rand(&A, NON_NEGATIVE, 20);
         bi_gen_rand(&B, NON_NEGATIVE, 20);
-        bi_MULC_karatsuba(&C, A, B);
-        printf("A = ");
-        bi_print(A);
-        printf("B = ");
-        bi_print(B);
-        printf("C = ");
-        bi_print(C);
+        bi_kmul_core(&C, A, B);
+        bi_print("A", A);
+        bi_print("B", B);
+        bi_print("C", C);
 
         printf("print(A * B == C) #%d\n", j);
     }
@@ -1182,12 +1104,10 @@ void test_bi_word_reduction(int TEST)
 
         bi_gen_rand(&A, NEGATIVE, num1);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
         bi_word_reduction(&A, x);
-        printf("C = ");
-        bi_print(A);
+        bi_print("A", A);
         printf("print(A %% (2 ** (%d * %d)) == C) #%d\n", x, w, j);
     }
 
@@ -1210,10 +1130,8 @@ void test_bi_word_reduction(int TEST)
 
 //         Q = bi_long_div_2word(A, B->a[0]);
 
-//         printf("A = ");
-//         bi_print(A);
-//         printf("B = ");
-//         bi_print(B);
+//     //         bi_print("A", A);
+//     //         bi_print("B", B);
 //         printf("Q = %#llx\n", Q);
 
 //         printf("print(A // B == Q) #%d\n", j);
@@ -1286,13 +1204,11 @@ void test_bi_word_reduction(int TEST)
 
 //         bi_DIVCC(&Q, &R, A, B);
 
-//         printf("A = ");
-//         bi_print(A);
-//         printf("B = ");
-//         bi_print(B);
-//         printf("Q = %#llx\n", Q);
-//         printf("R = ");
-//         bi_print(R);
+//     //         bi_print("A", A);
+//
+//         printf("Q = %#llx\n", "x", Q);
+//
+//         bi_print("R", R);
 
 //         printf("print(A // B == Q) #%d\n", j);
 //         printf("print(A %% B == R) #%d\n", j);
@@ -1341,13 +1257,11 @@ void test_bi_word_reduction(int TEST)
 
 //         bi_DIVC(&Q, &R, A, B);
 
-//         printf("A = ");
-//         bi_print(A);
-//         printf("B = ");
-//         bi_print(B);
-//         printf("Q = %#llx\n", Q);
-//         printf("R = ");
-//         bi_print(R);
+//     //         bi_print("A", A);
+//
+//         printf("Q = %#llx\n", "x", Q);
+//
+//         bi_print("R", R);
 
 //         printf("print(A // B == Q) #%d\n", j);
 //         printf("print(A %% B == R) #%d\n", j);
@@ -1391,7 +1305,7 @@ void test_DIV(int TEST)
             }
         }
 
-        bi_DIV(&Q, &R, A, B);
+        bi_div(&Q, &R, A, B);
         sage_show_div(&Q, &R, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -1464,22 +1378,21 @@ void test_exp(int TEST, void (*func)(bigint **, bigint *, bigint *))
 
         bi_gen_rand(&A, NON_NEGATIVE, num1);
 
-        printf("n = ");
-        bi_print(N);
+        bi_print("N", N);
 
-        printf("A = ");
-        bi_print(A);
+        bi_print("A", A);
 
         func(&C, A, N);
         bi_l2r(&C, A, N);
 
-        printf("C = ");
-        bi_print(C);
+        bi_print("C", C);
         printf("print((A ** n) == C)\n");
         // printf("print(hex(A**n))\n");
     }
 
-    bi_delete_2(&C, &A);
+    bi_delete(&A);
+    bi_delete(&C);
+    bi_delete(&N);
 }
 
 void test_mod_exp(int TEST, void (*func)(bigint **, bigint *, bigint *, bigint *))
@@ -1600,20 +1513,16 @@ void test_mont_red(int TEST)
 
         bi_lshift(&N, 1);
 
-        bi_add_a(&N, 1);
+        bi_addi(&N, 1);
 
         bi_eea_itr(&nn, N, R);
 
         bi_mont_red(&C, x, R, N, nn);
 
-        printf("x = ");
-        bi_print(x);
-        printf("R = ");
-        bi_print(R);
-        printf("N = ");
-        bi_print(N);
-        printf("C = ");
-        bi_print(C);
+        bi_print("x", x);
+        bi_print("R", R);
+        bi_print("N", N);
+        bi_print("C", C);
         // printf("if (C != xgcd(A,B)[1]):\n");
         // printf("    print(\"{} : {}\".format(%d, xgcd(A,B)[1] == C)) #%d\n", j, j);
         // printf("    print(hex(xgcd(A,B)[1]))\n");
@@ -1648,6 +1557,7 @@ void test_is_prime(int TEST, int (*func)(bigint *, int k))
     }
     printf("if (cnt == 0):\n");
     printf("    print(\"ALL TRUE!\")\n");
+
     bi_delete(&n);
 }
 
@@ -1670,3 +1580,62 @@ void test_prime_gen(int TEST, void (*func)(bigint **, int))
     printf("    print(\"ALL TRUE!\")\n");
     bi_delete(&n);
 }
+
+// void test_textbook_RSA(int TEST, void (*keygen)(RSA_key *, RSA_key *, int),
+//                        void (*enc)(bigint **, bigint *, RSA_key *),
+//                        void (*dec)(bigint **, bigint *, RSA_key *))
+// {
+//     RSA_key pk;
+//     RSA_key sk;
+
+//     bigint *m = NULL;
+//     bigint *c = NULL;
+//     bigint *recoverd_msg = NULL;
+
+//     // bi_new(&m, 1);
+//     // m->a[0] = 0x200;
+
+//     bi_gen_rand(&m, NON_NEGATIVE, 5);
+
+//     RSA_keygen(&pk, &sk, n);
+
+//     printf("#   RSA-1024 Key list\n");
+//     printf("p = ");
+//     bi_print(sk.p);
+//     newline;
+//     printf("q = ");
+//     bi_print(sk.q);
+//     newline;
+//     printf("N = ");
+//     bi_print(pk.N);
+//     newline;
+
+//     printf("e = ");
+//     bi_print(pk.e);
+//     newline;
+//     printf("d = ");
+//     bi_print(sk.d);
+
+//     newline;
+
+//     RSA_enc(&c, m, &pk);
+//     printf("Cipher text(RSA-1024)\n");
+//     bi_print(c);
+
+//     newline;
+
+//     RSA_dec(&recoverd_msg, c, &sk);
+//     printf("Recovered message(RSA-1024)\n");
+//     bi_print(recoverd_msg);
+
+//     newline;
+
+//     if (bi_cmp(m, recoverd_msg) == 0)
+//         printf("Success!\n");
+//     else
+//         printf("Fali..\n");
+
+//     bi_delete(&m);
+//     bi_delete(&c);
+//     bi_delete(&recoverd_msg);
+// }

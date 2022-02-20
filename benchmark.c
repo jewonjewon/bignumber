@@ -9,7 +9,7 @@ void bench_bi_MUL(IN int TEST, int len)
     bigint *A = NULL;
     bigint *B = NULL;
     bigint *C = NULL;
-    // printf("### bi_MUL ###\n");
+    // printf("### bi_mul ###\n");
     // printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
@@ -24,7 +24,7 @@ void bench_bi_MUL(IN int TEST, int len)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_MUL(&C, A, B);
+        bi_mul(&C, A, B);
         // sage_show_mul(&C, A, B, j);
     }
     // printf("if (cnt == 0):\n");
@@ -41,7 +41,7 @@ void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLA
 
     if (flag >= bi_min(A->wordlen, B->wordlen))
     {
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         return;
     }
 
@@ -88,13 +88,13 @@ void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLA
 
     bi_assign(&R, T1);
     bi_word_lshift(&R, 2 * l);
-    bi_ADD(&R, R, T0);
+    bi_add(&R, R, T0);
 
     bigint *S1 = NULL;
     bigint *S0 = NULL;
 
-    bi_SUB(&S1, A0, A1);
-    bi_SUB(&S0, B1, B0);
+    bi_sub(&S1, A0, A1);
+    bi_sub(&S0, B1, B0);
 
     //
     // printf("# T1 = ");
@@ -119,7 +119,7 @@ void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLA
     bi_abs(S1);
     bi_abs(S0);
 
-    bi_MULC_karatsuba(&S, S1, S0);
+    bi_kmul_core(&S, S1, S0);
 
     S1->sign = t1;
     S0->sign = t0;
@@ -130,7 +130,7 @@ void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLA
     // bi_print(S);
     // newline;
 
-    bi_ADD(&S, S, T1);
+    bi_add(&S, S, T1);
 
     //
     // printf("# T1 = ");
@@ -140,7 +140,7 @@ void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLA
     // bi_print(S);
     // newline;
 
-    bi_ADD(&S, S, T0);
+    bi_add(&S, S, T0);
 
     //
     // printf("#3.   S = ");
@@ -154,7 +154,7 @@ void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLA
     // bi_print(S);
     // newline;
 
-    bi_ADD(&R, R, S);
+    bi_add(&R, R, S);
     // 함수를 두개 만들기
     // z = x + y, z = z + x
 
@@ -179,7 +179,7 @@ void bi_check_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B, int FLA
     return;
 }
 
-// bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+// bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_check_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B, int FLAG)
 {
     // Case 1: A = 0 or B = 0 then C = 0
@@ -234,7 +234,7 @@ void bench_bi_check_KMUL(IN int TEST, int FLAG)
     bigint *A = NULL;
     bigint *B = NULL;
     bigint *C = NULL;
-    // printf("### bi_KMUL ###\n");
+    // printf("### bi_kmul ###\n");
     // printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
@@ -262,7 +262,7 @@ void bench_bi_check_KMUL(IN int TEST, int FLAG)
 //     bigint *A = NULL;
 //     bigint *B = NULL;
 //     bigint *C = NULL;
-//     // printf("### bi_KMUL ###\n");
+//     // printf("### bi_kmul ###\n");
 //     // printf("cnt = 0\n");
 
 //     for (int j = 0; j < TEST; j++)
@@ -276,7 +276,7 @@ void bench_bi_check_KMUL(IN int TEST, int FLAG)
 //         bi_gen_rand(&A, sign1, num1);
 //         bi_gen_rand(&B, sign2, num2);
 
-//         bi_KMUL(&C, A, B);
+//         bi_kmul(&C, A, B);
 //         // sage_show_mul(&C, A, B, j);
 //     }
 //     // printf("if (cnt == 0):\n");
@@ -291,7 +291,7 @@ void bench_bi_KMUL(IN int TEST, int len)
     bigint *A = NULL;
     bigint *B = NULL;
     bigint *C = NULL;
-    // printf("### bi_KMUL ###\n");
+    // printf("### bi_kmul ###\n");
     // printf("cnt = 0\n");
 
     for (int j = 0; j < TEST; j++)
@@ -305,7 +305,7 @@ void bench_bi_KMUL(IN int TEST, int len)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_KMUL(&C, A, B);
+        bi_kmul(&C, A, B);
         // sage_show_mul(&C, A, B, j);
     }
     // printf("if (cnt == 0):\n");

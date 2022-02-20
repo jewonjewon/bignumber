@@ -3,8 +3,10 @@
 #include "bi_test.h"
 #include "bi_rand.h"
 #include "benchmark.h"
+#include "bi_prime.h"
 
 /* C-- */
+
 void bi_sub_minus_one(bigint **A)
 {
 
@@ -13,7 +15,7 @@ void bi_sub_minus_one(bigint **A)
     bi_set_one(&T0);    /* T0 = 1 */
     bi_assign(&T1, *A); /* T1 = A */
 
-    bi_SUB(A, T1, T0);
+    bi_sub(A, T1, T0);
 
     bi_delete(&T0);
     bi_delete(&T1);
@@ -34,7 +36,7 @@ int bi_get_l(bigint *a)
             bi_rshift(&T, 1);
             cnt++;
         }
-        else
+        else /* T의 마지막 비트가 0일 경우 */
         {
             bi_delete(&T);
             return cnt;
@@ -51,15 +53,21 @@ int bi_is_composite(IN bigint *n, IN bigint *q, IN int l, IN bigint *a)
     bigint *nn = NULL;
 
     bi_mod_exp_l2r(&t, a, q, n);
+
     bi_assign(&nn, n);
     bi_div_r(&r, t, n);
 
     if (bi_is_one(r) == true)
+    {
+        bi_delete(&nn);
+        bi_delete(&t);
+        bi_delete(&r);
         return false; /* NOT COMPOSITE */
+    }
 
     for (int j = 0; j < l; j++)
     {
-        bi_sub_minus_a(&nn, 1);
+        bi_subi(&nn, 1);
 
         if (bi_cmp(r, nn) == 0)
         {
@@ -68,13 +76,13 @@ int bi_is_composite(IN bigint *n, IN bigint *q, IN int l, IN bigint *a)
             bi_delete(&r);
             return false; /* NOT COMPOSITE */
         }
+
         bi_ksqu_asg(&t);
         bi_mod_asg(&t, n);
     }
     bi_delete(&nn);
     bi_delete(&t);
     bi_delete(&r);
-
     return true; /* COMPOSITE */
 }
 // end bi_is_composite()
@@ -82,9 +90,6 @@ int bi_is_composite(IN bigint *n, IN bigint *q, IN int l, IN bigint *a)
 /* n: 판별하고자 하는 정수, k: 시행 횟수 , use miller-rabin primallity test*/
 int bi_is_prime(bigint *n, int k)
 {
-    if (bi_is_even(n) == true) /* n is even, n is NOT prime */
-        return false;
-
     if (bi_is_one(n) == true or bi_is_zero(n) == true) /* n is 1 or n is 0, n is NOT prime */
         return false;
 
@@ -93,16 +98,25 @@ int bi_is_prime(bigint *n, int k)
     bigint *d = NULL;
     bigint *a = NULL;
 
-    bi_assign(&t, n);      /* t ← n */
-    bi_sub_minus_a(&t, 1); /* t ← n-1 */
+    bi_assign(&t, n); /* t ← n */
+    bi_subi(&t, 1);   /* t ← n-1 */
 
     int l = bi_get_l(t);
 
     bi_assign(&q, t);
     bi_rshift(&q, 1); /* q ← (A-1) >> 1 */
 
-    bi_sub_minus_a(&t, 1);
+    bi_subi(&t, 1);
+#if 1
+    while (k > 0) /* k번 시행 */
+    {
+        do
+        {
+            bi_gen_rand(&a, NON_NEGATIVE, t->wordlen);
 
+        } while ((bi_is_zero(a) == true) or (bi_is_one(a) == true) or (bi_cmp(a, t) == -1));
+#endif
+#if 0
     while (k > 0) /* k번 시행 */
     {
         do
@@ -110,17 +124,22 @@ int bi_is_prime(bigint *n, int k)
             bi_SPDM(&a, t); /* Choose random bit a in [2, a - 2)*/
 
         } while (bi_is_zero(a) == true or bi_is_one(a) == true);
-
+#endif
         // printf("a = ");
         // bi_print(a);
+        // bi_ea_bin_itr(&d, a, n);
 
-        bi_ea_bin_itr(&d, a, n);
-
-        if (bi_is_one(d) == false)
-            return false; /* n is NOT prime */
+        // if (bi_is_one(d) == false)
+        //     return false; /* n is NOT prime */
 
         if (bi_is_composite(n, q, l, a) == true)
+        {
+            bi_delete(&q);
+            bi_delete(&t);
+            bi_delete(&a);
+            bi_delete(&d);
             return false; /* n is NOT prime */
+        }
         k--;
     }
 
@@ -135,7 +154,7 @@ int bi_is_prime(bigint *n, int k)
 
 void bi_gen_prime(bigint **p, int bitlen)
 {
-    int k = 40; /* k: 시행횟수 */
+    int k = 5; /* k: 시행횟수 */
     int x = 0;
     int j = 0;
     int len = bitlen / w;
@@ -146,9 +165,11 @@ void bi_gen_prime(bigint **p, int bitlen)
     {
         bi_gen_rand(&n, NON_NEGATIVE, len);
 
+        n->a[0] |= 1; /* ODD */
+
         x = bi_is_prime(n, k);
 
-        if (x == 1) /* x is 1 then x is prime */
+        if (x == true) /* x is true then x is prime */
         {
             bi_assign(p, n);
             bi_delete(&n);

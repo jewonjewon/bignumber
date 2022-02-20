@@ -27,7 +27,7 @@ word bi_long_div_2word(IN bigint *A, IN word B)
     return Q;
 }
 
-void bi_DIVCC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
+void bi_div_core2(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 {
     int n = A->wordlen; /* n is wordlen(A) */
     int m = B->wordlen; /* n is wordlen(B) */
@@ -62,9 +62,9 @@ void bi_DIVCC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     QQ->a[0] = q;
 
     bigint *T = NULL;
-    bi_MULC(&T, B, QQ);
+    bi_mul_core(&T, B, QQ);
 
-    bi_SUB(R, A, T);
+    bi_sub(R, A, T);
 
     q = QQ->a[0];
 
@@ -80,7 +80,7 @@ void bi_DIVCC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     bi_delete(&T);
 }
 
-void bi_DIVC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
+void bi_div_core(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 {
     if (bi_cmp(A, B) == -1)
     {
@@ -103,7 +103,7 @@ void bi_DIVC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     bi_lshift(&AA, k);
     bi_lshift(&BB, k);
 
-    bi_DIVCC(Q, &RR, AA, BB);
+    bi_div_core2(Q, &RR, AA, BB);
 
     bi_rshift(&RR, k);
 
@@ -114,11 +114,11 @@ void bi_DIVC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B)
     bi_delete(&BB);
 }
 
-void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
+void bi_div(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 {
     if (bi_is_zero(B) == true)
     {
-        printf("# bi_DIV Error: B = 0, 정의 불가능(분수가 0임)\n");
+        printf("# bi_div Error: B = 0, 정의 불가능(분수가 0임)\n");
         return;
     }
     if (bi_is_zero(A) == true)
@@ -147,8 +147,8 @@ void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
         bi_assign(&T, *R);
         bi_word_lshift(&T, 1);
 
-        bi_add_a(&T, A->a[j]);
-        bi_DIVC(&(*Q)->a[j], R, T, B);
+        bi_addi(&T, A->a[j]);
+        bi_div_core(&(*Q)->a[j], R, T, B);
     }
 
     bi_refine(*Q);
@@ -192,7 +192,7 @@ void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
 void bi_div_q(OUT bigint **Q, IN bigint *A, IN bigint *B)
 {
     bigint *T = NULL;
-    bi_DIV(Q, &T, A, B);
+    bi_div(Q, &T, A, B);
 
     bi_delete(&T);
 }
@@ -201,7 +201,7 @@ void bi_div_q(OUT bigint **Q, IN bigint *A, IN bigint *B)
 void bi_div_r(OUT bigint **R, IN bigint *A, IN bigint *B)
 {
     bigint *T = NULL;
-    bi_DIV(&T, R, A, B);
+    bi_div(&T, R, A, B);
 
     bi_delete(&T);
 }
@@ -222,7 +222,7 @@ void bi_mod_asg(OUT bigint **R, IN bigint *N)
 
     bi_assign(&T, *R);
 
-    bi_DIV(&q, R, T, N);
+    bi_div(&q, R, T, N);
 
     bi_delete(&q);
     bi_delete(&T);
@@ -237,7 +237,7 @@ void bi_div_asg(OUT bigint **Q, IN bigint *A)
         return;
     bi_assign(&T, *Q);
 
-    bi_DIV(Q, &r, T, A);
+    bi_div(Q, &r, T, A);
 
     bi_delete(&r);
     bi_delete(&T);

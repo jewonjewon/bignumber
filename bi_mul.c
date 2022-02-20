@@ -41,13 +41,13 @@ void bi_MUL_AB(OUT bigint **C, IN word A, IN word B)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_MULC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
+ * bi_mul_core(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
  * 다중 워드 2개를 입력받아 곱셈 연산 수행 후 최대 wordlen(A) + wordlen(B) 워드 크기의 출력값을 반환하는 함수.
  * 다중 워드 곱셈이므로 결과값 C의 최대 워드 길이는 wordlen(A) + wordlen(B) 워드.
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_MULC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
-void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B)
+// bi_mul_core(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
+void bi_mul_core(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     bi_set_zero(C);
 
@@ -68,13 +68,13 @@ void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+ * bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
  * 임의의 정수 A와 B를 입력받아 MULC를 통한 곱셈 연산 수행 후 결과값 C를 반환하는 함수.
  * 다중 워드 곱셈이므로 결과값 C의 최대 워드 길이는 wordlen(A) + wordlen(B) 워드.
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
-void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
+// bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_mul(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     // Case 1: A = 0 or B = 0 then C = 0
     if (bi_is_zero(A) == true or bi_is_zero(B) == true)
@@ -115,7 +115,7 @@ void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B)
 
     bi_abs(A);
     bi_abs(B);
-    bi_MULC(C, A, B);
+    bi_mul_core(C, A, B);
     A->sign = t1;
     B->sign = t0;
     (*C)->sign = t1 ^ t0;
@@ -127,19 +127,19 @@ void bi_mul_asg(IN OUT bigint **C, IN bigint *A)
     bigint *T = NULL;
     bi_assign(&T, *C); /* T ← C */
 
-    bi_MUL(C, T, A);
+    bi_mul(C, T, A);
 
     bi_delete(&T);
 }
 
-void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
+void bi_kmul_core(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
 
     int flag = 3; /* flag = 3일 때 가장 빠름 */
 
     if (flag >= bi_min(A->wordlen, B->wordlen))
     {
-        bi_MUL(C, A, B);
+        bi_mul(C, A, B);
         return;
     }
 
@@ -163,24 +163,11 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_assign(&B0, B);
     bi_word_reduction(&B0, l);
 
-    //
-    // printf("# l = %d\n", l);
-    // printf("# A1 = ");
-    // bi_print(A1);
-    // printf("# A0 = ");
-    // bi_print(A0);
-    // newline;
-    // printf("# B1 = ");
-    // bi_print(B1);
-    // printf("# B0 = ");
-    // bi_print(B0);
-    // newline;
-
     bigint *T1 = NULL;
     bigint *T0 = NULL;
 
-    bi_MULC_karatsuba(&T1, A1, B1);
-    bi_MULC_karatsuba(&T0, A0, B0);
+    bi_kmul_core(&T1, A1, B1);
+    bi_kmul_core(&T0, A0, B0);
 
     bigint *R = NULL;
 
@@ -191,23 +178,8 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     bigint *S1 = NULL;
     bigint *S0 = NULL;
 
-    bi_SUB(&S1, A0, A1);
-    bi_SUB(&S0, B1, B0);
-
-    //
-    // printf("# T1 = ");
-    // bi_print(T1);
-    // printf("# T0 = ");
-    // bi_print(T0);
-    // newline;
-    // printf("#  R = ");
-    // bi_print(R);
-    // newline;
-    // printf("# S1 = ");
-    // bi_print(S1);
-    // printf("# S0 = ");
-    // bi_print(S0);
-    // newline;
+    bi_sub(&S1, A0, A1);
+    bi_sub(&S0, B1, B0);
 
     bigint *S = NULL;
 
@@ -217,16 +189,12 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_abs(S1);
     bi_abs(S0);
 
-    bi_MULC_karatsuba(&S, S1, S0);
+    bi_kmul_core(&S, S1, S0);
 
     S1->sign = t1;
     S0->sign = t0;
     S->sign = S1->sign ^ S0->sign;
 
-    //
-    // printf("#1.   S = ");
-    // bi_print(S);
-    // newline;
     bi_add_asg(&S, T1);    /* S += T1 */
     bi_add_asg(&S, T0);    /* S += T0 */
     bi_word_lshift(&S, l); /* R <<= l*w */
@@ -248,8 +216,8 @@ void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B)
     return;
 }
 
-// bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
-void bi_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B)
+// bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_kmul(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
     // Case 1: A = 0 or B = 0 then C = 0
     if (bi_is_zero(A) == true or bi_is_zero(B) == true)
@@ -291,20 +259,20 @@ void bi_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_abs(A);
     bi_abs(B);
 
-    bi_MULC_karatsuba(C, A, B);
+    bi_kmul_core(C, A, B);
 
     A->sign = t1;
     B->sign = t0;
     (*C)->sign = t1 ^ t0;
 }
 
-// bi_MUL(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+// bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_kmul_asg(OUT bigint **C, IN bigint *A)
 {
     bigint *T = NULL;
     bi_assign(&T, *C);
 
-    bi_KMUL(C, T, A);
+    bi_kmul(C, T, A);
 
     bi_delete(&T);
 }

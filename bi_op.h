@@ -38,52 +38,52 @@ void bi_or_asg(IN OUT bigint **C, IN bigint *A);
 
 /* ADD */
 void bi_ADD_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c);
-void bi_ADDC(OUT bigint **C, IN bigint *A, IN bigint *B);
-void bi_ADD(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_add_core(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_add(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 void bi_addc_asg(IN OUT bigint **C, IN bigint *A);
 void bi_add_asg(IN OUT bigint **C, IN bigint *A);
 
-void bi_add_a(IN OUT bigint **A, IN word a);
+void bi_addi(IN OUT bigint **A, IN word a);
 
 /* SUB */
 void bi_SUB_ABc(OUT word *C, IN word A, IN word B, IN OUT int *c);
-void bi_SUBC(OUT bigint **C, IN bigint *A, IN bigint *B);
-void bi_SUB(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_sub_core(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_sub(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 void bi_sub_asg(IN OUT bigint **C, IN bigint *A);
 void bi_sub_minus_one(bigint **A);
-void bi_sub_minus_a(IN OUT bigint **A, IN word a);
+void bi_subi(IN OUT bigint **A, IN word a);
 
 /* MULTIPLICATION */
 void bi_MUL_AB(OUT bigint **C, IN word A, IN word B);
-void bi_MULC(OUT bigint **C, IN bigint *A, IN bigint *B);
-void bi_MUL(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_mul_core(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_mul(OUT bigint **C, IN bigint *A, IN bigint *B);
 
 // C *= A
 void bi_mul_asg(IN OUT bigint **C, IN bigint *A);
 
-void bi_MULC_karatsuba(OUT bigint **C, IN bigint *A, IN bigint *B);
-void bi_KMUL(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_kmul_core(OUT bigint **C, IN bigint *A, IN bigint *B);
+void bi_kmul(OUT bigint **C, IN bigint *A, IN bigint *B);
 void bi_kmul_asg(OUT bigint **C, IN bigint *A);
 
 /* SQUARING */
 void bi_SQU_A(OUT bigint **C, word A);
-void bi_SQUC(OUT bigint **C, IN bigint *A);
-void bi_SQU(OUT bigint **C, IN bigint *A);
+void bi_squ_core(OUT bigint **C, IN bigint *A);
+void bi_squ(OUT bigint **C, IN bigint *A);
 
 void bi_squ_asg(OUT bigint **C);
 
-void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A);
-void bi_KSQU(OUT bigint **C, IN bigint *A);
+void bi_ksqu_core(OUT bigint **C, IN bigint *A);
+void bi_ksqu(OUT bigint **C, IN bigint *A);
 
 void bi_ksqu_asg(OUT bigint **C);
 
 /* DIVISION */
 word bi_long_div_2word(IN bigint *A, IN word B);
-void bi_DIVCC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B);
-void bi_DIVC(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B);
-void bi_DIV(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B);
+void bi_div_core2(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B);
+void bi_div_core(OUT word *Q, OUT bigint **R, IN bigint *A, IN bigint *B);
+void bi_div(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B);
 
 void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B);
 

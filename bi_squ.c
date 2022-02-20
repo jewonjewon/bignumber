@@ -35,13 +35,13 @@ void bi_SQU_A(OUT bigint **C, word A)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_SQUC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
+ * bi_squ_core(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
  * 다중 워드 2개를 입력받아 제곱 연산 수행 후 최대 wordlen(A) + wordlen(B) 워드 크기의 출력값을 반환하는 함수.
  * 다중 워드 제곱이므로 결과값 C의 최대 워드 길이는 wordlen(A) + wordlen(B) 워드.
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_SQUC(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
-void bi_SQUC(OUT bigint **C, IN bigint *A)
+// bi_squ_core(출력: bigint형 배열, 입력: 다중 워드, 입력: 다중 워드)
+void bi_squ_core(OUT bigint **C, IN bigint *A)
 {
     // bi_new(C, 2 * A->wordlen);
     int n = A->wordlen; /* n is wordlen(A) */
@@ -69,7 +69,7 @@ void bi_SQUC(OUT bigint **C, IN bigint *A)
         }
     }
     bi_lshift(&C1, 1);
-    bi_ADD(C, C0, C1);
+    bi_add(C, C0, C1);
 
     bi_delete(&C0);
     bi_delete(&C1);
@@ -78,13 +78,13 @@ void bi_SQUC(OUT bigint **C, IN bigint *A)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * bi_SQU(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+ * bi_squ(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
  * 임의의 정수 A와 B를 입력받아 SQUC()함수를 통한 제곱 연산 수행 후 결과값 C를 반환하는 함수.
  * Case 별로 제곱 연산 수행
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_SQU(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
-void bi_SQU(OUT bigint **C, IN bigint *A)
+// bi_squ(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_squ(OUT bigint **C, IN bigint *A)
 {
     // Case 1: A = 0 or A = 1 or A = -1
     if (bi_is_zero(A) == true or bi_is_one(A) == true or bi_is_minus_one(A) == true)
@@ -95,7 +95,7 @@ void bi_SQU(OUT bigint **C, IN bigint *A)
     }
 
     // Case 2: Otherwise
-    bi_SQUC(C, A);
+    bi_squ_core(C, A);
 }
 
 void bi_squ_asg(OUT bigint **C)
@@ -103,12 +103,12 @@ void bi_squ_asg(OUT bigint **C)
     bigint *T = NULL;
 
     bi_assign(&T, *C);
-    bi_SQU(C, T);
+    bi_squ(C, T);
 
     bi_delete(&T);
 }
 
-void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
+void bi_ksqu_core(OUT bigint **C, IN bigint *A)
 {
     int sign_A = A->sign;
 
@@ -116,7 +116,7 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
 
     if (flag >= A->wordlen)
     {
-        bi_SQUC(C, A);
+        bi_squ_core(C, A);
         return;
     }
 
@@ -135,8 +135,8 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
     bigint *T1 = NULL;
     bigint *T0 = NULL;
 
-    bi_SQUC_karatsuba(&T1, A1);
-    bi_SQUC_karatsuba(&T0, A0);
+    bi_ksqu_core(&T1, A1);
+    bi_ksqu_core(&T0, A0);
 
     bigint *R = NULL;
 
@@ -145,9 +145,9 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
     bi_add_asg(&R, T0);
 
     bigint *S = NULL;
-    bi_MULC_karatsuba(&S, A1, A0);
+    bi_kmul_core(&S, A1, A0);
     bi_lshift(&S, l * w + 1);
-    bi_ADDC(C, R, S);
+    bi_add_core(C, R, S);
 
     A->sign = sign_A;
 
@@ -159,7 +159,7 @@ void bi_SQUC_karatsuba(OUT bigint **C, IN bigint *A)
     bi_delete(&S);
 }
 
-void bi_KSQU(OUT bigint **C, IN bigint *A)
+void bi_ksqu(OUT bigint **C, IN bigint *A)
 {
     // Case 1: A = 0 or A = 1 or A = -1
     if (bi_is_zero(A) == true or bi_is_one(A) == true or bi_is_minus_one(A) == true)
@@ -170,16 +170,15 @@ void bi_KSQU(OUT bigint **C, IN bigint *A)
     }
 
     // Case 2: Otherwise
-    bi_SQUC_karatsuba(C, A);
+    bi_ksqu_core(C, A);
 }
 
 void bi_ksqu_asg(OUT bigint **C)
 {
-
     bigint *T = NULL;
     bi_assign(&T, *C);
 
-    bi_KSQU(C, T);
+    bi_ksqu(C, T);
 
     bi_delete(&T);
 }

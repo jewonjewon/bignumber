@@ -17,7 +17,7 @@ void sub_test_KMUL1_1(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -41,7 +41,7 @@ void sub_test_KMUL1_2(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_new(&B, 1);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -62,7 +62,7 @@ void sub_test_KMUL1_3(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_new(&A, 1);
         bi_new(&B, 1);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -87,7 +87,7 @@ void sub_test_KMUL2(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -113,7 +113,7 @@ void sub_test_KMUL3(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&B, sign2, num2);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -138,7 +138,7 @@ void sub_test_KMUL4(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -164,7 +164,7 @@ void sub_test_KMUL5(bigint **C, bigint *A, bigint *B, IN int TEST)
 
         bi_gen_rand(&A, sign1, num1);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -191,7 +191,7 @@ void sub_test_KMUL6_1(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -223,7 +223,7 @@ void sub_test_KMUL6_2(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -255,7 +255,7 @@ void sub_test_KMUL6_3(bigint **C, bigint *A, bigint *B, IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_KMUL(C, A, B);
+        bi_kmul(C, A, B);
         sage_show_mul(C, A, B, j);
     }
     printf("if (cnt == 0):\n");
@@ -298,7 +298,7 @@ void sub_test_KSQU1_1(bigint **C, bigint *A, IN int TEST)
     for (int j = 0; j < TEST; j++)
     {
         bi_new(&A, 1);
-        bi_KSQU(C, A);
+        bi_ksqu(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");
@@ -316,7 +316,7 @@ void sub_test_KSQU1_2(bigint **C, bigint *A, IN int TEST)
     {
         bi_new(&A, 1);
         A->a[0] = 1;
-        bi_KSQU(C, A);
+        bi_ksqu(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");
@@ -335,7 +335,7 @@ void sub_test_KSQU1_3(bigint **C, bigint *A, IN int TEST)
         bi_new(&A, 1);
         A->a[0] = 1;
         A->sign = NEGATIVE;
-        bi_KSQU(C, A);
+        bi_ksqu(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");
@@ -355,7 +355,7 @@ void sub_test_KSQU2(bigint **C, bigint *A, IN int TEST)
         int num1 = rand() % 0x0f + 1;
 
         bi_gen_rand(&A, sign1, num1);
-        bi_KSQU(C, A);
+        bi_ksqu(C, A);
         sage_show_squ(C, A, j);
     }
     printf("if (cnt == 0):\n");

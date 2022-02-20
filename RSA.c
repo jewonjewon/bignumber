@@ -12,21 +12,83 @@ void bi_euler_phi(bigint **phi_N, bigint *p, bigint *q)
     bi_assign(&t0, p);
     bi_assign(&t1, q);
 
-    bi_sub_minus_a(&t0, 1); /* p -= 1 */
-    bi_sub_minus_a(&t1, 1); /* q -= 1 */
+    bi_subi(&t0, 1); /* p -= 1 */
+    bi_subi(&t1, 1); /* q -= 1 */
 
     /* p와 q는 소수이므로 phi_N = (p-1)(q-1) */
-    bi_KMUL(phi_N, t0, t1); /* N = (p-1)*(q-1) */
+    bi_kmul(phi_N, t0, t1); /* N = (p-1)*(q-1) */
 
     bi_delete(&t0);
     bi_delete(&t1);
 }
+
+// // void RSA_keygen(RSA_key **pk, RSA_key **sk)
+// void RSA_keygen(RSA_key *pk, RSA_key *sk, int n)
+// {
+//     bigint *T = NULL;
+//     bigint *phi_N = NULL; /* phi_N = (p-1)*(q-1) */
+//     // bigint *p = NULL;
+
+//     sk->p = NULL;
+//     sk->q = NULL;
+//     sk->d = NULL;
+//     sk->N = NULL;
+
+//     pk->N = NULL;
+//     pk->e = NULL;
+
+//     n >>= 1;
+
+//     /* 1. 512비트 크기의 서로 다른 두 소수 생성 */
+//     bi_gen_prime(&sk->p, n); /* Choose random prime p */
+//     bi_gen_prime(&sk->q, n); /* Choose random prime q */
+
+//     bi_kmul(&pk->N, sk->p, sk->q); /* N = pq */
+//     bi_assign(&sk->N, pk->N);
+
+//     bi_euler_phi(&phi_N, sk->p, sk->q); /* Calculate phi(N) = (p-1)*(q-1) */
+
+//     /* 4. Calculate e s.t. gcd(e, phi(N)) = 1 */
+//     while (1)
+//     {
+//         do
+//         {
+//             bi_SPDM(&pk->e, phi_N);
+
+//         } while (bi_is_zero(pk->e) == true or bi_is_one(pk->e) == true);
+
+//         bi_ea_bin_itr(&T, pk->e, phi_N);
+
+//         if (bi_is_one(T) == true)
+//         {
+//             bi_eea_itr(&sk->d, pk->e, phi_N); /* Calculate d s.t. ed = 1 (mod phi(N)) */
+
+//             if (bi_cmp(pk->e, sk->d) != 0) /* e와 d가 같을 경우 재수행 */
+//             {
+//                 if (sk->d->sign == NEGATIVE)
+//                     bi_add_asg(&sk->d, phi_N);
+
+//                 bi_delete(&T);
+//                 bi_delete(&phi_N);
+
+//                 // bi_delete(&sk->p);
+//                 // bi_delete(&sk->q);
+//                 // bi_delete(&sk->d);
+//                 // bi_delete(&sk->N);
+//                 // bi_delete(&pk->N);
+//                 // bi_delete(&pk->e);
+//                 return;
+//             }
+//         }
+//     }
+// }
 
 // void RSA_keygen(RSA_key **pk, RSA_key **sk)
 void RSA_keygen(RSA_key *pk, RSA_key *sk, int n)
 {
     bigint *T = NULL;
     bigint *phi_N = NULL; /* phi_N = (p-1)*(q-1) */
+    bigint *p = NULL;
 
     sk->p = NULL;
     sk->q = NULL;
@@ -39,10 +101,11 @@ void RSA_keygen(RSA_key *pk, RSA_key *sk, int n)
     n >>= 1;
 
     /* 1. 512비트 크기의 서로 다른 두 소수 생성 */
-    bi_gen_prime(&sk->p, n); /* Choose random prime p */
+    bi_gen_prime(&p, n); /* Choose random prime p */
+
     bi_gen_prime(&sk->q, n); /* Choose random prime q */
 
-    bi_KMUL(&pk->N, sk->p, sk->q); /* N = pq */
+    bi_kmul(&pk->N, sk->p, sk->q); /* N = pq */
     bi_assign(&sk->N, pk->N);
 
     bi_euler_phi(&phi_N, sk->p, sk->q); /* Calculate phi(N) = (p-1)*(q-1) */
@@ -69,6 +132,13 @@ void RSA_keygen(RSA_key *pk, RSA_key *sk, int n)
 
                 bi_delete(&T);
                 bi_delete(&phi_N);
+
+                // bi_delete(&sk->p);
+                // bi_delete(&sk->q);
+                // bi_delete(&sk->d);
+                // bi_delete(&sk->N);
+                // bi_delete(&pk->N);
+                // bi_delete(&pk->e);
                 return;
             }
         }
@@ -96,7 +166,7 @@ void RSA_crt_keygen(RSA_key *pk, RSA_key *sk, int n)
     n >>= 1;
     bi_gen_prime(&sk->p, n);       /* Choose random prime p */
     bi_gen_prime(&sk->q, n);       /* Choose random prime q */
-    bi_KMUL(&pk->N, sk->p, sk->q); /* N = pq */
+    bi_kmul(&pk->N, sk->p, sk->q); /* N = pq */
     bi_assign(&sk->N, pk->N);
 
     bi_euler_phi(&phi_N, sk->p, sk->q); /* Calculate phi(N) = (p-1)*(q-1) */
@@ -122,6 +192,7 @@ void RSA_crt_keygen(RSA_key *pk, RSA_key *sk, int n)
                     bi_add_asg(&sk->d, phi_N);
                 bi_delete(&T);
                 bi_delete(&phi_N);
+
                 break;
             }
         }
@@ -130,10 +201,10 @@ void RSA_crt_keygen(RSA_key *pk, RSA_key *sk, int n)
     bigint *pp = NULL; /* pp = p - 1 */
     bigint *qq = NULL; /* qq = q - 1 */
     bi_assign(&pp, sk->p);
-    bi_sub_minus_a(&pp, 1);
+    bi_subi(&pp, 1);
 
     bi_assign(&qq, sk->q);
-    bi_sub_minus_a(&qq, 1);
+    bi_subi(&qq, 1);
 
     bi_div_r(&sk->dp, sk->d, pp); /* dp = d (mod p - 1) */
     bi_div_r(&sk->dq, sk->d, qq); /* dq = d (mod q - 1) */
@@ -153,7 +224,7 @@ void RSA_crt_dec(OUT bigint **m, bigint *c, RSA_key *sk)
     bi_mod_exp_mns(&mp, c, sk->dp, sk->p);
     bi_mod_exp_mns(&mq, c, sk->dq, sk->q);
 
-    bi_SUB(&t, mp, mq);
+    bi_sub(&t, mp, mq);
     bi_kmul_asg(&t, sk->q);
     bi_kmul_asg(&t, sk->inv_qp);
     bi_add_asg(&t, mq);
@@ -181,45 +252,45 @@ void textbook_RSA(int n)
     RSA_key pk;
     RSA_key sk;
 
+    sk.p = NULL;
+    sk.q = NULL;
+    sk.d = NULL;
+    sk.N = NULL;
+
+    pk.N = NULL;
+    pk.e = NULL;
+
     bigint *m = NULL;
     bigint *c = NULL;
     bigint *recoverd_msg = NULL;
-
-    // bi_new(&m, 1);
-    // m->a[0] = 0x200;
 
     bi_gen_rand(&m, NON_NEGATIVE, 5);
 
     RSA_keygen(&pk, &sk, n);
 
     printf("#   RSA-1024 Key list\n");
-    printf("p = ");
-    bi_print(sk.p);
+    bi_print("p", sk.p);
     newline;
-    printf("q = ");
-    bi_print(sk.q);
+    bi_print("q", sk.q);
     newline;
-    printf("N = ");
-    bi_print(pk.N);
+    bi_print("N", pk.N);
     newline;
 
-    printf("e = ");
-    bi_print(pk.e);
+    bi_print("e", pk.e);
     newline;
-    printf("d = ");
-    bi_print(sk.d);
+    bi_print("d", sk.d);
 
     newline;
 
     RSA_enc(&c, m, &pk);
     printf("Cipher text(RSA-1024)\n");
-    bi_print(c);
+    bi_print("c", c);
 
     newline;
 
     RSA_dec(&recoverd_msg, c, &sk);
     printf("Recovered message(RSA-1024)\n");
-    bi_print(recoverd_msg);
+    bi_print("recoverd_msg", recoverd_msg);
 
     newline;
 
@@ -227,6 +298,17 @@ void textbook_RSA(int n)
         printf("Success!\n");
     else
         printf("Fali..\n");
+
+    // bi_delete(&sk);
+    // bi_delete(&pk);
+
+    bi_delete(&sk.p);
+    bi_delete(&sk.q);
+
+    bi_delete(&sk.d);
+    bi_delete(&sk.N);
+    bi_delete(&pk.N);
+    bi_delete(&pk.e);
 
     bi_delete(&m);
     bi_delete(&c);
@@ -243,38 +325,32 @@ void RSA_crt(int n)
     bigint *recoverd_msg = NULL;
 
     RSA_crt_keygen(&pk, &sk, n);
-    bi_new(&m, 1);
-    m->a[0] = 0x2000000;
+
+    bi_gen_rand(&m, NON_NEGATIVE, 5);
 
     printf("#   RSA-crt Key list\n");
-    printf("p = ");
-    bi_print(sk.p);
+    bi_print("p", sk.p);
     newline;
-    printf("q = ");
-    bi_print(sk.q);
+    bi_print("q", sk.q);
     newline;
-    printf("N = ");
-    bi_print(pk.N);
+    bi_print("N", pk.N);
     newline;
-    // printf("phi(N) = ");
-    // bi_print(sk.phi_N);
-    printf("e = ");
-    bi_print(pk.e);
+
+    bi_print("e", pk.e);
     newline;
-    printf("d = ");
-    bi_print(sk.d);
+    bi_print("d", sk.d);
 
     newline;
 
     RSA_enc(&c, m, &pk);
     printf("Cipher text(RSA-1024)\n");
-    bi_print(c);
+    bi_print("c", c);
 
     newline;
 
     RSA_crt_dec(&recoverd_msg, c, &sk);
     printf("Recovered message(RSA-1024)\n");
-    bi_print(recoverd_msg);
+    bi_print("recoverd_msg", recoverd_msg);
 
     newline;
 
@@ -282,6 +358,9 @@ void RSA_crt(int n)
         printf("Success!\n");
     else
         printf("Fali..\n");
+
+    // bi_delete(&sk);
+    // bi_delete(&pk);
 
     bi_delete(&m);
     bi_delete(&c);

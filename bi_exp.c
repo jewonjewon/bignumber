@@ -175,24 +175,21 @@ void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R,
 
     /* m = ((x mod R) * nn) mod R */
     bi_word_reduction(&x, R->wordlen - 1);
-    printf("x = ");
-    bi_print(x);
 
-    bi_KMUL(&m, x, nn);
+    bi_print("x", x);
 
-    printf("1. m = ");
-    bi_print(m);
+    bi_kmul(&m, x, nn);
+
+    bi_print("m", m);
     bi_word_reduction(&m, R->wordlen - 1);
 
-    printf("2. m = ");
-    bi_print(m);
+    bi_print("m", m);
 
     bi_mul_asg(&m, n);
-    bi_ADD(&t, x, m);
+    bi_add(&t, x, m);
     bi_word_rshift(&t, R->wordlen - 1);
 
-    printf("t = ");
-    bi_print(t);
+    bi_print("t", t);
 
     if (bi_cmp(t, n) == 1 or bi_cmp(t, n) == 0)
         bi_sub_asg(&t, n);

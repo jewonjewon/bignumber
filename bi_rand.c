@@ -92,7 +92,7 @@ void bi_SPDM(bigint **C, bigint *A)
     bigint *TT = NULL;
 
     bi_assign(&T, A);
-    bi_sub_minus_a(&T, 1);
+    bi_subi(&T, 1);
 
     bi_gen_rand_bit(&K, T);
 
@@ -105,6 +105,7 @@ void bi_SPDM(bigint **C, bigint *A)
         {
             bi_assign(C, K);
             bi_refine(*C);
+
             bi_delete(&D);
             bi_delete(&K);
             bi_delete(&T);
@@ -121,6 +122,8 @@ void bi_SPDM(bigint **C, bigint *A)
         bi_xor(&G, K, T); /* c ^ (i-1) */
 
         int d = k - bi_bit_cnt(G);
+
+        bi_delete(&G);
 
         int qq = d / w;
         int rr = d % w;

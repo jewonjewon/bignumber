@@ -79,46 +79,43 @@ void bi_init(IN OUT bigint **A)
         (*A)->a[j] = 0;
 }
 
-void bi_print(bigint *A)
+void bi_print(char *str, bigint *A)
 {
     if (A->sign == NEGATIVE)
         printf("-");
 
 #if (w == 64)
-    // Case: 워드길이가 1인 경우
     if (A->wordlen == 1)
-        printf("%#llx", A->a[A->wordlen - 1]);
-    // Case: 그 외
+        printf("%s = %#llx", str, A->a[A->wordlen - 1]);
     else
     {
-        printf("%#llx", A->a[A->wordlen - 1]);
+        printf("%s = %#llx", str, A->a[A->wordlen - 1]);
         for (int j = A->wordlen - 2; j >= 0; j--)
             printf("%016llx", A->a[j]);
     }
 #elif (w == 32)
     // Case: 워드길이가 1인 경우
     if (A->wordlen == 1)
-        printf("%#x", A->a[A->wordlen - 1]);
+        printf("%s = %#x", str, A->a[A->wordlen - 1]);
     // Case: 그 외
     else
     {
-        printf("%#x", A->a[A->wordlen - 1]);
+        printf("%s = %#x", str, A->a[A->wordlen - 1]);
         for (int j = A->wordlen - 2; j >= 0; j--)
             printf("%08x", A->a[j]);
     }
 #elif (w == 8)
     // Case: 워드길이가 1인 경우
     if (A->wordlen == 1)
-        printf("%#x", A->a[A->wordlen - 1]);
+        printf("%s = %#x", str, A->a[A->wordlen - 1]);
     // Case: 그 외
     else
     {
-        printf("%#x", A->a[A->wordlen - 1]);
+        printf("%s = %#x", str, A->a[A->wordlen - 1]);
         for (int j = A->wordlen - 2; j >= 0; j--)
             printf("%02x", A->a[j]);
     }
 #endif
-    // printf(", ");
     printf("\n");
 }
 
@@ -256,7 +253,7 @@ int bi_compare_abs(IN bigint *A, IN bigint *B)
  *  - If A = B, then return 0
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// bi_cmp(*A, *B),A > B → 1, A < B → -1, A = B → 0
+// A > B → 1, A < B → -1, A = B → 0
 int bi_cmp(IN bigint *A, IN bigint *B)
 {
     // Case: A > B

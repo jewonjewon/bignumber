@@ -117,7 +117,7 @@ void bench_lshift()
     printf("# 1번 함수 1회 수행 시간 :%lf\n", (end1 - start1) / cnt);
     // printf("%lf\n ", (end2 - start2));
     // printf("# 2번 함수 1회 수행 시간 :%lf\n", (end2 - start2) / cnt);
-    printf("A = ");
-    bi_print(A);
+
+    bi_print("A", A);
     bi_delete(&A);
 }

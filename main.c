@@ -21,22 +21,21 @@ int main()
     // test_KSQU(1000);
     // test_DIV(1000);
     // test_long_div_bin(1000);
-
     // test_exp(10, bi_l2r);
     // test_mod_exp(100, bi_mod_exp_l2r);
 
     // test_gcd(100, bi_ea_rcs);
-    // test_gcd(10000, lehmer_gcd);
     // test_gcd(100, bi_ea_bin_itr);
     // test_gcd(100, bi_ea_itr);
     // test_xgcd(100, bi_eea_itr);
-    // test_xgcd(100, bi_eea_bin_itr);
 
-    // test_is_prime(100, bi_is_prime);
-    // test_prime_gen(10, bi_gen_prime);
+    // test_is_prime(1, bi_is_prime);
+    // test_prime_gen(1, bi_gen_prime);
 
-    // test_mont_red(1);
 #endif
+    // test_xgcd(100, bi_eea_bin_itr);
+    // test_gcd(10000, lehmer_gcd);
+    // test_mont_red(1);
 
     // test_bi_long_div_2word(1000);
     // test_DIVCC(1000);
@@ -53,7 +52,6 @@ int main()
     // test_MULC_karastuba(100);
 
 #if 1 // 벤치마킹
-      // for (int j = 0; j < 10; j++)
     // bench_MUL();
     // bench_ADD();
     // bench_DIV();
@@ -61,6 +59,7 @@ int main()
     // bench_lshift();
     // bench_gcd();
     // bench_prime();
+    // bench_SPDM();
     bench_RSA();
 
 #endif
@@ -73,6 +72,21 @@ int main()
     bigint *R = NULL;
     bigint *n = NULL;
     bigint *M = NULL;
+
+    // for (int j = 0; j < 10000; j++)
+    // {
+    //     bi_gen_rand(&A, NON_NEGATIVE, 10);
+    //     bi_gen_rand(&B, NON_NEGATIVE, 10);
+    //     printf("%d-th = %d\n", j, bi_cmp(A, B));
+    // }
+
+    // bi_gen_rand(&A, NON_NEGATIVE, 10);
+    // for (int j = 0; j < 100000; j++)
+    // {
+    //     bi_subi(&A, 1);
+    //     // bi_gen_rand(&B, NON_NEGATIVE, 10);
+    //     bi_print(A);
+    // }
 
 #if 0 // RSA
 

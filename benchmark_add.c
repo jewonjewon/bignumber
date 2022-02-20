@@ -21,7 +21,7 @@ void bench_bi_ADD(IN int TEST)
         bi_gen_rand(&A, sign1, num1);
         bi_gen_rand(&B, sign2, num2);
 
-        bi_ADD(&C, A, B);
+        bi_add(&C, A, B);
     }
 
     bi_delete_3(&C, &A, &B);

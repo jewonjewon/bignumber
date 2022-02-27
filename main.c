@@ -1,33 +1,32 @@
 #include <stdio.h>
 
-#include "bi.h"
-#include "bi_op.h"
-#include "bi_prime.h"
-#include "bi_test.h"
-#include "benchmark.h"
-#include "bi_rand.h"
-#include "RSA.h"
+#include "includes/bi.h"
+#include "includes/bi_op.h"
+#include "includes/bi_prime.h"
+#include "includes/bi_rand.h"
+#include "includes/RSA.h"
+#include "includes/bi_test.h"
 
 int main()
 {
     srand((unsigned)time(NULL));
 
 #if 1 // 정확성 검증
-    // test_ADD(1000);
-    // test_SUB(1000);
-    // test_MUL(1000);
-    // test_SQU(1000);
-    // test_KMUL(1000);
-    // test_KSQU(1000);
-    // test_DIV(1000);
-    // test_long_div_bin(1000);
+    test_ADD(100);
+    // test_SUB(100);
+    // test_MUL(100);
+    // test_SQU(100);
+    // test_KMUL(100);
+    // test_KSQU(100);
+    // test_DIV(100);
+    // test_long_div_bin(100);
     // test_exp(10, bi_l2r);
     // test_mod_exp(100, bi_mod_exp_l2r);
 
-    // test_gcd(100, bi_ea_rcs);
-    // test_gcd(100, bi_ea_bin_itr);
-    // test_gcd(100, bi_ea_itr);
-    // test_xgcd(100, bi_eea_itr);
+    // test_gcd(2, bi_ea_rcs);
+    // test_gcd(2, bi_ea_bin_itr);
+    // test_gcd(2, bi_ea_itr);
+    // test_xgcd(2, bi_eea_itr);
 
     // test_is_prime(1, bi_is_prime);
     // test_prime_gen(1, bi_gen_prime);
@@ -51,7 +50,7 @@ int main()
     // test_SQUC(1);
     // test_MULC_karastuba(100);
 
-#if 1 // 벤치마킹
+#if 0 // 벤치마킹
     // bench_MUL();
     // bench_ADD();
     // bench_DIV();
@@ -64,7 +63,7 @@ int main()
 
 #endif
 
-#if 1 // 부검
+#if 0 // 부검
     bigint *A = NULL;
     bigint *B = NULL;
     bigint *C = NULL;

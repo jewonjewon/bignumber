@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "rsa.h": "c",
+        "bi_op.h": "c",
+        "bi.h": "c",
+        "bi_rand.h": "c",
+        "bi_prime.h": "c",
+        "benchmark.h": "c",
+        "basic.h": "c",
+        "time.h": "c",
+        "bi_test.h": "c"
+    }
+}

@@ -1,0 +1,9 @@
+/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles/main.dir
+/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles/edit_cache.dir
+/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles/rebuild_cache.dir
+/Users/jewon/Documents/GitHub/bignumber/build/lib/CMakeFiles/bigint.dir
+/Users/jewon/Documents/GitHub/bignumber/build/lib/CMakeFiles/edit_cache.dir
+/Users/jewon/Documents/GitHub/bignumber/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/jewon/Documents/GitHub/bignumber/build/tests/CMakeFiles/test.dir
+/Users/jewon/Documents/GitHub/bignumber/build/tests/CMakeFiles/edit_cache.dir
+/Users/jewon/Documents/GitHub/bignumber/build/tests/CMakeFiles/rebuild_cache.dir

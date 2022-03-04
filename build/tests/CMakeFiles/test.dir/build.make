@@ -69,24 +69,10 @@ include tests/CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/test.dir/flags.make
 
-tests/CMakeFiles/test.dir/bi_karatsuba_test.c.o: tests/CMakeFiles/test.dir/flags.make
-tests/CMakeFiles/test.dir/bi_karatsuba_test.c.o: ../tests/bi_karatsuba_test.c
-tests/CMakeFiles/test.dir/bi_karatsuba_test.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/test.dir/bi_karatsuba_test.c.o"
-	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/bi_karatsuba_test.c.o -MF CMakeFiles/test.dir/bi_karatsuba_test.c.o.d -o CMakeFiles/test.dir/bi_karatsuba_test.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/bi_karatsuba_test.c
-
-tests/CMakeFiles/test.dir/bi_karatsuba_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/bi_karatsuba_test.c.i"
-	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/bi_karatsuba_test.c > CMakeFiles/test.dir/bi_karatsuba_test.c.i
-
-tests/CMakeFiles/test.dir/bi_karatsuba_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/bi_karatsuba_test.c.s"
-	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/bi_karatsuba_test.c -o CMakeFiles/test.dir/bi_karatsuba_test.c.s
-
 tests/CMakeFiles/test.dir/bi_test.c.o: tests/CMakeFiles/test.dir/flags.make
 tests/CMakeFiles/test.dir/bi_test.c.o: ../tests/bi_test.c
 tests/CMakeFiles/test.dir/bi_test.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/test.dir/bi_test.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/test.dir/bi_test.c.o"
 	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/bi_test.c.o -MF CMakeFiles/test.dir/bi_test.c.o.d -o CMakeFiles/test.dir/bi_test.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/bi_test.c
 
 tests/CMakeFiles/test.dir/bi_test.c.i: cmake_force
@@ -97,19 +83,225 @@ tests/CMakeFiles/test.dir/bi_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/bi_test.c.s"
 	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/bi_test.c -o CMakeFiles/test.dir/bi_test.c.s
 
+tests/CMakeFiles/test.dir/bi_test2.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/bi_test2.c.o: ../tests/bi_test2.c
+tests/CMakeFiles/test.dir/bi_test2.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/test.dir/bi_test2.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/bi_test2.c.o -MF CMakeFiles/test.dir/bi_test2.c.o.d -o CMakeFiles/test.dir/bi_test2.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/bi_test2.c
+
+tests/CMakeFiles/test.dir/bi_test2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/bi_test2.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/bi_test2.c > CMakeFiles/test.dir/bi_test2.c.i
+
+tests/CMakeFiles/test.dir/bi_test2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/bi_test2.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/bi_test2.c -o CMakeFiles/test.dir/bi_test2.c.s
+
+tests/CMakeFiles/test.dir/test_add.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_add.c.o: ../tests/test_add.c
+tests/CMakeFiles/test.dir/test_add.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object tests/CMakeFiles/test.dir/test_add.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_add.c.o -MF CMakeFiles/test.dir/test_add.c.o.d -o CMakeFiles/test.dir/test_add.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_add.c
+
+tests/CMakeFiles/test.dir/test_add.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_add.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_add.c > CMakeFiles/test.dir/test_add.c.i
+
+tests/CMakeFiles/test.dir/test_add.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_add.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_add.c -o CMakeFiles/test.dir/test_add.c.s
+
+tests/CMakeFiles/test.dir/test_div.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_div.c.o: ../tests/test_div.c
+tests/CMakeFiles/test.dir/test_div.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object tests/CMakeFiles/test.dir/test_div.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_div.c.o -MF CMakeFiles/test.dir/test_div.c.o.d -o CMakeFiles/test.dir/test_div.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_div.c
+
+tests/CMakeFiles/test.dir/test_div.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_div.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_div.c > CMakeFiles/test.dir/test_div.c.i
+
+tests/CMakeFiles/test.dir/test_div.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_div.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_div.c -o CMakeFiles/test.dir/test_div.c.s
+
+tests/CMakeFiles/test.dir/test_exp.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_exp.c.o: ../tests/test_exp.c
+tests/CMakeFiles/test.dir/test_exp.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object tests/CMakeFiles/test.dir/test_exp.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_exp.c.o -MF CMakeFiles/test.dir/test_exp.c.o.d -o CMakeFiles/test.dir/test_exp.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_exp.c
+
+tests/CMakeFiles/test.dir/test_exp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_exp.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_exp.c > CMakeFiles/test.dir/test_exp.c.i
+
+tests/CMakeFiles/test.dir/test_exp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_exp.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_exp.c -o CMakeFiles/test.dir/test_exp.c.s
+
+tests/CMakeFiles/test.dir/test_gcd.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_gcd.c.o: ../tests/test_gcd.c
+tests/CMakeFiles/test.dir/test_gcd.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object tests/CMakeFiles/test.dir/test_gcd.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_gcd.c.o -MF CMakeFiles/test.dir/test_gcd.c.o.d -o CMakeFiles/test.dir/test_gcd.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_gcd.c
+
+tests/CMakeFiles/test.dir/test_gcd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_gcd.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_gcd.c > CMakeFiles/test.dir/test_gcd.c.i
+
+tests/CMakeFiles/test.dir/test_gcd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_gcd.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_gcd.c -o CMakeFiles/test.dir/test_gcd.c.s
+
+tests/CMakeFiles/test.dir/test_kmul.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_kmul.c.o: ../tests/test_kmul.c
+tests/CMakeFiles/test.dir/test_kmul.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object tests/CMakeFiles/test.dir/test_kmul.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_kmul.c.o -MF CMakeFiles/test.dir/test_kmul.c.o.d -o CMakeFiles/test.dir/test_kmul.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_kmul.c
+
+tests/CMakeFiles/test.dir/test_kmul.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_kmul.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_kmul.c > CMakeFiles/test.dir/test_kmul.c.i
+
+tests/CMakeFiles/test.dir/test_kmul.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_kmul.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_kmul.c -o CMakeFiles/test.dir/test_kmul.c.s
+
+tests/CMakeFiles/test.dir/test_ksqu.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_ksqu.c.o: ../tests/test_ksqu.c
+tests/CMakeFiles/test.dir/test_ksqu.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object tests/CMakeFiles/test.dir/test_ksqu.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_ksqu.c.o -MF CMakeFiles/test.dir/test_ksqu.c.o.d -o CMakeFiles/test.dir/test_ksqu.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_ksqu.c
+
+tests/CMakeFiles/test.dir/test_ksqu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_ksqu.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_ksqu.c > CMakeFiles/test.dir/test_ksqu.c.i
+
+tests/CMakeFiles/test.dir/test_ksqu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_ksqu.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_ksqu.c -o CMakeFiles/test.dir/test_ksqu.c.s
+
+tests/CMakeFiles/test.dir/test_mod_exp.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_mod_exp.c.o: ../tests/test_mod_exp.c
+tests/CMakeFiles/test.dir/test_mod_exp.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object tests/CMakeFiles/test.dir/test_mod_exp.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_mod_exp.c.o -MF CMakeFiles/test.dir/test_mod_exp.c.o.d -o CMakeFiles/test.dir/test_mod_exp.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_mod_exp.c
+
+tests/CMakeFiles/test.dir/test_mod_exp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_mod_exp.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_mod_exp.c > CMakeFiles/test.dir/test_mod_exp.c.i
+
+tests/CMakeFiles/test.dir/test_mod_exp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_mod_exp.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_mod_exp.c -o CMakeFiles/test.dir/test_mod_exp.c.s
+
+tests/CMakeFiles/test.dir/test_mul.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_mul.c.o: ../tests/test_mul.c
+tests/CMakeFiles/test.dir/test_mul.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object tests/CMakeFiles/test.dir/test_mul.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_mul.c.o -MF CMakeFiles/test.dir/test_mul.c.o.d -o CMakeFiles/test.dir/test_mul.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_mul.c
+
+tests/CMakeFiles/test.dir/test_mul.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_mul.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_mul.c > CMakeFiles/test.dir/test_mul.c.i
+
+tests/CMakeFiles/test.dir/test_mul.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_mul.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_mul.c -o CMakeFiles/test.dir/test_mul.c.s
+
+tests/CMakeFiles/test.dir/test_prime.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_prime.c.o: ../tests/test_prime.c
+tests/CMakeFiles/test.dir/test_prime.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object tests/CMakeFiles/test.dir/test_prime.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_prime.c.o -MF CMakeFiles/test.dir/test_prime.c.o.d -o CMakeFiles/test.dir/test_prime.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_prime.c
+
+tests/CMakeFiles/test.dir/test_prime.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_prime.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_prime.c > CMakeFiles/test.dir/test_prime.c.i
+
+tests/CMakeFiles/test.dir/test_prime.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_prime.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_prime.c -o CMakeFiles/test.dir/test_prime.c.s
+
+tests/CMakeFiles/test.dir/test_squ.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_squ.c.o: ../tests/test_squ.c
+tests/CMakeFiles/test.dir/test_squ.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object tests/CMakeFiles/test.dir/test_squ.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_squ.c.o -MF CMakeFiles/test.dir/test_squ.c.o.d -o CMakeFiles/test.dir/test_squ.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_squ.c
+
+tests/CMakeFiles/test.dir/test_squ.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_squ.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_squ.c > CMakeFiles/test.dir/test_squ.c.i
+
+tests/CMakeFiles/test.dir/test_squ.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_squ.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_squ.c -o CMakeFiles/test.dir/test_squ.c.s
+
+tests/CMakeFiles/test.dir/test_sub.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_sub.c.o: ../tests/test_sub.c
+tests/CMakeFiles/test.dir/test_sub.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object tests/CMakeFiles/test.dir/test_sub.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_sub.c.o -MF CMakeFiles/test.dir/test_sub.c.o.d -o CMakeFiles/test.dir/test_sub.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_sub.c
+
+tests/CMakeFiles/test.dir/test_sub.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_sub.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_sub.c > CMakeFiles/test.dir/test_sub.c.i
+
+tests/CMakeFiles/test.dir/test_sub.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_sub.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_sub.c -o CMakeFiles/test.dir/test_sub.c.s
+
+tests/CMakeFiles/test.dir/test_xgcd.c.o: tests/CMakeFiles/test.dir/flags.make
+tests/CMakeFiles/test.dir/test_xgcd.c.o: ../tests/test_xgcd.c
+tests/CMakeFiles/test.dir/test_xgcd.c.o: tests/CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object tests/CMakeFiles/test.dir/test_xgcd.c.o"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/test.dir/test_xgcd.c.o -MF CMakeFiles/test.dir/test_xgcd.c.o.d -o CMakeFiles/test.dir/test_xgcd.c.o -c /Users/jewon/Documents/GitHub/bignumber/tests/test_xgcd.c
+
+tests/CMakeFiles/test.dir/test_xgcd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/test_xgcd.c.i"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jewon/Documents/GitHub/bignumber/tests/test_xgcd.c > CMakeFiles/test.dir/test_xgcd.c.i
+
+tests/CMakeFiles/test.dir/test_xgcd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/test_xgcd.c.s"
+	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jewon/Documents/GitHub/bignumber/tests/test_xgcd.c -o CMakeFiles/test.dir/test_xgcd.c.s
+
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/bi_karatsuba_test.c.o" \
-"CMakeFiles/test.dir/bi_test.c.o"
+"CMakeFiles/test.dir/bi_test.c.o" \
+"CMakeFiles/test.dir/bi_test2.c.o" \
+"CMakeFiles/test.dir/test_add.c.o" \
+"CMakeFiles/test.dir/test_div.c.o" \
+"CMakeFiles/test.dir/test_exp.c.o" \
+"CMakeFiles/test.dir/test_gcd.c.o" \
+"CMakeFiles/test.dir/test_kmul.c.o" \
+"CMakeFiles/test.dir/test_ksqu.c.o" \
+"CMakeFiles/test.dir/test_mod_exp.c.o" \
+"CMakeFiles/test.dir/test_mul.c.o" \
+"CMakeFiles/test.dir/test_prime.c.o" \
+"CMakeFiles/test.dir/test_squ.c.o" \
+"CMakeFiles/test.dir/test_sub.c.o" \
+"CMakeFiles/test.dir/test_xgcd.c.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-tests/libtest.a: tests/CMakeFiles/test.dir/bi_karatsuba_test.c.o
 tests/libtest.a: tests/CMakeFiles/test.dir/bi_test.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/bi_test2.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_add.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_div.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_exp.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_gcd.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_kmul.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_ksqu.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_mod_exp.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_mul.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_prime.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_squ.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_sub.c.o
+tests/libtest.a: tests/CMakeFiles/test.dir/test_xgcd.c.o
 tests/libtest.a: tests/CMakeFiles/test.dir/build.make
 tests/libtest.a: tests/CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libtest.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jewon/Documents/GitHub/bignumber/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C static library libtest.a"
 	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/test.dir/cmake_clean_target.cmake
 	cd /Users/jewon/Documents/GitHub/bignumber/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 

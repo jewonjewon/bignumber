@@ -8,6 +8,7 @@
         "benchmark.h": "c",
         "basic.h": "c",
         "time.h": "c",
-        "bi_test.h": "c"
+        "bi_test.h": "c",
+        "stdio.h": "c"
     }
 }

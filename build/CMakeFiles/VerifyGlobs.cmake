@@ -28,8 +28,20 @@ endif()
 # SRC_FILES at tests/CMakeLists.txt:11 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/Users/jewon/Documents/GitHub/bignumber/tests/*.c")
 set(OLD_GLOB
-  "/Users/jewon/Documents/GitHub/bignumber/tests/bi_karatsuba_test.c"
   "/Users/jewon/Documents/GitHub/bignumber/tests/bi_test.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/bi_test2.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_add.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_div.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_exp.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_gcd.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_kmul.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_ksqu.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_mod_exp.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_mul.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_prime.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_squ.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_sub.c"
+  "/Users/jewon/Documents/GitHub/bignumber/tests/test_xgcd.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

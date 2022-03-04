@@ -190,8 +190,23 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
             bi_sub_asg(&V1, V0);
         }
     }
+    bigint *rr = NULL;
+    bi_assign(&rr, U1);
 
+    bigint *tmp1 = NULL;
+    bigint *tmp2 = NULL;
+    bigint *tmp3 = NULL;
+    bigint *tmp4 = NULL;
+    bi_kmul(&tmp1, a, U1);
+    bi_kmul(&tmp2, b, V1);
+
+    bi_add(&tmp3, tmp1, tmp2);
+    bi_kmul(&tmp4, T1, T2);
+
+    printf("%d\n", bi_cmp(tmp4, tmp3));
     bi_assign(C, U1);
+
+    // printf("%d\n", bi_compare_abs(C, B));
 
     bi_delete(&T0);
     bi_delete(&T1);
@@ -205,6 +220,7 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
 
     bi_delete(&a);
     bi_delete(&b);
+    // bi_delete(&rr);
 }
 
 void bi_eea_itr(OUT bigint **C, IN bigint *A, IN bigint *B)

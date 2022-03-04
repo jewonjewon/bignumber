@@ -12,27 +12,27 @@ int main()
     srand((unsigned)time(NULL));
 
 #if 1 // 정확성 검증
-    test_ADD(100);
-    // test_SUB(100);
-    // test_MUL(100);
-    // test_SQU(100);
+    test_add(100);
+    test_SUB(100);
+    test_MUL(100);
+    test_SQU(100);
     // test_KMUL(100);
     // test_KSQU(100);
     // test_DIV(100);
     // test_long_div_bin(100);
-    // test_exp(10, bi_l2r);
+    // test_exp(100, bi_l2r);
     // test_mod_exp(100, bi_mod_exp_l2r);
 
-    // test_gcd(2, bi_ea_rcs);
-    // test_gcd(2, bi_ea_bin_itr);
-    // test_gcd(2, bi_ea_itr);
+    // test_gcd(50, bi_ea_rcs);
+    // test_gcd(50, bi_ea_bin_itr);
+    // test_gcd(50, bi_ea_itr);
     // test_xgcd(2, bi_eea_itr);
+    // test_xgcd(10, bi_eea_bin_itr);
 
     // test_is_prime(1, bi_is_prime);
     // test_prime_gen(1, bi_gen_prime);
 
 #endif
-    // test_xgcd(100, bi_eea_bin_itr);
     // test_gcd(10000, lehmer_gcd);
     // test_mont_red(1);
 
@@ -50,7 +50,7 @@ int main()
     // test_SQUC(1);
     // test_MULC_karastuba(100);
 
-#if 0 // 벤치마킹
+#if 1 // 벤치마킹
     // bench_MUL();
     // bench_ADD();
     // bench_DIV();
@@ -59,7 +59,7 @@ int main()
     // bench_gcd();
     // bench_prime();
     // bench_SPDM();
-    bench_RSA();
+    // bench_RSA();
 
 #endif
 

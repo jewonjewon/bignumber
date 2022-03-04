@@ -9,13 +9,6 @@
 #include "bi_rand.h"
 #include "RSA.h"
 
-// #include <index/basic.h>
-// #include <index/bi_prime.h>
-// #include <index/bi_op.h>
-// #include <index/bi_test.h>
-// #include <index/bi_rand.h>
-// #include <index/RSA.h>
-
 int bi_get_l(bigint *a);
 int bi_is_composite(IN bigint *n, IN bigint *q, IN int l, IN bigint *a);
 int bi_is_prime(bigint *n, int k);

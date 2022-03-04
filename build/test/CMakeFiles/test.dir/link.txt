@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libtest.a CMakeFiles/test.dir/bi_karatsuba_test.c.o CMakeFiles/test.dir/bi_test.c.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libtest.a

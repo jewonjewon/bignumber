@@ -131,30 +131,6 @@ test/fast:
 	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-bi_karatsuba_test.o: bi_karatsuba_test.c.o
-.PHONY : bi_karatsuba_test.o
-
-# target to build an object file
-bi_karatsuba_test.c.o:
-	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/bi_karatsuba_test.c.o
-.PHONY : bi_karatsuba_test.c.o
-
-bi_karatsuba_test.i: bi_karatsuba_test.c.i
-.PHONY : bi_karatsuba_test.i
-
-# target to preprocess a source file
-bi_karatsuba_test.c.i:
-	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/bi_karatsuba_test.c.i
-.PHONY : bi_karatsuba_test.c.i
-
-bi_karatsuba_test.s: bi_karatsuba_test.c.s
-.PHONY : bi_karatsuba_test.s
-
-# target to generate assembly for a file
-bi_karatsuba_test.c.s:
-	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/bi_karatsuba_test.c.s
-.PHONY : bi_karatsuba_test.c.s
-
 bi_test.o: bi_test.c.o
 .PHONY : bi_test.o
 
@@ -179,6 +155,318 @@ bi_test.c.s:
 	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/bi_test.c.s
 .PHONY : bi_test.c.s
 
+bi_test2.o: bi_test2.c.o
+.PHONY : bi_test2.o
+
+# target to build an object file
+bi_test2.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/bi_test2.c.o
+.PHONY : bi_test2.c.o
+
+bi_test2.i: bi_test2.c.i
+.PHONY : bi_test2.i
+
+# target to preprocess a source file
+bi_test2.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/bi_test2.c.i
+.PHONY : bi_test2.c.i
+
+bi_test2.s: bi_test2.c.s
+.PHONY : bi_test2.s
+
+# target to generate assembly for a file
+bi_test2.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/bi_test2.c.s
+.PHONY : bi_test2.c.s
+
+test_add.o: test_add.c.o
+.PHONY : test_add.o
+
+# target to build an object file
+test_add.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_add.c.o
+.PHONY : test_add.c.o
+
+test_add.i: test_add.c.i
+.PHONY : test_add.i
+
+# target to preprocess a source file
+test_add.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_add.c.i
+.PHONY : test_add.c.i
+
+test_add.s: test_add.c.s
+.PHONY : test_add.s
+
+# target to generate assembly for a file
+test_add.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_add.c.s
+.PHONY : test_add.c.s
+
+test_div.o: test_div.c.o
+.PHONY : test_div.o
+
+# target to build an object file
+test_div.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_div.c.o
+.PHONY : test_div.c.o
+
+test_div.i: test_div.c.i
+.PHONY : test_div.i
+
+# target to preprocess a source file
+test_div.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_div.c.i
+.PHONY : test_div.c.i
+
+test_div.s: test_div.c.s
+.PHONY : test_div.s
+
+# target to generate assembly for a file
+test_div.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_div.c.s
+.PHONY : test_div.c.s
+
+test_exp.o: test_exp.c.o
+.PHONY : test_exp.o
+
+# target to build an object file
+test_exp.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_exp.c.o
+.PHONY : test_exp.c.o
+
+test_exp.i: test_exp.c.i
+.PHONY : test_exp.i
+
+# target to preprocess a source file
+test_exp.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_exp.c.i
+.PHONY : test_exp.c.i
+
+test_exp.s: test_exp.c.s
+.PHONY : test_exp.s
+
+# target to generate assembly for a file
+test_exp.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_exp.c.s
+.PHONY : test_exp.c.s
+
+test_gcd.o: test_gcd.c.o
+.PHONY : test_gcd.o
+
+# target to build an object file
+test_gcd.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_gcd.c.o
+.PHONY : test_gcd.c.o
+
+test_gcd.i: test_gcd.c.i
+.PHONY : test_gcd.i
+
+# target to preprocess a source file
+test_gcd.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_gcd.c.i
+.PHONY : test_gcd.c.i
+
+test_gcd.s: test_gcd.c.s
+.PHONY : test_gcd.s
+
+# target to generate assembly for a file
+test_gcd.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_gcd.c.s
+.PHONY : test_gcd.c.s
+
+test_kmul.o: test_kmul.c.o
+.PHONY : test_kmul.o
+
+# target to build an object file
+test_kmul.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_kmul.c.o
+.PHONY : test_kmul.c.o
+
+test_kmul.i: test_kmul.c.i
+.PHONY : test_kmul.i
+
+# target to preprocess a source file
+test_kmul.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_kmul.c.i
+.PHONY : test_kmul.c.i
+
+test_kmul.s: test_kmul.c.s
+.PHONY : test_kmul.s
+
+# target to generate assembly for a file
+test_kmul.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_kmul.c.s
+.PHONY : test_kmul.c.s
+
+test_ksqu.o: test_ksqu.c.o
+.PHONY : test_ksqu.o
+
+# target to build an object file
+test_ksqu.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_ksqu.c.o
+.PHONY : test_ksqu.c.o
+
+test_ksqu.i: test_ksqu.c.i
+.PHONY : test_ksqu.i
+
+# target to preprocess a source file
+test_ksqu.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_ksqu.c.i
+.PHONY : test_ksqu.c.i
+
+test_ksqu.s: test_ksqu.c.s
+.PHONY : test_ksqu.s
+
+# target to generate assembly for a file
+test_ksqu.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_ksqu.c.s
+.PHONY : test_ksqu.c.s
+
+test_mod_exp.o: test_mod_exp.c.o
+.PHONY : test_mod_exp.o
+
+# target to build an object file
+test_mod_exp.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_mod_exp.c.o
+.PHONY : test_mod_exp.c.o
+
+test_mod_exp.i: test_mod_exp.c.i
+.PHONY : test_mod_exp.i
+
+# target to preprocess a source file
+test_mod_exp.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_mod_exp.c.i
+.PHONY : test_mod_exp.c.i
+
+test_mod_exp.s: test_mod_exp.c.s
+.PHONY : test_mod_exp.s
+
+# target to generate assembly for a file
+test_mod_exp.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_mod_exp.c.s
+.PHONY : test_mod_exp.c.s
+
+test_mul.o: test_mul.c.o
+.PHONY : test_mul.o
+
+# target to build an object file
+test_mul.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_mul.c.o
+.PHONY : test_mul.c.o
+
+test_mul.i: test_mul.c.i
+.PHONY : test_mul.i
+
+# target to preprocess a source file
+test_mul.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_mul.c.i
+.PHONY : test_mul.c.i
+
+test_mul.s: test_mul.c.s
+.PHONY : test_mul.s
+
+# target to generate assembly for a file
+test_mul.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_mul.c.s
+.PHONY : test_mul.c.s
+
+test_prime.o: test_prime.c.o
+.PHONY : test_prime.o
+
+# target to build an object file
+test_prime.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_prime.c.o
+.PHONY : test_prime.c.o
+
+test_prime.i: test_prime.c.i
+.PHONY : test_prime.i
+
+# target to preprocess a source file
+test_prime.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_prime.c.i
+.PHONY : test_prime.c.i
+
+test_prime.s: test_prime.c.s
+.PHONY : test_prime.s
+
+# target to generate assembly for a file
+test_prime.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_prime.c.s
+.PHONY : test_prime.c.s
+
+test_squ.o: test_squ.c.o
+.PHONY : test_squ.o
+
+# target to build an object file
+test_squ.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_squ.c.o
+.PHONY : test_squ.c.o
+
+test_squ.i: test_squ.c.i
+.PHONY : test_squ.i
+
+# target to preprocess a source file
+test_squ.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_squ.c.i
+.PHONY : test_squ.c.i
+
+test_squ.s: test_squ.c.s
+.PHONY : test_squ.s
+
+# target to generate assembly for a file
+test_squ.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_squ.c.s
+.PHONY : test_squ.c.s
+
+test_sub.o: test_sub.c.o
+.PHONY : test_sub.o
+
+# target to build an object file
+test_sub.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_sub.c.o
+.PHONY : test_sub.c.o
+
+test_sub.i: test_sub.c.i
+.PHONY : test_sub.i
+
+# target to preprocess a source file
+test_sub.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_sub.c.i
+.PHONY : test_sub.c.i
+
+test_sub.s: test_sub.c.s
+.PHONY : test_sub.s
+
+# target to generate assembly for a file
+test_sub.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_sub.c.s
+.PHONY : test_sub.c.s
+
+test_xgcd.o: test_xgcd.c.o
+.PHONY : test_xgcd.o
+
+# target to build an object file
+test_xgcd.c.o:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_xgcd.c.o
+.PHONY : test_xgcd.c.o
+
+test_xgcd.i: test_xgcd.c.i
+.PHONY : test_xgcd.i
+
+# target to preprocess a source file
+test_xgcd.c.i:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_xgcd.c.i
+.PHONY : test_xgcd.c.i
+
+test_xgcd.s: test_xgcd.c.s
+.PHONY : test_xgcd.s
+
+# target to generate assembly for a file
+test_xgcd.c.s:
+	cd /Users/jewon/Documents/GitHub/bignumber/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test_xgcd.c.s
+.PHONY : test_xgcd.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -188,12 +476,48 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... bi_karatsuba_test.o"
-	@echo "... bi_karatsuba_test.i"
-	@echo "... bi_karatsuba_test.s"
 	@echo "... bi_test.o"
 	@echo "... bi_test.i"
 	@echo "... bi_test.s"
+	@echo "... bi_test2.o"
+	@echo "... bi_test2.i"
+	@echo "... bi_test2.s"
+	@echo "... test_add.o"
+	@echo "... test_add.i"
+	@echo "... test_add.s"
+	@echo "... test_div.o"
+	@echo "... test_div.i"
+	@echo "... test_div.s"
+	@echo "... test_exp.o"
+	@echo "... test_exp.i"
+	@echo "... test_exp.s"
+	@echo "... test_gcd.o"
+	@echo "... test_gcd.i"
+	@echo "... test_gcd.s"
+	@echo "... test_kmul.o"
+	@echo "... test_kmul.i"
+	@echo "... test_kmul.s"
+	@echo "... test_ksqu.o"
+	@echo "... test_ksqu.i"
+	@echo "... test_ksqu.s"
+	@echo "... test_mod_exp.o"
+	@echo "... test_mod_exp.i"
+	@echo "... test_mod_exp.s"
+	@echo "... test_mul.o"
+	@echo "... test_mul.i"
+	@echo "... test_mul.s"
+	@echo "... test_prime.o"
+	@echo "... test_prime.i"
+	@echo "... test_prime.s"
+	@echo "... test_squ.o"
+	@echo "... test_squ.i"
+	@echo "... test_squ.s"
+	@echo "... test_sub.o"
+	@echo "... test_sub.i"
+	@echo "... test_sub.s"
+	@echo "... test_xgcd.o"
+	@echo "... test_xgcd.i"
+	@echo "... test_xgcd.s"
 .PHONY : help
 
 

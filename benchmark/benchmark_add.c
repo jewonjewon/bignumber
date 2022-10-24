@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-#include "../includes/bi.h"
-#include "../includes/bi_op.h"
-#include "../includes/bi_prime.h"
-#include "../includes/bi_rand.h"
-#include "../includes/RSA.h"
-#include "../includes/bi_test.h"
+#include "includes/benchmark.h"
+#include "includes/bi_rand.h"
+#include "includes/bi.h"
+#include "includes/bi_op.h"
+#include "includes/bi_test.h"
+#include "includes/bi_prime.h"
+#include "includes/RSA.h"
 
 void bench_bi_ADD(IN int TEST)
 {
@@ -35,8 +36,10 @@ void bench_ADD()
     printf("# ADD \n");
     int cnt = 10000000; /* cnt: 시행 횟수 */
 
-    double start1, start2;
-    double end1, end2;
+    double start1;
+    // double start1, start2;
+    double end1;
+    // double end1, end2;
 
     start1 = (double)clock() / CLOCKS_PER_SEC;
     bench_bi_ADD(cnt);

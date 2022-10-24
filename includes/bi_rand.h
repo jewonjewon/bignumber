@@ -1,10 +1,11 @@
-#ifndef _INCLUDE_BI_RAND_H
-#define _INCLUDE_BI_RAND_H
+#ifndef __BI_RAND_H__
+#define __BI_RAND_H__
 
 #include "bi.h"
 #include "bi_op.h"
 #include "bi_prime.h"
 #include "bi_test.h"
+#include "benchmark.h"
 
 void arr_rand_range(word *dst, IN int lbound, int ubound);
 void arr_rand(word *dst, IN int wordlen);

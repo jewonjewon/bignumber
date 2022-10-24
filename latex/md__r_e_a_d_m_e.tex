@@ -1,0 +1,111 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{목표}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item 큰 정수 연산 라이브러리
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item \mbox{[}x\mbox{]} 덧셈
+\item \mbox{[}x\mbox{]} 뺄셈
+\item \mbox{[}x\mbox{]} Schoolbook 곱셈
+\item \mbox{[}x\mbox{]} Schoolbook 제곱
+\item \mbox{[}x\mbox{]} Karatsuba 곱셈
+\item \mbox{[}x\mbox{]} Karatsuba 제곱
+\item \mbox{[}x\mbox{]} 워드 단위 긴 나눗셈
+\item \mbox{[}x\mbox{]} 이진 긴 나눗셈
+\item \mbox{[}x\mbox{]} Left-\/\+To-\/\+Right binary Method
+\item \mbox{[}x\mbox{]} Right-\/\+To-\/\+Left binary Method
+\item \mbox{[} \mbox{]} Montgomery Ladder Method
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item 검증 함수
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item \mbox{[}x\mbox{]} 덧셈
+\item \mbox{[}x\mbox{]} 뺄셈
+\item \mbox{[}x\mbox{]} Schoolbook 곱셈
+\item \mbox{[}x\mbox{]} Schoolbook 제곱
+\item \mbox{[}x\mbox{]} Karatsuba 곱셈
+\item \mbox{[}x\mbox{]} Karatsuba 제곱
+\item \mbox{[}x\mbox{]} 워드 단위 긴 나눗셈
+\item \mbox{[}x\mbox{]} 이진 긴 나눗셈
+\item \mbox{[}x\mbox{]} Left-\/\+To-\/\+Right binary Method
+\item \mbox{[}x\mbox{]} Right-\/\+To-\/\+Left binary Method
+\item \mbox{[} \mbox{]} Montgomery Ladder Method
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item 암호
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item \mbox{[} \mbox{]} Textbook-\/\+RSA 1024, 2048
+\item \mbox{[} \mbox{]} RSA-\/\+CRT
+\item \mbox{[} \mbox{]} RSA-\/\+OAEP
+\item \mbox{[} \mbox{]} DH Key Exchange Protocol
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{개발 일정}\label{md__r_e_a_d_m_e_autotoc_md2}
+21.\+12.\+17 $\sim$ 겨울방학\+: 빅넘버 라이브러리 완성, RSA(RSA-\/\+CRT, RSA-\/\+OAEP)완성, DH 키교환 완성
+
+21.\+12.\+17 $\sim$ 2022 1학기\+: ECC 완성\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{개발 현황}\label{md__r_e_a_d_m_e_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 날짜   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 개발 내용   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 비고    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 날짜   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 개발 내용   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 비고    }\\\cline{1-3}
+\endhead
+21.\+12.\+21   &Schoolbook 곱셈 구현, 케이스 별 검증 완료   &(ADD, SUB 검증 재확인할 것)    \\\cline{1-3}
+21.\+12.\+26   &Schoolbook 제곱 구현, 케이스 별 검증 완료   &\sout{SQU 함수에서 memory leak 발생 이 부분 다시 확인하기}, 해결    \\\cline{1-3}
+21.\+12.\+27   &카라츄바 곱셈 하는중 (음수 $\ast$ 양수), reduction에서 오류뜸 , 덧셈, 뺄셈 수정   &없음    \\\cline{1-3}
+22.\+01.\+02   &카라츄바 입력정수 양수인 케이스 만 완성   &음수 처리 해야함    \\\cline{1-3}
+22.\+01.\+03   &카라츄바 제곱 완성, 테스트함수 완성   &부족한 부분 주석 채워넣기, 다음 날 교수님께 현 상황 보고   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{유의 사항}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item 주석 아주 상세히 기술할 것
+\item 메모리 누수 확인 잘하기
+\item 코드 가독성 신경쓰기
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{큰 정수 라이브러리 함수}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{bi\+\_\+logical\+\_\+op}\label{md__r_e_a_d_m_e_autotoc_md6}
+논리연산자 함수
+
+
+\begin{DoxyItemize}
+\item 큰 정수 SHIFT 함수
+\begin{DoxyItemize}
+\item bit LEFT shift + word LEFT shift 함수 \$\textbackslash{}rightarrow\$ bi\+\_\+lshift()
+\item word LEFT shift 함수 \$\textbackslash{}\+Rightarrow\$ bi\+\_\+word\+\_\+lshift(bigint 구조체, 워드 단위 시프트 수)
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{bi\+\_\+op}\label{md__r_e_a_d_m_e_autotoc_md7}
+산술연산자 함수(e.\+g. 사칙연산 등) bi\+\_\+add, bi\+\_\+sub, bi\+\_\+mul, bi\+\_\+squ
+
+
+\begin{DoxyItemize}
+\item 덧셈
+\begin{DoxyItemize}
+\item bi\+\_\+\+ADD\+\_\+\+ABc
+\item bi\+\_\+\+ADDC
+\item bi\+\_\+\+ADD
+\end{DoxyItemize}
+\item 뺄셈
+\begin{DoxyItemize}
+\item bi\+\_\+\+SUB\+\_\+\+AbB
+\item bi\+\_\+\+SUBC
+\item bi\+\_\+\+SUB
+\end{DoxyItemize}
+\item 곱셈
+\begin{DoxyItemize}
+\item bi\+\_\+\+MUL\+\_\+\+AB
+\item bi\+\_\+\+MULC
+\item bi\+\_\+\+MUL
+\end{DoxyItemize}
+\item 나눗셈
+\begin{DoxyItemize}
+\item bi\+\_\+\+SQU\+\_\+A
+\item bi\+\_\+\+SQUC
+\item bi\+\_\+\+SQU
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{bi\+\_\+test}\label{md__r_e_a_d_m_e_autotoc_md8}
+함수 정확성 검증 테스트 함수\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{bi\+\_\+local}\label{md__r_e_a_d_m_e_autotoc_md9}
+기본적으로 필요한 것들 , 매크로 구조체 정의 등 

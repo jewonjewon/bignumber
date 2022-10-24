@@ -1,5 +1,5 @@
-#ifndef _INCLUDE_BI_H
-#define _INCLUDE_BI_H
+#ifndef __BI_H__
+#define __BI_H__
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,16 +7,21 @@
 #include <time.h>
 #include <stdbool.h>
 
-#define w 64 /* w: 워드 크기 지정 */
+#define w 64 // w: 워드의 크기 지정
 
 #define check printf("#?????\n")
 #define newline printf("\n")
 
-#define IN  // function input
-#define OUT // function output
+/// 함수 입력
+#define IN
+/// 함수 출력
+#define OUT
+/// 상수
 #define CONSTATNT
 
+/// 음이 아닌 정수
 #define NON_NEGATIVE 0
+/// 음수
 #define NEGATIVE 1
 
 #define and &&
@@ -41,11 +46,15 @@ typedef unsigned char word;
 #define W (0xff)
 #endif
 
+/// @brief 큰 정수용 구조체
 typedef struct
 {
-    int sign;    /* 부호 */
-    int wordlen; /* 워드길이 */
-    word *a;     /* 배열 */
+    /// @brief  부호
+    int sign;
+    /// @brief 워드 길이
+    int wordlen;
+    /// @brief 배열
+    word *a;
 } bigint;
 
 /* == == == == == BASIC FUNCTION == == == == == */
@@ -77,6 +86,7 @@ int bi_cmp(IN bigint *A, IN bigint *B);
 void bi_abs(IN bigint *A);
 void bi_flip_sign(IN bigint *A);
 
+// 다른 곳에 두기
 int bi_min(IN int a, IN int b);
 int bi_max(IN int a, IN int b);
 

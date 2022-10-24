@@ -1,0 +1,276 @@
+#include "../includes/bi.h"
+#include "../includes/bi_op.h"
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_MUL_AB(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
+ * 단일 워드 2개를 입력받아 곱셈 연산 수행 후 최대 2워드 크기의 출력값을 반환하는 함수.
+ * 단일 워드 곱셈이므로 결과값 C의 최대 워드 길이는 2워드.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+//  bi_MUL_AB(출력: bigint형 배열, 입력: 단일 워드, 입력: 단일 워드)
+void bi_MUL_AB(OUT bigint **C, IN word A, IN word B)
+{
+    bi_new(C, 2);
+
+    /// A1, B1 = A, B의 상위 w/2비트
+    word A1 = A >> (w / 2);
+
+    /// A0 = A의 하위 w/2비트
+    word A0 = A & HALF_MASK;
+
+    /// B1 = B의 상위 w/2비트
+    word B1 = B >> (w / 2);
+    /// B0 = B의 하위 w/2비트
+    word B0 = B & HALF_MASK;
+
+    word T1 = A1 * B0;
+    word T0 = A0 * B1;
+
+    T0 = T1 + T0;
+    T1 = T0 < T1;
+
+    word C1 = A1 * B1;
+    word C0 = A0 * B0;
+
+    word T = C0;
+
+    C0 = C0 + (T0 << (w / 2));
+    C1 = C1 + (T1 << (w / 2)) + (T0 >> (w / 2)) + (C0 < T);
+
+    // C = C1 || C0
+    (*C)->a[1] = C1;
+    (*C)->a[0] = C0;
+}
+
+/// @brief 다중 워드 2개를 입력받아 곱셈 연산 수행 후 최대 wordlen(A) + wordlen(B) 워드 크기의 출력값을 반환하는 함수
+/// @param C (output) A*B
+/// @param A (input) 임의의 큰 정수(워드배열)
+/// @param B (input) 임의의 큰 정수(워드배열)
+void bi_mul_core(OUT bigint **C, IN bigint *A, IN bigint *B)
+{
+    bi_set_zero(C);
+
+    int n = A->wordlen; /* n is wordlen(A) */
+    int m = B->wordlen; /* m is wordlen(B) */
+
+    bigint *T = NULL;
+
+    for (int j = 0; j < n; j++)
+        for (int i = 0; i < m; i++)
+        {
+            bi_MUL_AB(&T, A->a[j], B->a[i]);
+            bi_word_lshift(&T, i + j); /*T ← T << (i+j)w */
+            bi_addc_asg(C, T);         /* C += T */
+        }
+
+    bi_delete(&T);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+ * 임의의 정수 A와 B를 입력받아 MULC를 통한 곱셈 연산 수행 후 결과값 C를 반환하는 함수.
+ * 다중 워드 곱셈이므로 결과값 C의 최대 워드 길이는 wordlen(A) + wordlen(B) 워드.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_mul(OUT bigint **C, IN bigint *A, IN bigint *B)
+{
+    // Case 1: A = 0 or B = 0 then C = 0
+    if (bi_is_zero(A) == true or bi_is_zero(B) == true)
+    {
+        bi_set_zero(C);
+        return;
+    }
+
+    // Case 2: A = 1 then C = 1 * B
+    if (bi_is_one(A) == true)
+    {
+        bi_assign(C, B);
+        return;
+    }
+    // Case 3: A = -1 then C = -(1) * B
+    else if (bi_is_minus_one(A) == true)
+    {
+        bi_assign(C, B);
+        bi_flip_sign(*C);
+        return;
+    }
+    /// Case 4: B = 1 then C = 1 * A
+    if (bi_is_one(B) == true)
+    {
+        bi_assign(C, A);
+        return;
+    }
+    // Case 5: B = -1 then C = -(1) * A
+    else if (bi_is_minus_one(B) == true)
+    {
+        bi_assign(C, A);
+        bi_flip_sign(*C);
+        return;
+    }
+    // Case 6: Otherwise
+    int t1 = A->sign;
+    int t0 = B->sign;
+
+    bi_abs(A);
+    bi_abs(B);
+    bi_mul_core(C, A, B);
+    A->sign = t1;
+    B->sign = t0;
+    (*C)->sign = t1 ^ t0;
+}
+
+// bi_mul_asg(출력: bigint형 배열, 입력: 임의의 정수) → C *= A
+void bi_mul_asg(IN OUT bigint **C, IN bigint *A)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C); /* T ← C */
+
+    bi_mul(C, T, A);
+
+    bi_delete(&T);
+}
+
+void bi_kmul_core(OUT bigint **C, IN bigint *A, IN bigint *B)
+{
+
+    int flag = 3; /* flag = 3일 때 가장 빠름 */
+
+    if (flag >= bi_min(A->wordlen, B->wordlen))
+    {
+        bi_mul(C, A, B);
+        return;
+    }
+
+    int l = (bi_max(A->wordlen, B->wordlen) + 1) >> 1;
+
+    bigint *A1 = NULL;
+    bigint *A0 = NULL;
+
+    bi_assign(&A1, A);
+    bi_word_rshift(&A1, l);
+
+    bi_assign(&A0, A);
+    bi_word_reduction(&A0, l);
+
+    bigint *B1 = NULL;
+    bigint *B0 = NULL;
+
+    bi_assign(&B1, B);
+    bi_word_rshift(&B1, l);
+
+    bi_assign(&B0, B);
+    bi_word_reduction(&B0, l);
+
+    bigint *T1 = NULL;
+    bigint *T0 = NULL;
+
+    bi_kmul_core(&T1, A1, B1);
+    bi_kmul_core(&T0, A0, B0);
+
+    bigint *R = NULL;
+
+    bi_assign(&R, T1);
+    bi_word_lshift(&R, 2 * l);
+    bi_add_asg(&R, T0);
+
+    bigint *S1 = NULL;
+    bigint *S0 = NULL;
+
+    bi_sub(&S1, A0, A1);
+    bi_sub(&S0, B1, B0);
+
+    bigint *S = NULL;
+
+    int t1 = S1->sign;
+    int t0 = S0->sign;
+
+    bi_abs(S1);
+    bi_abs(S0);
+
+    bi_kmul_core(&S, S1, S0);
+
+    S1->sign = t1;
+    S0->sign = t0;
+    S->sign = S1->sign ^ S0->sign;
+
+    bi_add_asg(&S, T1);    /* S += T1 */
+    bi_add_asg(&S, T0);    /* S += T0 */
+    bi_word_lshift(&S, l); /* R <<= l*w */
+    bi_add_asg(&R, S);     /* R += S */
+
+    bi_assign(C, R); /* Return C(= R)  */
+
+    bi_delete(&A1);
+    bi_delete(&A0);
+    bi_delete(&B1);
+    bi_delete(&B0);
+    bi_delete(&R);
+    bi_delete(&T1);
+    bi_delete(&T0);
+    bi_delete(&S);
+    bi_delete(&S1);
+    bi_delete(&S0);
+
+    return;
+}
+
+// bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_kmul(OUT bigint **C, IN bigint *A, IN bigint *B)
+{
+    // Case 1: A = 0 or B = 0 then C = 0
+    if (bi_is_zero(A) == true or bi_is_zero(B) == true)
+    {
+        bi_set_zero(C);
+        return;
+    }
+
+    // Case 2: A = 1 then C = 1 * B
+    if (bi_is_one(A) == true)
+    {
+        bi_assign(C, B);
+        return;
+    }
+    // Case 3: A = -1 then C = -(1) * B
+    else if (bi_is_minus_one(A) == true)
+    {
+        bi_assign(C, B);
+        (*C)->sign = A->sign ^ B->sign;
+        return;
+    }
+    // Case 4: B = 1 then C = 1 * A
+    if (bi_is_one(B) == true)
+    {
+        bi_assign(C, A);
+        return;
+    }
+    // Case 5: B = -1 then C = -(1) * A
+    else if (bi_is_minus_one(B) == true)
+    {
+        bi_assign(C, A);
+        (*C)->sign = A->sign ^ B->sign;
+        return;
+    }
+    // Case 6: Otherwise
+    int t1 = A->sign;
+    int t0 = B->sign;
+
+    bi_abs(A);
+    bi_abs(B);
+
+    bi_kmul_core(C, A, B);
+
+    A->sign = t1;
+    B->sign = t0;
+    (*C)->sign = t1 ^ t0;
+}
+
+// bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
+void bi_kmul_asg(OUT bigint **C, IN bigint *A)
+{
+    bigint *T = NULL;
+    bi_assign(&T, *C);
+
+    bi_kmul(C, T, A);
+
+    bi_delete(&T);
+}

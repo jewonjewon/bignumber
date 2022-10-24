@@ -1,13 +1,20 @@
-#ifndef _INCLUDE_BI_OP_H
-#define _INCLUDE_BI_OP_H
+#ifndef __BI_OP_H__
+#define __BI_OP_H__
 
 #include "bi.h"
+/* 수정 할 것 */
+int min(IN int a, IN int b);
+word pow2(int a);
 
+#define get_j_bit(a, j) ((a >> j) & 0x1)
+
+int bitlen(word a);
 int bi_bit_cnt(bigint *A);
 int bi_get_j_bit(bigint *A, int n);
 
 /* LOGICAL OPERATION */
 void bi_word_lshift(IN OUT bigint **A, IN int x);
+// void bi_word_lshift2(OUT bigint **C, IN bigint *A, IN int r);
 
 void bi_lshift(OUT bigint **A, IN int x);
 

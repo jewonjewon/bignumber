@@ -1,18 +1,25 @@
 #include <stdio.h>
 
-#include "../includes/bi.h"
-#include "../includes/bi_op.h"
-#include "../includes/bi_prime.h"
-#include "../includes/bi_rand.h"
-#include "../includes/RSA.h"
-#include "../includes/bi_test.h"
+// #include "bi.h"
+// #include "bi_op.h"
+// #include "bi_test.h"
+// #include "bi_prime.h"
+// #include "bi_rand.h"
+
+#include "includes/benchmark.h"
+#include "includes/bi_rand.h"
+#include "includes/bi.h"
+#include "includes/bi_op.h"
+#include "includes/bi_test.h"
+#include "includes/bi_prime.h"
+#include "includes/RSA.h"
 
 void bench_bi_SPDM(IN int TEST, void (*func)(bigint **, bigint *))
 {
     bigint *C = NULL;
     bigint *A = NULL;
 
-    int wordlen = 8;
+    // int wordlen = 8;
 
     for (int j = 0; j < TEST; j++)
     {
@@ -40,8 +47,10 @@ void bench_SPDM()
     printf("# prime \n");
     int cnt = 1000000; /* cnt: 시행 횟수 */
 
-    double start1, start2, start3, start4;
-    double end1, end2, end3, end4;
+    double start1;
+    // double start1, start2, start3, start4;
+    double end1;
+    // double end1, end2, end3, end4;
 
     start1 = (double)clock() / CLOCKS_PER_SEC;
     bench_bi_SPDM(cnt, bi_SPDM);

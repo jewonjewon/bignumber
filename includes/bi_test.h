@@ -1,17 +1,9 @@
-#ifndef _INCLUDE_BI_TEST_H
-#define _INCLUDE_BI_TEST_H
-
-#include <time.h>
+#ifndef __BI_TEST_H__
+#define __BI_TEST_H__
 
 #include "bi.h"
 #include "bi_op.h"
 #include "bi_test.h"
-#include "basic.h"
-
-/* a 이하의 랜덤한 양의 정수 a */
-#define rand_num(a) ((rand() % a) + 1)
-/* 랜덤 부호 생성 0 또는 1 a */
-#define rand_sign() ((rand() % 2))
 
 /* 테스트용 서브 함수들 */
 void sage_show_add(bigint **C, bigint *A, bigint *B, int j);
@@ -29,15 +21,15 @@ void sage_show_prime_gen(bigint *n, int j);
 void bi_delete_3(bigint **C, bigint **A, bigint **B);
 void bi_delete_2(bigint **C, bigint **A);
 
-/* add Accuracy Verification */
-void sub_test_add1(bigint **C, bigint *A, bigint *B, IN int TEST);
-void sub_test_add2(bigint **C, bigint *A, bigint *B, IN int TEST);
-void sub_test_add3(bigint **C, bigint *A, bigint *B, IN int TEST);
-void sub_test_add4(bigint **C, bigint *A, bigint *B, IN int TEST);
-void sub_test_add5(bigint **C, bigint *A, bigint *B, IN int TEST);
-void sub_test_add6(bigint **C, bigint *A, bigint *B, IN int TEST);
+/* ADD Accuracy Verification */
+void sub_test_ADD1(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_ADD2(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_ADD3(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_ADD4(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_ADD5(bigint **C, bigint *A, bigint *B, IN int TEST);
+void sub_test_ADD6(bigint **C, bigint *A, bigint *B, IN int TEST);
 
-void test_add(IN int TEST);
+void test_ADD(IN int TEST);
 //
 
 /* SUB Accuracy Verification */
@@ -139,5 +131,6 @@ void test_is_prime(int TEST, int (*func)(bigint *, int k));
 void test_prime_gen(int TEST, void (*func)(bigint **, int));
 
 /* RSA */
+
 
 #endif

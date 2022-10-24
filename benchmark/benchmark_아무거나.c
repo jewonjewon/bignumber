@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-#include "../includes/bi.h"
-#include "../includes/bi_op.h"
-#include "../includes/bi_prime.h"
-#include "../includes/bi_rand.h"
-#include "../includes/RSA.h"
-#include "../includes/bi_test.h"
+// #include "bi.h"
+// #include "bi_op.h"
+// #include "bi_test.h"
+
+#include "includes/bi.h"
+#include "includes/bi_op.h"
+#include "includes/bi_test.h"
 
 // void bench_bi_DIV(IN int TEST)
 // {
@@ -93,9 +94,11 @@ void bench_lshift()
     int num1 = rand() % 0x0f + 1;
     bi_gen_rand(&A, NON_NEGATIVE, num1);
 
-    double start1, start2;
-    double end1, end2;
-    int j = 0;
+    double start1;
+    // double start1, start2;
+    double end1;
+    // double end1, end2;
+    // int j = 0;
     bigint *T = NULL;
 
     start1 = (double)clock() / CLOCKS_PER_SEC;

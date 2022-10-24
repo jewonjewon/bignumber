@@ -1,11 +1,17 @@
 #include <stdio.h>
 
-#include "../includes/bi.h"
-#include "../includes/bi_op.h"
-#include "../includes/bi_prime.h"
-#include "../includes/bi_rand.h"
-#include "../includes/RSA.h"
-#include "../includes/bi_test.h"
+// #include "bi.h"
+// #include "bi_op.h"
+// #include "bi_test.h"
+
+#include "includes/benchmark.h"
+#include "includes/bi_rand.h"
+#include "includes/bi.h"
+#include "includes/bi_op.h"
+#include "includes/bi_test.h"
+#include "includes/bi_prime.h"
+#include "includes/RSA.h"
+
 void bench_bi_DIV(IN int TEST)
 {
     bigint *A = NULL;

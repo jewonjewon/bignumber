@@ -1,5 +1,5 @@
-#ifndef _INCLUDE_BENCHMARK_H
-#define _INCLUDE_BENCHMARK_H
+#ifndef __BENCHMARK_H__
+#define __BENCHMARK_H__
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +7,6 @@
 #include <time.h>
 #include <stdbool.h>
 
-#include "basic.h"
 #include "bi.h"
 #include "bi_op.h"
 #include "bi_test.h"

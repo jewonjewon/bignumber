@@ -14,7 +14,7 @@
 - [x] 이진 긴 나눗셈
 - [x] Left-To-Right binary Method
 - [x] Right-To-Left binary Method
-- [x] Montgomery Ladder Method
+- [ ] Montgomery Ladder Method
 
 2. 검증 함수
 
@@ -28,12 +28,12 @@
 - [x] 이진 긴 나눗셈
 - [x] Left-To-Right binary Method
 - [x] Right-To-Left binary Method
-- [x] Montgomery Ladder Method
+- [ ] Montgomery Ladder Method
 
 3. 암호
 
-- [x] Textbook-RSA 1024, 2048
-- [x] RSA-CRT
+- [ ] Textbook-RSA 1024, 2048
+- [ ] RSA-CRT
 - [ ] RSA-OAEP
 - [ ] DH Key Exchange Protocol
 
@@ -76,30 +76,20 @@ bi_add, bi_sub, bi_mul, bi_squ
 
 - 덧셈
   - bi_ADD_ABc
-  - bi_add_core
-  - bi_add
+  - bi_ADDC
+  - bi_ADD
 - 뺄셈
   - bi_SUB_AbB
-  - bi_sub_core
-  - bi_sub
+  - bi_SUBC
+  - bi_SUB
 - 곱셈
   - bi_MUL_AB
-  - bi_mul_core
-  - bi_mul
-  - bi_kmul_core
-  - bi_kmul
-- 제곱
-  - bi_SQU_A
-  - bi_squ_core
-  - bi_squ
-  - bi_ksqu_core
-  - bi_ksqu
+  - bi_MULC
+  - bi_MUL
 - 나눗셈
-  - bi_long_div_2word
-  - bi_div_core2
-  - bi_div_core
-  - bi_div
-  - bi_bin_long_div
+  - bi_SQU_A
+  - bi_SQUC
+  - bi_SQU
 
 ## bi_test
 

@@ -24,9 +24,6 @@
 /// 음수
 #define NEGATIVE 1
 
-#define and &&
-#define or ||
-
 #define ZEROLIZE
 
 #if w == 64 // 64비트
@@ -34,16 +31,19 @@ typedef unsigned long long word;
 #define MASK (0xffffffffffffffff)
 #define HALF_MASK (0xffffffff) // 32비트 마스크
 #define W (0xffffffffffffffff)
+#define WORD_LEN 16
 #elif w == 32 // 32비트
 typedef unsigned int word;
 #define MASK (0xffffffff)
 #define HALF_MASK (0xffff) // 16비트 마스크
 #define W (0xffffffff)
+#define WORD_LEN 8
 #elif w == 8 // 8비트
 typedef unsigned char word;
 #define MASK (0xff)
 #define HALF_MASK (0xf) // 4비트 마스크
 #define W (0xff)
+#define WORD_LEN 2
 #endif
 
 /// @brief 큰 정수용 구조체
@@ -66,7 +66,7 @@ void bi_resize(IN OUT bigint **A, IN int wordlen);
 
 void bi_init(IN OUT bigint **A);
 
-void bi_print(char *str, bigint *A);
+void bi_print(const char *str, bigint *A);
 
 void arr_rand(word *dst, IN int wordlen);
 void bi_gen_rand(OUT bigint **A, IN int sign, IN int wordlen);

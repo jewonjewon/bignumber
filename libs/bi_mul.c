@@ -74,8 +74,8 @@ void bi_mul_core(OUT bigint **C, IN bigint *A, IN bigint *B)
 // bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_mul(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    // Case 1: A = 0 or B = 0 then C = 0
-    if (bi_is_zero(A) == true or bi_is_zero(B) == true)
+    // Case 1: A = 0 || B = 0 then C = 0
+    if (bi_is_zero(A) == true || bi_is_zero(B) == true)
     {
         bi_set_zero(C);
         return;
@@ -217,8 +217,8 @@ void bi_kmul_core(OUT bigint **C, IN bigint *A, IN bigint *B)
 // bi_mul(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_kmul(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    // Case 1: A = 0 or B = 0 then C = 0
-    if (bi_is_zero(A) == true or bi_is_zero(B) == true)
+    // Case 1: A = 0 || B = 0 then C = 0
+    if (bi_is_zero(A) == true || bi_is_zero(B) == true)
     {
         bi_set_zero(C);
         return;

@@ -86,8 +86,8 @@ void bi_squ_core(OUT bigint **C, IN bigint *A)
 // bi_squ(출력: bigint형 배열, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_squ(OUT bigint **C, IN bigint *A)
 {
-    // Case 1: A = 0 or A = 1 or A = -1
-    if (bi_is_zero(A) == true or bi_is_one(A) == true or bi_is_minus_one(A) == true)
+    // Case 1: A = 0 || A = 1 || A = -1
+    if (bi_is_zero(A) == true || bi_is_one(A) == true || bi_is_minus_one(A) == true)
     {
         bi_assign(C, A);
         bi_abs(*C);
@@ -161,8 +161,8 @@ void bi_ksqu_core(OUT bigint **C, IN bigint *A)
 
 void bi_ksqu(OUT bigint **C, IN bigint *A)
 {
-    // Case 1: A = 0 or A = 1 or A = -1
-    if (bi_is_zero(A) == true or bi_is_one(A) == true or bi_is_minus_one(A) == true)
+    // Case 1: A = 0 || A = 1 || A = -1
+    if (bi_is_zero(A) == true || bi_is_one(A) == true || bi_is_minus_one(A) == true)
     {
         bi_assign(C, A);
         (*C)->sign = NON_NEGATIVE;

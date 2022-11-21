@@ -91,7 +91,7 @@ int bi_is_composite(IN bigint *n, IN bigint *q, IN int l, IN bigint *a)
 /* n: 판별하고자 하는 정수, k: 시행 횟수 , use miller-rabin primallity test*/
 int bi_is_prime(bigint *n, int k)
 {
-    if (bi_is_one(n) == true or bi_is_zero(n) == true) /* n is 1 or n is 0, n is NOT prime */
+    if (bi_is_one(n) == true || bi_is_zero(n) == true) /* n is 1 || n is 0, n is NOT prime */
         return false;
 
     bigint *q = NULL;
@@ -115,7 +115,7 @@ int bi_is_prime(bigint *n, int k)
         {
             bi_gen_rand(&a, NON_NEGATIVE, t->wordlen);
 
-        } while ((bi_is_zero(a) == true) or (bi_is_one(a) == true) or (bi_cmp(a, t) == -1));
+        } while ((bi_is_zero(a) == true) || (bi_is_one(a) == true) || (bi_cmp(a, t) == -1));
 #endif
 #if 1
     while (k > 0) /* k번 시행 */
@@ -124,7 +124,7 @@ int bi_is_prime(bigint *n, int k)
         {
             bi_SPDM(&a, t); /* Choose random bit a in [2, a - 2)*/
 
-        } while (bi_is_zero(a) == true or bi_is_one(a) == true);
+        } while (bi_is_zero(a) == true || bi_is_one(a) == true);
 #endif
 #if 0
         printf("a = ");

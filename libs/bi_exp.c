@@ -191,7 +191,7 @@ void bi_mont_red(OUT bigint **C, IN bigint *x, IN bigint *R,
 
     bi_print("t", t);
 
-    if (bi_cmp(t, n) == 1 or bi_cmp(t, n) == 0)
+    if (bi_cmp(t, n) == 1 || bi_cmp(t, n) == 0)
         bi_sub_asg(&t, n);
 
     bi_assign(C, t);

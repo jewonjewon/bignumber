@@ -176,7 +176,7 @@ void bi_long_div_bin(OUT bigint **Q, OUT bigint **R, IN bigint *A, IN bigint *B)
         bi_lshift(R, 1);
         (*R)->a[0] ^= bi_get_j_bit(A, j);
 
-        if (bi_cmp(*R, B) == 1 or bi_cmp(*R, B) == 0)
+        if (bi_cmp(*R, B) == 1 || bi_cmp(*R, B) == 0)
         {
             bi_lshift(&T, j);
             bi_xor_asg(Q, T);

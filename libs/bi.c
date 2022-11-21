@@ -15,6 +15,10 @@ void bi_delete(IN OUT bigint **A)
     *A = NULL;
 }
 // bigint형 배열 생성(부호= NON_NEGATIVE, 워드길이= wordlen, 배열= 0)
+
+/// @brief bigint 배열 생성
+/// @param A bigint 배열
+/// @param wordlen bigint 배열 개수
 void bi_new(IN OUT bigint **A, IN int wordlen)
 {
     // 입력받은 배열에 어떠한 값이 저장되어있는 경우 free 후 새롭게 할당
@@ -47,7 +51,7 @@ void bi_refine(bigint *A)
         A->a = (word *)realloc(A->a, sizeof(word) * new_wordlen);
     }
 
-    if ((A->wordlen == 1) and (A->a[0] == 0))
+    if ((A->wordlen == 1) && (A->a[0] == 0))
         A->sign = NON_NEGATIVE;
 }
 
@@ -79,7 +83,7 @@ void bi_init(IN OUT bigint **A)
         (*A)->a[j] = 0;
 }
 
-void bi_print(char *str, bigint *A)
+void bi_print(const char *str, bigint *A)
 {
     printf("%s = ", str);
 
@@ -139,8 +143,8 @@ void bi_set_zero(OUT bigint **A)
 
 int bi_is_zero(IN bigint *A)
 {
-    // Case: A < 0 or A[0] != 0
-    if (A->sign == NEGATIVE or A->a[0] != 0)
+    // Case: A < 0 || A[0] != 0
+    if (A->sign == NEGATIVE || A->a[0] != 0)
         return false;
 
     for (int j = A->wordlen - 1; j > 0; j--)
@@ -152,7 +156,7 @@ int bi_is_zero(IN bigint *A)
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * bi_is_one(*A) → sign(A) = NON-NEGATIVE
  * bigint형 구조체 A와 B를 입력받아 A와 B의 대소 비교를 진행하는 함수
- *  - If A < 0 or A[0] ≠ 1, then return false (A is NOT 1)
+ *  - If A < 0 || A[0] ≠ 1, then return false (A is NOT 1)
  *  - Else If {A[wordlen(A)], ..., A[1]} ≠ 0, then return false (A is NOT 1)
  *  - Else, return true (A = 1)
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -160,8 +164,8 @@ int bi_is_zero(IN bigint *A)
 // bi_is_one(*A)
 int bi_is_one(IN bigint *A)
 {
-    // Case: A < 0 or A[0] != 1
-    if (A->sign == NEGATIVE or A->a[0] != 1)
+    // Case: A < 0 || A[0] != 1
+    if (A->sign == NEGATIVE || A->a[0] != 1)
         return false;
 
     for (int j = A->wordlen - 1; j > 0; j--)
@@ -172,8 +176,8 @@ int bi_is_one(IN bigint *A)
 
 int bi_is_two(IN bigint *A)
 {
-    // Case: A < 0 or A[0] != 2
-    if (A->sign == NEGATIVE or A->a[0] != 2)
+    // Case: A < 0 || A[0] != 2
+    if (A->sign == NEGATIVE || A->a[0] != 2)
         return false;
 
     for (int j = A->wordlen - 1; j > 0; j--)
@@ -185,7 +189,7 @@ int bi_is_two(IN bigint *A)
 /* 임의의 정수 A가 짝수인지 판별하는 함수  */
 int bi_is_even(IN bigint *A)
 {
-    // Case: A < 0 or A[0] != 2
+    // Case: A < 0 || A[0] != 2
     if ((A->a[0] & 0x1) == 0)
         return true; /* A is even */
     return false;    /* A is NOT even */
@@ -194,7 +198,7 @@ int bi_is_even(IN bigint *A)
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * bi_is_minus_one(*A) → sign(A) = NON-NEGATIVE
  * bigint형 구조체 A와 B를 입력받아 A와 B의 대소 비교를 진행하는 함수
- *  - If A > 0 or A[0] ≠ 1, then return false (A is NOT -1)
+ *  - If A > 0 || A[0] ≠ 1, then return false (A is NOT -1)
  *  - Else If {A[wordlen(A)], ..., A[1]} ≠ 0, then return false (A is NOT -1)
  *  - Else, return true (A = -1)
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -202,8 +206,8 @@ int bi_is_even(IN bigint *A)
 // bi_is_minus_one(*A)
 int bi_is_minus_one(IN bigint *A)
 {
-    // Case: A < 0 or A[0] != 1
-    if (A->sign == NON_NEGATIVE or A->a[0] != 1)
+    // Case: A < 0 || A[0] != 1
+    if (A->sign == NON_NEGATIVE || A->a[0] != 1)
         return false;
 
     for (int j = A->wordlen - 1; j > 0; j--)
@@ -259,10 +263,10 @@ int bi_compare_abs(IN bigint *A, IN bigint *B)
 int bi_cmp(IN bigint *A, IN bigint *B)
 {
     // Case: A > B
-    if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
+    if (A->sign == NON_NEGATIVE && B->sign == NEGATIVE)
         return 1;
     // Case: A < B
-    if (A->sign == NEGATIVE and B->sign == NON_NEGATIVE)
+    if (A->sign == NEGATIVE && B->sign == NON_NEGATIVE)
         return -1;
 
     int ret = bi_compare_abs(A, B);

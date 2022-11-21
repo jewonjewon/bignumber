@@ -54,7 +54,7 @@ void bi_ea_bin_itr(bigint **C, bigint *A, bigint *B)
     bi_assign(&T1, B);
     bi_set_one(&T2);
 
-    while (((T0->a[0] & 0x1) == 0) and ((T1->a[0] & 0x1) == 0))
+    while (((T0->a[0] & 0x1) == 0) && ((T1->a[0] & 0x1) == 0))
     {
         bi_rshift(&T0, 1);
         bi_rshift(&T1, 1);
@@ -71,7 +71,7 @@ void bi_ea_bin_itr(bigint **C, bigint *A, bigint *B)
         {
             bi_rshift(&T1, 1);
         }
-        if ((bi_cmp(T1, T0) == 1) or (bi_cmp(T1, T0) == 0)) /* if T1 ≥ T0 */
+        if ((bi_cmp(T1, T0) == 1) || (bi_cmp(T1, T0) == 0)) /* if T1 ≥ T0 */
         {
             bi_sub_asg(&T1, T0);
         }
@@ -108,7 +108,7 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
     bi_assign(&T1, b);
     bi_set_one(&T2);
 
-    while ((T0->a[0] & 0x1) == 0 and (T1->a[0] & 0x1) == 0)
+    while ((T0->a[0] & 0x1) == 0 && (T1->a[0] & 0x1) == 0)
     {
         bi_rshift(&T0, 1);
         bi_rshift(&T1, 1);
@@ -130,7 +130,7 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
         {
             bi_rshift(&T0, 1);
 
-            if ((U0->a[0] & 0x1) == 0 and (V0->a[0] & 0x1) == 0)
+            if ((U0->a[0] & 0x1) == 0 && (V0->a[0] & 0x1) == 0)
             {
                 bi_rshift(&U0, 1);
                 bi_rshift(&V0, 1);
@@ -155,7 +155,7 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
         {
             bi_rshift(&T1, 1);
 
-            if ((U1->a[0] & 0x1) == 0 and (V1->a[0] & 0x1) == 0)
+            if ((U1->a[0] & 0x1) == 0 && (V1->a[0] & 0x1) == 0)
             {
                 bi_rshift(&U1, 1);
                 bi_rshift(&V1, 1);
@@ -176,7 +176,7 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
             // bi_print(V1);
             // newline;
         }
-        if ((bi_cmp(T0, T1) == 1) or (bi_cmp(T0, T1) == 0)) /* T0 ≥ T1 ? */
+        if ((bi_cmp(T0, T1) == 1) || (bi_cmp(T0, T1) == 0)) /* T0 ≥ T1 ? */
         {
             // printf("#if\n");
             bi_sub_asg(&T0, T1);
@@ -210,7 +210,7 @@ void bi_eea_bin_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
 
 void bi_eea_itr(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    if (bi_is_zero(A) == true or bi_is_zero(B))
+    if (bi_is_zero(A) == true || bi_is_zero(B))
     {
         bi_set_zero(C);
         return;
@@ -331,8 +331,8 @@ void lehmer_gcd(OUT bigint **C, IN bigint *A, IN bigint *B)
 
         while (1)
         {
-            /* y + C == 0 or y + D == 0 */
-            if (bi_is_zero(t0) == true or bi_is_zero(t1) == true)
+            /* y + C == 0 || y + D == 0 */
+            if (bi_is_zero(t0) == true || bi_is_zero(t1) == true)
             {
                 break;
             }

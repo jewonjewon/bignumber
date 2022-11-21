@@ -57,7 +57,7 @@ void bi_add_core(OUT bigint **C, IN bigint *A, IN bigint *B)
 //  bi_add(출력: C = A + B, 입력: 임의의 정수, 입력: 임의의 정수)
 void bi_add(OUT bigint **C, IN bigint *A, IN bigint *B)
 {
-    if (bi_is_zero(A) == true and bi_is_zero(B))
+    if (bi_is_zero(A) == true && bi_is_zero(B))
     {
         bi_set_zero(C);
         return;
@@ -83,8 +83,8 @@ void bi_add(OUT bigint **C, IN bigint *A, IN bigint *B)
         bi_assign(C, A);
         return;
     }
-    // Case 3: A > 0 and B < 0, C = A - |B|
-    if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
+    // Case 3: A > 0 && B < 0, C = A - |B|
+    if (A->sign == NON_NEGATIVE && B->sign == NEGATIVE)
     {
         bi_abs(B);
         bi_sub(C, A, B);
@@ -92,8 +92,8 @@ void bi_add(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
 
-    // Case 4: A < 0 and B > 0, C = B - |A|
-    if (A->sign == NEGATIVE and B->sign == NON_NEGATIVE)
+    // Case 4: A < 0 && B > 0, C = B - |A|
+    if (A->sign == NEGATIVE && B->sign == NON_NEGATIVE)
     {
         bi_abs(A); /* A ← |A| */
         bi_sub(C, B, A);
@@ -210,21 +210,21 @@ void bi_sub(OUT bigint **C, IN bigint *A, IN bigint *B)
     }
 
     // Case 4: 0 < B ≤ A,  C = A - B
-    if (A->sign == NON_NEGATIVE and B->sign == NON_NEGATIVE and bi_cmp(A, B) == 1)
+    if (A->sign == NON_NEGATIVE && B->sign == NON_NEGATIVE && bi_cmp(A, B) == 1)
     {
         bi_sub_core(C, A, B);
         return;
     }
 
     // Case 5: 0 < A < B,  -C = B - A
-    else if (A->sign == NON_NEGATIVE and B->sign == NON_NEGATIVE and bi_cmp(A, B) == -1)
+    else if (A->sign == NON_NEGATIVE && B->sign == NON_NEGATIVE && bi_cmp(A, B) == -1)
     {
         bi_sub_core(C, B, A);
         (*C)->sign = NEGATIVE;
         return;
     }
     // Case 6: 0 > A ≥ B,  C = |B| - |A|
-    if (A->sign == NEGATIVE and B->sign == NEGATIVE and bi_cmp(A, B) == 1)
+    if (A->sign == NEGATIVE && B->sign == NEGATIVE && bi_cmp(A, B) == 1)
     {
         bi_abs(A);
         bi_abs(B);
@@ -237,7 +237,7 @@ void bi_sub(OUT bigint **C, IN bigint *A, IN bigint *B)
     }
 
     // Case 7: 0 > B > A,  C = |B| - |A|
-    else if (A->sign == NEGATIVE and B->sign == NEGATIVE and bi_cmp(A, B) == -1)
+    else if (A->sign == NEGATIVE && B->sign == NEGATIVE && bi_cmp(A, B) == -1)
     {
         bi_abs(A);
         bi_abs(B);
@@ -251,8 +251,8 @@ void bi_sub(OUT bigint **C, IN bigint *A, IN bigint *B)
         return;
     }
 
-    // Case 8: A > 0 and B < 0
-    if (A->sign == NON_NEGATIVE and B->sign == NEGATIVE)
+    // Case 8: A > 0 && B < 0
+    if (A->sign == NON_NEGATIVE && B->sign == NEGATIVE)
     {
         bi_abs(B);
         bi_add(C, A, B);

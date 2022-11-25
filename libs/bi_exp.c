@@ -67,6 +67,11 @@ void bi_mns(OUT bigint **C, IN bigint *A, IN bigint *n)
     bi_delete(&T1);
 }
 
+/// @brief left-to-right binary method(modular exponentiation)
+/// @param C A^n (mod M)
+/// @param A 밑수
+/// @param n 지수
+/// @param M 모듈러스 값
 void bi_mod_exp_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
 {
     bigint *T = NULL;
@@ -75,22 +80,18 @@ void bi_mod_exp_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M)
     for (int j = bi_bit_cnt(n) - 1; j >= 0; j--)
     {
         bi_ksqu_asg(&T);
-        // printf("#  T = ");
-        // bi_print(T);
+        // bi_print("# T", T);
         bi_mod_asg(&T, M);
-
-        // printf("# (squ) T = ");
-        // bi_print(T);
+        // bi_print("# (squ mod) T", T);
 
         if (bi_get_j_bit(n, j) == 1)
         {
             bi_kmul_asg(&T, A);
             bi_mod_asg(&T, M);
-
-            // printf("# (mul) T = ");
-            // bi_print(T);
+            // bi_print("# (mul mod) T", T);
         }
     }
+
     bi_assign(C, T);
     bi_delete(&T);
 }

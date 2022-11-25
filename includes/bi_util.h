@@ -34,6 +34,6 @@ word hexToWord(const char h[], int len);
 /// @param src 16진수 문자열(const char *)
 /// @param dst bigint형 배열
 /// @param len src의 길이
-void hexstrToBigint(word *dst, const char *src, int len);
+void hexstrToBigint(word *dst, const char *src);
 
 #endif

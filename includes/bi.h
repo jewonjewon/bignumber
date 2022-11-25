@@ -32,18 +32,21 @@ typedef unsigned long long word;
 #define HALF_MASK (0xffffffff) // 32비트 마스크
 #define W (0xffffffffffffffff)
 #define WORD_LEN 16
+#define BIT_LEN 64
 #elif w == 32 // 32비트
 typedef unsigned int word;
 #define MASK (0xffffffff)
 #define HALF_MASK (0xffff) // 16비트 마스크
 #define W (0xffffffff)
 #define WORD_LEN 8
+#define BIT_LEN 32
 #elif w == 8 // 8비트
 typedef unsigned char word;
 #define MASK (0xff)
 #define HALF_MASK (0xf) // 4비트 마스크
 #define W (0xff)
 #define WORD_LEN 2
+#define BIT_LEN 8
 #endif
 
 /// @brief 큰 정수용 구조체
@@ -58,6 +61,7 @@ typedef struct
 } bigint;
 
 /* == == == == == BASIC FUNCTION == == == == == */
+
 void bi_delete(IN OUT bigint **A);
 void bi_new(IN OUT bigint **A, IN int wordlen);
 void bi_refine(bigint *A);

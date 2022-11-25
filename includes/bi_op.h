@@ -102,6 +102,12 @@ void bi_r2l(OUT bigint **C, IN bigint *A, IN bigint *n);
 void bi_mns(OUT bigint **C, IN bigint *A, IN bigint *n);
 
 /* MODULAR EXPONENTIATION */
+
+/// @brief left-to-right binary method(modular exponentiation)
+/// @param C A^n (mod M)
+/// @param A 밑수
+/// @param n 지수
+/// @param M 모듈러스 값
 void bi_mod_exp_l2r(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M);
 void bi_mod_exp_r2l(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M);
 void bi_mod_exp_mns(OUT bigint **C, IN bigint *A, IN bigint *n, IN bigint *M);

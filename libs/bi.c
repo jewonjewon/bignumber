@@ -1,5 +1,7 @@
 #include "../includes/bi.h"
 
+/// @brief bigint형 구조체 메모리 해제
+/// @param A bigint형 구조체
 void bi_delete(IN OUT bigint **A)
 {
     if (*A == NULL)
@@ -23,7 +25,9 @@ void bi_new(IN OUT bigint **A, IN int wordlen)
 {
     // 입력받은 배열에 어떠한 값이 저장되어있는 경우 free 후 새롭게 할당
     if (*A != NULL)
+    {
         bi_delete(A);
+    }
 
     *A = (bigint *)malloc(sizeof(bigint));
     (*A)->sign = NON_NEGATIVE;
@@ -55,18 +59,23 @@ void bi_refine(bigint *A)
         A->sign = NON_NEGATIVE;
 }
 
-// x배열을 y에 assign
-void bi_assign(IN OUT bigint **y, IN bigint *x)
+/// @brief src를 dst에 할당
+/// @param dst 할당 대상 bigint형 구조체
+/// @param src 할당할 bigint형 구조체
+void bi_assign(IN OUT bigint **dst, IN bigint *src)
 {
-    if (*y != NULL)
-        bi_delete(y);
+    if (*dst != NULL)
+        bi_delete(dst);
 
-    bi_new(y, x->wordlen);
-    (*y)->sign = x->sign;
+    bi_new(dst, src->wordlen);
+    (*dst)->sign = src->sign;
 
-    memmove((*y)->a, x->a, sizeof(word) * x->wordlen);
+    memmove((*dst)->a, src->a, sizeof(word) * src->wordlen);
 }
-// 입력 배열 A의 길이를 입력 wordlen만큼 길이를 늘려주는 함수
+
+/// @brief bigint형 구조체의 워드길이를 변경하고자 하는 길이로 늘려줌
+/// @param A 임의의 bigint형 구조체
+/// @param wordlen 변경하고자 하는 워드길이
 void bi_resize(IN OUT bigint **A, IN int wordlen)
 {
     (*A)->a = (word *)realloc((*A)->a, sizeof(word) * wordlen);

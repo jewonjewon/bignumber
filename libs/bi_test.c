@@ -1572,7 +1572,7 @@ void test_prime_gen(int TEST, void (*func)(bigint **, int))
     {
         // int num1 = rand() % 0x0f + 1; /* num1 is random bit length */
 
-        func(&n, 64); /* Choose random num1-bit prime n */
+        func(&n, 256); /* Choose random num1-bit prime n */
         sage_show_prime_gen(n, j);
     }
 

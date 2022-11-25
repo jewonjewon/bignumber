@@ -7,6 +7,8 @@ int bi_bit_cnt(bigint *A)
     if (A->wordlen < 1)
         return -1; /* error */
 
+    bi_refine(A);
+
     int t = bitlen(A->a[A->wordlen - 1]);    /* t =  A의 최상위워드의 비트 길이 */
     int bitlen_A = w * (A->wordlen - 1) + t; /* bitlen(A) = (w * wordlen(A)) + t */
     return bitlen_A;                         /* A의 비트길이 반환 */

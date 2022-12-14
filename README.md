@@ -2,21 +2,22 @@
 
 ## 목표(Goal)
 
-1. 큰 정수 연산 라이브러리
-
-- [x] 덧셈
-- [x] 뺄셈
-- [x] Schoolbook 곱셈
-- [x] Schoolbook 제곱
-- [x] Karatsuba 곱셈
-- [x] Karatsuba 제곱
+### 큰 정수 연산 함수
+- [x] Addition
+- [x] Subtraction
+- [x] Schoolbook Multiplication
+- [x] Schoolbook Square
+- [x] Karatsuba Multiplication
+- [x] Karatsuba Square
 - [x] 워드 단위 긴 나눗셈
-- [x] 이진 긴 나눗셈
+- [x] Binary long division
 - [x] Left-To-Right binary Method
 - [x] Right-To-Left binary Method
 - [x] Montgomery Ladder Method
 
-2. 검증 함수
+### 소수 생성
+
+### 검증
 
 - [x] 덧셈
 - [x] 뺄셈
